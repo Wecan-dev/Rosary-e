@@ -1087,6 +1087,81 @@ button:focus {
   font-size: 17px;
 }
 
+.main-categories__item:nth-child(even) .main-categories__img {
+  order: -1;
+}
+
+.main-categories__item .container-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-categories__item .main-categories__img {
+  position: relative;
+}
+
+.main-categories__item .main-categories__img img {
+  width: 100%;
+}
+
+.main-categories__item .main-categories__details {
+  background-color: #f0e3d4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 104px;
+}
+
+.main-categories__item .main-categories__text {
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.main-categories__item .main-categories__poster {
+  margin-bottom: 13px;
+  margin-top: 13px;
+  width: 364px;
+  height: 452px;
+  object-fit: contain;
+}
+
+.main-categories__item .main-categories__icon {
+  width: 50px;
+  height: 74px;
+  margin-bottom: 9px;
+  object-fit: contain;
+}
+
+.main-categories__item .main-categories__mask {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.main-categories__item .main-categories__title {
+  font-size: 120px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #ffffff;
+  font-family: "MADE SAONARA";
+  margin-bottom: 121px;
+}
+
 .main-blog .main-blog__item {
   margin-bottom: 45px;
 }
