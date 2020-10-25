@@ -134,7 +134,11 @@
                 $200.000
               %a.general-btn__simple{:href=>""}
                 Comprar
-                                                            
+        .d-flex.justify-content-center
+          %a.main-featured__btn{:href=>""}
+            Comprar ahora
+            %i.fa.fa-angle-right                                                        
+    
     %section.main-about
       .padding-top-bottom.padding-right-left
         %h2.main-general__title
@@ -155,62 +159,102 @@
               Leer más
               %i.fa.fa-angle-right
 
-
+    .main-break
+      .main-break__img
+        %img{:src=>"assets/img/image_7.png" }/
+        .main-break__mask
+          %img{:src=>"assets/img/logo-w.png" }/
+    .main-sale
+      .container-grid
+        .main-sale__text
+          %p.main-sale__description
+            Lorem Ipsum is simply dummy text of the printing.
+          %h2.main-sale__title
+            Descuentos 50% OFF
+          %a.general-btn__simple{:href=>""}
+            Comprar
+        .main-sale__img
+          %img{:src=>"assets/img/image.png" }/
     %footer.main-footer
-      .container.padding-top-bottom
+      .padding-right-left.padding-top-bottom
         .container-grid
           .main-footer__item
             .main-footer__logo
-              %img{:src=>"assets/img/logo_2@2x.png" }/
+              %img{:src=>"assets/img/logo.png" }/
             %p.main-footer__description
-              Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per.
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry’s.
+            .main-footer__rrss
+              %p Síguenos en
+              %a.rrss__item{:href=>"", :target=>"_blank"}
+                %img{:src=>"assets/img/fb.png" }/
+              %a.rrss__item{:href=>"", :target=>"_blank"}
+                %img{:src=>"assets/img/ig.png" }/
+            
+              %a.rrss__item{:href=>"", :target=>"_blank"}
+                %img{:src=>"assets/img/pr.png" }/
+          
           .main-footer__item
             %h2.main-footer__title
-              Menú 
+              Quick Shop 
+            %ul.site-map
+              %li
+                %a{:href=>""}
+                  New in
+              %li
+                %a{:href=>""}
+                  Recomendados
+              %li
+                %a{:href=>""}
+                  Productos 
+              %li
+                %a{:href=>""}
+                  Cats & Dogs
+              %li
+                %a{:href=>""}
+                  Accesorios 
+              %li
+                %a{:href=>""}
+                  Personalizados                   
+          .main-footer__item
+            %h2.main-footer__title
+              Más información 
             %ul.site-map
               %li
                 %a{:href=>"nosotros.html"}
-                  Quiénes Somos 
+                  Nosotros 
               %li
                 %a{:href=>"servicios.html"}
-                  Servicios
+                  Guía de tallas
               %li
                 %a{:href=>"publicaciones.html"}
-                  Publicaciones 
+                  Envíos
               %li
                 %a{:href=>"proveedores.html"}
-                  Proveedores
+                  Políticas y privacidad 
               %li
                 %a{:href=>"contacto.html"}
-                  Contácto 
+                  Términos y condiciones            
           .main-footer__item
             %h2.main-footer__title
-              Datos de Contacto
-            %ul.list-contact
+              Contacto
+            %ul.main-footer__contact
               %li
+                %img{:src=>"assets/img/place.png" }/
                 %a{:href=>""}
-                  %i.fa.fa-map-marker 
                   Carrera 51b #78-40
               %li
-                %a{:href=>"mailto:info@ekored.co"}
-                  %i.fa.fa-envelope-o
-                  Email: info@ekored.co
+                %img{:src=>"assets/img/envelope.png" }/
+                %a{:href=>""}
+                  Email: info@rosary.com
               %li
-                %a{:href=>"tel:5744443569"}
-                  %i.fa.fa-phone 
-                  Phone: 57 (4) 444 35 69
-          .main-footer__item
-            %h2.main-footer__title
-              Nuestras Redes
-            .main-footer__rrss
-              %a.rrss__item{:href=>"https://www.facebook.com/ekoredco", :target=>"_blank"}
-                %i.fa.fa-facebook 
-              %a.rrss__item{:href=>"https://twitter.com/ekoredco", :target=>"_blank"}
-                %i.fa.fa-twitter 
-              %a.rrss__item{:href=>"https://www.youtube.com/channel/UCSRIAcCn4BsyyqK4WywatZg", :target=>"_blank"}
-                %i.fa.fa-youtube-play 
-              %a.rrss__item{:href=>"https://www.instagram.com/ekoredco/", :target=>"_blank"}
-                %i.fa.fa-instagram 
+                %img{:src=>"assets/img/phone-call.png" }/
+                %a{:href=>""}
+                  Phone: 57 (4) 444 35 69                 
+
+
+
+
+
     
     -# %a#js_up.boton-subir.slider-top{:href => "#"}
     -#   %img{:src=>"assets/img/button@3x.png", :alt=>"icon chat"}
@@ -218,9 +262,9 @@
 
     .main-powered
       .container 
-        .d-flex.justify-content-center.p-4.main-powered__flex
-          %p Copyright © 2019 
-          %a{:href=>"https://sigma.la/"} Sigma Studios 
+        .d-flex.justify-content-center.main-powered__flex
+          %p Copyright 2020
+          %a{:href=>""}Branch
           %p - Sitios Web
     -# .main-whatsapp
     -#   %a{ :href=>" "}
