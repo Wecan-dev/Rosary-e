@@ -1,0 +1,152 @@
+.main-banner__content {
+  .slick-prev {
+    z-index: 2;
+    height: 40px;
+    width: 40px;
+    top: 55%;
+    left: 0%;
+    transition: all .5s;
+    background-color: #7f7f7f;
+    width: 44px;
+    height: 78px;
+    cursor: pointer;
+
+    &:before {
+      font-size: 14px;
+      color: $white;
+      content: "\f053";
+      font-family: 'FontAwesome';
+      z-index: 3;
+    }
+
+    &:hover {
+      outline: none;
+      transition: all .5s;
+      background: $black;
+      color: $white;
+    }
+  }
+
+  .slick-next {
+    right: 0%;
+    z-index: 2;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    transition: all .5s;
+
+    top: 55%;
+    background-color: #7f7f7f;
+    width: 44px;
+    height: 78px;
+
+    &:before {
+      font-size: 14px;
+      color: $white;
+      content: "\f054";
+      font-family: 'FontAwesome';
+    }
+
+    &:hover {
+      outline: none;
+      background: $black;
+      color: $white;
+      transition: all .5s;
+
+    }
+  }
+
+  .slick-dots {
+    z-index: 2;
+    display: flex;
+    position: absolute;
+    bottom: 5%;
+    right: 53%;
+    width: 0%;
+
+    @include respond-to(md) {
+      left: 45%;
+    }
+
+    @include respond-to(sm) {
+      left: 45%;
+    }
+
+    @include respond-to(xs) {
+      left: 35%;
+    }
+
+    .slick-active {
+      button {
+        &:before {
+          color: $dots-color-active;
+          opacity: 0.75;
+          width: 35px;
+          margin: 0;
+        }
+      }
+    }
+
+    li {
+      margin: 0 10px;
+
+      button {
+
+        &:before {
+          color: $dots-color;
+          content: '';
+          height: $dots-size;
+          width: $dots-size;
+          display: inline-block;
+          background: $orange;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: all 300ms ease;
+        }
+
+        &:hover:before,
+        &:focus:before {
+          color: $dots-color-active;
+        }
+      }
+    }
+  }
+}
+
+.main-featured__carousel {
+  .slick-prev {
+    left: 0;
+    right: initial;
+
+    &::before {
+      background-image: url('../img/prev.png');
+    }
+  }
+
+  .slick-next {
+    right: 0;
+
+    &::before {
+      background-image: url('../img/next.png');
+    }
+  }
+
+  .slick-next,
+  .slick-prev {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    top: 39%;
+
+    &::before {
+      content: "";
+      background-size: 100%;
+      background-repeat: no-repeat;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0
+    }
+  }
+}

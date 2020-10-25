@@ -1,0 +1,39 @@
+// Medias querys
+$breakpoints: ('xs': "(min-width: 0px) and (max-width: 767px)",
+  'sm': "(min-width: 768px) and (max-width: 991px)",
+  'md': "(min-width: 992px) and (max-width: 1199px)",
+  'lg': "(min-width: 1200px) and (max-width: 1600px)",
+  'xl': "(min-width: 1601px) and (max-width: 2048px)",
+) !default;
+
+// Fonts
+
+
+// General
+$white: #fff;
+$black: #000;
+$orange: #f47321;
+$lightWhite:#F7FCF9;
+$lightBlack:#0B1A1C;
+$green: #9dcc49;
+$blue: #1c3348;
+$gray: #4a4a4a;
+$roboto: 'Roboto',
+sans-serif;
+$montserrat: 'Montserrat',
+sans-serif;
+$opensans: 'Open Sans',
+sans-serif;
+$poppins: 'Poppins',
+sans-serif;
+$gray2: #888888;
+$graycard: #7f7f7f;
+$graylight: #f5f5f5;
+
+
+// Slick
+$arrow-color: #f50000;
+$arrow-size: 25px;
+$dots-color: gray;
+$dots-color-active: #00b050;
+$dots-size: 12px;

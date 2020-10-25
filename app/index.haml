@@ -1,0 +1,237 @@
+!!!
+%html{ lang: 'en' }
+  %head
+    %meta{ charset: 'UTF-8' }/
+    %meta{ content: 'width=device-width, initial-scale=1.0', name:'viewport' }/
+    %title Ekored
+    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", :integrity => "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", :rel => "stylesheet"}/
+    %link{ rel: 'stylesheet', href:'assets/css/font-awesome.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/font-awesome.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/slick-theme.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/slick.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/main.css' }/
+    %link{ rel: 'stylesheet', href:'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css' }/
+    %link{:href => "assets/img/favicon.png", :rel => "shortcut icon"}/
+    %link{ href:'https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Open+Sans:300,400,600,700,800|Poppins:100,200,300,400,500,600,700,800,900&display=swap',  rel:'stylesheet' }/
+  %body
+    -# %header.fixed-top.navbar-fixed-js      
+    -#   %nav.navbar.navbar-expand-lg
+    -#     .container
+    -#       .main-brand__top
+    -#         .main-brand
+    -#           %a.navbar-brand{ :href => 'index.html' }
+    -#             %img#iso{ :src => 'assets/img/logo_2@2x.png', :alt=>"Logo Ekored"}/ 
+    -#       .main-brand__fixed
+    -#         .main-brand
+    -#           %a.navbar-brand{ :href => 'index.html' }
+    -#             %img#iso{ :src => 'assets/img/logo_2@2x.png', :alt=>"Logo Ekored" }/ 
+    -#       .main-brand.brand-responsive
+    -#         %a.navbar-brand{ :href => 'index.html' }
+    -#           %img#iso{ :src => 'assets/img/logo_2@2x.png', :alt=>"Logo Ekored"}/ 
+    -#         %button.navbar-toggler.p-2.border-0.hamburger.hamburger--elastic.ml-autos{ 'data-toggle' => 'offcanvas', :type => 'button' }
+    -#           %span.hamburger-box
+    -#           %span.hamburger-inner
+    -#       .navbar-collapse.offcanvas-collapse
+    -#         %ul.navbar-nav.mr-autos
+    -#           %li.nav-item
+    -#             %a.nav-link.nav-link-p{:href => 'nosotros.html',:data-toggle => 'offcanvas' } 
+    -#               Quiénes Somos
+    -#           %li.nav-item
+    -#             %a.nav-link.nav-link-p{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+    -#               PET
+    -#             -# %ul.dropdown-menu
+    -#             -#   %li
+    -#             -#     %a{:href => "diversity-and-inclusion.html"} Diversidad e inclusión
+    -#             -#   %li
+    -#             -#     %a{:href => "future-of-work.html"} Futuro del trabajo
+    -#             -#   %li
+    -#             -#     %a{:href => "future-of-education.html"} Futuro de la educación
+    -#             -#   %li
+    -#             -#     %a{:href => "brand-building.html"} Construcción de marca empleadora
+    -#             -#   %li
+    -#             -#     %a{:href => "dream-race.html"} Carrera de los sueños de los jovenes
+    -#           %li.nav-item
+    -#             %a.nav-link.nav-link-p{:data-toggle => 'offcanvas', :href => "publicaciones.html", :role => "button"}
+    -#               Publicaciones
+    -#           %li.nav-item
+    -#             %a.nav-link.nav-link-p{:data-toggle => 'offcanvas', :href => "prensa.html", :role => "button"}
+    -#               Prensa
+
+    -#           %li.nav-item
+    -#             %a.nav-link.nav-link-p{:href => 'proveedores.html',:data-toggle => 'offcanvas' } Proveedores
+    -#           %li.nav-item
+    -#             %a.nav-link.nav-link-p.main-general__button{:href => 'contacto.html',:data-toggle => 'offcanvas' } Contáctanos
+  
+    -# %section.main-banner
+    -#   .main-banner__content
+    -#     .main-banner__item
+    -#       .main-banner__text.wow.animated.fadeIn{:style=>"visibility: visible; animation-delay: .3s  ;"}
+    -#         .container
+    -#           .main-banner__title
+    -#             %p 
+    -#               Lorem ipsum dolor sit amet consectetur 
+    -#           .main-banner__subtitle 
+    -#             %p  
+    -#               Auctor mauris vehicula quisque posuere erat malesuada ad sapien aliquam odio suspendisse, fusce leo condimentum in tempus magnis tortor ante purus scelerisque. Consequat pellentesque elementum velit ad netus facilisi praesent libero
+    -#           %br              
+    -#           %a.main-general__button{:href=>''}VER MÁS
+    -#       .main-banner__img
+    -#         %img{:src=>"assets/img/image_8.png", :alt=>"Imagen Banner"}/
+    %section.main-featured
+      .padding-top-bottom
+        %h2.main-general__title
+          LO MÁS POPULAR
+        %p.main-general__subtitle
+          Best sellers
+        .main-featured__carousel
+          .main-featured__product
+            .main-featured__img
+              %img{:src=>"assets/img/image_17.png"}/
+            .main-featured__text
+              %a.main-featured__title{:href=>""}
+                Aretes de estrellas - Dorado
+              %p.main-featured__price   
+                $200.000
+              %a.general-btn__simple{:href=>""}
+                Comprar
+          .main-featured__product
+            .main-featured__img
+              %img{:src=>"assets/img/image_19.png"}/
+            .main-featured__text
+              %a.main-featured__title{:href=>""}
+                Aretes de estrellas - Dorado
+              %p.main-featured__price   
+                $200.000
+              %a.general-btn__simple{:href=>""}
+                Comprar
+          .main-featured__product
+            .main-featured__img
+              %img{:src=>"assets/img/image_21.png"}/
+            .main-featured__text
+              %a.main-featured__title{:href=>""}
+                Aretes de estrellas - Dorado
+              %p.main-featured__price   
+                $200.000
+              %a.general-btn__simple{:href=>""}
+                Comprar
+          .main-featured__product
+            .main-featured__img
+              %img{:src=>"assets/img/image_23.png"}/
+            .main-featured__text
+              %a.main-featured__title{:href=>""}
+                Aretes de estrellas - Dorado
+              %p.main-featured__price   
+                $200.000
+              %a.general-btn__simple{:href=>""}
+                Comprar
+          .main-featured__product
+            .main-featured__img
+              %img{:src=>"assets/img/image_17.png"}/
+            .main-featured__text
+              %a.main-featured__title{:href=>""}
+                Aretes de estrellas - Dorado
+              %p.main-featured__price   
+                $200.000
+              %a.general-btn__simple{:href=>""}
+                Comprar
+                                                            
+    %section.main-about
+      .padding-top-bottom.padding-right-left
+        %h2.main-general__title
+          NUESTRA FILOSOFÍA  
+        %p.main-general__subtitle
+          Acerca de Rosary
+        .container-grid
+          .main-about__img
+            %img{:src=>"assets/img/image_16.png"}/     
+          .main-about__text 
+            %p.main-general__description
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            %p.main-general__description
+              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            %p.main-general__description
+              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.     
+            %a.main-about__btn{:href=>""}
+              Leer más
+              %i.fa.fa-angle-right
+
+
+    %footer.main-footer
+      .container.padding-top-bottom
+        .container-grid
+          .main-footer__item
+            .main-footer__logo
+              %img{:src=>"assets/img/logo_2@2x.png" }/
+            %p.main-footer__description
+              Lorem ipsum dolor sit amet consectetur adipiscing elit donec facilisi magna natoque, per.
+          .main-footer__item
+            %h2.main-footer__title
+              Menú 
+            %ul.site-map
+              %li
+                %a{:href=>"nosotros.html"}
+                  Quiénes Somos 
+              %li
+                %a{:href=>"servicios.html"}
+                  Servicios
+              %li
+                %a{:href=>"publicaciones.html"}
+                  Publicaciones 
+              %li
+                %a{:href=>"proveedores.html"}
+                  Proveedores
+              %li
+                %a{:href=>"contacto.html"}
+                  Contácto 
+          .main-footer__item
+            %h2.main-footer__title
+              Datos de Contacto
+            %ul.list-contact
+              %li
+                %a{:href=>""}
+                  %i.fa.fa-map-marker 
+                  Carrera 51b #78-40
+              %li
+                %a{:href=>"mailto:info@ekored.co"}
+                  %i.fa.fa-envelope-o
+                  Email: info@ekored.co
+              %li
+                %a{:href=>"tel:5744443569"}
+                  %i.fa.fa-phone 
+                  Phone: 57 (4) 444 35 69
+          .main-footer__item
+            %h2.main-footer__title
+              Nuestras Redes
+            .main-footer__rrss
+              %a.rrss__item{:href=>"https://www.facebook.com/ekoredco", :target=>"_blank"}
+                %i.fa.fa-facebook 
+              %a.rrss__item{:href=>"https://twitter.com/ekoredco", :target=>"_blank"}
+                %i.fa.fa-twitter 
+              %a.rrss__item{:href=>"https://www.youtube.com/channel/UCSRIAcCn4BsyyqK4WywatZg", :target=>"_blank"}
+                %i.fa.fa-youtube-play 
+              %a.rrss__item{:href=>"https://www.instagram.com/ekoredco/", :target=>"_blank"}
+                %i.fa.fa-instagram 
+    
+    -# %a#js_up.boton-subir.slider-top{:href => "#"}
+    -#   %img{:src=>"assets/img/button@3x.png", :alt=>"icon chat"}
+
+
+    .main-powered
+      .container 
+        .d-flex.justify-content-center.p-4.main-powered__flex
+          %p Copyright © 2019 
+          %a{:href=>"https://sigma.la/"} Sigma Studios 
+          %p - Sitios Web
+    -# .main-whatsapp
+    -#   %a{ :href=>" "}
+    -#     %img{:src=>"assets/img/whatsapp@3x.png", :alt=>"icon chat"}
+
+    %script{src: 'assets/js/jquery.min.js' }
+    %script{:crossorigin => "anonymous", :integrity => "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1", :src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"}
+    %script{:crossorigin => "anonymous", :integrity => "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM", :src => "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"}
+    %script{src: 'assets/js/slick.min.js' }
+    %script{src: 'assets/js/setting-slick.js' }
+    %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js' }
+    %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js' }
+    %script{src: 'assets/js/main.js' }
+
