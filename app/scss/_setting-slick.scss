@@ -139,6 +139,11 @@
     top: 39%;
     z-index: 1;
 
+    @include respond-to(xs) {
+      width: 35px;
+      height: 35px;
+    }
+
     &::before {
       content: "";
       background-size: 100%;

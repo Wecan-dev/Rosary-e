@@ -111,8 +111,8 @@ body {}
 .hamburger-inner::after {
   width: 35px;
   height: 3px;
-  background-color: #007844;
-  ;
+  background-color: #c3ae87;
+
   border-radius: 3px;
   position: absolute;
   transition-property: transform;
@@ -135,7 +135,7 @@ body {}
 }
 
 .hamburger--elastic .hamburger-inner {
-  top: 1.7rem;
+  top: 35px;
   transition-duration: 0.275s;
   transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }

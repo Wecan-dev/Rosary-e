@@ -195,11 +195,21 @@ button:focus {
 .padding-top-bottom {
   padding-top: 104px;
   padding-bottom: 104px;
+
+  @include respond-to(xs) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .padding-right-left {
   padding-right: 125px;
   padding-left: 114px;
+
+  @include respond-to(xs) {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
 }
 
 .container-grid {
@@ -218,6 +228,10 @@ button:focus {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 11px;
+
+  @include respond-to(xs) {
+    font-size: 37px;
+  }
 }
 
 .main-general__subtitle {
@@ -254,6 +268,25 @@ button:focus {
   color: #000000;
   text-decoration: underline;
   text-transform: uppercase;
+}
+
+.pre-navbar {
+  height: 60px;
+  background-color: #f0e3d4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.35px;
+    margin-bottom: 0;
+    color: #000000;
+  }
 }
 
 .navbar {
@@ -302,40 +335,24 @@ button:focus {
   }
 }
 
-
-.nav-item .main-general__button {
-  color: $white !important;
-
+.container-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .nav-item {
-  display: flex;
-  align-items: center;
-
-  // display: flex;
-  // align-items: center;
-  @include respond-to(xs) {
-    justify-content: center;
-    margin: .5rem 0;
-  }
 
   & a {
-    // height: 100%;
-    justify-content: center;
-    display: flex;
-    color: $white;
-    font-weight: bold;
-    // font-family: $poppins;
-    // text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    align-items: center;
-
-    @include respond-to(xs) {
-      font-size: 1.3rem;
-      color: #007844;
-      text-shadow: none;
-      font-weight: 600;
-
-    }
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.3px;
+    color: #000000;
+    text-transform: uppercase;
   }
 }
 
@@ -360,10 +377,6 @@ button:focus {
   }
 }
 
-.fixed {
-  background: #1c3348 !important;
-}
-
 .nav-link {
 
   transition: .3s ease-in-out;
@@ -371,45 +384,9 @@ button:focus {
   padding-right: 1.2rem !important;
   padding-left: 1.2rem !important;
 
-  @include respond-to(xs) {
-    color: $white;
-  }
-
-
-  @include respond-to(sm) {
-    color: $white;
-  }
-
-
-  &.fixed-color {
-    transition: .3s ease-in-out;
-
-    @include respond-to(sm) {
-      color: $white;
-    }
-  }
-
-  &:hover {
-    color: #9dcc49 !important;
-
-
-    @include respond-to(xs) {
-      color: $white;
-    }
-  }
 }
 
-.fixed--link {
-  color: #4a4a4a !important;
-}
 
-.fixed--white {
-  background: #fff;
-
-  // .nav-item a {
-  //   color: #000;
-  // } 
-}
 
 .navbar-brand {
   display: flex;
@@ -417,17 +394,11 @@ button:focus {
   margin-right: 0;
 
   img {
-    width: 191px;
-    height: 56px;
+    margin-top: 19px;
     object-fit: contain;
-
-    @include respond-to(md) {
-
-      width: 11rem;
-      height: 4rem;
-      object-fit: contain;
-    }
-
+    margin-bottom: 10px;
+    width: 90px;
+    height: 56px;
   }
 
   @include respond-to(xs) {
@@ -680,6 +651,18 @@ button:focus {
   .container-grid {
     grid-template-columns: 1fr 1fr;
     gap: 121px;
+
+    @include respond-to(xs) {
+      grid-template-columns: 100%;
+      gap: 20px;
+    }
+
+    .main-about__img {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
   }
 
   .main-general__description {
@@ -707,11 +690,19 @@ button:focus {
   &:nth-child(even) {
     .main-categories__img {
       order: -1;
+
+      @include respond-to(xs) {
+        order: initial;
+      }
     }
   }
 
   .container-grid {
     grid-template-columns: 1fr 1fr;
+
+    @include respond-to(xs) {
+      grid-template-columns: 100%;
+    }
   }
 
   .main-categories__img {
@@ -728,6 +719,13 @@ button:focus {
     flex-direction: column;
     align-items: center;
     padding-top: 104px;
+
+    @include respond-to(xs) {
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
   }
 
   .main-categories__text {
@@ -741,6 +739,8 @@ button:focus {
     color: #000000;
     text-transform: uppercase;
     margin-bottom: 0;
+
+
   }
 
   .main-categories__poster {
@@ -748,7 +748,11 @@ button:focus {
     margin-top: 13px;
     width: 364px;
     height: 452px;
-    object-fit: contain
+    object-fit: contain;
+
+    @include respond-to(xs) {
+      width: 100%;
+    }
   }
 
   .main-categories__icon {
@@ -779,6 +783,10 @@ button:focus {
     color: #ffffff;
     font-family: $made;
     margin-bottom: 121px;
+
+    @include respond-to(xs) {
+      font-size: 37px;
+    }
   }
 }
 
@@ -787,27 +795,46 @@ button:focus {
   .main-blog__item {
     margin-bottom: 45px;
 
+    .container-grid {
+      gap: 62px;
+      grid-template-columns: 658px 1fr;
+
+      @include respond-to(xs) {
+        grid-template-columns: 100%;
+      }
+    }
+
     &:nth-child(even) {
       .main-blog__img {
         order: -1;
+
+        @include respond-to(xs) {
+          order: initial;
+        }
       }
 
       .container-grid {
         grid-template-columns: 600px 1fr;
 
+        @include respond-to(xs) {
+          grid-template-columns: 100%;
+        }
       }
 
       .main-blog__text {
         padding-left: 165px;
         padding-right: 250px;
+        margin-top: 30px;
+
+        @include respond-to(xs) {
+          padding-left: 25px;
+          padding-right: 25px;
+        }
       }
     }
   }
 
-  .container-grid {
-    gap: 62px;
-    grid-template-columns: 658px 1fr;
-  }
+
 
   .main-blog__img {
     img {
@@ -819,6 +846,11 @@ button:focus {
   .main-blog__text {
     margin-top: 115px;
     padding-left: 293px;
+
+    @include respond-to(xs) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
   }
 
   .main-blog__title {
@@ -832,6 +864,10 @@ button:focus {
     font-family: $made;
     text-transform: uppercase;
     margin-bottom: 36px;
+
+    @include respond-to(xs) {
+      font-size: 37px;
+    }
   }
 
   .main-blog__counter {
@@ -856,6 +892,18 @@ button:focus {
   position: relative;
   justify-content: center;
 
+  @include respond-to(xs) {
+    padding: 25px;
+  }
+
+  .main-break__img {
+    img {
+      @include respond-to(xs) {
+        width: 100%;
+      }
+    }
+  }
+
   .main-break__mask {
     position: absolute;
     top: 0;
@@ -871,6 +919,11 @@ button:focus {
       width: 300px;
       height: 58px;
       object-fit: contain;
+
+      @include respond-to(xs) {
+        width: 180px;
+
+      }
     }
   }
 }
@@ -878,6 +931,10 @@ button:focus {
 .main-sale {
   .container-grid {
     grid-template-columns: 1fr 1fr;
+
+    @include respond-to(xs) {
+      grid-template-columns: 100%;
+    }
   }
 
   .main-sale__img {
@@ -893,6 +950,11 @@ button:focus {
     padding-top: 66px;
     padding-left: 51px;
     padding-right: 51px;
+
+    @include respond-to(xs) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
   }
 
   .main-sale__description {
@@ -916,6 +978,10 @@ button:focus {
     letter-spacing: 2.5px;
     margin-bottom: 16px;
     color: #000000;
+
+    @include respond-to(xs) {
+      font-size: 47px;
+    }
   }
 }
 
@@ -943,6 +1009,11 @@ button:focus {
 
   .main-footer__logo {
     margin-bottom: 27px;
+
+    @include respond-to(xs) {
+      display: flex;
+      justify-content: center;
+    }
 
     img {
       width: 128px;
@@ -991,6 +1062,10 @@ button:focus {
       text-transform: uppercase;
       margin-bottom: 0;
       margin-right: 20px;
+
+      @include respond-to(xs) {
+        display: none;
+      }
     }
   }
 
@@ -1003,6 +1078,11 @@ button:focus {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+
+    @include respond-to(xs) {
+      width: 40px;
+      height: 40px;
+    }
 
     img {
       width: 16px;
@@ -1043,10 +1123,6 @@ button:focus {
   padding: 0;
   margin: 0;
   list-style: none;
-
-  @include respond-to(xs) {
-    padding: 0 2rem;
-  }
 
   li {
     margin-bottom: 5px;
