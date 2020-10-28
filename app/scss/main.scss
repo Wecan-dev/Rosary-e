@@ -41,7 +41,7 @@ a:hover {
 body {
   font-family: 'Brandon Text Regular';
   color: #000;
-  background-color: #fcf4ea;
+  // background-color: #fcf4ea;
 
   & :focus {
     outline: none;
@@ -209,6 +209,11 @@ button:focus {
   @include respond-to(xs) {
     padding-right: 25px;
     padding-left: 25px;
+  }
+
+  @include respond-to(sm) {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
@@ -430,6 +435,13 @@ button:focus {
   justify-content: flex-end;
 }
 
+header {
+  background-color: rgba(255, 255, 255, 0.71);
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
 .nav-top__header {
   width: 100%;
   background-color: $lightBlack;
@@ -471,13 +483,15 @@ button:focus {
 
   .main-banner__text {
     position: absolute;
-    width: 100%;
+    width: 49%;
     display: flex;
     height: 100%;
     align-items: flex-start;
     flex-direction: column;
     justify-content: center;
-    background: #4a4a4a70;
+    right: 0;
+
+    // background: #4a4a4a70;
 
     @include respond-to(xs) {
       width: 100%;
@@ -494,67 +508,29 @@ button:focus {
     }
 
     .main-banner__title {
-      width: 50%;
+      margin-top: 130px;
+      height: max-content;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 22px 33px;
 
-      @include respond-to(xs) {
-        width: 100%;
-      }
-
-
-      p {
-        font-size: 41px;
-        font-weight: 600;
-        color: $white;
-        // font-size: 3.5rem;
-        font-family: $montserrat;
-        // text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-        // font-weight: bold;
-        margin: 1rem 0;
-        // line-height: 1;
-
-        @include respond-to(xs) {
-          font-size: 31px;
-          line-height: 1;
-        }
-      }
-    }
-
-    .main-banner__subtitle {
-      width: 50%;
-
-      p {
-        font-size: 1rem;
-        font-weight: 500;
-        font-family: $montserrat;
-        color: $white;
-      }
-
-      @include respond-to(xs) {
-        width: 100%;
-      }
-    }
-
-    .main-banner__description {
-      padding: 0 25px;
-      color: $white;
-      font-size: 20px;
-      line-height: 2rem;
-      margin: 50px 0 0 0;
-
-      @include respond-to(md) {
-        font-size: 18px;
-      }
-
-      @include respond-to(xs) {
-        font-size: 18px;
-        padding: 0;
+      h2 {
+        font-size: 45px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 1.13px;
+        color: #000000;
+        text-transform: uppercase;
+        font-family: $made;
       }
     }
   }
 
   .main-banner__img {
     width: 100%;
-    height: 100vh;
+    height: 964px;
 
     img {
       width: 100%;
@@ -565,7 +541,7 @@ button:focus {
 }
 
 .main-featured {
-  background-color: #e7d6c087;
+  background-color: #fcf4ea;
 
   .padding-top-bottom {
     padding-bottom: 53px;
@@ -657,6 +633,11 @@ button:focus {
       gap: 20px;
     }
 
+    @include respond-to(sm) {
+      grid-template-columns: 100%;
+      gap: 20px;
+    }
+
     .main-about__img {
       img {
         width: 100%;
@@ -688,6 +669,11 @@ button:focus {
 
 .main-categories__item {
   &:nth-child(even) {
+    .main-categories__details {
+      background-color: #fff;
+
+    }
+
     .main-categories__img {
       order: -1;
 
@@ -703,6 +689,10 @@ button:focus {
     @include respond-to(xs) {
       grid-template-columns: 100%;
     }
+
+    @include respond-to(sm) {
+      grid-template-columns: 100%;
+    }
   }
 
   .main-categories__img {
@@ -710,11 +700,18 @@ button:focus {
 
     img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include respond-to(sm) {
+      order: -1;
+
     }
   }
 
   .main-categories__details {
-    background-color: #f0e3d4;
+    background-color: #faf5ee;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -725,6 +722,11 @@ button:focus {
       padding-right: 25px;
       padding-top: 50px;
       padding-bottom: 50px;
+    }
+
+    @include respond-to(sm) {
+      padding-top: 104px;
+      padding-bottom: 104px;
     }
   }
 
@@ -802,6 +804,10 @@ button:focus {
       @include respond-to(xs) {
         grid-template-columns: 100%;
       }
+
+      @include respond-to(sm) {
+        grid-template-columns: 100%;
+      }
     }
 
     &:nth-child(even) {
@@ -819,6 +825,10 @@ button:focus {
         @include respond-to(xs) {
           grid-template-columns: 100%;
         }
+
+        @include respond-to(sm) {
+          grid-template-columns: 100%;
+        }
       }
 
       .main-blog__text {
@@ -829,6 +839,11 @@ button:focus {
         @include respond-to(xs) {
           padding-left: 25px;
           padding-right: 25px;
+        }
+
+        @include respond-to(sm) {
+          padding-left: 50px;
+          padding-right: 50px;
         }
       }
     }
@@ -850,6 +865,16 @@ button:focus {
     @include respond-to(xs) {
       padding-left: 25px;
       padding-right: 25px;
+    }
+
+    @include respond-to(sm) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    @include respond-to(sm) {
+      padding-left: 50px;
+      padding-right: 50px;
     }
   }
 
@@ -935,6 +960,10 @@ button:focus {
     @include respond-to(xs) {
       grid-template-columns: 100%;
     }
+
+    @include respond-to(sm) {
+      grid-template-columns: 100%;
+    }
   }
 
   .main-sale__img {
@@ -986,7 +1015,7 @@ button:focus {
 }
 
 .main-footer {
-  background-color: #f1e8d7;
+  background-color: #faf5ee;
 
   .padding-top-bottom {
     padding-bottom: 52px;
@@ -1005,6 +1034,12 @@ button:focus {
       grid-template-columns: 100%;
       gap: 2rem;
     }
+
+    @include respond-to(sm) {
+      gap: 10px;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
   }
 
   .main-footer__logo {
@@ -1064,6 +1099,10 @@ button:focus {
       margin-right: 20px;
 
       @include respond-to(xs) {
+        display: none;
+      }
+
+      @include respond-to(sm) {
         display: none;
       }
     }
