@@ -75,9 +75,26 @@
     display: inline-block;
     height: 20px;
     width: 20px;
-    margin: 0 5px;
+    margin: 0 8px;
     padding: 0;
     cursor: pointer;
+
+    &:last-child {
+      &::before {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: "-";
+      position: absolute;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      right: -10px;
+    }
 
   }
 

@@ -363,7 +363,7 @@ button:focus {
 
 .navbar {
   .navbar-nav {
-    min-height: 5rem;
+    // min-height: 5rem;
   }
 
 }
@@ -476,6 +476,10 @@ header {
 
 .main-banner {
   overflow: hidden;
+
+  .main-banner__content {
+    margin-bottom: 0;
+  }
 
   .main-banner__item {
     position: relative;
@@ -742,7 +746,6 @@ header {
     text-transform: uppercase;
     margin-bottom: 0;
 
-
   }
 
   .main-categories__poster {
@@ -908,10 +911,6 @@ header {
 }
 
 .main-break {
-  background-image: url(../img/image_6.png);
-  background-size: cover;
-  padding-bottom: 150px;
-  padding-top: 150px;
   display: flex;
   align-items: center;
   position: relative;
@@ -923,6 +922,9 @@ header {
 
   .main-break__img {
     img {
+      width: 100%;
+      height: 100%;
+
       @include respond-to(xs) {
         width: 100%;
       }
@@ -1024,6 +1026,11 @@ header {
   .padding-right-left {
     padding-left: 54px;
     padding-right: 54px;
+
+    @include respond-to(xs) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
   }
 
   .container-grid {
