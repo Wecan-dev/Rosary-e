@@ -1,0 +1,151 @@
+!!!
+%html{ lang: 'en' }
+  %head
+    %meta{ charset: 'UTF-8' }/
+    %meta{ content: 'width=device-width, initial-scale=1.0', name:'viewport' }/
+    %title Rosary
+    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", :integrity => "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", :rel => "stylesheet"}/
+    %link{ rel: 'stylesheet', href:'assets/css/font-awesome.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/font-awesome.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/slick-theme.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/slick.css' }/
+    %link{ rel: 'stylesheet', href:'assets/css/main.css' }/
+    %link{ rel: 'stylesheet', href:'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css' }/
+    %link{:href => "assets/img/favicon.png", :rel => "shortcut icon"}/
+    %link{ href:'https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Open+Sans:300,400,600,700,800|Poppins:100,200,300,400,500,600,700,800,900&display=swap',  rel:'stylesheet' }/
+  %body
+    %section.contact
+      .container-grid
+        .contact-form
+          %h2.contact-form__title
+            dejanos un mensaje
+          %p.contact-form__description
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+          %form
+            %input{:placeholder=>"Nombre*"}/
+            %input{:placeholder=>"Correo*"}/
+            %input{:placeholder=>"Asunto"}/
+            %textarea{:placeholder=>"Tu comentario aqui."}
+            %a.general-btn__rose{:href=>""}
+              Enviar
+        .contact-sidebar
+          %h2.contact-form__title
+            Nuestra información
+          %p.contact-form__description
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+          
+          %ul.contact-list
+            %li
+              %img{:src=>"assets/img/phone-call.png" }/
+              %a{:href=>""}
+                %p Teléfono
+                57 (4) 444 35 69                     
+            %li
+              %img{:src=>"assets/img/envelope.png" }/
+              %a{:href=>""}
+                %p Correo Electrónico
+                info@rosary.com
+            %li
+              %img{:src=>"assets/img/place.png" }/
+              %a{:href=>""}
+                %p Ubicación
+                Calle 78 #79 - 24, Medellín-Colombia
+
+
+
+
+    %footer.main-footer
+      .padding-right-left.padding-top-bottom
+        .container-grid
+          .main-footer__item
+            .main-footer__logo
+              %img{:src=>"assets/img/logo.png" }/
+            %p.main-footer__description
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry’s.
+            .main-footer__rrss
+              %p Síguenos en
+              %a.rrss__item{:href=>"", :target=>"_blank"}
+                %img{:src=>"assets/img/fb.png" }/
+              %a.rrss__item{:href=>"", :target=>"_blank"}
+                %img{:src=>"assets/img/ig.png" }/
+            
+              %a.rrss__item{:href=>"", :target=>"_blank"}
+                %img{:src=>"assets/img/pr.png" }/
+          
+          .main-footer__item
+            %h2.main-footer__title
+              Quick Shop 
+            %ul.site-map
+              %li
+                %a{:href=>""}
+                  New in
+              %li
+                %a{:href=>""}
+                  Recomendados
+              %li
+                %a{:href=>""}
+                  Productos 
+              %li
+                %a{:href=>""}
+                  Cats & Dogs
+              %li
+                %a{:href=>""}
+                  Accesorios 
+              %li
+                %a{:href=>""}
+                  Personalizados                   
+          .main-footer__item
+            %h2.main-footer__title
+              Más información 
+            %ul.site-map
+              %li
+                %a{:href=>""}
+                  Nosotros 
+              %li
+                %a{:href=>""}
+                  Guía de tallas
+              %li
+                %a{:href=>""}
+                  Envíos
+              %li
+                %a{:href=>""}
+                  Políticas y privacidad 
+              %li
+                %a{:href=>""}
+                  Términos y condiciones            
+          .main-footer__item
+            %h2.main-footer__title
+              Contacto
+            %ul.main-footer__contact
+              %li
+                %img{:src=>"assets/img/place.png" }/
+                %a{:href=>""}
+                  Carrera 51b #78-40
+              %li
+                %img{:src=>"assets/img/envelope.png" }/
+                %a{:href=>""}
+                  Email: info@rosary.com
+              %li
+                %img{:src=>"assets/img/phone-call.png" }/
+                %a{:href=>""}
+                  Phone: 57 (4) 444 35 69                     
+    -# %a#js_up.boton-subir.slider-top{:href => "#"}
+    -#   %img{:src=>"assets/img/button@3x.png", :alt=>"icon chat"}
+    .main-powered
+      .container 
+        .d-flex.justify-content-center.main-powered__flex
+          %p Copyright 2020
+          %a{:href=>""}Branch
+          %p - Sitios Web
+    -# .main-whatsapp
+    -#   %a{ :href=>" "}
+    -#     %img{:src=>"assets/img/whatsapp@3x.png", :alt=>"icon chat"}
+
+    %script{src: 'assets/js/jquery.min.js' }
+    %script{:crossorigin => "anonymous", :integrity => "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1", :src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"}
+    %script{:crossorigin => "anonymous", :integrity => "sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM", :src => "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"}
+    %script{src: 'assets/js/slick.min.js' }
+    %script{src: 'assets/js/setting-slick.js' }
+    %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js' }
+    %script{src: 'assets/js/main.js' }
+

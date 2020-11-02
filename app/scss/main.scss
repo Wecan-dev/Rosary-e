@@ -20,6 +20,7 @@ html {
 
 a:hover {
   text-decoration: none;
+  color: initial;
 }
 
 *,
@@ -273,6 +274,33 @@ button:focus {
   color: #000000;
   text-decoration: underline;
   text-transform: uppercase;
+}
+
+.general-btn__rose {
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.73px;
+  color: #000000;
+  border-radius: 2px;
+  background-color: #d0bd9b;
+  width: 215px;
+  height: 50px;
+  display: flex;
+  text-transform: uppercase;
+  font-family: Brandon Text Bold;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+
+  &:hover {
+    transition: .3s;
+    background: #e6d8be;
+    color: initial;
+
+  }
 }
 
 .pre-navbar {
@@ -1280,5 +1308,133 @@ header {
 
   img {
     width: 4.5rem;
+  }
+}
+
+.contact {
+  padding: 60px 60px 42px 60px;
+
+  @include respond-to(xs) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .container-grid {
+    gap: 151px;
+    grid-template-columns: 1fr 365px;
+
+    @include respond-to(xs) {
+      grid-template-columns: 100%;
+      gap: 40px;
+    }
+
+    @include respond-to(sm) {
+      grid-template-columns: 100%;
+      gap: 60px;
+
+    }
+
+    @include respond-to(md) {
+      gap: 60px;
+
+    }
+  }
+
+  .contact-form__title {
+    font-size: 15px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    color: #d0bd9b;
+    font-family: Brandon Text Regular;
+    margin-bottom: 14px;
+  }
+
+  .contact-form__description {
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.19px;
+    color: #000000;
+    font-family: Brandon Text Regular;
+    margin-bottom: 25px;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  input {
+    margin-bottom: 27px;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      width: 49%;
+    }
+  }
+
+  input,
+  textarea {
+    padding: 20px;
+    border-radius: 2px;
+    border: solid 1px #d0bd9b;
+    width: 100%;
+
+    &::placeholder {
+      font-size: 13px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #000000;
+      font-family: Brandon Text Medium;
+    }
+  }
+
+  textarea {
+    height: 314px;
+    margin-bottom: 32px;
+  }
+
+  .contact-list {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+    }
+
+    a {
+      font-size: 13px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #000000;
+      font-family: Brandon Text Regular;
+    }
+
+    p {
+      font-family: Brandon Text Medium;
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 18px;
+      margin-right: 8px;
+      height: 18px;
+      object-fit: contain;
+    }
   }
 }
