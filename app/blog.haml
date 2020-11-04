@@ -14,6 +14,8 @@
     %link{:href => "assets/img/favicon.png", :rel => "shortcut icon"}/
     %link{ href:'https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Open+Sans:300,400,600,700,800|Poppins:100,200,300,400,500,600,700,800,900&display=swap',  rel:'stylesheet' }/
   %body
+    %section.pre-navbar
+      %p AHORA  | ENVÍO GRATIS - CUPÓN: GRATIS
     %header.header-solid    
       %nav.navbar.navbar-expand-lg
         .container-nav
@@ -55,7 +57,7 @@
                 %a.nav-link{:href => '',:data-toggle => 'offcanvas' } 
                   Nosotros
               %li.nav-item
-                %a.nav-link{:href => '',:data-toggle => 'offcanvas' } 
+                %a.nav-link{:href => 'blog.html',:data-toggle => 'offcanvas' } 
                   Blog
               %li.nav-item
                 %a.nav-link{:href => '',:data-toggle => 'offcanvas' } 
@@ -170,7 +172,59 @@
               %img{:src=>"assets/img/blog/next.png"}/
 
         .blog-sidebar
-      
+          .blog-sidebar__content
+            %p.blog-sidebar__title
+              Categorias
+            %ul.blog-sidebar__categorie
+              %li 
+                %a{:href=>""}
+                  Boho living
+              %li 
+                %a{:href=>""}
+                  Tatto boho
+              %li
+                %a{:href=>""}
+                  Beach boho style
+          .blog-sidebar__content
+            %p.blog-sidebar__title
+              Síguenos
+            %ul.blog-sidebar__follow.blog-sidebar__box
+              %li
+                %a{:href=>""}
+                  %img{:src=>"assets/img/fb.png" }/
+              %li
+                %a{:href=>""}
+                  %img{:src=>"assets/img/ig.png" }/
+              %li
+                %a{:href=>""}
+                  %img{:src=>"assets/img/pr.png" }/
+          .blog-sidebar__content
+            %p.blog-sidebar__title
+              Post recientes
+            .blog-sidebar__post
+              .blog-post__item
+                %img{:src=>"assets/img/blog/image_4.png" }/ 
+                .blog-post__text
+                  %p Enero 12 del 2020
+                  %a{:href=>""} Lorem ipsum
+              .blog-post__item
+                %img{:src=>"assets/img/blog/image_4.png" }/ 
+                .blog-post__text
+                  %p January 12, 2020
+                  %a{:href=>""} Lorem ipsum
+              .blog-post__item
+                %img{:src=>"assets/img/blog/image_4.png" }/ 
+                .blog-post__text
+                  %p January 12, 2020
+                  %a{:href=>""} Bell on a building                                  
+          .blog-sidebar__poster
+            %img{:src=>"assets/img/blog/image_5.png" }/
+            .blog-sidebar__text
+              %h2 2020
+              %p New Collection
+              %a.general-btn__rose{:href=>""} Comprar
+
+
 
     %footer.main-footer
       .padding-right-left.padding-top-bottom
