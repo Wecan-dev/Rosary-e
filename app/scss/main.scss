@@ -236,7 +236,7 @@ button:focus {
   margin-bottom: 11px;
 
   @include respond-to(xs) {
-    font-size: 37px;
+    font-size: 30px;
   }
 }
 
@@ -377,6 +377,7 @@ button:focus {
 
 .nav-item {
 
+
   & a {
     font-size: 12px;
     font-weight: normal;
@@ -386,6 +387,23 @@ button:focus {
     letter-spacing: 0.3px;
     color: #000000;
     text-transform: uppercase;
+  }
+}
+
+.nav-icon {
+  padding-left: 70px;
+  list-style: none;
+  display: flex;
+
+  a {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
   }
 }
 
@@ -457,6 +475,8 @@ button:focus {
 .navbar-nav {
   width: 100%;
   justify-content: flex-end;
+  margin-bottom: 9px;
+  align-items: flex-end;
 }
 
 .navbar-collapse {
@@ -468,6 +488,11 @@ header {
   position: absolute;
   width: 100%;
   z-index: 1;
+}
+
+.header-solid {
+  background-color: #fcf4ea;
+  position: initial;
 }
 
 .nav-top__header {
@@ -922,7 +947,7 @@ header {
     margin-bottom: 36px;
 
     @include respond-to(xs) {
-      font-size: 37px;
+      font-size: 30px;
     }
   }
 
@@ -1039,7 +1064,7 @@ header {
     color: #000000;
 
     @include respond-to(xs) {
-      font-size: 47px;
+      font-size: 37px;
     }
   }
 }
@@ -1435,6 +1460,300 @@ header {
       margin-right: 8px;
       height: 18px;
       object-fit: contain;
+    }
+  }
+}
+
+.general-banner {
+  position: relative;
+  height: 373px;
+
+  @include respond-to(xs) {
+    height: 118px;
+  }
+
+  @include respond-to(sm) {
+    height: 200px;
+  }
+
+  @include respond-to(md) {
+    height: 268px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .main-general__title {
+    margin-bottom: 0;
+
+  }
+
+  .general-banner__text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .general-banner__subtitle {
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 2px;
+    color: #000000;
+    font-family: Brandon Text Regular;
+    text-transform: uppercase;
+    text-align: center;
+
+  }
+}
+
+.error-404 {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 667px;
+    object-fit: cover;
+  }
+
+  .error-404__text {
+    padding: 49px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+  }
+
+  .error-404__title {
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: normal;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-family: Brandon Text Black;
+    margin-bottom: 9px;
+
+    @include respond-to(xs) {
+      font-size: 25px;
+    }
+  }
+
+  .error-404__title--bold {
+    font-family: Brandon Text Bold;
+    margin-bottom: 37px;
+  }
+
+  .error-404__subtitle {
+    font-size: 25px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.67px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #ffffff;
+
+
+    @include respond-to(xs) {
+      font-size: 15px;
+    }
+  }
+
+  .error-44__number {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: Brandon Text Bold;
+    font-size: 300px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: .8;
+    letter-spacing: normal;
+    color: #ffffff;
+    margin-bottom: 30px;
+
+    @include respond-to(xs) {
+      font-size: 115px;
+    }
+  }
+}
+
+.blog-general {
+  padding: 23px 57px;
+
+  .container-grid {
+    grid-template-columns: 1fr 318px;
+    gap: 119px;
+  }
+
+  .blog-general__paginator {
+
+    a {
+      margin-right: 36px;
+      font-size: 16px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      font-family: Brandon Text Medium;
+      letter-spacing: normal;
+      color: #000000;
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+  }
+}
+
+.blog-general__post {
+  border-bottom: 1px solid #d0bd9b;
+  margin-bottom: 38.6px;
+
+  .blog-general__poster {
+    margin-bottom: 38px;
+  }
+
+  .blog-general__description {
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.19px;
+    color: #000000;
+    margin-bottom: 9px;
+  }
+
+  .blog-general__meta {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.45px;
+    color: #000000;
+
+    li {
+      margin-right: 19px;
+    }
+
+    img {
+      width: 15px;
+      margin-right: 5px;
+      height: 15px;
+      object-fit: contain;
+    }
+
+    a {
+      color: #000000;
+
+    }
+  }
+
+  .blog-general__title {
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+    font-family: $made;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 13px;
+    display: inline-block;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 62px;
+      height: 1px;
+      background: #c0a980;
+      bottom: 0;
+    }
+  }
+
+  .blog-general__autor {
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+    margin-bottom: 35px;
+
+    span {
+      color: #c0a980;
+    }
+  }
+
+  .general-blog__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 58px;
+  }
+
+  .general-blog__btn {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.73px;
+    color: #000000;
+    display: block;
+    font-family: Brandon Text Medium;
+    border-bottom: 1px solid;
+  }
+
+  .general-blog__icon {
+    a {
+      font-size: 13px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #000000;
+
+      &:nth-child(1) {
+        margin-right: 10px;
+      }
+    }
+
+    img {
+      margin-right: 9px;
+
     }
   }
 }

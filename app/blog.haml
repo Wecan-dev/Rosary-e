@@ -75,51 +75,102 @@
                     %img{:src=>"assets/img/bag@2x.png"}/ 
 
     
-    %section.general-banner
-      %img{:src=>"assets/img/contacto/image.png" }/
-      .general-banner__text
-        %h2.main-general__title
-          contacto
-        %p.general-banner__subtitle
-          Rosary
-    %section.contact
+
+    %section.blog-general
       .container-grid
-        .contact-form
-          %h2.contact-form__title
-            dejanos un mensaje
-          %p.contact-form__description
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-          %form
-            %input{:placeholder=>"Nombre*"}/
-            %input{:placeholder=>"Correo*"}/
-            %input{:placeholder=>"Asunto"}/
-            %textarea{:placeholder=>"Tu comentario aqui."}
-            %a.general-btn__rose{:href=>""}
-              Enviar
-        .contact-sidebar
-          %h2.contact-form__title
-            Nuestra información
-          %p.contact-form__description
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-          
-          %ul.contact-list
-            %li
-              %img{:src=>"assets/img/phone-call.png" }/
-              %a{:href=>""}
-                %p Teléfono
-                57 (4) 444 35 69                     
-            %li
-              %img{:src=>"assets/img/envelope.png" }/
-              %a{:href=>""}
-                %p Correo Electrónico
-                info@rosary.com
-            %li
-              %img{:src=>"assets/img/place.png" }/
-              %a{:href=>""}
-                %p Ubicación
-                Calle 78 #79 - 24, Medellín-Colombia
+        .blog-general__all
+          .blog-general__post
+            %img.blog-general__poster{:src=>"assets/img/blog/image.png"}/
+            %ul.blog-general__meta 
+              %li
+                %img{:src=>"assets/img/blog/calendar.png"}/
+                %a{:href=>""} 
+                  Julio 19, 2020
+              %li
+                %img{:src=>"assets/img/blog/tag.png"}/
+                %a{:href=>""}
+                  style-woman
+            %a.blog-general__title{:href=>""}
+              Lorem Ipsum is simply
+            %p.blog-general__description
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. 
+            %p.blog-general__autor
+              %span
+                By:
+              Admin
+            .general-blog__flex
+              %a.general-blog__btn{:href=>""}
+                Continuar Leyendo
+              .general-blog__icon
+                %a{:href=>""}
+                  %img{:src=>"assets/img/blog/share.png"}/
+                %a{:href=>""}
+                  %img{:src=>"assets/img/blog/comment.png"}/
+                  0 comentarios              
+          .blog-general__post
+            %img.blog-general__poster{:src=>"assets/img/blog/image_2.png"}/
+            %ul.blog-general__meta 
+              %li
+                %img{:src=>"assets/img/blog/calendar.png"}/
+                %a{:href=>""} 
+                  Julio 19, 2020
+              %li
+                %img{:src=>"assets/img/blog/tag.png"}/
+                %a{:href=>""}
+                  style-woman
+            %a.blog-general__title{:href=>""}
+              Lorem Ipsum is simply
+            %p.blog-general__description
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. 
+            %p.blog-general__autor
+              %span
+                By:
+              Admin
+            .general-blog__flex
+              %a.general-blog__btn{:href=>""}
+                Continuar Leyendo
+              .general-blog__icon
+                %a{:href=>""}
+                  %img{:src=>"assets/img/blog/share.png"}/
+                %a{:href=>""}
+                  %img{:src=>"assets/img/blog/comment.png"}/
+                  0 comentarios     
+          .blog-general__post
+            %img.blog-general__poster{:src=>"assets/img/blog/image.png"}/
+            %ul.blog-general__meta 
+              %li
+                %img{:src=>"assets/img/blog/calendar.png"}/
+                %a{:href=>""} 
+                  Julio 19, 2020
+              %li
+                %img{:src=>"assets/img/blog/tag.png"}/
+                %a{:href=>""}
+                  style-woman
+            %a.blog-general__title{:href=>""}
+              Lorem Ipsum is simply
+            %p.blog-general__description
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. 
+            %p.blog-general__autor
+              %span
+                By:
+              Admin
+            .general-blog__flex
+              %a.general-blog__btn{:href=>""}
+                Continuar Leyendo
+              .general-blog__icon
+                %a{:href=>""}
+                  %img{:src=>"assets/img/blog/share.png"}/
+                %a{:href=>""}
+                  %img{:src=>"assets/img/blog/comment.png"}/
+                  0 comentarios     
+          .blog-general__paginator
+            %a{:href=>""} 1
+            %a{:href=>""} 2
+            %a{:href=>""}
+              %img{:src=>"assets/img/blog/next.png"}/
 
-
+        .blog-sidebar
+      
 
     %footer.main-footer
       .padding-right-left.padding-top-bottom
