@@ -612,6 +612,13 @@ button:focus {
   }
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .padding-right-left {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
 .container-grid {
   display: grid;
 }
@@ -633,6 +640,12 @@ button:focus {
 @media (min-width: 0px) and (max-width: 767px) {
   .main-general__title {
     font-size: 30px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-general__title {
+    font-size: 35px;
   }
 }
 
@@ -782,6 +795,19 @@ button:focus {
   text-transform: uppercase;
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .nav-item a {
+    font-size: 11px;
+    letter-spacing: 0;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar-collapse {
+    width: 100%;
+  }
+}
+
 .nav-icon {
   padding-left: 70px;
   list-style: none;
@@ -793,10 +819,29 @@ button:focus {
   padding-right: 10px !important;
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .nav-icon a {
+    padding-right: 0 !important;
+  }
+}
+
 .nav-icon img {
   width: 16px;
   height: 16px;
   object-fit: contain;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .nav-icon img {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .nav-icon {
+    padding-left: 0;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -817,9 +862,15 @@ button:focus {
 
 .nav-link {
   transition: .3s ease-in-out;
-  font-size: 1rem;
   padding-right: 1.2rem !important;
   padding-left: 1.2rem !important;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .nav-link {
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+  }
 }
 
 .navbar-brand {
@@ -866,6 +917,12 @@ button:focus {
   justify-content: flex-end;
   margin-bottom: 9px;
   align-items: flex-end;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navbar-nav {
+    justify-content: center;
+  }
 }
 
 .navbar-collapse {
@@ -978,6 +1035,14 @@ header {
   font-size: 45px;
   margin-bottom: 0;
   font-family: "MADE SAONARA";
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-banner .main-banner__text h2,
+        .main-banner .main-banner__text h3,
+        .main-banner .main-banner__text p {
+    font-size: 35px;
+  }
 }
 
 .main-banner .main-banner__text p {
@@ -1208,6 +1273,12 @@ header {
   }
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-categories__item .main-categories__details {
+    padding: 30px;
+  }
+}
+
 .main-categories__item .main-categories__text {
   font-size: 15px;
   font-weight: normal;
@@ -1271,6 +1342,12 @@ header {
   }
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-categories__item .main-categories__title {
+    font-size: 48px;
+  }
+}
+
 .main-text {
   margin-bottom: 121px;
   margin-top: 80px;
@@ -1327,6 +1404,12 @@ header {
   }
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-blog .main-blog__item .container-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .main-blog .main-blog__item:nth-child(even) .main-blog__img {
   order: -1;
 }
@@ -1353,6 +1436,12 @@ header {
   }
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-blog .main-blog__item:nth-child(even) .container-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .main-blog .main-blog__item:nth-child(even) .main-blog__text {
   padding-left: 165px;
   padding-right: 250px;
@@ -1367,6 +1456,13 @@ header {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .main-blog .main-blog__item:nth-child(even) .main-blog__text {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
   .main-blog .main-blog__item:nth-child(even) .main-blog__text {
     padding-left: 50px;
     padding-right: 50px;
@@ -1404,6 +1500,13 @@ header {
   }
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-blog .main-blog__text {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
 .main-blog .main-blog__title {
   font-size: 45px;
   font-weight: normal;
@@ -1420,6 +1523,12 @@ header {
 @media (min-width: 0px) and (max-width: 767px) {
   .main-blog .main-blog__title {
     font-size: 30px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-blog .main-blog__title {
+    font-size: 35px;
   }
 }
 
@@ -1544,6 +1653,12 @@ header {
 @media (min-width: 0px) and (max-width: 767px) {
   .main-sale .main-sale__title {
     font-size: 37px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .main-sale .main-sale__title {
+    font-size: 40px;
   }
 }
 

@@ -216,6 +216,11 @@ button:focus {
     padding-left: 50px;
     padding-right: 50px;
   }
+
+  @include respond-to(md) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 .container-grid {
@@ -237,6 +242,10 @@ button:focus {
 
   @include respond-to(xs) {
     font-size: 30px;
+  }
+
+  @include respond-to(md) {
+    font-size: 35px;
   }
 }
 
@@ -387,6 +396,18 @@ button:focus {
     letter-spacing: 0.3px;
     color: #000000;
     text-transform: uppercase;
+
+    @include respond-to(md) {
+      font-size: 11px;
+
+      letter-spacing: 0;
+    }
+  }
+}
+
+.navbar-collapse {
+  @include respond-to(md) {
+    width: 100%;
   }
 }
 
@@ -398,12 +419,26 @@ button:focus {
   a {
     padding-left: 10px !important;
     padding-right: 10px !important;
+
+    @include respond-to(md) {
+      padding-right: 0 !important;
+    }
   }
 
   img {
     width: 16px;
     height: 16px;
     object-fit: contain;
+
+    @include respond-to(md) {
+
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  @include respond-to(md) {
+    padding-left: 0;
   }
 }
 
@@ -431,9 +466,15 @@ button:focus {
 .nav-link {
 
   transition: .3s ease-in-out;
-  font-size: 1rem;
   padding-right: 1.2rem !important;
   padding-left: 1.2rem !important;
+
+  @include respond-to(md) {
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+
+
+  }
 
 }
 
@@ -477,6 +518,10 @@ button:focus {
   justify-content: flex-end;
   margin-bottom: 9px;
   align-items: flex-end;
+
+  @include respond-to(md) {
+    justify-content: center;
+  }
 }
 
 .navbar-collapse {
@@ -589,6 +634,10 @@ header {
       font-size: 45px;
       margin-bottom: 0;
       font-family: $made;
+
+      @include respond-to(md) {
+        font-size: 35px;
+      }
 
     }
 
@@ -813,6 +862,11 @@ header {
       padding-top: 104px;
       padding-bottom: 104px;
     }
+
+    @include respond-to(md) {
+      padding: 30px;
+    }
+
   }
 
   .main-categories__text {
@@ -873,6 +927,10 @@ header {
     @include respond-to(xs) {
       font-size: 37px;
     }
+
+    @include respond-to(md) {
+      font-size: 48px;
+    }
   }
 }
 
@@ -927,6 +985,10 @@ header {
       @include respond-to(sm) {
         grid-template-columns: 100%;
       }
+
+      @include respond-to(md) {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     &:nth-child(even) {
@@ -948,6 +1010,10 @@ header {
         @include respond-to(sm) {
           grid-template-columns: 100%;
         }
+
+        @include respond-to(md) {
+          grid-template-columns: 1fr 1fr;
+        }
       }
 
       .main-blog__text {
@@ -964,6 +1030,13 @@ header {
           padding-left: 50px;
           padding-right: 50px;
         }
+
+        @include respond-to(md) {
+          padding-left: 50px;
+          padding-right: 50px;
+        }
+
+
       }
     }
   }
@@ -995,6 +1068,11 @@ header {
       padding-left: 50px;
       padding-right: 50px;
     }
+
+    @include respond-to(md) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
   }
 
   .main-blog__title {
@@ -1011,6 +1089,10 @@ header {
 
     @include respond-to(xs) {
       font-size: 30px;
+    }
+
+    @include respond-to(md) {
+      font-size: 35px;
     }
   }
 
@@ -1128,6 +1210,10 @@ header {
 
     @include respond-to(xs) {
       font-size: 37px;
+    }
+
+    @include respond-to(md) {
+      font-size: 40px;
     }
   }
 }
