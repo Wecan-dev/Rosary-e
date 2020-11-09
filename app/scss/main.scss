@@ -526,13 +526,14 @@ header {
   }
 }
 
+.main-banner__content {
+  margin-bottom: 0 !important;
+}
+
 
 .main-banner {
   overflow: hidden;
 
-  .main-banner__content {
-    margin-bottom: 0;
-  }
 
   .main-banner__item {
     position: relative;
@@ -571,17 +572,44 @@ header {
       background-color: rgba(255, 255, 255, 0.5);
       padding: 22px 33px;
 
-      h2 {
-        font-size: 45px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: 1.13px;
-        color: #000000;
-        text-transform: uppercase;
-        font-family: $made;
+      font-size: 45px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 1.13px;
+      color: #000000;
+      text-transform: uppercase;
+    }
+
+
+    h2,
+    h3,
+    p {
+      font-size: 45px;
+      margin-bottom: 0;
+      font-family: $made;
+
+    }
+
+    p {
+      position: relative;
+      padding-left: 57px;
+
+      &::before {
+        width: 27px;
+        height: 1px;
+        left: 0;
+        background: #000;
+        z-index: 1;
+        top: 50%;
+        position: absolute;
+        content: "";
       }
+    }
+
+    h3 {
+      padding-left: 27px;
     }
   }
 
@@ -844,6 +872,41 @@ header {
 
     @include respond-to(xs) {
       font-size: 37px;
+    }
+  }
+}
+
+.main-text {
+  margin-bottom: 121px;
+  margin-top: 80px;
+}
+
+.main-text ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  font-size: 45px;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.13px;
+  color: #000000;
+  font-family: $made;
+
+  li {
+    position: relative;
+    padding-right: 35px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 1px;
+      width: 12px;
+      right: 12px;
+      top: 50%;
+      background: #000;
     }
   }
 }

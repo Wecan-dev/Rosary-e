@@ -68,35 +68,37 @@
     counter-reset: item;
     list-style: decimal-leading-zero;
     list-style-type: decimal-leading-zero;
-  }
 
-  li {
-    position: relative;
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    margin: 0 8px;
-    padding: 0;
-    cursor: pointer;
+    li {
+      position: relative;
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      margin: 0 8px;
+      padding: 0;
+      cursor: pointer;
 
-    &:last-child {
-      &::before {
-        display: none;
+      &:last-child {
+        &::before {
+          display: none;
+        }
       }
-    }
 
-    &::before {
-      content: "-";
-      position: absolute;
-      font-size: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      right: -10px;
-    }
+      &::before {
+        content: "-";
+        position: absolute;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        right: -10px;
+      }
 
+    }
   }
+
+
 
   button {
     &::before {

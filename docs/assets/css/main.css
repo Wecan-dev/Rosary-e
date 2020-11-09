@@ -300,7 +300,7 @@ body {
   list-style-type: decimal-leading-zero;
 }
 
-.main-banner__content li {
+.main-banner__content .slick-dots li {
   position: relative;
   display: inline-block;
   height: 20px;
@@ -310,11 +310,11 @@ body {
   cursor: pointer;
 }
 
-.main-banner__content li:last-child::before {
+.main-banner__content .slick-dots li:last-child::before {
   display: none;
 }
 
-.main-banner__content li::before {
+.main-banner__content .slick-dots li::before {
   content: "-";
   position: absolute;
   font-size: 20px;
@@ -917,12 +917,12 @@ header {
   text-decoration: none;
 }
 
-.main-banner {
-  overflow: hidden;
+.main-banner__content {
+  margin-bottom: 0 !important;
 }
 
-.main-banner .main-banner__content {
-  margin-bottom: 0;
+.main-banner {
+  overflow: hidden;
 }
 
 .main-banner .main-banner__item {
@@ -962,9 +962,6 @@ header {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 22px 33px;
-}
-
-.main-banner .main-banner__text .main-banner__title h2 {
   font-size: 45px;
   font-weight: normal;
   font-stretch: normal;
@@ -973,7 +970,34 @@ header {
   letter-spacing: 1.13px;
   color: #000000;
   text-transform: uppercase;
+}
+
+.main-banner .main-banner__text h2,
+    .main-banner .main-banner__text h3,
+    .main-banner .main-banner__text p {
+  font-size: 45px;
+  margin-bottom: 0;
   font-family: "MADE SAONARA";
+}
+
+.main-banner .main-banner__text p {
+  position: relative;
+  padding-left: 57px;
+}
+
+.main-banner .main-banner__text p::before {
+  width: 27px;
+  height: 1px;
+  left: 0;
+  background: #000;
+  z-index: 1;
+  top: 50%;
+  position: absolute;
+  content: "";
+}
+
+.main-banner .main-banner__text h3 {
+  padding-left: 27px;
 }
 
 .main-banner .main-banner__img {
@@ -1245,6 +1269,41 @@ header {
   .main-categories__item .main-categories__title {
     font-size: 37px;
   }
+}
+
+.main-text {
+  margin-bottom: 121px;
+  margin-top: 80px;
+}
+
+.main-text ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  font-size: 45px;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.13px;
+  color: #000000;
+  font-family: "MADE SAONARA";
+}
+
+.main-text ul li {
+  position: relative;
+  padding-right: 35px;
+}
+
+.main-text ul li::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 12px;
+  right: 12px;
+  top: 50%;
+  background: #000;
 }
 
 .main-blog .main-blog__item {
