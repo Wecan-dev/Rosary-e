@@ -9,7 +9,7 @@ body {}
 @media (max-width: 768px) {
   .offcanvas-collapse {
     position: fixed;
-    top: 5.3rem;
+    top: 143px;
     /* Height of navbar */
     bottom: 0;
     left: 100%;
@@ -23,15 +23,17 @@ body {}
     transition-duration: .3s;
     transition-property: left, visibility;
     padding-top: 25px;
+    z-index: 1;
 
     @include respond-to(sm) {
-      top: 10.4rem;
+      top: 151px;
     }
   }
 
   .offcanvas-collapse.open {
     left: 0;
     visibility: visible;
+    z-index: 1;
   }
 }
 
@@ -103,7 +105,7 @@ body {}
 .hamburger-inner {
   display: block;
   top: 50%;
-  margin-top: -2px;
+  margin-top: 0px;
 }
 
 .hamburger-inner,

@@ -148,7 +148,7 @@
     height: 60px;
     object-fit: contain;
     top: 39%;
-    z-index: 1;
+    // z-index: 1;
 
     @include respond-to(xs) {
       width: 35px;

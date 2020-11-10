@@ -73,7 +73,7 @@ body {
 @media (max-width: 768px) {
   .offcanvas-collapse {
     position: fixed;
-    top: 5.3rem;
+    top: 143px;
     /* Height of navbar */
     bottom: 0;
     left: 100%;
@@ -87,12 +87,13 @@ body {
     transition-duration: .3s;
     transition-property: left, visibility;
     padding-top: 25px;
+    z-index: 1;
   }
 }
 
 @media (max-width: 768px) and (min-width: 768px) and (max-width: 991px) {
   .offcanvas-collapse {
-    top: 10.4rem;
+    top: 151px;
   }
 }
 
@@ -100,6 +101,7 @@ body {
   .offcanvas-collapse.open {
     left: 0;
     visibility: visible;
+    z-index: 1;
   }
 }
 
@@ -170,7 +172,7 @@ body {
 .hamburger-inner {
   display: block;
   top: 50%;
-  margin-top: -2px;
+  margin-top: 0px;
 }
 
 .hamburger-inner,
@@ -368,7 +370,6 @@ body {
   height: 60px;
   object-fit: contain;
   top: 39%;
-  z-index: 1;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -729,6 +730,24 @@ button:focus {
   color: #000000;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  .pre-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .pre-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
 .navbar {
   background-color: transparent;
   transition: .3s ease-in-out;
@@ -784,6 +803,18 @@ button:focus {
   width: 100%;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .nav-item {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .nav-item {
+    margin-bottom: 5px;
+  }
+}
+
 .nav-item a {
   font-size: 12px;
   font-weight: normal;
@@ -793,6 +824,19 @@ button:focus {
   letter-spacing: 0.3px;
   color: #000000;
   text-transform: uppercase;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .nav-item a {
+    padding-left: 0 !important;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .nav-item a {
+    font-size: 15px;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -814,6 +858,18 @@ button:focus {
   display: flex;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  .nav-icon {
+    padding-left: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .nav-icon {
+    padding-left: 0;
+  }
+}
+
 .nav-icon a {
   padding-left: 10px !important;
   padding-right: 10px !important;
@@ -822,6 +878,12 @@ button:focus {
 @media (min-width: 992px) and (max-width: 1199px) {
   .nav-icon a {
     padding-right: 0 !important;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .nav-icon a {
+    padding-left: 0 !important;
   }
 }
 
@@ -849,6 +911,7 @@ button:focus {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 0 20px;
   }
 }
 
@@ -885,6 +948,12 @@ button:focus {
   margin-bottom: 10px;
   width: 90px;
   height: 56px;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .navbar-brand img {
+    margin-top: 10px;
+  }
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -925,6 +994,18 @@ button:focus {
   }
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  .navbar-nav {
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-nav {
+    align-items: flex-start;
+  }
+}
+
 .navbar-collapse {
   justify-content: flex-end;
 }
@@ -936,9 +1017,35 @@ header {
   z-index: 1;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  header {
+    position: fixed;
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  header {
+    position: fixed;
+    margin-top: 60px;
+  }
+}
+
 .header-solid {
   background-color: #fcf4ea;
   position: initial;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .header-solid {
+    position: fixed;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .header-solid {
+    position: fixed;
+  }
 }
 
 .nav-top__header {

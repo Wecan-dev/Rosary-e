@@ -329,6 +329,20 @@ button:focus {
     margin-bottom: 0;
     color: #000000;
   }
+
+  @include respond-to(xs) {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  @include respond-to(sm) {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
 }
 
 .navbar {
@@ -386,6 +400,13 @@ button:focus {
 
 .nav-item {
 
+  @include respond-to(sm) {
+    margin-bottom: 10px;
+  }
+
+  @include respond-to(xs) {
+    margin-bottom: 5px;
+  }
 
   & a {
     font-size: 12px;
@@ -396,6 +417,17 @@ button:focus {
     letter-spacing: 0.3px;
     color: #000000;
     text-transform: uppercase;
+
+    @include respond-to(xs) {
+      padding-left: 0 !important;
+      font-size: 14px;
+
+
+    }
+
+    @include respond-to(sm) {
+      font-size: 15px;
+    }
 
     @include respond-to(md) {
       font-size: 11px;
@@ -416,12 +448,24 @@ button:focus {
   list-style: none;
   display: flex;
 
+  @include respond-to(xs) {
+    padding-left: 0;
+  }
+
+  @include respond-to(sm) {
+    padding-left: 0;
+  }
+
   a {
     padding-left: 10px !important;
     padding-right: 10px !important;
 
     @include respond-to(md) {
       padding-right: 0 !important;
+    }
+
+    @include respond-to(xs) {
+      padding-left: 0 !important;
     }
   }
 
@@ -454,6 +498,7 @@ button:focus {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 0 20px;
   }
 
   @include respond-to(xs) {
@@ -461,6 +506,7 @@ button:focus {
     display: flex;
     justify-content: space-between;
   }
+
 }
 
 .nav-link {
@@ -491,11 +537,16 @@ button:focus {
     margin-bottom: 10px;
     width: 90px;
     height: 56px;
+
+    @include respond-to(xs) {
+      margin-top: 10px;
+    }
   }
 
   @include respond-to(xs) {
     width: initial;
     margin-left: 10px;
+
   }
 
   @include respond-to(sm) {
@@ -522,6 +573,14 @@ button:focus {
   @include respond-to(md) {
     justify-content: center;
   }
+
+  @include respond-to(xs) {
+    align-items: flex-start;
+  }
+
+  @include respond-to(sm) {
+    align-items: flex-start;
+  }
 }
 
 .navbar-collapse {
@@ -533,11 +592,29 @@ header {
   position: absolute;
   width: 100%;
   z-index: 1;
+
+  @include respond-to(xs) {
+    position: fixed;
+    margin-top: 60px;
+  }
+
+  @include respond-to(sm) {
+    position: fixed;
+    margin-top: 60px;
+  }
 }
 
 .header-solid {
   background-color: #fcf4ea;
   position: initial;
+
+  @include respond-to(xs) {
+    position: fixed;
+  }
+
+  @include respond-to(sm) {
+    position: fixed;
+  }
 }
 
 .nav-top__header {
