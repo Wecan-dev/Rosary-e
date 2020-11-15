@@ -3432,3 +3432,76 @@ header {
   display: block;
   text-align: center;
 }
+
+.custom-piece {
+  position: relative;
+  background-color: #fcf4ea;
+}
+
+.custom-piece .padding-top-bottom {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.custom-piece .container-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .custom-piece .container-grid {
+    grid-template-columns: 100%;
+  }
+}
+
+.custom-piece .custom-piece__title {
+  font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 2.14px;
+  color: #000000;
+  font-family: "MADE SAONARA";
+  text-transform: uppercase;
+  margin-bottom: 19px;
+}
+
+.custom-piece .custom-piece__text {
+  display: flex;
+  align-items: center;
+  padding-right: 135px;
+  margin-left: -99px;
+}
+
+.custom-piece .custom-piece__text img {
+  margin-right: 43px;
+}
+
+.custom-piece .custom-piece__btn {
+  font-size: 15px;
+  font-weight: normal;
+  position: absolute;
+  bottom: 32px;
+  right: 61px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.38px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.custom-piece .custom-piece__btn i {
+  margin-left: 5px;
+  font-size: 16px;
+}
+
+.custom-piece .custom-piece__description {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #000000;
+}
