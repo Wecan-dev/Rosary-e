@@ -3188,6 +3188,15 @@ header {
   }
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .general-promo .general-promo__text {
+    padding-bottom: 82px;
+    padding-top: 66px;
+    padding-left: 51px;
+    padding-right: 51px;
+  }
+}
+
 .general-promo form {
   display: flex;
   width: 100%;
@@ -3253,6 +3262,12 @@ header {
 @media (min-width: 0px) and (max-width: 767px) {
   .general-promo .general-promo__title {
     font-size: 37px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .general-promo .general-promo__title {
+    font-size: 40px;
   }
 }
 

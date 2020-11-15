@@ -2572,6 +2572,7 @@ header {
       padding-left: 50px;
       padding-right: 50px;
     }
+
   }
 
   .container-grid {
@@ -2666,6 +2667,15 @@ header {
     @include respond-to(xs) {
       padding: 40px 25px;
     }
+
+
+    @include respond-to(md) {
+
+      padding-bottom: 82px;
+      padding-top: 66px;
+      padding-left: 51px;
+      padding-right: 51px;
+    }
   }
 
   form {
@@ -2732,6 +2742,10 @@ header {
 
     @include respond-to(xs) {
       font-size: 37px;
+    }
+
+    @include respond-to(md) {
+      font-size: 40px;
     }
   }
 
