@@ -3276,3 +3276,44 @@ header {
   width: 100%;
   object-fit: cover;
 }
+
+.general-legal .padding-right-left {
+  padding-left: 62px;
+  padding-right: 62px;
+}
+
+.general-legal .padding-top-bottom {
+  padding-top: 77px;
+  padding-bottom: 30px;
+}
+
+.general-legal .general-legal__title {
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.52px;
+  color: #d0bd9b;
+  font-family: Brandon Text Bold;
+  margin-bottom: 19px;
+}
+
+.general-legal .general-legal__description {
+  font-size: 13px;
+  margin-bottom: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.45px;
+  color: #000000;
+}
+
+.general-legal .general-legal__item {
+  margin-bottom: 35px;
+}
+
+.categories-all {
+  grid-template-columns: 1fr 1fr;
+}
