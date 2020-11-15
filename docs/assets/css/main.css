@@ -3314,6 +3314,121 @@ header {
   margin-bottom: 35px;
 }
 
-.categories-all {
+.categories-all .container-grid {
   grid-template-columns: 1fr 1fr;
+  gap: 37px 33px;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .categories-all .container-grid {
+    grid-template-columns: 100%;
+    gap: 25px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .categories-all .container-grid {
+    grid-template-columns: 100%;
+    gap: 25px;
+  }
+}
+
+.categories-all .padding-top-bottom {
+  padding-top: 37px;
+}
+
+.categories-all .padding-right-left {
+  padding-left: 52px;
+  padding-right: 52px;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .categories-all .padding-right-left {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+.categories-all__card {
+  position: relative;
+}
+
+.categories-all__card .categories-all__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 78px;
+  padding-left: 55px;
+  padding-right: 55px;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .categories-all__card .categories-all__text {
+    padding: 20px;
+    justify-content: center;
+  }
+}
+
+.categories-all__card .categories-all__title {
+  font-size: 120px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #ffffff;
+  font-family: "MADE SAONARA";
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .categories-all__card .categories-all__title {
+    font-size: 37px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .categories-all__card .categories-all__title {
+    font-size: 37px;
+  }
+}
+
+.categories-all__card .categories-all__subtitle {
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  text-transform: uppercase;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.categories-all__card img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.general-btn__light {
+  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.73px;
+  color: #ffffff;
+  font-family: Brandon Text Bold;
+  padding: 14px 43px;
+  border: solid 1px #ffffff;
+  text-transform: uppercase;
+  transition: .3s;
+  display: block;
+  text-align: center;
 }
