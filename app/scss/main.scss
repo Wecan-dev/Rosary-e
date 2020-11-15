@@ -249,6 +249,10 @@ button:focus {
   }
 }
 
+.main-general__title--other {
+  margin-bottom: 52px;
+}
+
 .main-general__subtitle {
   font-size: 12px;
   font-weight: normal;
@@ -827,6 +831,16 @@ header {
 
   .main-featured__text {
     text-align: center;
+  }
+}
+
+.main-featured__other {
+  .padding-top-bottom {
+    padding-top: 45px;
+  }
+
+  .main-featured__carousel {
+    margin-bottom: 0;
   }
 }
 
@@ -1696,10 +1710,12 @@ header {
 
   @include respond-to(xs) {
     height: 118px;
+    margin-top: 148px;
   }
 
   @include respond-to(sm) {
     height: 200px;
+    margin-top: 153px;
   }
 
   @include respond-to(md) {
@@ -1716,6 +1732,8 @@ header {
     margin-bottom: 0;
 
   }
+
+
 
   .general-banner__text {
     position: absolute;
@@ -2393,6 +2411,8 @@ header {
     margin-bottom: 30px;
   }
 
+
+
   .container-grid {
     grid-template-columns: 1fr 1fr;
     gap: 28px;
@@ -2530,5 +2550,196 @@ header {
     letter-spacing: normal;
     text-align: center;
     color: #000000;
+  }
+}
+
+.general-product {
+  .padding-top-bottom {
+    padding-top: 26px;
+    padding-bottom: 5px;
+  }
+
+  .padding-right-left {
+    padding-left: 53px;
+    padding-right: 53px;
+
+    @include respond-to(xs) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    @include respond-to(sm) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+
+  .container-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+
+    @include respond-to(xs) {
+      grid-template-columns: 100%;
+    }
+
+    @include respond-to(sm) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .main-featured__img {
+    img {
+      height: 317px;
+      object-fit: cover;
+
+      @include respond-to(sm) {
+        height: 188px;
+      }
+
+      @include respond-to(xs) {
+        height: 250px;
+      }
+
+      @include respond-to(md) {
+        height: 193px;
+      }
+    }
+  }
+
+  .main-featured__price {
+    margin-bottom: 0;
+  }
+
+  .main-featured__title {
+    color: #c6b18b;
+  }
+}
+
+.general-breadcrumbs {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 29px;
+
+  li {
+
+    &:nth-child(1) {
+      margin-right: 3px;
+
+      a {
+
+        font-family: Brandon Text Regular;
+      }
+    }
+
+    a {
+      font-size: 12px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 2px;
+      color: #000000;
+      font-family: Brandon Text Medium;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.general-promo {
+  .container-grid {
+    grid-template-columns: 1fr 1fr;
+
+    @include respond-to(xs) {
+      grid-template-columns: 100%;
+    }
+
+    @include respond-to(sm) {
+      grid-template-columns: 100%;
+    }
+  }
+
+  .general-promo__text {
+    padding: 84px 117px 88px 56px;
+    background-color: #f0e3d4;
+
+    @include respond-to(xs) {
+      padding: 40px 25px;
+    }
+  }
+
+  form {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    border-radius: 2px;
+    border: solid 1px #d0bd9b;
+    background: transparent;
+    justify-content: space-between;
+  }
+
+  .general-btn__rose {
+    width: 113px;
+    height: 100%;
+  }
+
+  input {
+    border: none;
+    padding: 21px 18px;
+    background: none;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.33px;
+    color: #000000;
+
+    &::placeholder {
+      font-size: 13px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: 0.33px;
+      color: #000000;
+
+    }
+  }
+
+  .general-promo__subtitle {
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    color: #000000;
+    margin-bottom: 20px;
+  }
+
+  .general-promo__title {
+    font-size: 70px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.01;
+    letter-spacing: 1.75px;
+    color: #000000;
+    font-family: $made;
+    margin-bottom: 20px;
+
+    @include respond-to(xs) {
+      font-size: 37px;
+    }
+  }
+
+  .general-promo__img {
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
