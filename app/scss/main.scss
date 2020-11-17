@@ -2912,9 +2912,17 @@ header {
   position: relative;
   background-color: #fcf4ea;
 
+  .custom-piece__img {
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
   .padding-top-bottom {
     padding-top: 32px;
-    padding-bottom: 32px;
+    padding-bottom: 0;
   }
 
   .container-grid {
@@ -2944,8 +2952,27 @@ header {
     padding-right: 135px;
     margin-left: -99px;
 
+    @include respond-to(xs) {
+      padding-right: 0;
+      margin-right: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-left: 0;
+      padding-bottom: 20px;
+      padding-top: 20px;
+      order: -1;
+    }
+
     img {
       margin-right: 43px;
+      object-fit: cover;
+
+
+      @include respond-to(xs) {
+        display: none;
+      }
     }
   }
 
@@ -2966,6 +2993,10 @@ header {
       margin-left: 5px;
       font-size: 16px;
     }
+
+    @include respond-to(xs) {
+      position: initial;
+    }
   }
 
   .custom-piece__description {
@@ -2976,6 +3007,37 @@ header {
     line-height: normal;
     letter-spacing: 1px;
     color: #000000;
+  }
+}
 
+.custom-description {
+  padding-top: 30px;
+  padding-bottom: 39px;
+
+  .main-general__title {
+    margin-bottom: 0;
+  }
+
+  .padding-right-left {
+    padding-left: 150px;
+    padding-right: 150px;
+
+    @include respond-to(xs) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+
+  .custom-description__text {
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 0;
   }
 }
