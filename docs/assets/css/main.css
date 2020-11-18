@@ -1222,6 +1222,14 @@ header {
   margin-bottom: 79px;
 }
 
+.main-featured--white {
+  background-color: #fff;
+}
+
+.main-featured--white .padding-top-bottom {
+  padding-bottom: 0;
+}
+
 .main-featured__product {
   margin-right: 10px;
   margin-left: 10px;
@@ -3433,6 +3441,11 @@ header {
   text-align: center;
 }
 
+.general-btn__light:hover {
+  background-color: #d0bd9b;
+  transition: .3s;
+}
+
 .custom-piece {
   position: relative;
   background-color: #fcf4ea;
@@ -3540,9 +3553,13 @@ header {
   color: #000000;
 }
 
+.custom-description--rosa {
+  background-color: #faf5ee;
+}
+
 .custom-description {
-  padding-top: 30px;
-  padding-bottom: 39px;
+  padding-top: 35px;
+  padding-bottom: 29px;
 }
 
 .custom-description .main-general__title {
@@ -3571,5 +3588,5 @@ header {
   text-align: center;
   color: #000000;
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 17px;
 }

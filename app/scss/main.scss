@@ -755,6 +755,7 @@ header {
   }
 }
 
+
 .main-featured {
   background-color: #fcf4ea;
 
@@ -787,6 +788,15 @@ header {
 
   .main-general__subtitle {
     margin-bottom: 79px;
+  }
+}
+
+
+.main-featured--white {
+  background-color: #fff;
+
+  .padding-top-bottom {
+    padding-bottom: 0;
   }
 }
 
@@ -2906,6 +2916,11 @@ header {
   transition: .3s;
   display: block;
   text-align: center;
+
+  &:hover {
+    background-color: #d0bd9b;
+    transition: .3s;
+  }
 }
 
 .custom-piece {
@@ -3010,9 +3025,13 @@ header {
   }
 }
 
+.custom-description--rosa {
+  background-color: #faf5ee;
+}
+
 .custom-description {
-  padding-top: 30px;
-  padding-bottom: 39px;
+  padding-top: 35px;
+  padding-bottom: 29px;
 
   .main-general__title {
     margin-bottom: 0;
@@ -3038,6 +3057,6 @@ header {
     text-align: center;
     color: #000000;
     text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 17px;
   }
 }
