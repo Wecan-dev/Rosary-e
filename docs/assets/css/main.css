@@ -2394,6 +2394,18 @@ header {
   object-fit: contain;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  .blog-general {
+    margin-top: 158px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .blog-general {
+    margin-top: 158px;
+  }
+}
+
 .blog-general__post {
   border-bottom: 1px solid #d0bd9b;
   margin-bottom: 38.6px;
@@ -2562,6 +2574,7 @@ header {
   padding-bottom: 29px;
   border-top: 1px solid #d0bd9b;
   margin-bottom: 0;
+  padding-left: 0;
 }
 
 .blog-genera__post--single .blog-general__cite {
@@ -2600,8 +2613,18 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 34px;
+}
+
+.blog-general__gallery img {
   width: 100%;
   object-fit: cover;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .blog-general__gallery {
+    grid-template-columns: 100%;
+    gap: 30px;
+  }
 }
 
 .blog-general__form form {
@@ -2659,6 +2682,24 @@ header {
   margin-bottom: 23px;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  .blog-general__form input {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .blog-general__form input {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .blog-general__form input {
+    width: 100%;
+  }
+}
+
 .blog-general__form textarea {
   height: 314px;
   width: 100%;
@@ -2673,6 +2714,20 @@ header {
   padding-top: 33px;
 }
 
+@media (min-width: 0px) and (max-width: 767px) {
+  .blog-post__metas {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .blog-post__metas {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .blog-general__categories {
   font-family: Brandon Text Bold;
   font-size: 14px;
@@ -2684,6 +2739,18 @@ header {
   text-transform: uppercase;
   display: inherit;
   transition: .3s;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .blog-general__categories {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .blog-general__categories {
+    margin-top: 20px;
+  }
 }
 
 .blog-general__categories p {

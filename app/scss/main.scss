@@ -1904,9 +1904,21 @@ header {
   }
 }
 
+.blog-general {
+  @include respond-to(xs) {
+    margin-top: 158px;
+  }
+
+  @include respond-to(sm) {
+    margin-top: 158px;
+  }
+}
+
 .blog-general__post {
   border-bottom: 1px solid #d0bd9b;
   margin-bottom: 38.6px;
+
+
 
   .blog-general__poster {
     margin-bottom: 38px;
@@ -2073,6 +2085,7 @@ header {
     padding-bottom: 29px;
     border-top: 1px solid #d0bd9b;
     margin-bottom: 0;
+    padding-left: 0;
   }
 
   .blog-general__cite {
@@ -2115,8 +2128,18 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 34px;
-  width: 100%;
-  object-fit: cover;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+
+  }
+
+  @include respond-to(xs) {
+    grid-template-columns: 100%;
+    gap: 30px;
+
+  }
 }
 
 .blog-general__form {
@@ -2174,6 +2197,18 @@ header {
   input {
     width: 391px;
     margin-bottom: 23px;
+
+    @include respond-to(xs) {
+      width: 100%;
+    }
+
+    @include respond-to(sm) {
+      width: 100%;
+    }
+
+    @include respond-to(md) {
+      width: 100%;
+    }
   }
 
   textarea {
@@ -2189,6 +2224,16 @@ header {
   align-items: center;
   padding-bottom: 33px;
   padding-top: 33px;
+
+  @include respond-to(xs) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @include respond-to(sm) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .blog-general__categories {
@@ -2201,7 +2246,16 @@ header {
   color: #000000;
   text-transform: uppercase;
   display: inherit;
+
   transition: .3s;
+
+  @include respond-to(xs) {
+    margin-top: 20px;
+  }
+
+  @include respond-to(sm) {
+    margin-top: 20px;
+  }
 
   p {
 
