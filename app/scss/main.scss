@@ -3528,6 +3528,30 @@ header {
   .shop-sidebar__content {
     margin-bottom: 26px;
 
+    select {
+      font-size: 13px;
+      font-weight: 500;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      text-transform: uppercase;
+      font-family: Brandon Text Medium;
+      letter-spacing: normal;
+      color: #000000;
+      background: none;
+      border: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      position: relative;
+      background-image: url(../img/productos/arrow.png);
+      background-repeat: no-repeat;
+      background-size: 8px;
+      background-position-x: right;
+      padding-right: 12.5px;
+      background-position-y: center;
+    }
+
     .filter-price {
       width: 100%;
       border: 0;
