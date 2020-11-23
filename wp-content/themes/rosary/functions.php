@@ -29,12 +29,12 @@ function theme_customize_register($wp_customize){
 
   $wp_customize->add_panel('panel1',
         array(
-            'title' => 'Header Pre-navbar',
+            'title' => 'Home',
             'priority' => 1,
             )
         );
- // require_once trailingslashit( get_template_directory() ) . 'inc/header/customizer-pre-navbar.php';
-//
+  require_once trailingslashit( get_template_directory() ) . 'inc/home/customizer-main-banner.php';
+  require_once trailingslashit( get_template_directory() ) . 'inc/home/customizer-main-best-seller.php';
   
 } 
 add_action('customize_register','theme_customize_register');

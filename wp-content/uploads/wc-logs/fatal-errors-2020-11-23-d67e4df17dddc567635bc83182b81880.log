@@ -24,3 +24,5 @@ Stack trace:
 
 2020-11-23T00:53:55+00:00 CRITICAL syntax error, unexpected end of file in C:\xampp2\htdocs\rosary\wp-content\themes\rosary\woocommerce\archive-product.php on line 417
 
+2020-11-23T18:25:09+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in C:\xampp\htdocs\rosary\wp-content\themes\rosary\functions.php on line 25
+
