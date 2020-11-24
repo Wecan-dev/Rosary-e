@@ -4685,6 +4685,82 @@ a.general-btn__simple:hover {
   color: #000000;
 }
 
+.woocommerce-MyAccount-content {
+  font-family: Brandon Text Regular;
+}
+
+.woocommerce-MyAccount-content p a {
+  font-family: Brandon Text Medium;
+
+  color: #000;
+}
+
+.woocommerce-address-fields .form-row {
+  width: 100% !important;
+  /* flex-wrap: nowrap; */
+  padding: 0 !important;
+}
+
+.woocommerce-address-fields .form-row input {
+  padding: 12px 13px;
+  border-radius: 2px;
+  width: 100%;
+  border: solid 1px #d0bd9b;
+}
+
+.woocommerce-Address-title .edit {
+  text-decoration: underline;
+  color: #000;
+  /* font-style: italic; */
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.woocommerce-EditAccountForm .form-row input {
+  padding: 12px 13px;
+  border-radius: 2px;
+  width: 100%;
+  border: solid 1px #d0bd9b;
+}
+
+.form-row {
+  width: 100% !important;
+  /* flex-wrap: nowrap; */
+  padding: 0 !important;
+  flex-direction: column;
+}
+
+.woocommerce-address-fields .general-btn__rose,
+.woocommerce-EditAccountForm .general-btn__rose {
+  margin-top: 17px;
+}
+
+.select2-container--default .select2-selection--single {
+  border-radius: 2px;
+  width: 100%;
+  border: solid 1px #d0bd9b;
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.woocommerce-address-fields label {
+  font-family: Brandon Text Medium;
+  font-size: 15px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.woocommerce-address-fields .woocommerce-input-wrapper {
+  width: 100%;
+
+}
+
 .product-details {
   padding: 53px 62px 46px 62px;
 }
