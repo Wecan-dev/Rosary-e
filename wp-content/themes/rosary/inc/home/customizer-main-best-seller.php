@@ -2,7 +2,7 @@
   /////Best Seller
   
   $wp_customize->add_section('best_seller', array (
-    'title' => 'Main Best Selller',
+    'title' => 'Best Selller',
     'panel' => 'panel1'
   ));
   

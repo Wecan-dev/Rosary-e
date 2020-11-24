@@ -26,3 +26,11 @@ Stack trace:
 
 2020-11-23T18:25:09+00:00 CRITICAL syntax error, unexpected ';', expecting ')' in C:\xampp\htdocs\rosary\wp-content\themes\rosary\functions.php on line 25
 
+2020-11-23T21:01:57+00:00 CRITICAL Uncaught Error: Call to undefined function the_ttle() in C:\xampp\htdocs\rosary\wp-content\themes\rosary\single.php:25
+Stack trace:
+#0 C:\xampp\htdocs\rosary\wp-includes\template-loader.php(106): include()
+#1 C:\xampp\htdocs\rosary\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\rosary\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\rosary\wp-content\themes\rosary\single.php on line 25
+

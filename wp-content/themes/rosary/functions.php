@@ -35,6 +35,31 @@ function theme_customize_register($wp_customize){
         );
   require_once trailingslashit( get_template_directory() ) . 'inc/home/customizer-main-banner.php';
   require_once trailingslashit( get_template_directory() ) . 'inc/home/customizer-main-best-seller.php';
+  require_once trailingslashit( get_template_directory() ) . 'inc/home/customizer-main-about.php';
+
+  $wp_customize->add_panel('panel3',
+        array(
+            'title' => 'Blog',
+            'priority' => 3,
+            )
+        );
+ 
+  require_once trailingslashit( get_template_directory() ) . 'inc/blog/customizer-blog.php';
+  require_once trailingslashit( get_template_directory() ) . 'inc/blog/customizer-blog-sidebar.php';
+  require_once trailingslashit( get_template_directory() ) . 'inc/blog/customizer-blog-sidebar-cover.php'; 
+
+
+  $wp_customize->add_panel('panel5',
+        array(
+            'title' => 'Informacón de Contacto',
+            'priority' => 5,
+            )
+        );
+ 
+ // require_once trailingslashit( get_template_directory() ) . 'inc/customizer-contact.php';
+  require_once trailingslashit( get_template_directory() ) . 'inc/contact/customizer-social-networks.php'; 
+ // require_once trailingslashit( get_template_directory() ) . 'inc/customizer-contact-stores.php';         
+
   
 } 
 add_action('customize_register','theme_customize_register');

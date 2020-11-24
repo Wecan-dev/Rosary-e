@@ -2,7 +2,7 @@
   /////Banner
   
   $wp_customize->add_section('banner', array (
-    'title' => 'Main Banner',
+    'title' => 'Banner',
     'panel' => 'panel1'
   ));
   
