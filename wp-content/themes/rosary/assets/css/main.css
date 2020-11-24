@@ -693,6 +693,15 @@ button:focus {
   color: #000000;
   text-decoration: underline;
   text-transform: uppercase;
+  transition: .3s;
+
+}
+
+
+
+a.general-btn__simple:hover {
+  color: #948365;
+  transition: .3s;
 }
 
 .general-btn__rose {
@@ -834,7 +843,14 @@ button:focus {
   line-height: normal;
   letter-spacing: 0.3px;
   color: #000000;
+  transition: .3s;
+
   text-transform: uppercase;
+}
+
+.nav-item a:hover {
+  transition: .3s;
+  color: #6b6b6b;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -1655,6 +1671,10 @@ button:focus {
   font-family: "MADE SAONARA";
   text-transform: uppercase;
   margin-bottom: 36px;
+}
+
+.main-blog .main-blog__title:hover {
+  text-decoration: none;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
