@@ -373,15 +373,16 @@ body {
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
+
   .main-featured__carousel .slick-next,
-    .main-featured__carousel .slick-prev {
+  .main-featured__carousel .slick-prev {
     width: 35px;
     height: 35px;
   }
 }
 
 .main-featured__carousel .slick-next::before,
-  .main-featured__carousel .slick-prev::before {
+.main-featured__carousel .slick-prev::before {
   content: "";
   background-size: 100%;
   background-repeat: no-repeat;
@@ -1146,17 +1147,18 @@ header {
 }
 
 .main-banner .main-banner__text h2,
-    .main-banner .main-banner__text h3,
-    .main-banner .main-banner__text p {
+.main-banner .main-banner__text h3,
+.main-banner .main-banner__text p {
   font-size: 45px;
   margin-bottom: 0;
   font-family: "MADE SAONARA";
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
+
   .main-banner .main-banner__text h2,
-        .main-banner .main-banner__text h3,
-        .main-banner .main-banner__text p {
+  .main-banner .main-banner__text h3,
+  .main-banner .main-banner__text p {
     font-size: 35px;
   }
 }
@@ -2136,12 +2138,13 @@ header {
   margin-bottom: 27px;
 }
 
-.contact input:nth-child(1), .contact input:nth-child(2) {
+.contact input:nth-child(1),
+.contact input:nth-child(2) {
   width: 49%;
 }
 
 .contact input,
-  .contact textarea {
+.contact textarea {
   padding: 20px;
   border-radius: 2px;
   border: solid 1px #d0bd9b;
@@ -2149,7 +2152,7 @@ header {
 }
 
 .contact input::placeholder,
-    .contact textarea::placeholder {
+.contact textarea::placeholder {
   font-size: 13px;
   font-weight: 500;
   font-stretch: normal;
@@ -2808,7 +2811,7 @@ header {
 }
 
 .blog-general__form input::placeholder,
-  .blog-general__form textarea::placeholder {
+.blog-general__form textarea::placeholder {
   font-size: 14px;
   font-weight: 500;
   font-stretch: normal;
@@ -4148,7 +4151,7 @@ header {
 }
 
 .shop-sidebar .shop-sidebar__content .price-field input[type=range]:active,
-  .shop-sidebar .shop-sidebar__content .price-field input[type=range]:focus {
+.shop-sidebar .shop-sidebar__content .price-field input[type=range]:focus {
   outline: 0;
 }
 
@@ -4165,7 +4168,7 @@ header {
 }
 
 .shop-sidebar .shop-sidebar__content .price-field input[type=range]::-webkit-slider-thumb {
-    /* WebKit/Blink */
+  /* WebKit/Blink */
   position: relative;
   appearance: none;
   margin: 0;
@@ -4184,7 +4187,7 @@ header {
 }
 
 .shop-sidebar .shop-sidebar__content .price-field input[type=range]::-moz-range-thumb {
-    /* Firefox */
+  /* Firefox */
   position: relative;
   appearance: none;
   margin: 0;
@@ -4203,7 +4206,7 @@ header {
 }
 
 .shop-sidebar .shop-sidebar__content .price-field input[type=range]::-ms-thumb {
-    /* IE */
+  /* IE */
   position: relative;
   appearance: none;
   margin: 0;
@@ -4221,7 +4224,7 @@ header {
 }
 
 .shop-sidebar .shop-sidebar__content .price-field input[type=range]::-webkit-slider-runnable-track {
-    /* WebKit/Blink */
+  /* WebKit/Blink */
   width: 188px;
   height: 2px;
   cursor: pointer;
@@ -4230,7 +4233,7 @@ header {
 }
 
 .shop-sidebar .shop-sidebar__content .price-field input[type=range]::-moz-range-track {
-    /* Firefox */
+  /* Firefox */
   width: 188px;
   height: 2px;
   cursor: pointer;
@@ -4239,7 +4242,7 @@ header {
 }
 
 .shop-sidebar .shop-sidebar__content .price-field input[type=range]::-ms-track {
-    /* IE */
+  /* IE */
   width: 188px;
   height: 2px;
   cursor: pointer;
@@ -4260,7 +4263,7 @@ header {
 }
 
 .shop-sidebar .shop-sidebar__content .price-wrap-1,
-  .shop-sidebar .shop-sidebar__content .price-wrap-2 {
+.shop-sidebar .shop-sidebar__content .price-wrap-2 {
   display: flex;
 }
 
@@ -4270,7 +4273,7 @@ header {
 }
 
 .shop-sidebar .shop-sidebar__content .price-wrap #one,
-  .shop-sidebar .shop-sidebar__content .price-wrap #two {
+.shop-sidebar .shop-sidebar__content .price-wrap #two {
   width: 23px;
   text-align: center;
   margin: 0;
@@ -4307,12 +4310,12 @@ header {
 }
 
 .shop-sidebar .shop-sidebar__categories li,
-  .shop-sidebar .shop-sidebar__colors li {
+.shop-sidebar .shop-sidebar__colors li {
   margin-bottom: 20px;
 }
 
 .shop-sidebar .shop-sidebar__categories li a,
-    .shop-sidebar .shop-sidebar__colors li a {
+.shop-sidebar .shop-sidebar__colors li a {
   font-size: 13px;
   font-weight: normal;
   font-stretch: normal;
@@ -4325,7 +4328,7 @@ header {
 }
 
 .shop-sidebar .shop-sidebar__categories li a:hover,
-      .shop-sidebar .shop-sidebar__colors li a:hover {
+.shop-sidebar .shop-sidebar__colors li a:hover {
   border-bottom: 1px solid #000;
   transition: .3s;
 }
@@ -4383,4 +4386,142 @@ header {
   letter-spacing: normal;
   font-family: Brandon Text Medium;
   color: #000000;
+}
+
+.login-icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-icon img {
+  width: 33px;
+  height: 33px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.login-text {
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+  font-family: Brandon Text Light;
+}
+
+.woocommerce-form-login {
+  width: 923px;
+  height: 710px;
+  padding: 119px 261px 183px 261px !important;
+  border-radius: 5px !important;
+  background-color: #ffffff;
+  height: 100% !IMPORTANT;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.woocommerce-Input--text {
+  margin: 20px 0 23px 0;
+  padding: 14px 22px 14px 22px;
+  border-radius: 2px;
+  border: solid 1px #d0bd9b;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  margin-bottom: 23px;
+  letter-spacing: normal;
+  color: #000000;
+  font-family: Brandon Text Regular;
+}
+
+.woocommerce-Input--text::placeholder {
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  font-family: Brandon Text Regular;
+}
+
+
+.woocommerce-form-login .woocommerce-form-row,
+.woocommerce-form-login .password-input {
+  width: 100%;
+}
+
+.login-flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 4px;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  font-family: Brandon Text Regular;
+
+}
+
+.login-flex a {
+  color: #000000;
+  text-decoration: underline !important;
+}
+
+.woocommerce-form-login__submit {
+  width: 100%;
+  margin: 0 !important;
+  padding: 15px !important;
+  border-radius: 2px !important;
+  background-color: #c0a980 !important;
+  font-family: Brandon Text Medium;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.73px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff !important;
+}
+
+.woocommerce-form-login__rememberme span {
+  margin-left: 10px;
+}
+
+.woocommerce-in-account {
+  margin-top: 20px;
+}
+
+.woocommerce-in-account a {
+  font-family: Brandon Text Regular;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  line-height: normal;
+  letter-spacing: 1.32px;
+  color: #000000;
+}
+
+.login-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d0bd9b;
 }
