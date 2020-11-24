@@ -4629,10 +4629,10 @@ a.general-btn__simple:hover {
 }
 
 .lost-password__custom {
-  padding-top: 73px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 73px;
   padding-bottom: 121px;
 }
 
@@ -4734,6 +4734,39 @@ a.general-btn__simple:hover {
 .woocommerce-address-fields .general-btn__rose,
 .woocommerce-EditAccountForm .general-btn__rose {
   margin-top: 17px;
+}
+
+.cart_totals {
+  width: 100% !important;
+}
+
+.cart-custom {
+  padding-top: 73px;
+  padding-bottom: 73px;
+  padding-left: 54px;
+  padding-right: 54px;
+}
+
+.coupon {
+  width: 100%;
+  display: flex;
+  margin-bottom: 2.5rem;
+  align-items: center;
+  margin-top: 2.5rem;
+  align-items: center;
+  border-radius: 5px;
+  border: solid 1px #d7d3cd;
+  justify-content: space-between;
+  padding: 5rem 2rem;
+}
+
+.coupon input {
+  padding: 10px;
+  width: 100% !important;
+  height: 50px;
+  border-radius: 2px;
+  margin-right: 29px;
+  border: solid 1px #d7d3cd;
 }
 
 .select2-container--default .select2-selection--single {
