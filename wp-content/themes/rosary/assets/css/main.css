@@ -705,6 +705,7 @@ button:focus {
   color: #000000;
   border-radius: 2px;
   background-color: #d0bd9b;
+  border: none;
   width: 215px;
   height: 50px;
   display: flex;
@@ -4662,6 +4663,103 @@ button:focus {
   line-height: normal;
   letter-spacing: normal;
   color: #000000;
+}
+
+.product-details {
+  padding: 53px 62px 46px 62px;
+}
+
+.product-details .product {
+  display: grid;
+  grid-template-columns: 54.6% 1fr;
+  gap: 26px;
+}
+
+.woocommerce-product-gallery__wrapper img,
+.video-js {
+  width: 100%;
+  object-fit: cover;
+  height: 628px !important;
+  object-position: center;
+}
+
+.product-details .product_title {
+  font-family: Brandon Text Bold;
+  font-size: 20px;
+  margin-bottom: 6px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.product-details .price {
+  font-family: Brandon Text Medium;
+  font-size: 15px;
+  font-weight: normal;
+  margin-bottom: 8px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.88px;
+  color: #000000;
+}
+
+.woocommerce-product-gallery.woocommerce-product-gallery--with-images.woocommerce-product-gallery--columns-4.images {
+  width: 100%;
+  float: left;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+}
+
+.product-details .flex-viewport {
+  width: 87%;
+  margin-left: 10px;
+  /* height: 585px !important; */
+}
+
+ol.flex-control-nav.flex-control-thumbs {
+  overflow-y: scroll;
+  zoom: 1;
+  height: 628px;
+  margin: 0;
+  padding: 0;
+  width: 131px;
+  display: flex;
+  /* order: -1; */
+  flex-direction: column-reverse;
+}
+
+ol.flex-control-nav.flex-control-thumbs li {
+  float: left;
+  margin: 0;
+  list-style: none;
+  border: solid 2px #d0bd9b;
+
+  margin-top: 15px;
+  width: 100%;
+  /* clear: left; */
+}
+
+ol.flex-control-nav.flex-control-thumbs img.flex-active {
+  opacity: 1;
+}
+
+ol.flex-control-nav.flex-control-thumbs img {
+  display: block;
+  width: 100% !important;
+  height: auto;
+  box-shadow: none;
+  cursor: pointer;
+  /* opacity: 0.5; */
+  margin: 0;
+}
+
+.product-details .general-btn__rose {
+  margin-top: 20px;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
