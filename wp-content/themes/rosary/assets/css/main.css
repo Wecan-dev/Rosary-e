@@ -1024,7 +1024,7 @@ button:focus {
   background-color: rgba(255, 255, 255, 0.71);
   position: absolute;
   width: 100%;
-  z-index: 1;
+  z-index: 9;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -2248,7 +2248,7 @@ button:focus {
   flex-direction: column;
 }
 
-.general-banner .general-banner__subtitle {
+.general-banner__subtitle {
   font-size: 12px;
   font-weight: normal;
   font-stretch: normal;
@@ -4607,6 +4607,63 @@ button:focus {
   justify-content: center;
 }
 
+.lost-password__custom {
+  padding-top: 73px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 121px;
+}
+
+.lost-password__custom form {
+  width: 700px;
+
+}
+
+.lost-password__custom button {
+  padding: 15px 74px 15px 75px;
+  border-radius: 2px;
+  background-color: #c0a980;
+  width: 400px;
+  font-size: 13px;
+  border: none !important;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.73px;
+  text-align: center;
+  color: #ffffff;
+  font-family: Brandon Text Medium;
+  text-transform: uppercase;
+}
+
+.woocommerce-notices-wrapper {
+  width: 100%;
+}
+
+.woocommerce-ResetPassword .woocommerce-form-row {
+  width: 100% !important;
+  margin-bottom: 27px !important;
+}
+
+.lost-password__custom .woocommerce-Input--text {
+  padding: 13px 22px 13px 22px !important;
+
+}
+
+.lost-password__text {
+  font-family: Brandon Text Light;
+  font-size: 15px;
+  margin-bottom: 17px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
 @media (min-width: 0px) and (max-width: 767px) {
   .woocommerce-form-login {
     padding: 20px !important;
@@ -4615,6 +4672,23 @@ button:focus {
 
   .login-content {
     margin-top: 24%;
+  }
+
+  .lost-password__custom form {
+    width: 100%;
+    padding: 0 25px;
+  }
+
+  .lost-password__custom {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+
+  .lost-password__custom button {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+
   }
 }
 

@@ -1,5 +1,5 @@
 <div class="woocommerce-banner" > 
-<img  src="<?php echo get_template_directory_uri();?>/assets/img/entregas.png">
+<img  src="<?php echo get_template_directory_uri();?>/assets/img/perfil.png">
 	<div class="woocommerce-banner__text">
 	<h2 class="main-general__title">
         Mi cuenta
