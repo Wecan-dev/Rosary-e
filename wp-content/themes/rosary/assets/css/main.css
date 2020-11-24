@@ -1020,7 +1020,7 @@ button:focus {
   justify-content: flex-end;
 }
 
-header {
+.header {
   background-color: rgba(255, 255, 255, 0.71);
   position: absolute;
   width: 100%;
@@ -1028,14 +1028,14 @@ header {
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
-  header {
+  .header {
     position: fixed;
     margin-top: 60px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  header {
+  .header {
     position: fixed;
     margin-top: 60px;
   }
@@ -1058,7 +1058,7 @@ header {
   }
 }
 
-.nav-top__header {
+.nav-top__.header {
   width: 100%;
   background-color: #0B1A1C;
   padding: 10px;
@@ -1071,13 +1071,13 @@ header {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .nav-top__header {
+  .nav-top__.header {
     display: none;
   }
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
-  .nav-top__header {
+  .nav-top__.header {
     display: none;
   }
 }
@@ -4001,20 +4001,20 @@ header {
   }
 }
 
-.shop-products .shop-products__header {
+.shop-products .shop-products__.header {
   display: flex;
   align-items: flex-end;
   margin-bottom: 19px;
   justify-content: space-between;
 }
 
-.shop-products .shop-products__header .shop-products__menu img {
+.shop-products .shop-products__.header .shop-products__menu img {
   width: 22px;
   height: 22px;
   margin-left: 13px;
 }
 
-.shop-products .shop-products__header h2 {
+.shop-products .shop-products__.header h2 {
   font-size: 13px;
   font-weight: normal;
   margin-bottom: 0;
@@ -4524,4 +4524,108 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #d0bd9b;
+}
+
+.woocommerce-MyAccount-navigation ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.woocommerce-MyAccount-navigation ul li {
+  margin-bottom: 21px;
+}
+
+.woocommerce-MyAccount-navigation ul a {
+  font-family: Brandon Text Regular;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  transition: .3s;
+}
+
+.woocommerce-MyAccount-navigation ul a:hover {
+  transition: .3s;
+  text-decoration: underline;
+
+}
+
+.woocommerce-MyAccount-navigation .is-active {
+  text-decoration: underline;
+}
+
+.woocommerce-padding {
+  padding-left: 54px;
+  padding-right: 259px;
+  padding-top: 31px;
+  padding-bottom: 31px;
+}
+
+.woocommerce-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+.woocommerce-MyAccount-navigation h2 {
+  font-family: Brandon Text Medium;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 21px;
+  letter-spacing: normal;
+  color: #c0a980;
+}
+
+.woocommerce-banner {
+  height: 373px;
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+}
+
+.woocommerce-banner img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.woocommerce-banner__text {
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  justify-content: center;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .woocommerce-form-login {
+    padding: 20px !important;
+    width: 90%;
+  }
+
+  .login-content {
+    margin-top: 24%;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 997px) {
+  .woocommerce-form-login {
+    padding: 60px 80px !important;
+    width: 90%;
+  }
+
+  .login-content {
+    margin-top: 15%;
+  }
 }

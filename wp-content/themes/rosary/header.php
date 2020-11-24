@@ -12,7 +12,7 @@
     <p>AHORA | ENVÍO GRATIS - CUPÓN: GRATIS</p>
   </section>
   <?php $urlsinparametros= explode('/', $_SERVER['REQUEST_URI'], 3); $home = get_post()->post_name.'/';?>
-  <header <?php if ($urlsinparametros[2] == $home OR $urlsinparametros[2] == 'tienda/') { echo 'class="header-solid"'; }  ?> >
+  <header class="header"  <?php if ($urlsinparametros[2] == $home OR $urlsinparametros[2] == 'tienda/') { echo 'class="header-solid"'; }  ?> >
     <nav class="navbar navbar-expand-lg">
       <div class="container-nav">
         <div class="main-brand__top">
