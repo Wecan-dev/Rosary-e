@@ -43,9 +43,9 @@
             <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/new-in">New in</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/recomendados">Recomendados</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/tienda">Productos</a>
             </li>
@@ -141,9 +141,9 @@ outlet
             <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/new-in">New in</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/recomendados">Recomendados</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/tienda">Productos</a>
             </li>
