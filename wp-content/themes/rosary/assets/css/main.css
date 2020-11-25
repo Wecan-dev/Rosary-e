@@ -2755,6 +2755,17 @@ a.general-btn__simple:hover {
 
 }
 
+.blog-comment__list .children {
+  list-style: none;
+  padding-left: 0;
+}
+
+.blog-comment__list .children li {
+  border: none;
+  margin-top: 17px;
+}
+
+
 .blog-comment__list li article {
   display: grid;
   grid-template-columns: 88px 1fr;

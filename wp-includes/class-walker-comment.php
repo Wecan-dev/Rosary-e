@@ -416,9 +416,7 @@ class Walker_Comment extends Walker {
 
 					
 
-					<?php if ( '0' == $comment->comment_approved ) : ?>
-					<em class="comment-awaiting-moderation"><?php echo $moderation_note; ?></em>
-					<?php endif; ?>
+				
 				</footer><!-- .comment-meta -->
 
 				<div class="comment-content">
@@ -448,6 +446,9 @@ class Walker_Comment extends Walker {
 					</div><!-- .comment-metadata -->
 					<div  class="blog-comment__description">
 					<?php comment_text(); ?>
+					<?php if ( '0' == $comment->comment_approved ) : ?>
+					<em class="comment-awaiting-moderation"><?php echo $moderation_note; ?></em>
+					<?php endif; ?>
 					</div>
 
 
