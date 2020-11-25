@@ -446,7 +446,7 @@ a:hover {
 }
 
 body {
-  font-family: 'Brandon Text Regular';
+  font-family: 'Brandon Text Regular' !important;
   color: #000;
 }
 
