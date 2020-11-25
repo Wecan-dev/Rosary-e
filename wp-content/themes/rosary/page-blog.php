@@ -80,7 +80,7 @@
                   "mid_size" => 2,
                   "prev_next" => true,
                   "next_text" => __('<img src="'.get_template_directory_uri().'/assets/img/blog/next.png">'),
-                  "prev_text" => __('<img src="'.get_template_directory_uri().'/assets/img/blog/next.png">'),
+                  "prev_text" => __('<img src="'.get_template_directory_uri().'/assets/img/blog/prev.png">'),
                   )); ?>
               </div>
 
