@@ -728,6 +728,7 @@ a.general-btn__simple:hover {
 .general-btn__rose:hover {
   transition: .3s;
   background: #e6d8be;
+  text-decoration: none;
   color: initial;
 }
 
@@ -4769,6 +4770,96 @@ a.general-btn__simple:hover {
   border: solid 1px #d7d3cd;
 }
 
+.product-remove .remove {
+  font-weight: lighter !important;
+  font-size: 34px !important;
+  font-family: 'Brandon Text Regular';
+  width: initial !important;
+  height: initial !important;
+  color: #000 !important;
+}
+
+thead {
+  font-family: Brandon Text Medium;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+
+}
+
+.cart_totals {
+  border-radius: 5px;
+  border: solid 1px #d7d3cd;
+  justify-content: space-between;
+  padding: 9px 12px;
+}
+
+.cart_totals {
+  font-family: Brandon Text Medium;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.cart_totals h2 {
+  font-size: 16px;
+  font-family: Brandon Text Medium;
+
+
+}
+
+.product-name a {
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+  letter-spacing: 0.6px;
+  text-align: center;
+  color: #000000;
+  display: inline-block;
+  font-family: 'Brandon Text Medium';
+}
+
+.product-remove .remove:hover {
+  background: none !important;
+  color: #000 !important;
+
+}
+
+.woocommerce-billing-fields input {
+  margin-bottom: 20px;
+  padding: 16px 15px;
+  height: 45px;
+  font-family: Brandon Text Regular;
+  font-size: 13px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+  border-radius: 2px;
+  border: solid 1px #d0bd9b;
+}
+
+.checkout-custom {
+  background-image: url('../img/checkout.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.checkout-custom .woocommerce-checkout {
+  padding: 41px;
+  width: 1105px;
+
+  margin: 64px 0;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
 .select2-container--default .select2-selection--single {
   border-radius: 2px;
   width: 100%;
@@ -4917,6 +5008,12 @@ ol.flex-control-nav.flex-control-thumbs img {
     width: 100%;
 
   }
+
+  .checkout-custom .woocommerce-checkout {
+
+    padding: 20px !important;
+    width: 90%;
+  }
 }
 
 
@@ -4928,5 +5025,11 @@ ol.flex-control-nav.flex-control-thumbs img {
 
   .login-content {
     margin-top: 15%;
+  }
+
+  .checkout-custom .woocommerce-checkout {
+
+    padding: 60px 20px !important;
+    width: 90%;
   }
 }
