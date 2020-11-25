@@ -845,7 +845,14 @@ a.general-btn__simple:hover {
 @media (min-width: 0px) and (max-width: 767px) {
   .nav-item {
     margin-bottom: 5px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
+}
+
+.nav-item {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
 }
 
 .nav-item a {
@@ -857,13 +864,14 @@ a.general-btn__simple:hover {
   letter-spacing: 0.3px;
   color: #000000;
   transition: .3s;
-
+  border-bottom: 1px solid transparent;
   text-transform: uppercase;
 }
 
 .nav-item a:hover {
   transition: .3s;
-  color: #6b6b6b;
+  color: #000;
+  border-bottom: 1px solid #000;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -876,6 +884,12 @@ a.general-btn__simple:hover {
 @media (min-width: 768px) and (max-width: 991px) {
   .nav-item a {
     font-size: 15px;
+  }
+
+  .nav-item {
+    margin-bottom: 5px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 
@@ -973,8 +987,13 @@ a.general-btn__simple:hover {
 
 .nav-link {
   transition: .3s ease-in-out;
-  padding-right: 1.2rem !important;
-  padding-left: 1.2rem !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.nav-link:hover {
+  transition: .3s ease-in-out;
+  color: #000;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -2660,7 +2679,6 @@ a.general-btn__simple:hover {
   color: #000000;
   display: block;
   transition: .3s;
-
   font-family: Brandon Text Medium;
   border-bottom: 1px solid;
 }
