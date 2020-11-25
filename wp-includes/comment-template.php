@@ -2358,11 +2358,11 @@ function comment_form( $args = array(), $post_id = null ) {
 	$defaults = array(
 		'fields'               => $fields,
 		'comment_field'        => sprintf(
-			'<p class="comment-form-comment">%s %s</p>',
-			sprintf(
+			// '<p class="comment-form-comment">%s %s</p>',
+			// sprintf(
 		
 	
-			),
+			// ),
 			'<textarea id="comment" placeholder="Tu comentario aquí" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea>'
 		),
 		'must_log_in'          => sprintf(

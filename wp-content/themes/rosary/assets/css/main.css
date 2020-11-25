@@ -4482,6 +4482,10 @@ a.general-btn__simple:hover {
   align-items: center;
 }
 
+.woocommerce-error {
+  margin-bottom: 0;
+}
+
 .woocommerce-Input--text {
   margin: 20px 0 23px 0;
   padding: 14px 22px 14px 22px;
@@ -4536,6 +4540,10 @@ a.general-btn__simple:hover {
   text-decoration: underline !important;
 }
 
+.woocommerce-form-register .form-row {
+  margin-bottom: 20px !important;
+}
+
 .woocommerce-form-login__submit {
   width: 100%;
   margin: 0 !important;
@@ -4548,6 +4556,7 @@ a.general-btn__simple:hover {
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
+  border: none;
   letter-spacing: 1.73px;
   text-align: center;
   text-transform: uppercase;
