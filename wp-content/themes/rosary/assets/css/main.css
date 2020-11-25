@@ -1640,6 +1640,11 @@ a.general-btn__simple:hover {
   }
 }
 
+.main-blog .main-blog__img {
+  height: 703px;
+
+}
+
 .main-blog .main-blog__img img {
   width: 100%;
   object-fit: cover;
@@ -1655,12 +1660,22 @@ a.general-btn__simple:hover {
     padding-left: 25px;
     padding-right: 25px;
   }
+
+  .main-blog .main-blog__img {
+    height: 100%;
+
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .main-blog .main-blog__text {
     padding-left: 25px;
     padding-right: 25px;
+  }
+
+  .main-blog .main-blog__img {
+    height: 100%;
+
   }
 }
 
