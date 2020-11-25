@@ -881,9 +881,15 @@ a.general-btn__simple:hover {
 }
 
 .nav-icon {
-  padding-left: 70px;
+  /* padding-left: 70px; */
   list-style: none;
   display: flex;
+  align-items: center;
+}
+
+.nav-icon li a {
+  display: flex;
+  align-items: center;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -900,6 +906,7 @@ a.general-btn__simple:hover {
 
 .nav-icon a {
   padding-left: 10px !important;
+  color: #000;
   padding-right: 10px !important;
 }
 
@@ -919,6 +926,7 @@ a.general-btn__simple:hover {
   width: 16px;
   height: 16px;
   object-fit: contain;
+  margin-right: 3px;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
