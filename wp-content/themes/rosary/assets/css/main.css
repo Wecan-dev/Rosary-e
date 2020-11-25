@@ -2650,6 +2650,10 @@ a.general-btn__simple:hover {
   margin-bottom: 45px;
 }
 
+.comment-form-comment {
+  width: 100%;
+}
+
 .blog-comment .blog-comment__reply {
   position: absolute;
   right: 0;
@@ -2823,6 +2827,15 @@ a.general-btn__simple:hover {
 
 .blog-general__form .general-btn__rose {
   width: 182px;
+  padding: 0;
+}
+
+.blog-general__form .comment-form-author {
+  order: -2;
+}
+
+.blog-general__form .comment-form-email {
+  order: -1;
 }
 
 .blog-general__form input,
@@ -2879,6 +2892,7 @@ a.general-btn__simple:hover {
   height: 314px;
   width: 100%;
   margin-bottom: 35px;
+  resize: none;
 }
 
 .blog-post__metas {

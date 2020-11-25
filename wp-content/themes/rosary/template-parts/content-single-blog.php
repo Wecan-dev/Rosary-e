@@ -67,7 +67,7 @@
  
           </ul>
 
-            <div class="blog-single__comment">
+            <div class="blog-comment">
               <h2>Comentarios (<?php echo get_comments_number() ?>)</h2>              
                 <?php if ( comments_open() || get_comments_number() ) :
                          comments_template();
