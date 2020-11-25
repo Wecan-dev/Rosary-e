@@ -379,6 +379,7 @@ body {
   height: 60px;
   object-fit: contain;
   top: 39%;
+  z-index: 1;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -2658,8 +2659,18 @@ a.general-btn__simple:hover {
   letter-spacing: 1.73px;
   color: #000000;
   display: block;
+  transition: .3s;
+
   font-family: Brandon Text Medium;
   border-bottom: 1px solid;
+}
+
+.blog-general__post .general-blog__btn:hover {
+
+  text-decoration: none;
+  transition: .3s;
+  color:
+    #c0a980;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
