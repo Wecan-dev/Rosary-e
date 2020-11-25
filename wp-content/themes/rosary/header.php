@@ -76,12 +76,12 @@ Blog
             </li>
             <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/blog">
-Contacto
-</a>
+            Categorías
+            </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/blog">
-Categorías
+Contacto
 </a>
             </li>
             <!-- <li class="nav-item">
@@ -181,17 +181,17 @@ Nosotros
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/blog">
 Blog
 </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/">
-Contacto
-</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/">
-Categorías
-</a>
-            </li>
+</li>
+<li class="nav-item">
+  <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/">
+    Categorías
+  </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/">
+    Contacto
+  </a>
+</li>
             <!-- <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/disenalo-tu-mismo">
 Diseñalo tú mismo
