@@ -2687,6 +2687,12 @@ a.general-btn__simple:hover {
   margin-bottom: 45px;
 }
 
+.logged-in-as a {
+  color: #000;
+  font-family: Brandon Text Regular;
+  font-size: 15px;
+}
+
 .comment-form-comment {
   width: 100%;
 }
