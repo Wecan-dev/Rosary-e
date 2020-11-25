@@ -55,11 +55,11 @@ Recomendados
 Productos
 </a>
             </li>
-            <li>
+            <!-- <li>
               <a href="<?php echo get_home_url() ?>/cats&dogs">
 Cats & Dogs
 </a>
-            </li>
+            </li> -->
             <li>
               <a href="<?php echo get_home_url() ?>/complementos-accesorios">
 Accesorios

@@ -77,7 +77,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 		<div class="login-icon">
 				<img  src="<?php echo get_template_directory_uri();?>/assets/img/user.png">
 			</div>
-		<h2><?php esc_html_e( 'Register', 'woocommerce' ); ?></h2>
+		<h2>Registro</h2>
 			<?php do_action( 'woocommerce_register_form_start' ); ?>
 
 			<?php if ( 'no' === get_option( 'woocommerce_registration_generate_username' ) ) : ?>
