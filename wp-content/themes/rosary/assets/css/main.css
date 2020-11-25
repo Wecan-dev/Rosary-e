@@ -12,7 +12,8 @@
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: none !important;
+  color: #000;
 }
 
 .btn_custom {
@@ -702,14 +703,16 @@ button:focus {
   text-decoration: underline;
   text-transform: uppercase;
   transition: .3s;
-
 }
+
+
 
 
 
 a.general-btn__simple:hover {
   color: #948365;
   transition: .3s;
+  text-decoration: underline !important;
 }
 
 .general-btn__rose {
@@ -1295,11 +1298,17 @@ a.general-btn__simple:hover {
   line-height: normal;
   text-transform: uppercase;
   margin-bottom: 9px;
+  transition: .3s;
   letter-spacing: 0.6px;
   text-align: center;
   color: #000000;
   display: inline-block;
   font-family: 'Brandon Text Medium';
+}
+
+.main-featured__product .main-featured__title:hover {
+  transition: .3s;
+  color: #d0bd9b;
 }
 
 .main-featured__product .main-featured__price {
@@ -1661,6 +1670,7 @@ a.general-btn__simple:hover {
 .main-blog .main-blog__img img {
   width: 100%;
   object-fit: cover;
+  height: 100%;
 }
 
 .main-blog .main-blog__text {
@@ -1678,6 +1688,10 @@ a.general-btn__simple:hover {
     height: 100%;
 
   }
+
+  .main-blog .main-blog__img img {
+    height: auto;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1688,7 +1702,11 @@ a.general-btn__simple:hover {
 
   .main-blog .main-blog__img {
     height: 100%;
+  }
 
+  .main-blog .main-blog__img img {
+
+    height: auto;
   }
 }
 
@@ -2470,6 +2488,28 @@ a.general-btn__simple:hover {
   color: #000000;
 }
 
+.blog-general__paginator span {
+  margin-right: 36px;
+}
+
+.blog-general__paginator .prev {
+  margin-right: 36px;
+
+}
+
+.blog-general__paginator {
+
+  margin-right: 36px;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  font-family: Brandon Text Medium;
+  letter-spacing: normal;
+  color: #000000;
+}
+
 .blog-general__paginator img {
   width: 20px;
   height: 20px;
@@ -2876,7 +2916,14 @@ a.general-btn__simple:hover {
   padding: 11px 14px 10px 15px;
   border: solid 1px #d0bd9b;
   display: inline-block;
+  transition: .3s;
   text-transform: uppercase;
+}
+
+.blog-general__tag a:hover {
+  transition: .3s;
+  text-decoration: none !important;
+  color: #000;
 }
 
 .blog-general__gallery {
@@ -3047,6 +3094,11 @@ a.general-btn__simple:hover {
   transition: .3s;
 }
 
+.blog-general__categories a:hover {
+  transition: .3s;
+  color: #000;
+}
+
 .blog-sidebar .blog-sidebar__title {
   background-color: #d0bd9b;
   font-size: 13px;
@@ -3088,6 +3140,13 @@ a.general-btn__simple:hover {
   color: #000000;
   padding: 15px 20px;
   display: block;
+  transition: .3s;
+}
+
+.blog-sidebar__categorie a:hover {
+  color: #b39e78;
+  transition: .3s;
+  text-decoration: none;
 }
 
 .blog-sidebar__categorie li:last-child a {
@@ -3215,6 +3274,13 @@ a.general-btn__simple:hover {
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
   overflow: hidden;
+  transition: .3s;
+
+}
+
+.blog-sidebar__post a:hover {
+  color: #b39e78;
+  transition: .3s;
 }
 
 .about-grid {
