@@ -80,7 +80,7 @@ Blog
             </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/blog">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/contacto">
 Contacto
 </a>
             </li>
@@ -188,7 +188,7 @@ Blog
   </a>
 </li>
 <li class="nav-item">
-  <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/">
+  <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/contacto">
     Contacto
   </a>
 </li>
