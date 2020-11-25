@@ -5,11 +5,11 @@
 # Cualquier cambio en las directivas que hay entre esos marcadores se sobreescribirán.
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /rosary/
+RewriteBase /Rosary-e/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /rosary/index.php [L]
+RewriteRule . /Rosary-e/index.php [L]
 </IfModule>
 
 # END WordPress
