@@ -703,14 +703,16 @@ button:focus {
   text-decoration: underline;
   text-transform: uppercase;
   transition: .3s;
-
 }
+
+
 
 
 
 a.general-btn__simple:hover {
   color: #948365;
   transition: .3s;
+  text-decoration: underline !important;
 }
 
 .general-btn__rose {
@@ -1296,11 +1298,17 @@ a.general-btn__simple:hover {
   line-height: normal;
   text-transform: uppercase;
   margin-bottom: 9px;
+  transition: .3s;
   letter-spacing: 0.6px;
   text-align: center;
   color: #000000;
   display: inline-block;
   font-family: 'Brandon Text Medium';
+}
+
+.main-featured__product .main-featured__title:hover {
+  transition: .3s;
+  color: #d0bd9b;
 }
 
 .main-featured__product .main-featured__price {
@@ -2469,6 +2477,23 @@ a.general-btn__simple:hover {
 }
 
 .blog-general__paginator a {
+  margin-right: 36px;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  font-family: Brandon Text Medium;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.blog-general__paginator span {
+  margin-right: 36px;
+}
+
+.blog-general__paginator {
+
   margin-right: 36px;
   font-size: 16px;
   font-weight: 500;
