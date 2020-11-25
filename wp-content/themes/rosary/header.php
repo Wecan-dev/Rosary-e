@@ -49,11 +49,11 @@
             <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/tienda">Productos</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/Cats&Dogs">
 Cats & Dogs
 </a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/complementos-accesorios">
 Accesorios
@@ -74,16 +74,16 @@ Nosotros
 Blog
 </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/disenalo-tu-mismo">
 Diseñalo tú mismo
 </a>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <!-- <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/outlet">
 outlet
 </a>
-            </li>
+            </li> -->
             <ul class="nav-icon">
               <li>
                  
@@ -147,11 +147,11 @@ outlet
             <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/tienda">Productos</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/cats&dogs">
 Cats & Dogs
 </a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/complementos-accesorios">
 Accesorios
@@ -172,16 +172,16 @@ Nosotros
 Blog
 </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/disenalo-tu-mismo">
 Diseñalo tú mismo
 </a>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <!-- <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/outlet">
 outlet
 </a>
-            </li>
+            </li> -->
             <ul class="nav-icon">
               <li>
                  

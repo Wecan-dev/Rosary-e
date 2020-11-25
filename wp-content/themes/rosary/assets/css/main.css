@@ -885,7 +885,7 @@ a.general-btn__simple:hover {
 }
 
 .nav-icon {
-  /* padding-left: 70px; */
+  padding-left: 100px;
   list-style: none;
   display: flex;
   align-items: center;
