@@ -3,7 +3,7 @@
   
   $wp_customize->add_section('sale', array (
     'title' => 'Sale',
-    'panel' => 'panel1'
+    'panel' => 'panel2'
   ));
   
 

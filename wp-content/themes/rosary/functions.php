@@ -29,8 +29,16 @@ function theme_customize_register($wp_customize){
 
   $wp_customize->add_panel('panel1',
         array(
-            'title' => 'Home',
+            'title' => 'Pre-navbar',
             'priority' => 1,
+            )
+        );
+  require_once trailingslashit( get_template_directory() ) . 'inc/pre-navbar/customizer-pre-navbar.php';  
+
+  $wp_customize->add_panel('panel2',
+        array(
+            'title' => 'Home',
+            'priority' => 2,
             )
         );
   require_once trailingslashit( get_template_directory() ) . 'inc/home/customizer-main-banner.php';

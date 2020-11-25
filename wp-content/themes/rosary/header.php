@@ -9,7 +9,7 @@
 </head>
 <body>
   <section class="pre-navbar">
-    <p>AHORA | ENVÍO GRATIS - CUPÓN: GRATIS</p>
+    <p><?php echo get_theme_mod('pre-navbar_title');?></p>
   </section>
   <?php if ( is_home() ) : ?>
   <header class="header">

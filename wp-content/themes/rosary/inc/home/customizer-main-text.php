@@ -3,7 +3,7 @@
   
   $wp_customize->add_section('text', array (
     'title' => 'Textos',
-    'panel' => 'panel1'
+    'panel' => 'panel2'
   ));
   
 
