@@ -86,15 +86,11 @@ outlet
             </li>
             <ul class="nav-icon">
               <li>
-                 <?php if (is_user_logged_in()){ ?>
+                 
                 <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/mi-cuenta">
                   <img src="<?php echo get_template_directory_uri();?>/assets/img/profile@2x.png">
                 </a>
-                <?php  }else { ?>
-                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/inicio-sesion">
-                  <img src="<?php echo get_template_directory_uri();?>/assets/img/profile@2x.png">
-                </a>
-              <?php  } ?>
+
               </li>
               <li>
                 <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/wishlist">
@@ -188,15 +184,11 @@ outlet
             </li>
             <ul class="nav-icon">
               <li>
-                 <?php if (is_user_logged_in()){ ?>
+                 
                 <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/mi-cuenta">
                   <img src="<?php echo get_template_directory_uri();?>/assets/img/profile@2x.png">
                 </a>
-                <?php  }else { ?>
-                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/inicio-sesion">
-                  <img src="<?php echo get_template_directory_uri();?>/assets/img/profile@2x.png">
-                </a>
-              <?php  } ?>
+
               </li>
               <li>
                 <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/wishlist">

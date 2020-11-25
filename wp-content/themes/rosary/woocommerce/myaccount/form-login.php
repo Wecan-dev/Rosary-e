@@ -29,7 +29,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 	<div class="u-column1 col-1">
 
 <?php endif; ?>
-	
+	<?php if ($_GET["create"] != 'account') { ?>
 		<form class="woocommerce-form woocommerce-form-login login" method="post">
 			<div class="login-icon">
 				<img  src="<?php echo get_template_directory_uri();?>/assets/img/user.png">
@@ -65,12 +65,12 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 			<?php do_action( 'woocommerce_login_form_end' ); ?>
 			<p class="woocommerce-in-account"><a href="?create=account">Crear una nueva cuenta <i class="fa fa-angle-right" > </i> </a></p>
 		</form>
-
+<?php } ?>
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 
 	</div>
-
-	<div class="u-column2 col-2">
+<?php if ($_GET["create"] == 'account') { ?>
+	<div class="u-column2 col-2 d-flex justify-content-center">
 
 		<h2><?php esc_html_e( 'Register', 'woocommerce' ); ?></h2>
 
@@ -111,13 +111,14 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 				<?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
 				<button type="submit" class="woocommerce-Button woocommerce-button button woocommerce-form-register__submit" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
 			</p>
+			<p class="woocommerce-in-account"><a href="?create=">Regresar a login <i class="fa fa-angle-right" > </i> </a></p>
 
 			<?php do_action( 'woocommerce_register_form_end' ); ?>
 
 		</form>
 
 	</div>
-
+<?php } ?>
 </div>
 <?php endif; ?>
 
