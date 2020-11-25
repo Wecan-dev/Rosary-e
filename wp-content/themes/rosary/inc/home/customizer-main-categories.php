@@ -3,7 +3,7 @@
   
   $wp_customize->add_section('categories', array (
     'title' => 'Imagen Categoría Break',
-    'panel' => 'panel1'
+    'panel' => 'panel2'
   ));
     
 

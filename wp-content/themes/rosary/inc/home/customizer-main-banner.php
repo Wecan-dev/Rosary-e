@@ -3,7 +3,7 @@
   
   $wp_customize->add_section('banner', array (
     'title' => 'Banner',
-    'panel' => 'panel1'
+    'panel' => 'panel2'
   ));
   
 for ($i=1; $i <= 3; $i++) { 

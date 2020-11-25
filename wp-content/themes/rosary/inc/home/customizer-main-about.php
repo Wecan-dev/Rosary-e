@@ -3,7 +3,7 @@
   
   $wp_customize->add_section('about', array (
     'title' => 'Nosotros',
-    'panel' => 'panel1'
+    'panel' => 'panel2'
   ));
   
 
@@ -15,6 +15,7 @@
     'description' => 'Título',
     'section' => 'about',
     'settings' => 'about_title',
+    ''
   )));
 
   $wp_customize->add_setting('about_subtitle', array(
