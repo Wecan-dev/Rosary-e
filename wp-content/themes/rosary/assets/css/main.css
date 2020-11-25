@@ -11,6 +11,10 @@
   background: #9E9E9E;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .btn_custom {
   display: inline-block;
   width: auto;
@@ -1270,6 +1274,7 @@ a.general-btn__simple:hover {
 
 .main-featured__product .main-featured__img {
   margin-bottom: 29px;
+  height: 469px;
 }
 
 .main-featured__product .main-featured__img img {
@@ -1303,6 +1308,10 @@ a.general-btn__simple:hover {
   letter-spacing: 0.75px;
   color: #000000;
   font-family: 'Brandon Text Medium';
+}
+
+.main-featured__price del {
+  text-decoration: line-through;
 }
 
 .main-featured__product .main-featured__text {
@@ -2796,6 +2805,11 @@ a.general-btn__simple:hover {
 @media (min-width: 0px) and (max-width: 767px) {
   .blog-comment__list li {
     grid-template-columns: 100%;
+  }
+
+  .blog-comment__list li article {
+    grid-template-columns: 100%;
+    gap: 15px;
   }
 }
 
