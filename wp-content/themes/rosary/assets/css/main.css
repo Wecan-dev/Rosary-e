@@ -2765,6 +2765,27 @@ a.general-btn__simple:hover {
   margin-top: 17px;
 }
 
+.comment-reply-title a {
+  color: #000;
+  cursor: default;
+  pointer-events: none;
+}
+
+#cancel-comment-reply-link {
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.73px;
+  color: #000000;
+  text-decoration: underline;
+  text-transform: uppercase;
+  position: absolute;
+  right: 0;
+  pointer-events: initial;
+  cursor: pointer;
+}
 
 .blog-comment__list li article {
   display: grid;
@@ -2873,6 +2894,10 @@ a.general-btn__simple:hover {
   letter-spacing: normal;
   color: #000000;
   font-family: Brandon Text Medium;
+}
+
+.blog-general__form {
+  position: relative;
 }
 
 .blog-general__form input::placeholder,
