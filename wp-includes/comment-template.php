@@ -1719,7 +1719,7 @@ function get_comment_reply_link( $args = array(), $comment = null, $post = null 
 		$data_attribute_string = trim( $data_attribute_string );
 
 		$link = sprintf(
-			"<a rel='nofollow' class='comment-reply-link' href='%s' %s aria-label='%s'>%s</a>",
+			"<a rel='nofollow' class='comment-reply-link blog-comment__reply' href='%s' %s aria-label='%s'>  </a>",
 			esc_url(
 				add_query_arg(
 					array(
@@ -1821,7 +1821,7 @@ function get_post_reply_link( $args = array(), $post = null ) {
 		);
 
 		$link = sprintf(
-			"<a rel='nofollow' class='comment-reply-link' href='%s' onclick='%s'>%s</a>",
+			"<a rel='nofollow' class='comment-reply-link ' href='%s' onclick='%s'>%s</a>",
 			get_permalink( $post->ID ) . '#' . $args['respond_id'],
 			$onclick,
 			$args['reply_text']

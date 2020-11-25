@@ -2658,6 +2658,11 @@ a.general-btn__simple:hover {
   position: absolute;
   right: 0;
   top: 39px;
+  background-image: url('../img/blog/reply.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
 }
 
 .blog-comment .blog-comment__reply img {
@@ -2720,9 +2725,7 @@ a.general-btn__simple:hover {
 }
 
 .blog-comment .blog-comment__avatar {
-  box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.12);
-  background-color: #ffffff;
-  border-radius: 50%;
+
   width: 88px;
   height: 88px;
   justify-content: center;
@@ -2733,6 +2736,9 @@ a.general-btn__simple:hover {
 .blog-comment .blog-comment__avatar img {
   width: 76px;
   height: 76px;
+  box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+  border-radius: 50%;
   object-fit: contain;
 }
 
@@ -2744,10 +2750,15 @@ a.general-btn__simple:hover {
 .blog-comment__list li {
   border-bottom: 1px solid #d0bd9b;
   padding-top: 38px;
+  position: relative;
   padding-bottom: 11px;
+
+}
+
+.blog-comment__list li article {
   display: grid;
   grid-template-columns: 88px 1fr;
-  gap: 69px;
+  gap: 0 69px;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {

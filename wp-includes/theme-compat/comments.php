@@ -54,7 +54,7 @@ if ( post_password_required() ) { ?>
 		<div class="alignright"><?php next_comments_link(); ?></div>
 	</div>
 
-	<ol class="commentlist">
+	<ol class="commentlist blog-comment__list">
 	<?php wp_list_comments(); ?>
 	</ol>
 
