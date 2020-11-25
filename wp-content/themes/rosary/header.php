@@ -44,61 +44,68 @@
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/new-in">New in</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="">Recomendados</a>
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/recomendados">Recomendados</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/tienda">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/Cats&Dogs">
 Cats & Dogs
 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="complementos-accesorios.html">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/complementos-accesorios">
 Accesorios
 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="personalizados.html">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/personalizados">
 Personalizados
 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="nosotros.html">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/nosotros">
 Nosotros
 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="blog.html">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/blog">
 Blog
 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/disenalo-tu-mismo">
 Diseñalo tú mismo
 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/outlet">
 outlet
 </a>
             </li>
             <ul class="nav-icon">
               <li>
-                <a class="nav-link" data="offcanvas" href="">
-<img src="<?php echo get_template_directory_uri();?>/assets/img/profile@2x.png">
-</a>
+                 <?php if (is_user_logged_in()){ ?>
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/mi-cuenta">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/img/profile@2x.png">
+                </a>
+                <?php  }else { ?>
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/inicio-sesion">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/img/profile@2x.png">
+                </a>
+              <?php  } ?>
               </li>
               <li>
-                <a class="nav-link" data="offcanvas" href="">
-<img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
-</a>
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/wishlist">
+                 <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
+                 <?php $wishlist_count = YITH_WCWL()->count_products(); echo esc_html( $wishlist_count ); ?>
+                </a>
               </li>
               <li>
-                <a class="nav-link" data="offcanvas" href="">
-<img src="<?php echo get_template_directory_uri();?>/assets/img/bag@2x.png">
-</a>
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/carrito">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/img/bag@2x.png"><?php echo wp_kses_data(WC()->cart->get_cart_contents_count()); ?>
+                </a>
               </li>
             </ul>
           </ul>
@@ -139,62 +146,71 @@ outlet
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/new-in">New in</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="">Recomendados</a>
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/recomendados">Recomendados</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/tienda">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/cats&dogs">
 Cats & Dogs
 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="complementos-accesorios.html">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/complementos-accesorios">
 Accesorios
 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="personalizados.html">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/personalizados">
 Personalizados
 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="nosotros.html">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/nosotros">
 Nosotros
 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="blog.html">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/blog">
 Blog
 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/disenalo-tu-mismo">
 Diseñalo tú mismo
 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/outlet">
 outlet
 </a>
             </li>
             <ul class="nav-icon">
               <li>
-                <a class="nav-link" data="offcanvas" href="">
-<img src="<?php echo get_template_directory_uri();?>/assets/img/profile@2x.png">
-</a>
+                 <?php if (is_user_logged_in()){ ?>
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/mi-cuenta">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/img/profile@2x.png">
+                </a>
+                <?php  }else { ?>
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/inicio-sesion">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/img/profile@2x.png">
+                </a>
+              <?php  } ?>
               </li>
               <li>
-                <a class="nav-link" data="offcanvas" href="">
-<img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
-</a>
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/wishlist">
+                 <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
+                 <?php $wishlist_count = YITH_WCWL()->count_products(); echo esc_html( $wishlist_count ); ?>
+                </a>
               </li>
               <li>
-                <a class="nav-link" data="offcanvas" href="">
-<img src="<?php echo get_template_directory_uri();?>/assets/img/bag@2x.png">
-</a>
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/carrito">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/img/bag@2x.png"><?php echo wp_kses_data(WC()->cart->get_cart_contents_count()); ?>
+                </a>
               </li>
+
+
             </ul>
           </ul>
         </div>

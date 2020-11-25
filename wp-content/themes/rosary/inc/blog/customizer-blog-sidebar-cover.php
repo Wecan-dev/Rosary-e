@@ -14,7 +14,7 @@
   
   $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'blog_sidebar_text_control', array (
     'label' => 'Sidebar Cover',
-    'description' => 'Text',
+    'description' => 'Descripción',
     'section' => 'blog_sidebar_cover',
     'settings' => 'blog_sidebar_text',
     'type' => 'textarea'
@@ -49,12 +49,5 @@
     'settings' => 'blog_sidebar_image'
   )));
 
-  $wp_customize->add_setting('blog_sidebar_image_responsive');
-  
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'blog_sidebar_image_responsive_control', array (
-    'description' => 'Image Responsive',
-    'section' => 'blog_sidebar_cover',
-    'settings' => 'blog_sidebar_image_responsive'
-  )));  
   
 ?>

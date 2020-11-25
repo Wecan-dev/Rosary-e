@@ -1,18 +1,22 @@
+<?php if (get_theme_mod('sale_image') != NULL) { ?>
+
 <div class="main-sale">
     <div class="container-grid">
       <div class="main-sale__text">
         <p class="main-sale__description">
-          Lorem Ipsum is simply dummy text of the printing.
+          <?php echo get_theme_mod('sale_description'); ?>
         </p>
         <h2 class="main-sale__title">
-          Descuentos 50% OFF
+          <?php echo get_theme_mod('sale_title'); ?>
         </h2>
-        <a class="general-btn__simple" href="">
-Comprar
-</a>
+        <a class="general-btn__simple" href="<?php echo get_theme_mod('sale_urlbuttom'); ?>">
+          <?php echo get_theme_mod('sale_buttom'); ?>
+        </a>
       </div>
       <div class="main-sale__img">
-        <img src="<?php echo get_template_directory_uri();?>/assets/img/image.png">
+        <img src="<?php echo get_theme_mod('sale_image'); ?>">
       </div>
     </div>
   </div>
+
+<?php } ?>  

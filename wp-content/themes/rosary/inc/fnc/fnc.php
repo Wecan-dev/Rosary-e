@@ -83,13 +83,13 @@ add_theme_support( 'wc-product-gallery-slider' );
 
 /*****************Widget ************************/
 
-function clever_widgets_init() {
+function rosary_widgets_init() {
 
   register_sidebar(
     array(
-      'name'          => __( 'Sidebar Header', 'Clever' ),
+      'name'          => __( 'Sidebar Header', 'rosary' ),
       'id'            => 'sidebar-1',
-      'description'   => __( 'Add widgets here to appear in your header.', 'Clever' ),
+      'description'   => __( 'Add widgets here to appear in your header.', 'rosary' ),
       'before_widget' => '<section id="%1$s" class="widget %2$s">',
       'after_widget'  => '</section>',
       'before_title'  => '<h2 class="widget-title">',
@@ -99,9 +99,9 @@ function clever_widgets_init() {
 
   register_sidebar(
     array(
-      'name'          => __( 'Sidebar-2 Header', 'Clever' ),
+      'name'          => __( 'Sidebar-2 Header', 'rosary' ),
       'id'            => 'sidebar-2',
-      'description'   => __( 'Add widgets here to appear in your header.', 'Clever' ),
+      'description'   => __( 'Add widgets here to appear in your header.', 'rosary' ),
       'before_widget' => '<section id="%1$s" class="widget %2$s">',
       'after_widget'  => '</section>',
       'before_title'  => '<h2 class="widget-title">',
@@ -110,7 +110,7 @@ function clever_widgets_init() {
   );  
 
 }
-add_action( 'widgets_init', 'clever_widgets_init' );
+add_action( 'widgets_init', 'rosary_widgets_init' );
 
 /****************Excerpt general****************/
 

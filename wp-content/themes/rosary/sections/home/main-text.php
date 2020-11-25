@@ -1,43 +1,11 @@
   <section class="main-text">
     <ul>
-      <li>simplicity</li>
-      <li>elegance</li>
-      <li>natural</li>
-      <li>simplicity</li>
-      <li>elegance</li>
-      <li>natural</li>
-      <li>simplicity</li>
-      <li>elegance</li>
-      <li>natural</li>
-      <li>simplicity</li>
-      <li>elegance</li>
-      <li>natural</li>
+      <?php echo str_replace ( "\n", "<li></li>", get_theme_mod('text_linea1'));?>
     </ul>
     <ul>
-      <li>elegance</li>
-      <li>natural</li>
-      <li>simplicity</li>
-      <li>elegance</li>
-      <li>natural</li>
-      <li>simplicity</li>
-      <li>elegance</li>
-      <li>natural</li>
-      <li>simplicity</li>
-      <li>elegance</li>
-      <li>natural</li>
+      <?php echo str_replace ( "\n", "<li></li>", get_theme_mod('text_linea2'));?>
     </ul>
     <ul>
-      <li>simplicity</li>
-      <li>elegance</li>
-      <li>natural</li>
-      <li>simplicity</li>
-      <li>elegance</li>
-      <li>natural</li>
-      <li>simplicity</li>
-      <li>elegance</li>
-      <li>natural</li>
-      <li>simplicity</li>
-      <li>elegance</li>
-      <li>natural</li>
+      <?php echo str_replace ( "\n", "<li></li>", get_theme_mod('text_linea3'));?>
     </ul>
   </section>

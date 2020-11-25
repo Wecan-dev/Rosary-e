@@ -6,19 +6,33 @@
             <img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png">
           </div>
           <p class="main-footer__description">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry’s.
+            <?php echo get_theme_mod('description_contact'); ?>
           </p>
           <div class="main-footer__rrss">
             <p>Síguenos en</p>
-            <a class="rrss__item" href="" target="_blank">
-<img src="<?php echo get_template_directory_uri();?>/assets/img/fb.png">
-</a>
-            <a class="rrss__item" href="" target="_blank">
-<img src="<?php echo get_template_directory_uri();?>/assets/img/ig.png">
-</a>
-            <a class="rrss__item" href="" target="_blank">
-<img src="<?php echo get_template_directory_uri();?>/assets/img/pr.png">
-</a>
+
+                <?php if (get_theme_mod('pinterest')!=NULL) {?>                
+                  <a class="rrss__item" target="_blank" href="<?php echo get_theme_mod('pinterest'); ?>"><img src="<?php echo get_theme_mod('pinterest_image'); ?>"></a>               
+                <?php } ?>
+                <?php if (get_theme_mod('vimeo')!=NULL) {?> 
+                  <a class="rrss__item" target="_blank" href="<?php echo get_theme_mod('vimeo'); ?>"><img src="<?php echo get_theme_mod('vimeo_image'); ?>"></a>
+                <?php } ?>                
+                <?php if (get_theme_mod('youtube')!=NULL) {?>
+                  <a class="rrss__item" target="_blank" href="<?php echo get_theme_mod('youtube'); ?>"><img src="<?php echo get_theme_mod('youtube_image'); ?>"></a>
+                <?php } ?>
+                <?php if (get_theme_mod('facebook')!=NULL) {?>
+                  <a class="rrss__item" target="_blank" href="<?php echo get_theme_mod('facebook'); ?>"><img src="<?php echo get_theme_mod('facebook_image'); ?>"></a>
+                <?php } ?>
+                <?php if (get_theme_mod('instagram')!=NULL) {?>
+                  <a class="rrss__item" target="_blank" href="<?php echo get_theme_mod('instagram'); ?>"><img src="<?php echo get_theme_mod('instagram_image'); ?>"></a>
+                <?php } ?>
+                <?php if (get_theme_mod('twitter')!=NULL) {?>
+                  <a class="rrss__item" target="_blank" href="<?php echo get_theme_mod('twitter'); ?>"><img src="<?php echo get_theme_mod('twitter_image'); ?>"></a>
+                <?php } ?>   
+                <?php if (get_theme_mod('linkedin')!=NULL) {?>
+                  <a class="rrss__item" target="_blank" href="<?php echo get_theme_mod('linkedin'); ?>"><img src="<?php echo get_theme_mod('linkedin_image'); ?>"></a>
+                <?php } ?>        
+
           </div>
         </div>
         <div class="main-footer__item">
@@ -27,27 +41,27 @@
           </h2>
           <ul class="site-map">
             <li>
-              <a href="new-in.html">
+              <a href="<?php echo get_home_url() ?>/new-in">
 New in
 </a>
             </li>
             <li>
-              <a href="">
+              <a href="<?php echo get_home_url() ?>/recomendados">
 Recomendados
 </a>
             </li>
             <li>
-              <a href="tienda.html">
+              <a href="<?php echo get_home_url() ?>/tienda">
 Productos
 </a>
             </li>
             <li>
-              <a href="">
+              <a href="<?php echo get_home_url() ?>/cats&dogs">
 Cats & Dogs
 </a>
             </li>
             <li>
-              <a href="complementos-accesorios.html">
+              <a href="<?php echo get_home_url() ?>/complementos-accesorios">
 Accesorios
 </a>
             </li>
@@ -64,27 +78,27 @@ Personalizados
           </h2>
           <ul class="site-map">
             <li>
-              <a href="nosotros.html">
+              <a href="<?php echo get_home_url() ?>/nosotros">
 Nosotros
 </a>
             </li>
             <li>
-              <a href="">
+              <a href="<?php echo get_home_url() ?>/guia-de-tallas">
 Guía de tallas
 </a>
             </li>
             <li>
-              <a href="entregas-y-devoluciones.html">
+              <a href="<?php echo get_home_url() ?>/entregas-y-devoluciones">
 Envíos
 </a>
             </li>
             <li>
-              <a href="politicas-y-privacidad.html">
+              <a href="<?php echo get_home_url() ?>/politicas-y-privacidad">
 Políticas y privacidad
 </a>
             </li>
             <li>
-              <a href="terminos-y-condiciones.html">
+              <a href="<?php echo get_home_url() ?>/terminos-y-condiciones">
 Términos y condiciones
 </a>
             </li>
@@ -98,19 +112,19 @@ Términos y condiciones
             <li>
               <img src="<?php echo get_template_directory_uri();?>/assets/img/place.png">
               <a href="">
-Carrera 51b #78-40
+<?php echo get_theme_mod('address'); ?>
 </a>
             </li>
             <li>
               <img src="<?php echo get_template_directory_uri();?>/assets/img/envelope.png">
               <a href="">
-Email: info@rosary.com
+Email: <?php echo get_theme_mod('email'); ?>
 </a>
             </li>
             <li>
               <img src="<?php echo get_template_directory_uri();?>/assets/img/phone-call.png">
               <a href="">
-Phone: 57 (4) 444 35 69
+Phone: <?php echo get_theme_mod('phone'); ?>
 </a>
             </li>
           </ul>

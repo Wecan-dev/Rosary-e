@@ -89,7 +89,7 @@
              <?php  get_template_part('sections/blog/blog-sidebar-recent'); ?>
           <?php } ?>  
           <?php if (get_theme_mod('blog_sidebar_poster') != NULL) {?>
-             <?php  get_template_part('sections/blog/blog-sidebar-cover'); ?>
+             <?php  get_template_part('sections/blog/blog-sidebar-poster'); ?>
           <?php } ?>     
       </div>
     </div>

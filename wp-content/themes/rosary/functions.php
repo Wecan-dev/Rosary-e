@@ -36,6 +36,9 @@ function theme_customize_register($wp_customize){
   require_once trailingslashit( get_template_directory() ) . 'inc/home/customizer-main-banner.php';
   require_once trailingslashit( get_template_directory() ) . 'inc/home/customizer-main-best-seller.php';
   require_once trailingslashit( get_template_directory() ) . 'inc/home/customizer-main-about.php';
+  require_once trailingslashit( get_template_directory() ) . 'inc/home/customizer-main-text.php';
+  require_once trailingslashit( get_template_directory() ) . 'inc/home/customizer-main-categories.php';
+  require_once trailingslashit( get_template_directory() ) . 'inc/home/customizer-main-sale.php';
 
   $wp_customize->add_panel('panel3',
         array(
@@ -51,12 +54,12 @@ function theme_customize_register($wp_customize){
 
   $wp_customize->add_panel('panel5',
         array(
-            'title' => 'Informacón de Contacto',
+            'title' => 'Información de Contacto',
             'priority' => 5,
             )
         );
  
- // require_once trailingslashit( get_template_directory() ) . 'inc/customizer-contact.php';
+  require_once trailingslashit( get_template_directory() ) . 'inc/contact/customizer-contact.php';
   require_once trailingslashit( get_template_directory() ) . 'inc/contact/customizer-social-networks.php'; 
  // require_once trailingslashit( get_template_directory() ) . 'inc/customizer-contact-stores.php';         
 
