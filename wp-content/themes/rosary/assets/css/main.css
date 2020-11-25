@@ -3186,7 +3186,7 @@ a.general-btn__simple:hover {
 .blog-sidebar__post img {
   width: 94px;
   height: 94px;
-  object-fit: contain;
+  object-fit: cover;
   margin-right: 21px;
 }
 
