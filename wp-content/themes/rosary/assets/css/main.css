@@ -4121,20 +4121,20 @@ a.general-btn__simple:hover {
   }
 }
 
-.shop-products .shop-products__.header {
+.shop-products .shop-products__header {
   display: flex;
   align-items: flex-end;
   margin-bottom: 19px;
   justify-content: space-between;
 }
 
-.shop-products .shop-products__.header .shop-products__menu img {
+.shop-products .shop-products__header .shop-products__menu img {
   width: 22px;
   height: 22px;
   margin-left: 13px;
 }
 
-.shop-products .shop-products__.header h2 {
+.shop-products .shop-products__header h2 {
   font-size: 13px;
   font-weight: normal;
   margin-bottom: 0;
