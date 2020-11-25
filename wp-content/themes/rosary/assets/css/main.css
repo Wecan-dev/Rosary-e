@@ -2492,6 +2492,11 @@ a.general-btn__simple:hover {
   margin-right: 36px;
 }
 
+.blog-general__paginator .prev {
+  margin-right: 36px;
+
+}
+
 .blog-general__paginator {
 
   margin-right: 36px;
