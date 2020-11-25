@@ -412,6 +412,24 @@ if ($category_name != NULL){
           return $count;    
 }
 
+/************** Count posts****************/
+function counts_post()
+{ $count = 0;
+   
+        $args = 
+        array(
+          'post_type' => 'post',
+          'post_status' => 'publish',
+          'posts_per_page' => 99999, 
+         );
+
+         $loop = new WP_Query( $args ); 
+         while ( $loop->have_posts() ) : $loop->the_post(); global $product;
+              $count = $count+1;
+         endwhile; 
+  return $count; 
+}            
+        
 /************** Count product taxonomy****************/
  
 function count_post_product_taxonomy($cat,$tax,$categor)

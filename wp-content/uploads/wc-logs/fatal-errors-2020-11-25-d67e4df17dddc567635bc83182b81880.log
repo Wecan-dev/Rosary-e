@@ -20,3 +20,7 @@
 
 2020-11-25T14:56:03+00:00 CRITICAL syntax error, unexpected 'endif' (T_ENDIF) in C:\xampp\htdocs\rosary\wp-content\themes\rosary\woocommerce\myaccount\form-login.php on line 31
 
+2020-11-25T19:07:53+00:00 CRITICAL Cannot redeclare count_post() (previously declared in C:\xampp\htdocs\rosary\wp-content\themes\rosary\inc\fnc\fnc.php:170) in C:\xampp\htdocs\rosary\wp-content\themes\rosary\inc\fnc\fnc.php on line 431
+
+2020-11-25T19:09:02+00:00 CRITICAL Cannot redeclare count_post() (previously declared in C:\xampp\htdocs\rosary\wp-content\themes\rosary\inc\fnc\fnc.php:170) in C:\xampp\htdocs\rosary\wp-content\themes\rosary\inc\fnc\fnc.php on line 431
+
