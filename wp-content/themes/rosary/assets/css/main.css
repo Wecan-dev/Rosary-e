@@ -5267,3 +5267,7 @@ ol.flex-control-nav.flex-control-thumbs img {
     width: 90%;
   }
 }
+
+a.cc-link {
+    display: none;
+}

@@ -6,8 +6,31 @@
   <title><?php wp_title('|', true, 'right'); ?></title>
   <?php wp_head(); ?>  
   <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+
 <body>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#d0bd9b",
+      "text": "#000000"
+    },
+    "button": {
+      "background": "#000000"
+    }
+  },
+  "theme": "classic",
+  "content": {
+    "message": "Éste sitio web usa cookies, si permanece aquí acepta su uso.\nPuede leer más sobre el uso de cookies en nuestra Polìtica de Cookies <a href='' style = 'color: #0000'>Ler más</a> ",
+    "dismiss": "¡Acepto!",
+    "link": "Leer màs"
+  }
+});       
+</script>
+
   <section class="pre-navbar">
     <p><?php echo get_theme_mod('pre-navbar_title');?></p>
   </section>
@@ -75,7 +98,7 @@ Blog
 </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/blog">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/categorias">
             Categorías
             </a>
             </li>
@@ -183,7 +206,7 @@ Blog
 </a>
 </li>
 <li class="nav-item">
-  <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/">
+  <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/categorias">
     Categorías
   </a>
 </li>
