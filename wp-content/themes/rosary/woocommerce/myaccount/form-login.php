@@ -76,7 +76,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 				<img  src="<?php echo get_template_directory_uri();?>/assets/img/user.png">
 			</div>
 		<h2>Registro</h2>
-            <?php echo do_shortcode('[user_registration_form id="112"]'); ?>
+            <?php echo do_shortcode('[user_registration_form id="114"]'); ?>
             <p class="woocommerce-in-account"><a href="?create=">Regresar a login <i class="fa fa-angle-right" > </i> </a></p>
         </div>
 
