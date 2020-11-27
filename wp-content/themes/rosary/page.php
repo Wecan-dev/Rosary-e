@@ -452,6 +452,64 @@ Enviar
   </section>
 <?php } ?>
 
+<!-- ****************** Contacto *********************-->
+<?php if(get_field('template_rosary') == 'Contacto'){ ?>
+  <section class="general-banner">
+    <img src="<?php echo meta_value_img('image-banner-contacto', $id_page); ?>">
+    <div class="general-banner__text">
+      <h2 class="main-general__title">
+        <?php echo meta_value('title-banner-contacto', $id_page); ?>
+      </h2>
+      <p class="general-banner__subtitle">
+        <?php echo meta_value('subtitle-banner-contacto', $id_page); ?>
+      </p>
+    </div>
+  </section>
+  <section class="contact">
+    <div class="container-grid">
+      <div class="contact-form">
+        <h2 class="contact-form__title">
+          <?php echo meta_value('title-form-contacto', $id_page); ?>
+        </h2>
+        <p class="contact-form__description">
+          <?php echo meta_value('description-form-contacto', $id_page); ?>
+        </p>
+        <?php echo do_shortcode('[formidable id=1]'); ?>
+      </div>
+      <div class="contact-sidebar">
+        <h2 class="contact-form__title">
+          <?php echo meta_value('title-sidebar-contacto', $id_page); ?>
+        </h2>
+        <p class="contact-form__description">
+         
+        </p>
+        <ul class="contact-list">
+          <li>
+            <img src="<?php echo get_template_directory_uri();?>/assets/img/phone-call.png">
+            <a href="tel:<?php echo meta_value('phone-sidebar-contacto', $id_page); ?>">
+              <p>Teléfono</p>
+              <?php echo get_theme_mod('phone'); ?>
+            </a>
+          </li>
+          <li>
+            <img src="<?php echo get_template_directory_uri();?>/assets/img/envelope.png">
+            <a href="mailto:<?php echo meta_value('email-sidebar-contacto', $id_page); ?>">
+              <p>Correo Electrónico</p>
+              <?php echo get_theme_mod('email'); ?>
+            </a>
+          </li>
+          <li>
+            <img src="<?php echo get_template_directory_uri();?>/assets/img/place.png">
+            <a href="">
+              <p>Ubicación</p>
+              <?php echo get_theme_mod('address'); ?>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+<?php } ?>  
 
 <?php  endwhile; ?> 
 <?php get_footer(); ?>
