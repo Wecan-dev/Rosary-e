@@ -37,12 +37,11 @@ do_action( 'woocommerce_before_lost_password_form' );
 <form method="post" class="woocommerce-ResetPassword lost_reset_password">
 
 	<p class="lost-password__text" >
-
-	¿Perdiste tu contraseña? Por favor, introduzca su nombre de usuario o su dirección de correo electrónico. Recibirás un enlace para crear una nueva contraseña por correo electrónico
+¿Olvidaste tu contraseña? Recupérala aquí. Escribe tu correo electrónico y recibe un enlace para restablecerla.
 	</p><?php // @codingStandardsIgnoreLine ?>
 
 	<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
-		<input placeholder="Correo Electrónico" class="woocommerce-Input woocommerce-Input--text input-text" type="text" name="user_login" id="user_login" autocomplete="username" />
+		<input placeholder="Email" class="woocommerce-Input woocommerce-Input--text input-text" type="text" name="user_login" id="user_login" autocomplete="username" />
 	</p>
 
 	<div class="clear"></div>

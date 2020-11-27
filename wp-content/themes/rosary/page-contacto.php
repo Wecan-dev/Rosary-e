@@ -3,7 +3,7 @@
     <img src="<?php echo get_template_directory_uri();?>/assets/img/contacto/image.png">
     <div class="general-banner__text">
       <h2 class="main-general__title">
-        contacto
+        Contáctanos
       </h2>
       <p class="general-banner__subtitle">
         Rosary
@@ -17,7 +17,7 @@
           dejanos un mensaje
         </h2>
         <p class="contact-form__description">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+          Si tienes dudas o quieres ponerte en contacto con alguno de nuestros asesores. Hazlo aquí.
         </p>
         <form>
           <input placeholder="Nombre*">
@@ -34,7 +34,7 @@ Enviar
           Nuestra información
         </h2>
         <p class="contact-form__description">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+         
         </p>
         <ul class="contact-list">
           <li>

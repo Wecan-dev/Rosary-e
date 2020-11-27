@@ -35,7 +35,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 				<img  src="<?php echo get_template_directory_uri();?>/assets/img/user.png">
 			</div>
 			<p class="login-text">
-				Crear una cuenta para agilizar las futuras compras, hacer un seguimiento del historial de pedidos y recibir correos electrónicos, descuentos y ofertas especiales.
+				¿Aún no tienes una cuenta en Rosary? Accede a ofertas exclusivas, lanzamientos, eventos e ideas utiliza esta opción y accede al formulario de registro. <br> Brindándonos tus detalles, la compra en <a href="rosary.com.co">rosary.com.co</a> se efectuará de forma mucho más rápida y agradable.
 			</p>
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 
@@ -61,9 +61,9 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 				</div>
 			</p>
 		
-			<button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
+			<button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Iniciar Sesión', 'woocommerce' ); ?></button>
 			<?php do_action( 'woocommerce_login_form_end' ); ?>
-			<p class="woocommerce-in-account"><a href="?create=account">Crear una nueva cuenta <i class="fa fa-angle-right" > </i> </a></p>
+			<p class="woocommerce-in-account"><a href="?create=account">Crear una cuenta <i class="fa fa-angle-right" > </i> </a></p>
 		</form>
 <?php } ?>
 <?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
@@ -75,9 +75,9 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
         	<div class="login-icon">
 				<img  src="<?php echo get_template_directory_uri();?>/assets/img/user.png">
 			</div>
-		<h2>Registro</h2>
+		<h2>Regístrate</h2>
             <?php echo do_shortcode('[user_registration_form id="114"]'); ?>
-            <p class="woocommerce-in-account"><a href="?create=">Regresar a login <i class="fa fa-angle-right" > </i> </a></p>
+            <p class="woocommerce-in-account"><a href="?create=">Volver a Iniciar sesión <i class="fa fa-angle-right" > </i> </a></p>
         </div>
 
         

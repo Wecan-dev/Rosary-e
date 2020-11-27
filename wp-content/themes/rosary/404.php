@@ -6,16 +6,16 @@
         lo sentimos
       </h2>
       <p class="error-404__subtitle">
-        No podemos encontrar la página que está buscando
+        NO PODEMOS ENCONTRAR LA PÁGINA QUE BUSCAS
       </p>
       <h2 class="error-44__number">
         404
       </h2>
       <h2 class="error-404__title--bold error-404__title">
-        te llevaremos de vuelta
+        Te llevaremos de vuelta
       </h2>
       <a class="general-btn__rose" href="<?php echo get_home_url() ?>">
-te llevamos al inicio
+HOME
 </a>
     </div>
   </section>

@@ -1,6 +1,6 @@
         <div class="blog-sidebar__content">
           <p class="blog-sidebar__title">
-            Síguenos
+            ¡Síguenos!
           </p>
           <ul class="blog-sidebar__follow blog-sidebar__box">
                 <?php if (get_theme_mod('pinterest')!=NULL) {?> 

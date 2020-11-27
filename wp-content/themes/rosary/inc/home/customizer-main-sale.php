@@ -5,28 +5,29 @@
     'title' => 'Sale',
     'panel' => 'panel2'
   ));
+
+    $wp_customize->add_setting('sale_description', array(
+    'default' => ''
+  ));
   
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'sale_description_control', array (
+    'description' => 'Título',
+    'section' => 'sale',
+    'settings' => 'sale_description',
+    'type' => 'textarea'
+  )));
 
   $wp_customize->add_setting('sale_title', array(
     'default' => ''
   ));
   
   $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'sale_title_control', array (
-    'description' => 'Título',
+    'description' => 'Subtítulo',
     'section' => 'sale',
     'settings' => 'sale_title',
   )));  
 
-  $wp_customize->add_setting('sale_description', array(
-    'default' => ''
-  ));
-  
-  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'sale_description_control', array (
-    'description' => 'Descripción',
-    'section' => 'sale',
-    'settings' => 'sale_description',
-    'type' => 'textarea'
-  )));
+
 
   $wp_customize->add_setting('sale_buttom', array(
     'default' => ''

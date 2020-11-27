@@ -1468,6 +1468,8 @@ a.general-btn__simple:hover {
   flex-direction: column;
   align-items: center;
   padding-top: 104px;
+		      padding-right: 50px;
+    padding-left: 50px;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -1476,6 +1478,8 @@ a.general-btn__simple:hover {
     padding-right: 25px;
     padding-top: 50px;
     padding-bottom: 50px;
+		  padding-left: 10px;
+	  padding-right: 10px;
   }
 }
 
@@ -1483,6 +1487,8 @@ a.general-btn__simple:hover {
   .main-categories__item .main-categories__details {
     padding-top: 104px;
     padding-bottom: 104px;
+	  padding-left: 10px;
+	  padding-right: 10px;
   }
 }
 
@@ -1536,8 +1542,8 @@ a.general-btn__simple:hover {
   justify-content: center;
 }
 
-.main-categories__item .main-categories__title {
-  font-size: 120px;
+.main-categories__item .main-categories__title{
+  font-size: 100px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -1547,6 +1553,18 @@ a.general-btn__simple:hover {
   color: #ffffff;
   font-family: "MADE SAONARA";
   margin-bottom: 121px;
+}
+
+.main-break__mask .main-categories__title { 
+    font-size: 84px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #ffffff;
+    font-family: "MADE SAONARA";
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -1683,7 +1701,7 @@ a.general-btn__simple:hover {
 }
 
 .main-blog .main-blog__img {
-  height: 703px;
+    height: 473px;
 
 }
 
@@ -3234,15 +3252,15 @@ a.general-btn__simple:hover {
 }
 
 .blog-sidebar__poster .blog-sidebar__text h2 {
-  font-size: 40px;
+  font-size: 35px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
-  line-height: normal;
-  letter-spacing: 13.33px;
+  line-height: 1;
+  letter-spacing: 12.33px;
   color: #ffffff;
   font-family: "MADE SAONARA";
-  margin-bottom: 2px;
+    margin-bottom: -27px;
 }
 
 .blog-sidebar__poster .blog-sidebar__text .general-btn__rose {
@@ -3638,7 +3656,7 @@ a.general-btn__simple:hover {
   display: flex;
   flex-direction: column;
   padding: 15px;
-  justify-content: center;
+	    justify-content: flex-start;
   align-items: center;
   text-align: center;
 }
@@ -4648,6 +4666,16 @@ a.general-btn__simple:hover {
   font-family: Brandon Text Light;
 }
 
+.login-text a{
+	color: #000;
+	transition: .3s;
+	font-family: Brandon Text Medium;
+}
+.login-text a:hover {
+		transition: .3s;
+	color:#c0a980;
+}
+
 .woocommerce-form-login {
   width: 923px;
   height: 710px;
@@ -4659,6 +4687,13 @@ a.general-btn__simple:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.ur-frontend-form, .ur-frontend-form form {
+	padding: 0!important;
+	margin: 0!important;
+	border: none!important;
+	width: 100%;
 }
 
 .woocommerce-form-register h2 {
@@ -4678,10 +4713,10 @@ a.general-btn__simple:hover {
   margin-bottom: 0;
 }
 
-.woocommerce-Input--text {
+.woocommerce-Input--text, .user-registration input{
   margin: 20px 0 23px 0;
-  padding: 14px 22px 14px 22px;
-  border-radius: 2px;
+  padding: 14px 22px 14px 22px!important;
+  border-radius: 2px!important;
   border: solid 1px #d0bd9b;
   font-size: 13px;
   font-weight: normal;
@@ -4694,14 +4729,14 @@ a.general-btn__simple:hover {
   font-family: Brandon Text Regular;
 }
 
-.woocommerce-Input--text::placeholder {
+.woocommerce-Input--text::placeholder, .user-registration input::placeholder {
   font-size: 13px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #000000;
+  color: #000000!important;
   font-family: Brandon Text Regular;
 }
 
@@ -4735,8 +4770,13 @@ a.general-btn__simple:hover {
 .woocommerce-form-register .form-row {
   margin-bottom: 20px !important;
 }
+.woocommerce-form-register .ur-form-grid, .woocommerce-form-register .ur-button-container {
+	width: 100%!important;
+	padding: 0!important;
+}
 
-.woocommerce-form-login__submit {
+
+.woocommerce-form-login__submit, .ur-submit-button {
   width: 100%;
   margin: 0 !important;
   padding: 15px !important;
@@ -4753,6 +4793,10 @@ a.general-btn__simple:hover {
   text-align: center;
   text-transform: uppercase;
   color: #ffffff !important;
+}
+
+.field-privacy_policy, .field-privacy_policy .form-row  {
+	margin-bottom: 0!important;
 }
 
 .woocommerce-form-login__rememberme span {
