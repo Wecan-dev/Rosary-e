@@ -81,5 +81,5 @@ require_once trailingslashit( get_template_directory() ) . 'inc/fnc/fnc.php';
 
 /***************** Local field group ************/
 
-//require_once trailingslashit( get_template_directory() ) . 'inc/fnc/local-field-group.php';
+require_once trailingslashit( get_template_directory() ) . 'inc/fnc/local-field-group.php';
 
