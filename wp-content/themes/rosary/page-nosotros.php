@@ -3,10 +3,10 @@
     <img src="<?php echo get_template_directory_uri();?>/assets/img/contacto/image.png">
     <div class="general-banner__text">
       <h2 class="main-general__title">
-        Nosotros
+        ABOUT ROSARY 
       </h2>
       <p class="general-banner__subtitle">
-        Rosary
+        Conócenos
       </p>
     </div>
   </section>
@@ -18,19 +18,16 @@
         </div>
         <div class="about-grid__text">
           <p class="about-grid__titlexs">
-            Bienvenidos a
+            Descubre nuestra esencia
           </p>
           <h2 class="about-grid__title">
-            Lorem ipsum
+            WE BELIEVE IN
           </h2>
           <p class="about-grid__description">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Creemos que cada mujer, madre, hermana, hija, amiga o compañera brilla naturalmente. <br> Por eso buscamos enaltecer el resplandor de tu luz propia mientras reconoces, conectas y valoras todo eso que eres, lo que te define y enseñas al mundo.
           </p>
           <p class="about-grid__description">
-            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Apreciamos tu poder y ese valor personal que has aprendido a entregar sin límites en todos los niveles del amor conocido; uno del que surgen ciertos tesoros que deslumbran porque nos regalan recuerdos atemporales.
           </p>
         </div>
       </div>
@@ -42,19 +39,16 @@
         </div>
         <div class="about-grid__text">
           <p class="about-grid__titlexs">
-            Bienvenidos a
+            Enamórate
           </p>
           <h2 class="about-grid__title">
-            Lorem ipsum
+            MEET OUR COLLECTIONS
           </h2>
           <p class="about-grid__description">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Creamos cada pieza de la colección con el mayor nivel de exigencia. Fabricando tesoros con materiales de primera calidad que serán joyas atemporales para ti y los que amas. 
           </p>
           <p class="about-grid__description">
-            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Nuestro objetivo es inspirarte para que luzcas con orgullo tu esencia, por eso desde el diseño y la imagen hasta la producción y el envío, somos cuidadosos en ofrecerte la mejor experiencia posible. 
           </p>
         </div>
       </div>
@@ -62,7 +56,7 @@
   </div>
   <section class="about-reason">
     <h2 class="main-general__title">
-      Reason To Shop With Us
+      NEED MORE REASONS?
     </h2>
     <div class="container-grid">
       <div class="about-reason__item">
@@ -70,7 +64,7 @@
           <img src="<?php echo get_template_directory_uri();?>/assets/img/nosotros/shipped.png">
         </div>
         <p class="about-reason__text">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Garantizamos la confidencialidad y seguridad de nuestros envíos nacionales.
         </p>
       </div>
       <div class="about-reason__item">
@@ -78,7 +72,7 @@
           <img src="<?php echo get_template_directory_uri();?>/assets/img/nosotros/credit-card.png">
         </div>
         <p class="about-reason__text">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Compra Online con tu medio de pago favorito y paga de una forma rápida y segura con nuestra pasarela de pagos. 
         </p>
       </div>
       <div class="about-reason__item">
@@ -86,7 +80,7 @@
           <img src="<?php echo get_template_directory_uri();?>/assets/img/nosotros/telephone.png">
         </div>
         <p class="about-reason__text">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Te escuchamos, asesorando y acompañando tu compra hasta al final.
         </p>
       </div>
     </div>
@@ -94,7 +88,7 @@
   <section class="about-card">
     <div class="padding-top-bottom padding-right-left">
       <h2 class="main-general__title">
-        Lorem ipsum
+        ENHANCE YOUR OWN SHINE
       </h2>
       <div class="container-grid">
         <div class="about-card__item">
@@ -103,10 +97,12 @@
           </div>
           <div class="about-card__text">
             <h2 class="about-card__title">
-              Lorem Ipsum is simply dummy
+              Rosary's Treasure
             </h2>
             <p class="about-card__description">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.
+              Transformamos el amor, las caricias, las sonrisas, los abrazos y los momentos especiales en tesoros atemporales que conservarás para toda la vida. 
+
+Cada pieza de la colección Rosary’s Treasures está inspirada en la pureza del amor, la sutileza del universo y el infinito valor que le damos a nuestra esencia cuando se transforma en piezas de delicado encanto.
             </p>
           </div>
         </div>
@@ -116,10 +112,10 @@
           </div>
           <div class="about-card__text">
             <h2 class="about-card__title">
-              Lorem Ipsum is simply dummy
+              Sacred Treasures
             </h2>
             <p class="about-card__description">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.
+              Haz de tu vida una historia sagrada. Conectamos contigo y con tu esencia espiritual creando piezas únicas para nunca olvidar cultivar, atraer y manifestar la candidez sagrada de tu espitiru. Esa que se cultiva desde la raíz de nuestra tradición, que florece con el reconocimiento interior y que se manifiesta en la protección y posibilidad de disfrutar, un día más, las bendiciones que nos rodean.
             </p>
           </div>
         </div>

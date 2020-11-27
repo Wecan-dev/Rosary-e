@@ -9,7 +9,7 @@
             <?php echo get_theme_mod('description_contact'); ?>
           </p>
           <div class="main-footer__rrss">
-            <p>Síguenos en</p>
+            <p>Síguenos</p>
 
                 <?php if (get_theme_mod('pinterest')!=NULL) {?>                
                   <a class="rrss__item" target="_blank" href="<?php echo get_theme_mod('pinterest'); ?>"><img src="<?php echo get_theme_mod('pinterest_image'); ?>"></a>               
@@ -74,12 +74,12 @@ Personalizados
         </div>
         <div class="main-footer__item">
           <h2 class="main-footer__title">
-            Más información
+            Información
           </h2>
           <ul class="site-map">
             <li>
               <a href="<?php echo get_home_url() ?>/nosotros">
-Nosotros
+About Rosary
 </a>
             </li>
             <li>
@@ -89,7 +89,7 @@ Guía de tallas
             </li>
             <li>
               <a href="<?php echo get_home_url() ?>/entregas-y-devoluciones">
-Envíos
+Envíos y entregas
 </a>
             </li>
             <li>
@@ -106,15 +106,15 @@ Términos y condiciones
         </div>
         <div class="main-footer__item">
           <h2 class="main-footer__title">
-            Contacto
+            Contáctanos
           </h2>
           <ul class="main-footer__contact">
-            <li>
+            <!--<li>
               <img src="<?php echo get_template_directory_uri();?>/assets/img/place.png">
               <a href="">
 <?php echo get_theme_mod('address'); ?>
 </a>
-            </li>
+            </li>-->
             <li>
               <img src="<?php echo get_template_directory_uri();?>/assets/img/envelope.png">
               <a href="">
@@ -123,7 +123,7 @@ Email: <?php echo get_theme_mod('email'); ?>
             </li>
             <li>
               <img src="<?php echo get_template_directory_uri();?>/assets/img/phone-call.png">
-              <a href="">
+              <a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('phone'); ?>">
 Phone: <?php echo get_theme_mod('phone'); ?>
 </a>
             </li>

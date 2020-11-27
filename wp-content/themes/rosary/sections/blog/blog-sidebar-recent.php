@@ -1,6 +1,6 @@
         <div class="blog-sidebar__content">
           <p class="blog-sidebar__title">
-            Post recientes
+            Blogs recientes
           </p>
           <div class="blog-sidebar__post">
             <?php

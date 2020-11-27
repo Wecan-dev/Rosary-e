@@ -8,11 +8,11 @@
         <div class="main-categories__details">
           <img class="main-categories__icon" src="<?php echo get_template_directory_uri();?>/assets/img/logo_2.png">
           <p class="main-categories__text">
-            Encuentra tu estilo 
+            <?=$category->description ?>
           </p>
           <img class="main-categories__poster" src="<?php echo termmeta_value_img( 'poster_categories', $category->term_id ); ?>">
           <a class="general-btn__simple" href="<?php echo get_category_link( $category->term_id ); ?>">
-            Comprar
+            Comprar ahora
           </a>
         </div>
         <div class="main-categories__img">
@@ -31,7 +31,9 @@
     <div class="main-break__img">
       <img src="<?php echo get_theme_mod('categories_image'); ?>">
       <div class="main-break__mask">
-        <img src="<?php echo get_template_directory_uri();?>/assets/img/logo-w.png">
+		  <p class="main-categories__title" >
+			  <?php echo get_theme_mod('categories_title'); ?>
+		  </p>
       </div>
     </div>
   </section>
@@ -45,11 +47,11 @@
         <div class="main-categories__details">
           <img class="main-categories__icon" src="<?php echo get_template_directory_uri();?>/assets/img/logo_2.png">
           <p class="main-categories__text">
-            Encuentra tu estilo
+            <?=$category->description ?>
           </p>
           <img class="main-categories__poster" src="<?php echo get_template_directory_uri();?>/assets/img/image_4.png">
           <a class="general-btn__simple" href="<?php echo get_category_link( $category->term_id ); ?>">
-            Comprar
+            Comprar ahora
           </a>
         </div>
         <div class="main-categories__img">
