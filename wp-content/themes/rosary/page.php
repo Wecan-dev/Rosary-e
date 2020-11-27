@@ -484,6 +484,13 @@ Enviar
          
         </p>
         <ul class="contact-list">
+		  <li>
+            <img src="<?php echo get_template_directory_uri();?>/assets/img/envelope.png">
+            <a href="mailto:<?php echo meta_value('email-sidebar-contacto', $id_page); ?>">
+              <p>Correo Electrónico</p>
+              <?php echo get_theme_mod('email'); ?>
+            </a>
+          </li>
           <li>
             <img src="<?php echo get_template_directory_uri();?>/assets/img/phone-call.png">
             <a href="tel:<?php echo meta_value('phone-sidebar-contacto', $id_page); ?>">
@@ -491,13 +498,7 @@ Enviar
               <?php echo get_theme_mod('phone'); ?>
             </a>
           </li>
-          <li>
-            <img src="<?php echo get_template_directory_uri();?>/assets/img/envelope.png">
-            <a href="mailto:<?php echo meta_value('email-sidebar-contacto', $id_page); ?>">
-              <p>Correo Electrónico</p>
-              <?php echo get_theme_mod('email'); ?>
-            </a>
-          </li>
+       
           <li>
             <img src="<?php echo get_template_directory_uri();?>/assets/img/place.png">
             <a href="">
