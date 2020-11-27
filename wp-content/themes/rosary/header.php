@@ -26,7 +26,7 @@ window.cookieconsent.initialise({
   },
   "theme": "classic",
   "content": {
-    "message": "Éste sitio web usa cookies, si permanece aquí acepta su uso.\nPuede leer más sobre el uso de cookies en nuestra Polìtica de Cookies <a href='"+url+"' style = 'color: #000'>Ler más</a> ",
+    "message": "Éste sitio web usa cookies, si permanece aquí acepta su uso.\nPuede leer más sobre el uso de cookies en nuestra Polìtica de Cookies <a href='"+url+"' style = 'color: #000'>Leer más</a> ",
     "dismiss": "¡Acepto!",
     "link": "Leer màs"
   }

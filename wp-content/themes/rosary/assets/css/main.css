@@ -1554,6 +1554,20 @@ a.general-btn__simple:hover {
   font-family: "MADE SAONARA";
   margin-bottom: 121px;
 }
+.cc-message {
+  font-family: Brandon Text Regular;
+	
+}
+.cc-message a{
+	text-decoration: underline;
+	transition: .3s;
+}
+
+.cc-message a:hover{
+	transition: .3s;
+	
+	text-decoration: underline!important;
+}
 
 .main-break__mask .main-categories__title { 
     font-size: 84px;
