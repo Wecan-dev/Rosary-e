@@ -1,0 +1,2161 @@
+[
+    {
+        "key": "group_5fbfd6d2ebeff",
+        "title": "Info Adicional Usuarios",
+        "fields": [
+            {
+                "key": "field_5fbfd6e826576",
+                "label": "Cèdula de Identidad",
+                "name": "cedula_de_identidad",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "user_registration"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5fc045800876b",
+        "title": "Plantillas Páginas",
+        "fields": [
+            {
+                "key": "field_5fc0458a2cf1e",
+                "label": "",
+                "name": "template_rosary",
+                "type": "select",
+                "instructions": "Plantillas",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "Página General": "Página General",
+                    "New In": "New In",
+                    "Accesorios": "Accesorios",
+                    "Produtos": "Produtos",
+                    "Contacto": "Contacto",
+                    "Personalizados": "Personalizados",
+                    "Nosotros": "Nosotros",
+                    "Políticas": "Políticas",
+                    "Categorías": "Categorías",
+                    "Ninguno": "Ninguno"
+                },
+                "default_value": "Ninguno",
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5fc0466d2cf1f",
+                "label": "Página General",
+                "name": "title-banner-general-page",
+                "type": "text",
+                "instructions": "Título Banner",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Página General"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc0471e2cf20",
+                "label": "",
+                "name": "subtitle-banner-general-page",
+                "type": "text",
+                "instructions": "Subtítulo",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Página General"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc048052cf21",
+                "label": "",
+                "name": "image-banner-general-page",
+                "type": "image",
+                "instructions": "Imagen Banner",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Página General"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5fc04cf97d327",
+                "label": "New IN",
+                "name": "title-banner-new-in",
+                "type": "text",
+                "instructions": "Título Banner",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "New In"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc0515ef457a",
+                "label": "",
+                "name": "subtitle-banner-new-in",
+                "type": "text",
+                "instructions": "Subtítulo Banner",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "New In"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc04d347d328",
+                "label": "",
+                "name": "image-banner-new-in",
+                "type": "image",
+                "instructions": "Imagen Banner",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "New In"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5fc04d347d329",
+                "label": "",
+                "name": "title-new-in",
+                "type": "text",
+                "instructions": "Tìtulo Central",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "New In"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc066865da8f",
+                "label": "",
+                "name": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "New In"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Sección Otros",
+                "new_lines": "wpautop",
+                "esc_html": 0
+            },
+            {
+                "key": "field_5fc04ddb7d32a",
+                "label": "",
+                "name": "title-others-new-in",
+                "type": "text",
+                "instructions": "Tìtulo Otros Productos",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "New In"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc066cb5da90",
+                "label": "",
+                "name": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "New In"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Sección Promoción",
+                "new_lines": "wpautop",
+                "esc_html": 0
+            },
+            {
+                "key": "field_5fc05016bad47",
+                "label": "",
+                "name": "title-promo-new-in",
+                "type": "text",
+                "instructions": "Tìtulo Promoción",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "New In"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc0507dbad48",
+                "label": "",
+                "name": "subtitle-promo-new-in",
+                "type": "text",
+                "instructions": "Subtítulo Promoción",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "New In"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc050a8bad49",
+                "label": "",
+                "name": "image-promo-new-in",
+                "type": "image",
+                "instructions": "Imagen Promoción",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "New In"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5fc05abd722b4",
+                "label": "Accesorios",
+                "name": "title-banner-accesorios",
+                "type": "text",
+                "instructions": "Título Banner",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Accesorios"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc05b01722b6",
+                "label": "",
+                "name": "image-banner-accesorios",
+                "type": "image",
+                "instructions": "Imagen Banner",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Accesorios"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5fc05b11722b7",
+                "label": "",
+                "name": "title-accesorios",
+                "type": "text",
+                "instructions": "Tìtulo Central",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Accesorios"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc066e45da91",
+                "label": "",
+                "name": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Accesorios"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Sección Otros",
+                "new_lines": "wpautop",
+                "esc_html": 0
+            },
+            {
+                "key": "field_5fc05b3f722b8",
+                "label": "",
+                "name": "title-others-accesorios",
+                "type": "text",
+                "instructions": "Tìtulo Otros Productos",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Accesorios"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc067385da92",
+                "label": "",
+                "name": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Accesorios"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Sección Promoción",
+                "new_lines": "wpautop",
+                "esc_html": 0
+            },
+            {
+                "key": "field_5fc05e7e3bfff",
+                "label": "",
+                "name": "title-promo-accesorios",
+                "type": "text",
+                "instructions": "Tìtulo Promoción",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Accesorios"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc05e8b3c000",
+                "label": "",
+                "name": "subtitle-promo-accesorios",
+                "type": "text",
+                "instructions": "Subtítulo Promoción",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Accesorios"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc05e993c001",
+                "label": "",
+                "name": "image-promo-accesorios",
+                "type": "image",
+                "instructions": "Imagen Promoción",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Accesorios"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5fc068007a424",
+                "label": "Personalizados",
+                "name": "title-banner-personalizados",
+                "type": "text",
+                "instructions": "Título Banner",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Personalizados"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc068197a425",
+                "label": "",
+                "name": "image-banner-personalizados",
+                "type": "image",
+                "instructions": "Imagen Banner",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Personalizados"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5fc0683e7a426",
+                "label": "",
+                "name": "title-personalizados",
+                "type": "text",
+                "instructions": "Tìtulo Central",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Personalizados"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc069837a42f",
+                "label": "",
+                "name": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Personalizados"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Sección Piezas",
+                "new_lines": "wpautop",
+                "esc_html": 0
+            },
+            {
+                "key": "field_5fc068a97a428",
+                "label": "",
+                "name": "title-section1-personalizados",
+                "type": "text",
+                "instructions": "Tìtulo",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Personalizados"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc068db7a429",
+                "label": "",
+                "name": "description-section1-personalizados",
+                "type": "text",
+                "instructions": "Descripción",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Personalizados"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc069117a42a",
+                "label": "",
+                "name": "buttom-section1-personalizados",
+                "type": "text",
+                "instructions": "Botón",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Personalizados"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc069347a42b",
+                "label": "",
+                "name": "urlbuttom-section1-personalizados",
+                "type": "text",
+                "instructions": "Url Botón",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Personalizados"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc069557a42d",
+                "label": "",
+                "name": "image1-section1-personalizados",
+                "type": "image",
+                "instructions": "Imagen 1",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Personalizados"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5fc069717a42e",
+                "label": "",
+                "name": "image2-section1-personalizados",
+                "type": "image",
+                "instructions": "Imagen 2",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Personalizados"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5fc069e8906e9",
+                "label": "",
+                "name": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Personalizados"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Sección Descripción",
+                "new_lines": "wpautop",
+                "esc_html": 0
+            },
+            {
+                "key": "field_5fc06a0c906ea",
+                "label": "",
+                "name": "title-section2-personalizados",
+                "type": "text",
+                "instructions": "Tìtulo",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Personalizados"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc06a2c906eb",
+                "label": "",
+                "name": "subtitle-section2-personalizados",
+                "type": "text",
+                "instructions": "Subtìtulo",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Personalizados"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc06a46906ec",
+                "label": "",
+                "name": "description-section2-personalizados",
+                "type": "textarea",
+                "instructions": "Descripción",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Personalizados"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_5fc06e954589a",
+                "label": "Nosotros",
+                "name": "title-banner-nosotros",
+                "type": "text",
+                "instructions": "Título Banner",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc06ee04589c",
+                "label": "",
+                "name": "subtitle-banner-nosotros",
+                "type": "text",
+                "instructions": "Título Banner",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc06eaa4589b",
+                "label": "",
+                "name": "image-banner-nosotros",
+                "type": "image",
+                "instructions": "Imagen Banner",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5fc06f5c4589e",
+                "label": "",
+                "name": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Sección Items\r\nItem 1",
+                "new_lines": "wpautop",
+                "esc_html": 0
+            },
+            {
+                "key": "field_5fc06f224589d",
+                "label": "",
+                "name": "title-item1-nosotros",
+                "type": "text",
+                "instructions": "Título Item 1",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc06fde4589f",
+                "label": "",
+                "name": "subtitle-item1-nosotros",
+                "type": "text",
+                "instructions": "Subtítulo Item 1",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc06ff3458a0",
+                "label": "",
+                "name": "description-item1-nosotros",
+                "type": "textarea",
+                "instructions": "Descripción Item 1",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_5fc07010458a1",
+                "label": "",
+                "name": "image-item1-nosotros",
+                "type": "image",
+                "instructions": "Image Item 1",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5fc0706a458a3",
+                "label": "",
+                "name": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Item 2",
+                "new_lines": "wpautop",
+                "esc_html": 0
+            },
+            {
+                "key": "field_5fc0707b458a4",
+                "label": "",
+                "name": "title-item2-nosotros",
+                "type": "text",
+                "instructions": "Título Item 2",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc07081458a5",
+                "label": "",
+                "name": "subtitle-item2-nosotros",
+                "type": "text",
+                "instructions": "Subtítulo Item 2",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc07087458a6",
+                "label": "",
+                "name": "description-item2-nosotros",
+                "type": "textarea",
+                "instructions": "Descripción Item 2",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_5fc070af458a7",
+                "label": "",
+                "name": "image-item2-nosotros",
+                "type": "image",
+                "instructions": "Image Item 1",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5fc0712c2cbe9",
+                "label": "",
+                "name": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Sección Reason",
+                "new_lines": "wpautop",
+                "esc_html": 0
+            },
+            {
+                "key": "field_5fc071592cbea",
+                "label": "",
+                "name": "title-reason-nosotros",
+                "type": "text",
+                "instructions": "Título",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc071822cbeb",
+                "label": "",
+                "name": "texto-reason-nosotros",
+                "type": "text",
+                "instructions": "Texto Item 1",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc071cb2cbed",
+                "label": "",
+                "name": "icon-reason-nosotros",
+                "type": "image",
+                "instructions": "Ícono Item 1",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5fc072032cbee",
+                "label": "",
+                "name": "texto-reason2-nosotros",
+                "type": "text",
+                "instructions": "Texto Item 2",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc072122cbef",
+                "label": "",
+                "name": "icon-reason2-nosotros",
+                "type": "image",
+                "instructions": "Ícono Item 2",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5fc072432cbf0",
+                "label": "",
+                "name": "texto-reason3-nosotros",
+                "type": "text",
+                "instructions": "Texto Item 3",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc0724a2cbf1",
+                "label": "",
+                "name": "icon-reason3-nosotros",
+                "type": "image",
+                "instructions": "Ícono Item 3",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5fc07292d11a4",
+                "label": "",
+                "name": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "Sección Cards",
+                "new_lines": "wpautop",
+                "esc_html": 0
+            },
+            {
+                "key": "field_5fc072c4d11a5",
+                "label": "",
+                "name": "title-card-nosotros",
+                "type": "text",
+                "instructions": "Título",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc072fad11a6",
+                "label": "",
+                "name": "title-card1-nosotros",
+                "type": "text",
+                "instructions": "Título Item 1",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc07315d11a7",
+                "label": "",
+                "name": "description-card1-nosotros",
+                "type": "textarea",
+                "instructions": "Descripción Item 1",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_5fc0733ed11a8",
+                "label": "",
+                "name": "image-card1-nosotros",
+                "type": "image",
+                "instructions": "Imagen Item 1",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5fc07363d11a9",
+                "label": "",
+                "name": "title-card2-nosotros",
+                "type": "text",
+                "instructions": "Título Item 2",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc07375d11aa",
+                "label": "",
+                "name": "description-card2-nosotros",
+                "type": "textarea",
+                "instructions": "Descripción Item 2",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_5fc07380d11ab",
+                "label": "",
+                "name": "image-card2-nosotros",
+                "type": "image",
+                "instructions": "Imagen Item 2",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Nosotros"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5fc07b1720c03",
+                "label": "Políticas",
+                "name": "title-banner-politicas",
+                "type": "text",
+                "instructions": "Título Banner",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Políticas"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc07b4320c04",
+                "label": "",
+                "name": "subtitle-banner-politicas",
+                "type": "text",
+                "instructions": "Subtítulo Banner",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Políticas"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc07b5720c05",
+                "label": "",
+                "name": "image-banner-politicas",
+                "type": "image",
+                "instructions": "Imagen Banner",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Políticas"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5fc07ea57c7af",
+                "label": "Categorías",
+                "name": "title-banner-categorias",
+                "type": "text",
+                "instructions": "Título Banner",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Categorías"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc07ece7c7b0",
+                "label": "",
+                "name": "subtitle-banner-categorias",
+                "type": "text",
+                "instructions": "Subtítulo Banner",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Categorías"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5fc07ee57c7b1",
+                "label": "",
+                "name": "image-banner-categorias",
+                "type": "image",
+                "instructions": "Imagen Banner",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Categorías"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5fc07f1d7c7b2",
+                "label": "",
+                "name": "title-general-categorias",
+                "type": "text",
+                "instructions": "Título General",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5fc0458a2cf1e",
+                            "operator": "==",
+                            "value": "Categorías"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5fbdb6a04c214",
+        "title": "Poster Categorías",
+        "fields": [
+            {
+                "key": "field_5fbdb6aadf574",
+                "label": "",
+                "name": "poster_categories",
+                "type": "image",
+                "instructions": "Poster",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "taxonomy",
+                    "operator": "==",
+                    "value": "product_cat"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]
