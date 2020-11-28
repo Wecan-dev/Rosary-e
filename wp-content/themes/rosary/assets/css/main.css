@@ -2239,7 +2239,9 @@ a.general-btn__simple:hover {
     gap: 60px;
   }
 }
-
+.contact .frm_form_fields  {
+	width:100%;
+}
 .contact .contact-form__title {
   font-size: 15px;
   font-weight: bold;
@@ -2253,6 +2255,28 @@ a.general-btn__simple:hover {
   margin-bottom: 14px;
 }
 
+
+.contact .general-btn__rose {
+	font-size: 13px!important;
+    
+    color: #000000!important;
+    border-radius: 2px!important;
+    background-color: #d0bd9b!important;
+    border: none;
+    width: 215px!important;
+    height: 50px!important;
+    display: flex;
+    text-transform: uppercase;
+	    border-color: transparent;
+	    border-width: 0!important;
+    font-family: Brandon Text Bold!important;
+}
+.contact .frm_style_formidable-style.with_frm_style .frm_error_style {
+    background-color: #d0bd9b!important;
+	color: #000!important;
+    border: 1px solid #d0bd9b!important;
+	width: 100%;
+}
 .contact .contact-form__description {
   font-size: 13px;
   font-weight: normal;
@@ -2272,42 +2296,43 @@ a.general-btn__simple:hover {
 }
 
 .contact input {
-  margin-bottom: 27px;
+  margin-bottom: 27px!important;
 }
 
-.contact input:nth-child(1),
-.contact input:nth-child(2) {
-  width: 49%;
-}
 
 .contact input,
 .contact textarea {
-  padding: 20px;
-  border-radius: 2px;
-  border: solid 1px #d0bd9b;
+  padding: 20px!important;
+  border-radius: 2px!important;
+  border: solid 1px #d0bd9b!important;
   width: 100%;
 }
 
 .contact input::placeholder,
 .contact textarea::placeholder {
-  font-size: 13px;
+  font-size: 13px!important;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #000000;
-  font-family: Brandon Text Medium;
+  color: #000000!important;
+  font-family: Brandon Text Medium!important;
 }
 
 .contact textarea {
   height: 314px;
-  margin-bottom: 32px;
+  margin-bottom: 32px!important;
+	resize: none;
 }
 
 .contact .contact-list {
   list-style: none;
   padding-left: 0;
+}
+
+.contact .frm_style_formidable-style.with_frm_style .form-field {
+	margin-bottom: 0!important;
 }
 
 .contact .contact-list li {
