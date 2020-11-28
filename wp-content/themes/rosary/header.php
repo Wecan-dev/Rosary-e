@@ -21,12 +21,13 @@ window.cookieconsent.initialise({
       "text": "#000000"
     },
     "button": {
-      "background": "#000000"
+      "background": "#fff",
+      "text": "#000000"
     }
   },
   "theme": "classic",
   "content": {
-    "message": "Éste sitio web usa cookies, si permanece aquí acepta su uso.\nPuede leer más sobre el uso de cookies en nuestra Polìtica de Cookies <a href='"+url+"' style = 'color: #000'>Leer más</a> ",
+    "message": "Este sitio web usa cookies para mejorar la experiencia del usuario. si continuas navegando entendemos que aceptas la Política de Cookies",
     "dismiss": "¡Acepto!",
     "link": "Leer màs"
   }

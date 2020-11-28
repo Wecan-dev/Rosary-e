@@ -148,7 +148,7 @@ Enviar
             <img src="<?php the_post_thumbnail_url('full');?>">
           </div>
           <div class="main-featured__text">
-            <a class="main-featured__title" href="">
+            <a class="main-featured__title" href="<?php the_permalink(); ?>">
               <?php the_title();?>
             </a>
             <p class="main-featured__price">
