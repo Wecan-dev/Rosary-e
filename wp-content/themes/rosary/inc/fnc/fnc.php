@@ -1053,6 +1053,20 @@ function file_customizer($id_file)
     } 
 }   
 
+/***************** Termmeta *****************/
+function termmeta_value( $meta_key, $post_id ){
+            global $wpdb;  
+              $result_link = $wpdb->get_results( "SELECT * FROM ".$wpdb->prefix."termmeta WHERE meta_key = '$meta_key' and term_id = '$post_id'"); 
+              foreach($result_link as $r)
+              {
+                      $value = $r->meta_value;                      
+              }
+              $result_link1 = $wpdb->get_results( "SELECT * FROM ".$wpdb->prefix."posts WHERE ID = '$value'"); 
+               
+              return $value;
+
+}
+
 /***************** Termmeta IMG *****************/
 function termmeta_value_img( $meta_key, $post_id ){
             global $wpdb;  
@@ -1124,3 +1138,72 @@ function meta_value_img( $meta_key, $post_id ){
 
 }
 
+// ******************** Generate description woocommerce_before_add_to_cart_button ***/
+add_action ('woocommerce_before_add_to_cart_button', 'generate_description');
+function generate_description () {
+
+  require_once trailingslashit( get_template_directory() ) . 'woocommerce/content-single-product.php';
+  $id = products();
+  global $wpdb;  
+  $result_link = $wpdb->get_results( "SELECT * FROM ".$wpdb->prefix."posts WHERE ID = '$id'"); 
+  foreach($result_link as $r)
+  {
+          $valued = $r->post_content;                    
+  }
+
+  //$valueb = meta_value( 'benefits_product', $id );
+  //$valuet = meta_value( 'technical_decription_product', $id );
+  //$valuec = meta_value( 'composition_product', $id ); 
+  //$span = '<span class="fa fa-circle"></span>';
+
+$valueb = meta_value( 'detalle_del_producto', $id );
+$valuet = meta_value( 'technical_decription_product', $id );
+$valuec =  meta_value( 'caracteristicas_producto', $id );
+$span = '<span class="fa fa-circle"></span>';
+
+  if ($valueb != NULL) {
+    $spanb = $span;
+  }
+  if ($valuet != NULL) {
+    $spant = $span;
+  }
+  if ($valuec != NULL) {
+    $spanc = $span;
+  }                                      
+ 
+  $description = '
+  <p class="title-collapse">
+    <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
+      Descripción <span class="caret"></span>
+    </a>
+  </p>
+  <div class="collapse show" id="collapseExample">
+    <div class="card_body">
+      '.$valued.'
+    </div>
+  </div>
+  <p class="title-collapse">
+    <a data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="true" aria-controls="collapseExample1">
+      Detalle del Producto <span class="caret"></span>
+    </a>
+  </p class="title-collapse" >
+  <div class="collapse show" id="collapseExample1">
+    <div class="card_body">
+      '.$spanb.''.str_replace("<br>", '<br><span class="fa fa-circle"></span>', $valueb).'
+    </div>
+  </div>
+  
+  
+  <p class="title-collapse">
+    <a data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+      Característica del Producto <span class="caret"></span>
+    </a>
+  </p>  
+  <div class="collapse" id="collapseExample3">
+    <div class="card_body">
+       '.$valuec.'
+    </div>
+  </div>';    
+
+  echo $description;
+}
