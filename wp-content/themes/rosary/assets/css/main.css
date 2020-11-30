@@ -4080,8 +4080,22 @@ transition: .3;
   padding-bottom: 78px;
   padding-left: 55px;
   padding-right: 55px;
+	    background-color: rgba(0, 0, 0, .24);
+}
+.categories-all__border {
+	 border: solid 1px #ffffff;
+    position: absolute;
+    z-index: 1;
+    top: 14px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
 }
 
+.categories-all .general-btn__light {
+	z-index: 2;
+}
+   
 @media (min-width: 0px) and (max-width: 767px) {
   .categories-all__card .categories-all__text {
     padding: 20px;
@@ -4090,7 +4104,7 @@ transition: .3;
 }
 
 .categories-all__card .categories-all__title {
-  font-size: 120px;
+    font-size: 80px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -4151,6 +4165,7 @@ transition: .3;
 .general-btn__light:hover {
   background-color: #d0bd9b;
   transition: .3s;
+	color: #000;
 }
 
 .custom-piece {
