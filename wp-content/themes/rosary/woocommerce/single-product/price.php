@@ -23,4 +23,6 @@ global $product;
 
 ?>
 <p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
-<span class="fa fa-circle"></span><span class="advise"> ¡Ultimas unidades de este producto!</span>
+<p class="advise product-notif"> 
+	<img src="<?php echo get_template_directory_uri();?>/assets/img/fire.png">
+	¡Ultimas unidades de este producto!</p>

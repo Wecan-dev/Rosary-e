@@ -1159,7 +1159,7 @@ function generate_description () {
 $valueb = meta_value( 'detalle_del_producto', $id );
 $valuet = meta_value( 'technical_decription_product', $id );
 $valuec =  meta_value( 'caracteristicas_producto', $id );
-$span = '<span class="fa fa-circle"></span>';
+$span = '<span class=""></span>';
 
   if ($valueb != NULL) {
     $spanb = $span;
@@ -1184,12 +1184,12 @@ $span = '<span class="fa fa-circle"></span>';
   </div>
   <p class="title-collapse">
     <a data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="true" aria-controls="collapseExample1">
-      Detalle del Producto <span class="caret"></span>
+      Detalle del Producto 
     </a>
   </p class="title-collapse" >
   <div class="collapse show" id="collapseExample1">
-    <div class="card_body">
-      '.$spanb.''.str_replace("<br>", '<br><span class="fa fa-circle"></span>', $valueb).'
+    <div class="card_body card_body-list">
+      '.$spanb.''.str_replace("<br>", '<br><span class=""></span>', $valueb).'
     </div>
   </div>
   
