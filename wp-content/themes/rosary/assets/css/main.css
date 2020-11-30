@@ -4282,10 +4282,13 @@ a.general-btn__simple:hover {
   margin: 0;
 }
 .title-collapse {
-	    border-top: solid 1px #d0bd9b;
+	    border-top: solid 2px #d0bd9b;
     padding-top: 17px;
-	margin-top: 15px;
 	
+}
+
+.product-details .variations_form cart {
+	margin-top: 15px;
 }
 
 .card_body {
@@ -4296,6 +4299,7 @@ a.general-btn__simple:hover {
   line-height: normal;
   letter-spacing: normal;
   color: #000000;
+	margin-bottom: 15px;
 }
 
 .title-collapse a {
