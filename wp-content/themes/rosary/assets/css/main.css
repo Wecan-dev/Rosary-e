@@ -5755,6 +5755,17 @@ ol.flex-control-nav.flex-control-thumbs img {
     padding: 20px !important;
     width: 90%;
   }
+	
+	.checkout-custom .container-grid {
+	    display: grid;
+    grid-template-columns: 100%;
+}
+	.checkout-grid .woocommerce-checkout-review-order {
+		padding: 0;
+	}
+	.checkout-grid #customer_details {
+    padding: 0px;
+}
 
   .login-content {
     margin-top: 24%;
@@ -5832,7 +5843,63 @@ ol.flex-control-nav.flex-control-thumbs img {
     padding-left: 25px;
     padding-right: 25px;
 }
-
+	
+	.checkout-custom {
+	margin-top:155px;	
+	}
+	
+	.cart-custom {
+		padding: 25px;
+	}
+	
+	.coupon {
+    padding: 0;
+    flex-wrap: wrap;
+    width: 100%;
+    border: none;
+	}
+	.coupon input {
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+	
+	.woocommerce-cart-form .general-btn__rose {
+		width: 100%;
+	}
+	
+	.woocommerce {
+			margin-top:155px;	
+	}
+	
+	.content-area .site-main {
+			margin-top:155px;	
+		
+	}
+	
+	.product-details {
+		padding: 25px;
+	}
+	.product-details .product {
+		grid-template-columns: 100%;
+	}
+	
+	.woocommerce-product-gallery.woocommerce-product-gallery--with-images.woocommerce-product-gallery--columns-4.images {
+		flex-direction: column;
+	}
+	.product-details .flex-viewport {
+		width: 100%;
+		    margin: 0;
+	}
+	
+	.woocommerce-product-gallery__wrapper img, .video-js {
+	    height: 337px!important;
+    object-fit: cover;
+	}
+	ol.flex-control-nav.flex-control-thumbs {
+		height: 100%;
+		width: 100%;
+		flex-direction: row;
+	}
 }
 
 
@@ -5841,6 +5908,28 @@ ol.flex-control-nav.flex-control-thumbs img {
     padding: 60px 80px !important;
     width: 90%;
   }
+	.woocommerce-product-gallery.woocommerce-product-gallery--with-images.woocommerce-product-gallery--columns-4.images {
+		flex-direction: column;
+	}
+		ol.flex-control-nav.flex-control-thumbs {
+		height: auto;
+		width: 100%;
+		flex-direction: row;
+	}
+		.product-details .flex-viewport {
+		width: 100%;
+		    margin: 0;
+	}
+	
+	.woocommerce-product-gallery__wrapper img, .video-js {
+	    height: 426px!important;
+    object-fit: cover;
+	}
+	.variations .value {
+	margin-left: 0!important;	
+	}
+	.coupon {
+		padding: 10px;}
 
   .login-content {
     margin-top: 15%;
@@ -5848,9 +5937,13 @@ ol.flex-control-nav.flex-control-thumbs img {
 
   .checkout-custom .woocommerce-checkout {
 
-    padding: 60px 20px !important;
+
     width: 90%;
   }
+	.checkout-custom .container-grid {
+
+    grid-template-columns: 1fr 1fr;
+}
 }
 
 a.cc-link {
