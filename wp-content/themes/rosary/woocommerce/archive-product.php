@@ -18,6 +18,14 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
+global $wp_query;
+if (get_queried_object_id()!=NULL) {
+   get_template_part('sections/category/subcategory');
+}
+else{ 
+
+
+
 $urlsinparametros= explode('?', $_SERVER['REQUEST_URI'], 2);
 if ($category_name == NULL){ 
     $urlsinparametros = get_home_url().'/'.get_post(get_the_ID())->post_name;
@@ -287,4 +295,7 @@ gfhgfhgfhgfh
   </section>
 
 <?php
+
+}//else
 get_footer( 'shop' );
+
