@@ -5366,7 +5366,7 @@ thead {
 
 }
 
-.woocommerce-billing-fields input {
+.woocommerce-billing-fields input, .woocommerce-input-wrapper input, .woocommerce-input-wrapper textarea {
   margin-bottom: 20px;
   padding: 16px 15px;
   height: 45px;
@@ -5381,6 +5381,79 @@ thead {
   border-radius: 2px;
   border: solid 1px #d0bd9b;
 }
+.woocommerce-input-wrapper textarea {
+	 height: 95px!important;
+}
+.woocommerce-additional-fields h3 {
+	font-family: Brandon Text Bold;
+  font-size: 13px;
+  font-weight: normal;
+	margin-top: 31px;
+	margin-bottom: 22px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+#place_order{
+	  padding: 16px 41px 16px 23px;
+  border-radius: 2px;
+  background-color: #d0bd9b;
+	  font-size: 13px;
+  font-weight: bold;
+  font-stretch: normal;
+	text-transform: uppercase;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.73px;
+  color: #000000;
+}
+
+.checkout-grid .woocommerce-checkout-review-order {
+	background: #f7f3ee;
+	    padding: 40px;
+}
+
+.checkout-grid #customer_details{
+	  padding: 30px;
+} 
+.checkout-grid .shop_table, .checkout-grid .shop_table .product-name {
+	border: none!important;
+	
+}
+.checkout-grid .shop_table .product-name {
+	  font-size: 15px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+
+}
+
+.checkout-grid .input-text {
+	margin-bottom: 11px!important;
+}
+.checkout-grid .shop_table .product-name strong {
+		margin-bottom: 4px;
+}
+
+.checkout-grid  .select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #d0bd9b;
+    border-radius: 2px;
+    height: 45px;
+	display: flex;}
+
+.checkout-grid .shop_table img{
+	border: solid 2px #d0bd9b;
+}
+ 
+
+.woocommerce-checkout #payment {
+	background: #fff;
+}
 
 .checkout-custom {
   background-image: url('../img/checkout.png');
@@ -5388,7 +5461,6 @@ thead {
   background-repeat: no-repeat;
 }
 	.checkout-custom .woocommerce-checkout {
-    padding: 41px;
      width: 1105px;
     margin: 64px 0;
     border-radius: 5px;
@@ -5423,7 +5495,6 @@ thead {
 	background: #f7f3ee;
 }
 .checkout-custom .woocommerce-checkout {
-  padding: 41px;
   width: 1105px;
 
   margin: 64px 0;
