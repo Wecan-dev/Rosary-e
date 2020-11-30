@@ -4281,7 +4281,41 @@ a.general-btn__simple:hover {
 .shop-products .main-featured__product {
   margin: 0;
 }
+.title-collapse {
+	    border-top: solid 1px #d0bd9b;
+    padding-top: 17px;
+	margin-top: 15px;
+	
+}
 
+.card_body {
+	font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.title-collapse a {
+	  font-family: Brandon Text Medium;
+  font-size: 15px;
+	transition: .3s;
+	margin-bottom: 6px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+	margin-bottom: 8px;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.title-collapse a:hover {
+	transition: .3s;
+	    color: #ab9a7c;
+}
 .shop-products .main-featured__product .main-featured__img img {
   height: 345px;
 }
