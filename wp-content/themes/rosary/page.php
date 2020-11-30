@@ -109,7 +109,7 @@
         <form>
           <input placeholder="Tu email" type="email">
           <a class="general-btn__rose" href="">
-Enviar
+Unirme
 </a>
         </form>
       </div>
