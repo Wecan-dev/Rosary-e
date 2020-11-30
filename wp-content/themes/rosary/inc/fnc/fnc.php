@@ -166,6 +166,19 @@ function author_name($id_author)
     } 
 }   
 
+/***************** Meta User *****************/
+function meta_user_value( $meta_key, $post_id ){
+            global $wpdb; 
+            $value = NULL; 
+              $result_link = $wpdb->get_results( "SELECT * FROM ".$wpdb->prefix."usermeta WHERE meta_key = '$meta_key' and user_id = '$post_id'"); 
+              foreach($result_link as $r)
+              {
+                      $value = $r->meta_value;                      
+              }
+              return $value;
+
+}
+
 /************** Count post cat ****************/
 function count_post($cat_id)
 {

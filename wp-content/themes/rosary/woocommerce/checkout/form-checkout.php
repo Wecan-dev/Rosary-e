@@ -18,7 +18,15 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
+global $current_user;
+if(is_user_logged_in() != NULL)
+{ 
+ // $user_logged = meta_user_value( 'user_registration_cedula_identidad', $current_user->ID );
+  $user_logged =  $current_user->display_name; 
+  
+}
 
+meta_user_value( $meta_key, $post_id );
 do_action( 'woocommerce_before_checkout_form', $checkout );
 
 // If checkout registration is disabled and not logged in, the user cannot checkout.
@@ -28,6 +36,9 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 }
 
 ?>
+<section class="contact">
+<div class="container-grid main-featured">
+<div class="contact-form">
 <div class="d-flex justify-content-center" >
 <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
@@ -51,7 +62,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 	
 	<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
 	
-	<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>
+	<!--<h3 id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h3>-->
 	
 	<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
@@ -64,4 +75,26 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 </form>
 	</div>
 
-<?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
+<?php //do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
+</div>
+<div class="contact-sidebar">
+	
+</div>
+</div>
+</section>
+<style type="text/css">
+	.checkout-custom .woocommerce-checkout {
+    padding: 41px;
+    width: 100% !important; 
+    margin: 64px 0;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+</style>
+<script type="text/javascript">
+    
+    var user_logged = "<?= $user_logged ?>"; 
+    $("input#additional_wooccm0").val(user_logged);
+	$('#order_review').appendTo('.contact-sidebar');
+	$('#payment').appendTo('#customer_details');
+</script>

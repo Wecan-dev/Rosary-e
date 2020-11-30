@@ -18,7 +18,13 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
-
+$urlsinparametros= explode('?', $_SERVER['REQUEST_URI'], 2);
+if ($category_name == NULL){ 
+    $urlsinparametros = get_home_url().'/'.get_post(get_the_ID())->post_name;
+}else{
+  $urlsinparametros = get_home_url().'/product-category/'.$category_name;
+}    
+$args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['orderby'],$paged,$category_name,$page_name);         
 /**
  * Hook: woocommerce_before_main_content.
  *
@@ -103,13 +109,13 @@ get_header( 'shop' );
 //do_action( 'woocommerce_sidebar' );
 ?>
   <section class="general-banner">
-    <img src="<?php echo get_template_directory_uri();?>/assets/img/productos/image_1.png">
+    <img src="<?php the_field('image_banner_productos'); ?>">
     <div class="general-banner__text">
       <h2 class="main-general__title">
-        Productos
+        <?php the_field('title_banner_productos'); ?>
       </h2>
       <p class="general-banner__subtitle">
-        Rosary
+        <?php the_field('subtitle_banner_productos'); ?>
       </p>
     </div>
   </section>
@@ -136,36 +142,18 @@ Filtros
               <span></span>
             </h2>
             <ul class="shop-sidebar__categories">
+          <?php
+          global $wpdb;
+          $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'orderby' => 'menu_order', 'order' => 'asc' ));  
+          ?>                                                        
+          <?php foreach($product_categories as $category): ?>
+            <?php $checked =NULL;  if ($category->slug == $_GET['cat']) { $checked = "checked='checked'"; } $categoria = $category->name; $category_id = $category->term_id; $category_link = get_category_link( $category_id ); ?>         
               <li>
-                <a href="">
-Pulseras
-</a>
+                <a href="<?php echo get_home_url().'/cat='.$category->slug.'&tax=product_cat'?>">
+                   <?= $categoria ?>
+                </a>
               </li>
-              <li>
-                <a href="">
-Aretes
-</a>
-              </li>
-              <li>
-                <a href="">
-Candongas
-</a>
-              </li>
-              <li>
-                <a href="">
-Collares
-</a>
-              </li>
-              <li>
-                <a href="">
-Anillos
-</a>
-              </li>
-              <li>
-                <a href="">
-Gargantillas
-</a>
-              </li>
+              <?php endforeach; ?>  
             </ul>
           </div>
           <div class="shop-sidebar__content">
@@ -236,10 +224,26 @@ Bronce
           <div class="shop-products__header">
             <h2>Showing 1-12 of 16 results</h2>
             <div class="shop-products__menu">
-              <img src="<?php echo get_template_directory_uri();?>/assets/img/productos/list.png">
-              <img src="<?php echo get_template_directory_uri();?>/assets/img/productos/menu.png">
+              <!-- Nav tabs -->
+          <!-- Nav tabs -->
+          <ul class="nav " id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class=" active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><img src="<?php echo get_template_directory_uri();?>/assets/img/categorie/grid.png"></a>
+            </li>
+            <li class="nav-item">
+              <a class="" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><img src="<?php echo get_template_directory_uri();?>/assets/img/categorie/open-menu.png"></a>
+            </li>
+          </ul>
+
+             
+              
             </div>
           </div>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
           <div class="container-grid">
             <div class="main-featured__product">
               <div class="main-featured__img">
@@ -254,149 +258,19 @@ Aretes de estrellas - Dorado
                 </p>
               </div>
             </div>
-            <div class="main-featured__product">
-              <div class="main-featured__img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/img/new-in/image-1.png">
-              </div>
-              <div class="main-featured__text">
-                <a class="main-featured__title" href="">
-Aretes de estrellas - Dorado
-</a>
-                <p class="main-featured__price">
-                  $200.000
-                </p>
-              </div>
-            </div>
-            <div class="main-featured__product">
-              <div class="main-featured__img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/img/new-in/image_2.png">
-              </div>
-              <div class="main-featured__text">
-                <a class="main-featured__title" href="">
-Aretes de estrellas - Dorado
-</a>
-                <p class="main-featured__price">
-                  $200.000
-                </p>
-              </div>
-            </div>
-            <div class="main-featured__product">
-              <div class="main-featured__img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/img/new-in/image_3.png">
-              </div>
-              <div class="main-featured__text">
-                <a class="main-featured__title" href="">
-Aretes de estrellas - Dorado
-</a>
-                <p class="main-featured__price">
-                  $200.000
-                </p>
-              </div>
-            </div>
-            <div class="main-featured__product">
-              <div class="main-featured__img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/img/new-in/image-1_2.png">
-              </div>
-              <div class="main-featured__text">
-                <a class="main-featured__title" href="">
-Aretes de estrellas - Dorado
-</a>
-                <p class="main-featured__price">
-                  $200.000
-                </p>
-              </div>
-            </div>
-            <div class="main-featured__product">
-              <div class="main-featured__img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/img/new-in/image-1.png">
-              </div>
-              <div class="main-featured__text">
-                <a class="main-featured__title" href="">
-Aretes de estrellas - Dorado
-</a>
-                <p class="main-featured__price">
-                  $200.000
-                </p>
-              </div>
-            </div>
-            <div class="main-featured__product">
-              <div class="main-featured__img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/img/new-in/image_2.png">
-              </div>
-              <div class="main-featured__text">
-                <a class="main-featured__title" href="">
-Aretes de estrellas - Dorado
-</a>
-                <p class="main-featured__price">
-                  $200.000
-                </p>
-              </div>
-            </div>
-            <div class="main-featured__product">
-              <div class="main-featured__img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/img/new-in/image_3.png">
-              </div>
-              <div class="main-featured__text">
-                <a class="main-featured__title" href="">
-Aretes de estrellas - Dorado
-</a>
-                <p class="main-featured__price">
-                  $200.000
-                </p>
-              </div>
-            </div>
-            <div class="main-featured__product">
-              <div class="main-featured__img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/img/new-in/image-1_2.png">
-              </div>
-              <div class="main-featured__text">
-                <a class="main-featured__title" href="">
-Aretes de estrellas - Dorado
-</a>
-                <p class="main-featured__price">
-                  $200.000
-                </p>
-              </div>
-            </div>
-            <div class="main-featured__product">
-              <div class="main-featured__img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/img/new-in/image-1.png">
-              </div>
-              <div class="main-featured__text">
-                <a class="main-featured__title" href="">
-Aretes de estrellas - Dorado
-</a>
-                <p class="main-featured__price">
-                  $200.000
-                </p>
-              </div>
-            </div>
-            <div class="main-featured__product">
-              <div class="main-featured__img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/img/new-in/image_2.png">
-              </div>
-              <div class="main-featured__text">
-                <a class="main-featured__title" href="">
-Aretes de estrellas - Dorado
-</a>
-                <p class="main-featured__price">
-                  $200.000
-                </p>
-              </div>
-            </div>
-            <div class="main-featured__product">
-              <div class="main-featured__img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/img/new-in/image_3.png">
-              </div>
-              <div class="main-featured__text">
-                <a class="main-featured__title" href="">
-Aretes de estrellas - Dorado
-</a>
-                <p class="main-featured__price">
-                  $200.000
-                </p>
-              </div>
-            </div>
+          </div>  
+            
+        </div>
+
+
+        <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+gfhgfhgfhgfh
+        </div>
+
+
+
+      </div>  
+
           </div>
           <div class="blog-general__paginator blog-general__paginator--center">
             <a class="blog-general__page-all" href="">Mostrar todo</a>

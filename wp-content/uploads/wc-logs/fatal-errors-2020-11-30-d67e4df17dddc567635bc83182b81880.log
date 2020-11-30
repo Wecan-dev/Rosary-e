@@ -1,0 +1,10 @@
+2020-11-30T08:10:29+00:00 CRITICAL syntax error, unexpected 'endforeach' (T_ENDFOREACH) en C:\xampp2\htdocs\rosary\wp-content\themes\rosary\woocommerce\archive-product.php en la línea 157
+
+2020-11-30T08:23:44+00:00 CRITICAL Uncaught Error: Call to undefined function cut_text() in C:\xampp2\htdocs\rosary\wp-content\themes\rosary\woocommerce\archive-product.php:279
+Stack trace:
+#0 C:\xampp2\htdocs\rosary\wp-includes\template-loader.php(106): include()
+#1 C:\xampp2\htdocs\rosary\wp-blog-header.php(19): require_once('C:\\xampp2\\htdoc...')
+#2 C:\xampp2\htdocs\rosary\index.php(17): require('C:\\xampp2\\htdoc...')
+#3 {main}
+  thrown en C:\xampp2\htdocs\rosary\wp-content\themes\rosary\woocommerce\archive-product.php en la línea 279
+
