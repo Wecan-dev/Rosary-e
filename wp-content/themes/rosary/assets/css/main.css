@@ -2417,15 +2417,19 @@ a.general-btn__simple:hover {
 @media (min-width: 0px) and (max-width: 767px) {
   .general-banner {
     height: 118px;
-    margin-top: 148px;
+    margin-top: 156px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .general-banner {
-    height: 200px;
-    margin-top: 153px;
+  .general-banner, .woocommerce-banner {
+    height: 200px!important;
+      margin-top: 166px;
   }
+	.general-banner__text, .woocommerce-banner__text {
+    background-color: rgba(255, 255, 255, 0.68);
+		    width: 100%!important;
+}
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -5765,6 +5769,18 @@ ol.flex-control-nav.flex-control-thumbs img {
     padding: 20px !important;
     width: 90%;
   }
+	.woocommerce-banner {
+    height: 118px;
+    margin-top: 156px;
+}
+		.woocommerce-banner__text {
+    background-color: rgba(255, 255, 255, 0.68);
+		    width: 100%;
+}
+	
+	.general-banner__text {
+		    background-color: rgba(255, 255, 255, 0.68);
+	}
 	.woocommerce-info, .woocommerce-message { 
 		    display: flex;
     flex-direction: column-reverse;
