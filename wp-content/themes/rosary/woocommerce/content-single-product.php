@@ -37,7 +37,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<section class="product-details main-featured" > 
+<section class="product-details" > 
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
 	<?php
@@ -98,7 +98,7 @@ if ( post_password_required() ) {
     </div>
   </section>
 
-  <section class="main-featured">
+  <section class="main-featured main-featured--white">
     <div class="padding-top-bottom">
       <h2 class="main-general__title">
         Productos Relacioandos
