@@ -2352,7 +2352,7 @@ a.general-btn__simple:hover {
   border: solid 1px #d0bd9b!important;
   width: 100%;
 }
-
+.contact label,
 .contact input::placeholder,
 .contact textarea::placeholder {
   font-size: 13px!important;
@@ -5426,6 +5426,11 @@ thead {
   letter-spacing: 1.88px;
   color: #000000;
 }
+
+.product-details .price del{
+	    text-decoration: line-through;
+}
+
 
 .woocommerce-product-gallery.woocommerce-product-gallery--with-images.woocommerce-product-gallery--columns-4.images {
   width: 100%;

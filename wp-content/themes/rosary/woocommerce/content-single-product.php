@@ -137,9 +137,6 @@ if ( post_password_required() ) {
             <p class="main-featured__price">
               <?php echo $product->get_price_html(); ?>
             </p>
-            <a class="general-btn__simple" href="<?php the_permalink(); ?>">
-               Comprar
-            </a>
           </div>
         </div>
       <?php   }}  wp_reset_query();?>  
