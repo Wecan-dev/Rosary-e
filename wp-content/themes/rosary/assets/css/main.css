@@ -2223,6 +2223,7 @@ a.general-btn__simple:hover {
 
 .main-powered a:hover {
   transition: .5s;
+	color: #c7b197;
 }
 
 /*botón up*/
@@ -2607,6 +2608,12 @@ a.general-btn__simple:hover {
   font-family: Brandon Text Medium;
   letter-spacing: normal;
   color: #000000;
+transition: .3;
+}
+
+.blog-general__paginator a:hover {
+	transition: .3;
+	color: #c7b197;
 }
 
 .blog-general__paginator span {
@@ -5024,6 +5031,13 @@ color: #000;}
   line-height: normal;
   letter-spacing: 1.32px;
   color: #000000;
+	
+	transition: .3s;
+}
+
+.woocommerce-in-account a:hover { 
+color: #c0a980;
+	transition: .3s;
 }
 
 .login-content {
