@@ -36,9 +36,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 }
 
 ?>
-<section class="contact">
-<div class="container-grid main-featured">
-<div class="contact-form">
+<section class="checkout-grid">
 <div class="d-flex justify-content-center" >
 <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
@@ -47,7 +45,11 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
 		<div class="col2-set" id="customer_details">
+			
 			<div class="col-12">
+				<h2 class="checkout-title" >
+				checkout information
+			</h2>
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
 			</div>
 
@@ -76,20 +78,12 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 	</div>
 
 <?php //do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
-</div>
-<div class="contact-sidebar">
+<div class="checkout-cart">
 	
-</div>
 </div>
 </section>
 <style type="text/css">
-	.checkout-custom .woocommerce-checkout {
-    padding: 41px;
-    width: 100% !important; 
-    margin: 64px 0;
-    border-radius: 5px;
-    background-color: #ffffff;
-}
+
 </style>
 <script type="text/javascript">
     

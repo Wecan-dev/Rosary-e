@@ -4412,6 +4412,44 @@ transition: .3;
     font-size: 16px;
 }
 
+.product-details .variation_button  span {
+height: auto!important;
+    width: auto!important;
+	    box-shadow: none!important;
+	  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+	
+} 
+
+.product-details .variations label {
+		  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.product-details .variations .label {
+	width: auto!important;
+}
+
+.product-details .reset_variations {
+	font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.73px;
+    color: #000000;
+}
+
+.product-details .variations .value .variation_button.selected span.phoen_swatches {
+	font-weight: 700;
+}
 .card_body {
 	font-size: 13px;
   font-weight: normal;
@@ -5349,7 +5387,41 @@ thead {
   background-size: cover;
   background-repeat: no-repeat;
 }
+	.checkout-custom .woocommerce-checkout {
+    padding: 41px;
+     width: 1105px;
+    margin: 64px 0;
+    border-radius: 5px;
+    background-color: #ffffff;
+		display:grid;
+		grid-template-columns: 1fr 461px;
+}
 
+.checkout-title {
+	  font-family: Brandon Text Medium;
+  font-size: 15px;
+  font-stretch: normal;
+  font-style: normal;
+	text-transform: uppercase;
+	margin-bottom: 31px;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #d0bd9b;	
+}
+
+.woocommerce-billing-fields h3 {
+	  font-family: Brandon Text Medium;
+  font-size: 13px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #d0bd9b;
+}
+
+.checkout-cart {
+	background: #f7f3ee;
+}
 .checkout-custom .woocommerce-checkout {
   padding: 41px;
   width: 1105px;
