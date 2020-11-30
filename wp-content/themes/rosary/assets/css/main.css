@@ -5465,10 +5465,11 @@ thead {
     margin: 64px 0;
     border-radius: 5px;
     background-color: #ffffff;
-		display:grid;
-		grid-template-columns: 1fr 461px;
-}
 
+}
+.checkout-cart {
+	
+}
 .checkout-title {
 	  font-family: Brandon Text Medium;
   font-size: 15px;
@@ -5501,6 +5502,11 @@ thead {
   border-radius: 5px;
   background-color: #ffffff;
 }
+.checkout-custom .container-grid {
+	    display: grid;
+    grid-template-columns: 1fr 461px;
+}
+
 
 .select2-container--default .select2-selection--single {
   border-radius: 2px;
