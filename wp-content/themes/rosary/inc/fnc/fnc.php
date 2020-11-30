@@ -442,7 +442,57 @@ function counts_post()
          endwhile; 
   return $count; 
 }            
-        
+
+/************** Count posts tag****************/
+function counts_post_tag($tag_lug)
+{ $count = 0;
+   
+        $args = 
+        array(
+          'post_type' => 'post',
+          'post_status' => 'publish',
+          'posts_per_page' => 99999, 
+          'tax_query' => array(
+             'relation'=>'AND', // 'AND' 'OR' ...
+              array(
+                'taxonomy'        => 'post_tag',
+                'field'           => 'slug',
+                'terms'           => array($tag_lug),
+                'operator'        => 'IN',
+               )),          
+         );
+
+         $loop = new WP_Query( $args ); 
+         while ( $loop->have_posts() ) : $loop->the_post(); global $product;
+              $count = $count+1;
+         endwhile; 
+  return $count; 
+}  
+
+/************** Count posts Cayegories****************/
+function counts_post_categorie($cat_lug)
+{ $count = 0;
+   
+        $args = 
+        array(
+          'post_type' => 'post',
+          'post_status' => 'publish',
+          'posts_per_page' => 99999, 
+          'tax_query' => array(
+            array(
+              'taxonomy'  => 'category',
+              'field'     => 'slug',
+              'terms'     => $cat_lug,
+            )),          
+         );
+
+         $loop = new WP_Query( $args ); 
+         while ( $loop->have_posts() ) : $loop->the_post(); global $product;
+              $count = $count+1;
+         endwhile; 
+  return $count; 
+}            
+
 /************** Count product taxonomy****************/
  
 function count_post_product_taxonomy($cat,$tax,$categor)

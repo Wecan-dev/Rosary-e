@@ -3,7 +3,7 @@
               Categorías
             </p>
             <ul class="blog-sidebar__categorie">
-            <?php $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'orderby' => 'menu_order', 'order' => 'asc' ));  ?>
+            <?php $product_categories = get_categories( array( 'taxonomy' => 'category', 'orderby' => 'menu_order', 'order' => 'asc' ));  ?>
             <?php foreach($product_categories as $category):  global $wpdb;?>
             <?php $result = $wpdb->get_results ("SELECT * FROM ".$wpdb->prefix."term_taxonomy where taxonomy = 'product_cat'");?>
                 <li>              
