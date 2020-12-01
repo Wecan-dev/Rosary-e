@@ -1,23 +1,7 @@
 <?php
-/**
- * The Template for displaying product archives, including the main shop page which is a post type archive
- *
- * This template can be overridden by copying it to yourtheme/woocommerce/archive-product.php.
- *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
- * (the theme developer) will need to copy the new files to your theme to
- * maintain compatibility. We try to do this as little as possible, but it does
- * happen. When this occurs the version of the template file will be bumped and
- * the readme will list any important changes.
- *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
- * @version 3.4.0
- */
-
-defined( 'ABSPATH' ) || exit;
-
+$pag = get_post(get_the_ID())->post_title;
 get_header( 'shop' );
+
 global $wp_query;
 if (get_queried_object_id()!=NULL) {
    get_template_part('sections/category/subcategory');
@@ -33,96 +17,16 @@ if ($category_name == NULL){
   $urlsinparametros = get_home_url().'/product-category/'.$category_name;
 }    
 $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['orderby'],$paged,$category_name,$page_name);         
-/**
- * Hook: woocommerce_before_main_content.
- *
- * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
- * @hooked woocommerce_breadcrumb - 20
- * @hooked WC_Structured_Data::generate_website_data() - 30
- */
-//do_action( 'woocommerce_before_main_content' );
 
-?>
-<!--<header class="woocommerce-products-header">
-	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
-	<?php endif; ?>
-	<?php
-	/**
-	 * Hook: woocommerce_archive_description.
-	 *
-	 * @hooked woocommerce_taxonomy_archive_description - 10
-	 * @hooked woocommerce_product_archive_description - 10
-	 */
-	do_action( 'woocommerce_archive_description' );
-	?>
-</header>-->
-<?php
-//if ( woocommerce_product_loop() ) {
-
-	/**
-	 * Hook: woocommerce_before_shop_loop.
-	 *
-	 * @hooked woocommerce_output_all_notices - 10
-	 * @hooked woocommerce_result_count - 20
-	 * @hooked woocommerce_catalog_ordering - 30
-	 */
-	//do_action( 'woocommerce_before_shop_loop' );
-
-	//woocommerce_product_loop_start();
-
-	//if ( wc_get_loop_prop( 'total' ) ) {
-		//while ( have_posts() ) {
-			//the_post();
-
-			/**
-			 * Hook: woocommerce_shop_loop.
-			 */
-			//do_action( 'woocommerce_shop_loop' );
-
-			//wc_get_template_part( 'content', 'product' );
-		//}
-	//}
-
-	//woocommerce_product_loop_end();
-
-	/**
-	 * Hook: woocommerce_after_shop_loop.
-	 *
-	 * @hooked woocommerce_pagination - 10
-	 */
-	//do_action( 'woocommerce_after_shop_loop' );
-//} else {
-	/**
-	 * Hook: woocommerce_no_products_found.
-	 *
-	 * @hooked wc_no_products_found - 10
-	 */
-	//do_action( 'woocommerce_no_products_found' );
-//}
-
-/**
- * Hook: woocommerce_after_main_content.
- *
- * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
- */
-//do_action( 'woocommerce_after_main_content' );
-
-/**
- * Hook: woocommerce_sidebar.
- *
- * @hooked woocommerce_get_sidebar - 10
- */
-//do_action( 'woocommerce_sidebar' );
 ?>
   <section class="general-banner">
-    <img src="<?php the_field('image_banner_productos'); ?>">
+    <img src="<?php echo get_template_directory_uri();?>/assets/img/productos/image_1.png">
     <div class="general-banner__text">
       <h2 class="main-general__title">
-        <?php the_field('title_banner_productos'); ?>
+        Productos
       </h2>
       <p class="general-banner__subtitle">
-        <?php the_field('subtitle_banner_productos'); ?>
+        Rosary
       </p>
     </div>
   </section>
@@ -278,38 +182,65 @@ Filtros
 
 
         <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-          <?php $loop = new WP_Query( $args ); ?>
-          <?php while ( $loop->have_posts() ) : $loop->the_post(); global $product;?>             
-            <div class="list_div" id="view" style="display:">
-              <table class="shop_table cart wishlist_table wishlist_view traditional responsive  list_table " data-pagination="no" data-per-page="5" data-page="1" data-id="5" data-token="6OL1RPFP5C1P">  
-                <tbody class="wishlist-items-wrapper list">
-                  <tr id="yith-wcwl-row-20 " class="list-product" data-row-id="20">        
-                    <td class="product-thumbnail list">
-                      <a href="<?php the_permalink(); ?>">
-                        <img class="list" src="<?php the_post_thumbnail_url('full'); ?>">          
-                      </a> 
-                      <table class="list_table">
-                        <tr>
-                          <td class="listt"> <a href="<?php the_permalink(); ?>" class="collection-item__title list"><?php the_title(); ?></a></td>
-                        </tr>
-                        <tr>
-                          <td class="listd"><p class="main-products__categorie"><?php if(lang() == 'es'){echo "Categoría: ";}if(lang() == 'en'){echo "Category: ";}  
-                            $product_categories = wp_get_post_terms( get_the_ID(), 'product_cat' ); $i = 0;
-                            foreach($product_categories as $category):
-                              if ($i > 0 ) {echo " / "; } echo $category->name; $i=$i+1;
-                            endforeach;?></p></td>
-                        </tr>          
-                      </table>                         
-                    </td>  
-                    <td class="product-price list">              
-                      <span class="woocommerce-Price-amount amount list"><?php echo $product->get_price_html(); ?>
-                    </td>
-                                          
-                    </tr>    
-                  </tbody>
-                </table>
-              </div>
-            <?php endwhile; ?>          
+          <div class="categorie-product__list">
+
+					<?php $loop = new WP_Query( $args ); ?>
+					<?php while ( $loop->have_posts() ) : $loop->the_post(); global $product;?>             
+							<div class="main-products__item">
+								<div class="main-products__img">
+									<div class="main-products__mask">
+										<a  href="<?php the_permalink(); ?>" class="product-link" > </a>
+								
+									</div>
+									<img src="<?php the_post_thumbnail_url('full');?>">
+								</div>
+								<div class="main-products__body">
+									<a class="main-products__title" href="<?php the_permalink(); ?>">
+										<?php the_title();?>
+									</a>
+									<p class="main-products__categorie">
+										<?php if(lang() == 'es'){echo "categoría: ";}if(lang() == 'en'){echo "category: ";}  
+										$product_categories = wp_get_post_terms( get_the_ID(), 'product_cat' ); $i = 0;
+										foreach($product_categories as $category):
+											if ($i > 0 ) {echo " / "; } echo $category->name; $i=$i+1;
+										endforeach;?>
+
+									</p>
+									<p class="main-products__price">
+										<?php echo $product->get_price_html(); ?>
+									</p>
+									<div class="main-products__txt" href="<?php the_permalink(); ?>">
+										<?php the_content();?>
+									</div>
+											<div class="main-products__icon">
+											<?php if (variation(get_the_ID()) <= 0){ ?>
+											<a href="?add-to-cart=<?php echo get_the_ID(); ?>">
+												<img src="<?php echo get_template_directory_uri();?>/assets/img/card.png">
+											</a>
+											<?php } ?>  
+											<?php if (variation(get_the_ID()) > 0){ ?>	
+											<a href="<?php the_permalink(); ?>">
+												<img src="<?php echo get_template_directory_uri();?>/assets/img/card.png">
+											</a>
+											<?php } ?> 
+											<?php //if (is_user_logged_in()){ ?>               							
+											<a href="?add_to_wishlist=<?php echo get_the_ID(); ?>">
+												<img src="<?php echo get_template_directory_uri();?>/assets/img/heart.png">
+											</a>
+                                            <?php //}else { ?>  
+                                                <!--<div data-toggle="tooltip" data-placement="top" title="" data-original-title="<?php if(lang() == 'es'){echo "Debes estar iniciar sesión";}else{echo "You must be logged";} ?>" class="collection-item__icon" >
+                                                  <img src="<?php echo get_template_directory_uri();?>/assets/img/heart.png">
+                                                </div>-->              
+                                            <?php// } ?>											
+											<a href="<?php the_permalink(); ?>">
+												<img src="<?php echo get_template_directory_uri();?>/assets/img/search.png">
+											</a>
+										</div>
+									<a class="main-general__button" href="<?php //the_permalink(); ?>"><?php if(lang() == 'es'){echo "Comprar";}if(lang() == 'en'){echo "To buy";}?></a>
+								</div>
+							</div>
+					<?php endwhile; ?>        	
+					</div>
         </div>
 
 
