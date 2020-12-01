@@ -441,7 +441,7 @@ Enviar
              <?=$category->name ?>
             </h2>
             <p class="categories-all__subtitle">
-              accesorios
+              <?=$category->description ?>
             </p>
             <a class="general-btn__light" href="<?php echo get_category_link( $category->term_id ); ?>">Comprar</a>
           </div>

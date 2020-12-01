@@ -47,7 +47,6 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
 	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
 	<?php endif; ?>
-
 	<?php
 	/**
 	 * Hook: woocommerce_archive_description.
@@ -157,7 +156,7 @@ Filtros
           <?php foreach($product_categories as $category): ?>
             <?php $checked =NULL;  if ($category->slug == $_GET['cat']) { $checked = "checked='checked'"; } $categoria = $category->name; $category_id = $category->term_id; $category_link = get_category_link( $category_id ); ?>         
               <li>
-                <a href="<?php echo get_home_url().'/cat='.$category->slug.'&tax=product_cat'?>">
+                <a href="<?php echo get_home_url().'/tienda?cat='.$category->slug.'&tax=product_cat'?>">
                    <?= $categoria ?>
                 </a>
               </li>
@@ -171,14 +170,15 @@ Filtros
             </h2>
             <div class="wrapper">
               <fieldset class="filter-price">
+               <form method="get">
                 <div class="price-field">
-                  <input id="lower" max="100" min="10" type="range" value="10">
-                  <input id="upper" max="100" min="10" type="range" value="100">
+                  <input name="lower" id="lower" max="200000" min="10" type="range" value="10">
+                  <input name="upper" id="upper" max="200000" min="10" type="range" value="200000">
                 </div>
                 <div class="price-wrap">
-                  <a class="shop-btn" href="">Filtro</a>
+                  <button class="shop-btn trans" type="submit">Filter</button>
                   <div class="d-flex">
-                    <span class="price-title">Precio:</span>
+                    <span class="price-title">Price:</span>
                     <div class="price-wrap-1">
                       <label for="one">$</label>
                       <input id="one">
@@ -190,6 +190,7 @@ Filtros
                     </div>
                   </div>
                 </div>
+                </form> 
               </fieldset>
             </div>
           </div>
@@ -199,26 +200,18 @@ Filtros
               <span></span>
             </h2>
             <ul class="shop-sidebar__colors">
+              <?php
+                 global $wpdb;
+                 $product_categories = get_categories( array( 'taxonomy' => 'pa_color', 'orderby' => 'menu_order', 'order' => 'asc' ));  
+              ?>                                                        
+              <?php foreach($product_categories as $category): ?>
+              <?php $categoria = $category->name; $category_id = $category->term_id; $category_link = get_category_link( $category_id ); ?>               
               <li>
-                <a href="">
-Oro rosa
-</a>
+                <a href="<?php echo get_home_url() ?>/tienda/?cat=<?php echo $category->slug;?>&tax=pa_color">
+                  <?= $categoria ?>
+                </a>
               </li>
-              <li>
-                <a href="">
-Plata
-</a>
-              </li>
-              <li>
-                <a href="">
-Oro
-</a>
-              </li>
-              <li>
-                <a href="">
-Bronce
-</a>
-              </li>
+              <?php endforeach; ?>
             </ul>
           </div>
           <div class="shop-sidebar__newsletter">
@@ -230,16 +223,28 @@ Bronce
         </div>
         <div class="shop-products">
           <div class="shop-products__header">
-            <h2>Showing 1-12 of 16 results</h2>
-            <div class="shop-products__menu">
+           <?php 
+            //$published_posts = wp_count_posts()->publish;
+             $published_posts = count_post_product($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"]);
+           // $posts_per_page = get_option('posts_per_page');
+            $posts_per_page = 12;
+            $page_number_max = ceil($published_posts / $posts_per_page);
+            $max_page = $page_number_max;
+            if (!$paged && $max_page >= 1) {
+               $current_page = 1;
+            }
+            else {
+              $current_page = $paged;
+            } ?>          
+            <h2>Showing <?php echo ''.$current_page.'-'.$max_page.' of '.$published_posts.''; ?> results</h2>            <div class="shop-products__menu">
               <!-- Nav tabs -->
           <!-- Nav tabs -->
           <ul class="nav " id="myTab" role="tablist">
             <li class="nav-item">
-              <a class=" active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><img src="<?php echo get_template_directory_uri();?>/assets/img/categorie/grid.png"></a>
+              <a class=" active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><img src="<?php echo get_template_directory_uri();?>/assets/img/productos/menu.png"></a>
             </li>
             <li class="nav-item">
-              <a class="" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><img src="<?php echo get_template_directory_uri();?>/assets/img/categorie/open-menu.png"></a>
+              <a class="" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><img src="<?php echo get_template_directory_uri();?>/assets/img/productos/list.png"></a>
             </li>
           </ul>
 
@@ -250,52 +255,105 @@ Bronce
 
       <!-- Tab panes -->
       <div class="tab-content">
-        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
+        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">        
           <div class="container-grid">
+          <?php $loop = new WP_Query( $args ); ?>
+          <?php while ( $loop->have_posts() ) : $loop->the_post(); global $product;?>            
             <div class="main-featured__product">
               <div class="main-featured__img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/img/new-in/image-1_2.png">
+                <img src="<?php the_post_thumbnail_url('full'); ?>">
               </div>
               <div class="main-featured__text">
-                <a class="main-featured__title" href="">
-Aretes de estrellas - Dorado
-</a>
+                <a class="main-featured__title" href="<?php the_permalink(); ?>">
+                   <?php the_title(); ?>
+                </a>
                 <p class="main-featured__price">
-                  $200.000
+                  <?php echo $product->get_price_html(); ?>
                 </p>
               </div>
             </div>
-          </div>  
-            
+          <?php endwhile; ?>    
+          </div>          
         </div>
 
 
         <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-gfhgfhgfhgfh
+          <?php $loop = new WP_Query( $args ); ?>
+          <?php while ( $loop->have_posts() ) : $loop->the_post(); global $product;?>             
+            <div class="list_div" id="view" style="display:">
+              <table class="shop_table cart wishlist_table wishlist_view traditional responsive  list_table " data-pagination="no" data-per-page="5" data-page="1" data-id="5" data-token="6OL1RPFP5C1P">  
+                <tbody class="wishlist-items-wrapper list">
+                  <tr id="yith-wcwl-row-20 " class="list-product" data-row-id="20">        
+                    <td class="product-thumbnail list">
+                      <a href="<?php the_permalink(); ?>">
+                        <img class="list" src="<?php the_post_thumbnail_url('full'); ?>">          
+                      </a> 
+                      <table class="list_table">
+                        <tr>
+                          <td class="listt"> <a href="<?php the_permalink(); ?>" class="collection-item__title list"><?php the_title(); ?></a></td>
+                        </tr>
+                        <tr>
+                          <td class="listd"><p class="main-products__categorie"><?php if(lang() == 'es'){echo "Categoría: ";}if(lang() == 'en'){echo "Category: ";}  
+                            $product_categories = wp_get_post_terms( get_the_ID(), 'product_cat' ); $i = 0;
+                            foreach($product_categories as $category):
+                              if ($i > 0 ) {echo " / "; } echo $category->name; $i=$i+1;
+                            endforeach;?></p></td>
+                        </tr>          
+                      </table>                         
+                    </td>  
+                    <td class="product-price list">              
+                      <span class="woocommerce-Price-amount amount list"><?php echo $product->get_price_html(); ?>
+                    </td>
+                                          
+                    </tr>    
+                  </tbody>
+                </table>
+              </div>
+            <?php endwhile; ?>          
         </div>
 
 
 
-      </div>  
+     
 
           </div>
-          <div class="blog-general__paginator blog-general__paginator--center">
-            <a class="blog-general__page-all" href="">Mostrar todo</a>
-            <a href="">1</a>
-            <a href="">2</a>
-            <a href="">...</a>
-            <a href="">
-<img src="<?php echo get_template_directory_uri();?>/assets/img/blog/next.png">
-</a>
-          </div>
+
+             <div class="blog-general__paginator">
+                <?php echo paginate_links(array(
+                  "base" => add_query_arg("paged", "%#%"),
+                  "format" => '',
+                  "type" => "plain",
+                  "total" => $max_page,
+                  "current" => $current_page,
+                  "show_all" => false,
+                  "end_size" => 2,
+                  "mid_size" => 2,
+                  "prev_next" => true,
+                  "next_text" => __('<img src="'.get_template_directory_uri().'/assets/img/blog/next.png">'),
+                  "prev_text" => __('<img src="'.get_template_directory_uri().'/assets/img/blog/prev.png">'),
+                  )); ?>
+              </div>
+
+        
+           
+
+
+
+
         </div>
       </div>
     </div>
   </section>
-
+  <script src="<?php echo get_template_directory_uri();?>/assets/js/jquery.min.js"></script>
+  <script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="<?php echo get_template_directory_uri();?>/assets/js/slick.min.js"></script>
+  <script src="<?php echo get_template_directory_uri();?>/assets/js/setting-slick.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="<?php echo get_template_directory_uri();?>/assets/js/main.js"></script>
 <?php
 
 }//else
 get_footer( 'shop' );
+
 
