@@ -443,7 +443,7 @@ Enviar
              <?=$category->name ?>
             </h2>
             <p class="categories-all__subtitle">
-              <?=$category->description ?>
+              <?php echo termmeta_value('descripcion_interna', $category->term_id);?>
             </p>
             <a class="general-btn__light" href="<?php echo get_category_link( $category->term_id ); ?>">Comprar</a>
           </div>
