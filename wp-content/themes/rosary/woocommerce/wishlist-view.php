@@ -351,4 +351,8 @@ if ( ! defined( 'YITH_WCWL' ) ) {
 .woocommerce-message::before {
 	display: none;
 }
+	@media (max-width: 767px) and (min-width: 0px){
+.woocommerce {
+    margin-top: 155px!important;
+	}}
 </style>

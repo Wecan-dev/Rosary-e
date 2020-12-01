@@ -109,7 +109,7 @@
         <form>
           <input placeholder="Tu email" type="email">
           <a class="general-btn__rose" href="">
-Enviar
+Unirme
 </a>
         </form>
       </div>
@@ -425,6 +425,7 @@ Enviar
     <div class="padding-top-bottom padding-right-left">
       <ul class="general-breadcrumbs">
         <li>
+			<a>
            <?php echo meta_value('title-general-categorias', $id_page); ?>
           </a>
         </li>
@@ -435,6 +436,7 @@ Enviar
       <?php $result = $wpdb->get_results ("SELECT * FROM ".$wpdb->prefix."term_taxonomy where taxonomy = 'product_cat'");?>    
              
         <div class="categories-all__card">
+			<span class="categories-all__border" ></span>
           <img src="<?php echo wp_get_attachment_url( get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true ) );?>">
           <div class="categories-all__text" href="">
             <h2 class="categories-all__title">
