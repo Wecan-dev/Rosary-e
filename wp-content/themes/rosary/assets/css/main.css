@@ -4129,6 +4129,7 @@ transition: .3;
 
 .categories-all__card .categories-all__subtitle {
   font-size: 13px;
+	    text-align: center;
   font-weight: normal;
   font-stretch: normal;
   text-transform: uppercase;
