@@ -23,10 +23,10 @@
   <section class="main-featured main-featured--white">
     <div class="padding-top-bottom">
       <h2 class="main-general__title">
-        productos relacionados
+        OTROS TESOROS
       </h2>
       <p class="main-general__subtitle">
-        del producto
+        DE LA COLECCIÓN
       </p>
       <div class="main-featured__carousel">
      <?php foreach((get_the_terms(get_the_ID(), 'product_cat' )) as $category) { $cate =$category->slug;}
