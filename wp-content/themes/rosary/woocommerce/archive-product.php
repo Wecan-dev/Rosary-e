@@ -8,7 +8,12 @@ if (get_queried_object_id()!=NULL) {
 }
 else{ 
 
-
+if ($_GET['orderby'] == 'menu_order' OR $_GET['orderby'] == NULL ){ $selectm = 'selected="selected"';}
+if ($_GET['orderby'] == 'popularity' ){ $selectp = 'selected="selected"';}
+if ($_GET['orderby'] == 'rating' ){ $selectr = 'selected="selected"';}
+if ($_GET['orderby'] == 'date' ){ $selectd = 'selected="selected"';}
+if ($_GET['orderby'] == 'price' ){ $selectpr = 'selected="selected"';}
+if ($_GET['orderby'] == 'price-desc' ){ $selectpr_desc = 'selected="selected"';}    
 
 $urlsinparametros= explode('?', $_SERVER['REQUEST_URI'], 2);
 if ($category_name == NULL){ 
@@ -16,7 +21,8 @@ if ($category_name == NULL){
 }else{
   $urlsinparametros = get_home_url().'/product-category/'.$category_name;
 }    
-$args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['orderby'],$paged,$category_name,$page_name);         
+
+$args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['orderby'],$paged);         
 
 ?>
   <section class="general-banner">
@@ -35,17 +41,17 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
       <div class="container-grid">
         <div class="shop-sidebar">
           <div class="shop-sidebar__content">
-            <select>
-<option>
-Filtros
-</option>
-<option>
-1
-</option>
-<option>
-1
-</option>
-</select>
+
+                <form class="woocommerce-ordering" method="get">
+                  <select name="orderby" class="orderby" aria-label="Shop order">
+                      <option value="menu_order" <?php echo $selectm ?>>Default sorting</option>
+                      <option value="popularity" <?php echo $selectp ?>>Sort by popularity</option>
+                      <option value="rating" <?php echo $selectr ?>>Sort by average rating</option>
+                      <option value="date" <?php echo $selectd ?>>Sort by latest</option>
+                      <option value="price" <?php echo $selectpr ?>>Sort by price: low to high</option>
+                      <option value="price-desc" <?php echo $selectpr_desc ?>>Sort by price: high to low</option>
+                  </select>
+                </form>
           </div>
           <div class="shop-sidebar__content">
             <h2 class="shop-sidebar__title">
