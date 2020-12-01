@@ -401,7 +401,7 @@ function color($id)
 
 
 
-function arg($cat,$tax,$lower,$upper,$paged,$category_name){ 
+function arg($cat,$tax,$lower,$upper,$orderby,$paged){ 
   
   if ($cat != NULL) {
     $args = 
@@ -455,14 +455,62 @@ function arg($cat,$tax,$lower,$upper,$paged,$category_name){
   }    
  
         
-
+  if ($orderby == 'rating') {
+    $args = 
+    array(
+      'post_type' => 'product',
+      'paged' => $paged,
+      'posts_per_page' => 9,        
+      'post_status' => 'publish',
+      'orderby' => 'meta_value', // orderby the meta_value of the following meta_key
+      'meta_key' => '_wc_average_rating', // the custom meta_key name
+      'order'=> 'DESC' // sort descending
+    );
+  } 
+        
+  if ($orderby == 'popularity') {
+    $args = 
+    array(
+      'post_type' => 'product',
+      'paged' => $paged,
+      'posts_per_page' => 9,        
+      'post_status' => 'publish',
+      'orderby' => 'meta_value', // orderby the meta_value of the following meta_key
+      'meta_key' => 'total_sales', // the custom meta_key name
+      'order'=> 'DESC' // sort descending
+    );
+  }          
+        
+  if ($orderby == 'menu_order') {
+    $args = 
+    array(
+      'post_type' => 'product',
+      'paged' => $paged,
+      'posts_per_page' => 9,        
+      'post_status' => 'publish',
+      'orderby' => 'menu_order',
+      'order' => 'ASC'
+    );
+  }  
+        
+  if ($orderby == 'date') {
+    $args = 
+    array(
+      'post_type' => 'product',
+      'paged' => $paged,
+      'posts_per_page' => 9,        
+      'post_status' => 'publish',
+      'orderby' => 'date',
+      'order' => 'DESC'
+    );
+  }  
         
   if ($orderby == 'price') {
     $args = 
     array(
       'post_type' => 'product',
       'paged' => $paged,
-      'posts_per_page' => 12,        
+      'posts_per_page' => 9,        
       'post_status' => 'publish',
       'orderby' => 'meta_value', // orderby the meta_value of the following meta_key
       'meta_key' => '_price', // the custom meta_key name
@@ -475,14 +523,13 @@ function arg($cat,$tax,$lower,$upper,$paged,$category_name){
     array(
       'post_type' => 'product',
       'paged' => $paged,
-      'posts_per_page' => 12,        
+      'posts_per_page' => 9,        
       'post_status' => 'publish',
       'orderby' => 'meta_value', // orderby the meta_value of the following meta_key
       'meta_key' => '_price', // the custom meta_key name
       'order'=> 'DESC' // sort descending
     );
-  } 
-
+  }    
 
       
   return $args; 
