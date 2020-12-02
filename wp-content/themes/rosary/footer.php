@@ -45,11 +45,7 @@
 New in
 </a>
             </li>
-            <li>
-              <a href="<?php echo get_home_url() ?>/recomendados">
-Recomendados
-</a>
-            </li>
+     
             <li>
               <a href="<?php echo get_home_url() ?>/tienda">
 Productos
@@ -66,7 +62,7 @@ Accesorios
 </a>
             </li>
             <li>
-              <a href="personalizados.html">
+              <a href="<?php echo get_home_url() ?>/personalizados">
 Personalizados
 </a>
             </li>
@@ -117,7 +113,7 @@ Términos y condiciones
             </li>-->
             <li>
               <img src="<?php echo get_template_directory_uri();?>/assets/img/envelope.png">
-              <a href="">
+              <a href="mailto:<?php echo get_theme_mod('email'); ?>">
 Email: <?php echo get_theme_mod('email'); ?>
 </a>
             </li>
