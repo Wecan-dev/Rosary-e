@@ -91,3 +91,60 @@ function rosary_custom_product_woocommmerce() {
   remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
   remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 } 
+
+// Register Custom Personalizados Home
+function Personalizado() {
+
+  $labels = array(
+    'name'                  => _x( 'Personalizados ', 'Post Type General Name', 'rosary' ),
+    'singular_name'         => _x( 'Personalizados', 'Post Type Singular Name', 'rosary' ),
+    'menu_name'             => __( 'Personalizados', 'rosary' ),
+    'name_admin_bar'        => __( 'Post Type', 'rosary' ),
+    'archives'              => __( 'Archivo', 'rosary' ),
+    'attributes'            => __( 'Atributos', 'rosary' ),
+    'parent_item_colon'     => __( 'Artículo principal', 'rosary' ),
+    'all_items'             => __( 'Todos los artículos', 'rosary' ),
+    'add_new_item'          => __( 'Agregar ítem nuevo', 'rosary' ),
+    'add_new'               => __( 'Añadir nuevo', 'rosary' ),
+    'new_item'              => __( 'Nuevo artículo', 'rosary' ),
+    'edit_item'             => __( 'Editar elemento', 'rosary' ),
+    'update_item'           => __( 'Actualizar artículo', 'rosary' ),
+    'view_item'             => __( 'Ver ítem', 'rosary' ),
+    'view_items'            => __( 'Ver artículos', 'rosary' ),
+    'search_items'          => __( 'Buscar artículo', 'rosary' ),
+    'not_found'             => __( 'Extraviado', 'rosary' ),
+    'not_found_in_trash'    => __( 'No se encuentra en la basura', 'rosary' ),
+    'featured_image'        => __( 'Foto principal', 'rosary' ),
+    'set_featured_image'    => __( 'Establecer imagen destacada', 'rosary' ),
+    'remove_featured_image' => __( 'Remove featured image', 'rosary' ),
+    'use_featured_image'    => __( 'Usar como imagen destacada', 'rosary' ),
+    'insert_into_item'      => __( 'Insertar en el elemento', 'rosary' ),
+    'uploaded_to_this_item' => __( 'Subido a este artículo', 'rosary' ),
+    'items_list'            => __( 'Lista de artículos', 'rosary' ),
+    'items_list_navigation' => __( 'Lista de elementos de navegación', 'rosary' ),
+    'filter_items_list'     => __( 'Lista de elementos de filtro', 'rosary' ),
+  );
+  $args = array(
+    'label'                 => __( 'Personalizados Home', 'rosary' ),
+    'description'           => __( 'Post Type Description', 'rosary' ),
+    'labels'                => $labels,
+    'supports'              => array( 'title'),
+    'taxonomies'            => array(  ),
+    'hierarchical'          => false,
+    'public'                => true,
+    'show_ui'               => true,
+    'show_in_menu'          => true,
+    'menu_position'         => 5,
+    'menu_icon'             => 'dashicons-images-alt2',
+    'show_in_admin_bar'     => true,
+    'show_in_nav_menus'     => true,
+    'can_export'            => true,
+    'has_archive'           => true,
+    'exclude_from_search'   => false,
+    'publicly_queryable'    => true,
+    'capability_type'       => 'page',
+  );
+  register_post_type( 'Personalizado', $args );
+
+}
+add_action( 'init', 'Personalizado', 0 );

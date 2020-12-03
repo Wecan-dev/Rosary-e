@@ -230,26 +230,43 @@ Enviar
       <ul class="general-breadcrumbs">
         <?php echo meta_value('title-personalizados', $id_page); ?>
       </ul>
+		<div class="custom-piece__carousel" >
+			
+      <?php          
+      $args = array (
+             'post_type' => 'personalizado',
+             'posts_status' => 'publish',
+		  'order' => 'ASC',
+      );?>
+      <?php $loop = new WP_Query( $args ); ?>
+      <?php while ( $loop->have_posts() ) : $loop->the_post(); global $product;?>   
+			<div class="custom-piece__item" >
+				
+			
       <div class="container-grid">
         <div class="custom-piece__img">
-          <img src="<?php echo meta_value_img('image1-section1-personalizados', $id_page); ?>">
+          <img src="<?php echo meta_value_img('image1-item-personalizados', get_the_ID()); ?>">
         </div>
         <div class="custom-piece__text">
-          <img src="<?php echo meta_value_img('image2-section1-personalizados', $id_page); ?>">
+          <img src="<?php echo meta_value_img('image2-item-personalizados', get_the_ID()); ?>">
           <div>
             <h2 class="custom-piece__title">
-              <?php echo meta_value('title-section1-personalizados', $id_page); ?>
+              <?php echo meta_value('title-item-personalizados', get_the_ID()); ?>
             </h2>
             <p class="custom-piece__description">
-              <?php echo meta_value('description-section1-personalizados', $id_page); ?>
+              <?php echo meta_value('description-item-personalizados',get_the_ID()); ?>
             </p>
           </div>
-          <a class="custom-piece__btn" href="<?php echo meta_value('urlbuttom-section1-personalizados', $id_page); ?>">
-<?php echo meta_value('buttom-section1-personalizados', $id_page); ?>
-<i class="fa fa-angle-right"></i>
-</a>
+          <a class="custom-piece__btn" href="<?php echo meta_value('urlbuttom-item-personalizados', get_the_ID()); ?>">
+              <?php echo meta_value('buttom-item-personalizados', get_the_ID()); ?>
+              <i class="fa fa-angle-right"></i>
+          </a>
         </div>
       </div>
+				</div>
+      <?php endwhile; ?> 
+					</div>
+
     </div>
   </section>
   <section class="custom-description">

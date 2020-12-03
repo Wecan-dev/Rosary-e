@@ -4213,6 +4213,7 @@ transition: .3;
   align-items: center;
   padding-right: 135px;
   margin-left: -99px;
+	    position: relative;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -4237,8 +4238,19 @@ transition: .3;
 
 @media (min-width: 0px) and (max-width: 767px) {
   .custom-piece .custom-piece__text img {
-    display: none;
+        width: 100%;
+    height: 100%;
+    margin: 0;
+	  margin-bottom: 20px;
   }
+	.custom-piece .custom-piece__text {
+	    padding: 11px;
+		
+	}
+
+	.custom-piece__img {
+		display: none;
+	}
 }
 
 .custom-piece .custom-piece__btn {
@@ -4264,6 +4276,7 @@ transition: .3;
   .custom-piece .custom-piece__btn {
     position: initial;
   }
+
 }
 
 .custom-piece .custom-piece__description {
@@ -4342,6 +4355,14 @@ transition: .3;
     padding-left: 25px;
     padding-right: 25px;
   }
+			.custom-piece .custom-piece__text { 
+	    padding-right: 22px;
+    margin-left: -154px;
+	}
+	.custom-piece .custom-piece__text img {
+	    margin-right: 35px;
+    height: 258px;
+	}
 }
 
 .shop .padding-top-bottom {
