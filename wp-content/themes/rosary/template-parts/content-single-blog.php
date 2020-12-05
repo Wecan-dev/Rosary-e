@@ -7,7 +7,7 @@
           <ul class="blog-general__meta">
             <li>
               <img src="<?php echo get_template_directory_uri();?>/assets/img/blog/calendar.png">
-              <a href=""><?php the_time(get_option('date_format')); ?></a>
+              <a><?php the_time(get_option('date_format')); ?></a>
             </li>
             <li>
               <img src="<?php echo get_template_directory_uri();?>/assets/img/blog/tag.png">

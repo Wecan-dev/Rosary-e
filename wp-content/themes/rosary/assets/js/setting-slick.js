@@ -62,7 +62,7 @@ $('.custom-piece__carousel').slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: false,
+        dots: true,
         // autoplay: true,
         arrows: false,
         autoplaySpeed: 1000
@@ -71,21 +71,16 @@ $('.custom-piece__carousel').slick({
   ]
 });
 
-$('.main-gallery__caroel').slick({
-  slidesToShow: 4,
-  speed: 500,
-  fade: true,
-  // cssEase: 'linear',
-  slidesToScroll: 1,
+$('.about-card__carousel').slick({
+  slidesToShow: 2,
+  slidesToScroll: 2,
   dots: false,
   arrows: true,
   responsive: [{
       breakpoint: 1200,
       settings: {
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true,
+        slidesToShow: 2,
+        slidesToScroll: 2,
       }
     },
     {

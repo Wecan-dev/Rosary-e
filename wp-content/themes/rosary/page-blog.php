@@ -16,7 +16,7 @@
           <ul class="blog-general__meta">
             <li>
               <img src="<?php echo get_template_directory_uri();?>/assets/img/blog/calendar.png">
-              <a href="">
+              <a>
                  <?php the_time(get_option('date_format')); ?>
               </a>
             </li>
@@ -25,7 +25,7 @@
               <?php if ( verify_tags(get_the_ID()) > 0 ){ foreach((get_the_terms(get_the_ID(), 'post_tag' )) as $tag) {$category_id = $tag->term_id; $tag_link = get_category_link( $category_id ); echo '<a href="'.$tag_link.'">'.$tag->name.'</a>'; }} ?>
             </li>
           </ul>
-          <a class="blog-general__title" href="">
+          <a class="blog-general__title" href="<?php the_permalink(); ?>">
              <?php the_title(); ?>
           </a>
           <p class="blog-general__description">
@@ -44,7 +44,7 @@
               <a href="">
 <img src="<?php echo get_template_directory_uri();?>/assets/img/blog/share.png">
 </a>
-              <a href="">
+              <a>
 <img src="<?php echo get_template_directory_uri();?>/assets/img/blog/comment.png">
 <?php echo get_comments_number() ?> comentarios
 </a>

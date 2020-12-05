@@ -2366,7 +2366,7 @@ a.general-btn__simple:hover {
 }
 
 .contact textarea {
-  height: 314px;
+  height: 200px;
   margin-bottom: 32px!important;
 	resize: none;
 }
@@ -2416,7 +2416,7 @@ a.general-btn__simple:hover {
 
 @media (min-width: 0px) and (max-width: 767px) {
   .general-banner {
-    height: 118px;
+      height: 130px;
     margin-top: 156px;
   }
 }
@@ -3262,6 +3262,7 @@ transition: .3;
 .blog-sidebar .blog-sidebar__box {
   padding: 20px;
   margin-bottom: 0;
+	    justify-content: center;
 }
 
 .blog-sidebar__categorie {
@@ -3346,15 +3347,16 @@ transition: .3;
 }
 
 .blog-sidebar__poster .blog-sidebar__text h2 {
-  font-size: 35px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: 12.33px;
-  color: #ffffff;
-  font-family: "MADE SAONARA";
+     font-size: 32px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 8.33px;
+    color: #ffffff;
+    font-family: "MADE SAONARA";
     margin-bottom: -27px;
+	text-align: center;
 }
 
 .blog-sidebar__poster .blog-sidebar__text .general-btn__rose {
@@ -3594,6 +3596,9 @@ transition: .3;
   padding-top: 59px;
   padding-bottom: 57px;
 }
+.about-card__item {
+margin: 0 14px;	
+}
 
 .about-card .padding-right-left {
   padding-right: 204px;
@@ -3680,7 +3685,14 @@ transition: .3;
   .about-card .main-general__title {
     font-size: 30px;
   }
+	
+	.about-card .about-card__img {
+		height: 100%;}
+	.about-card .about-card__item {
+	margin: 0;}
 }
+
+
 
 .about-card .about-card__description {
   font-size: 14px;
@@ -3703,6 +3715,8 @@ transition: .3;
     padding-left: 50px;
     padding-right: 50px;
   }
+	.about-card .about-card__img {
+		height: 100%;}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -3710,6 +3724,10 @@ transition: .3;
     padding-left: 50px;
     padding-right: 50px;
   }
+	
+	.about-card .about-card__img {
+		height: 100%;}
+	
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -3779,7 +3797,7 @@ transition: .3;
 
 .general-product .padding-top-bottom {
   padding-top: 26px;
-  padding-bottom: 5px;
+padding-bottom: 26px;
 }
 
 .general-product .padding-right-left {
@@ -4238,10 +4256,11 @@ transition: .3;
 
 @media (min-width: 0px) and (max-width: 767px) {
   .custom-piece .custom-piece__text img {
-        width: 100%;
+       width: 80%;
     height: 100%;
-    margin: 0;
-	  margin-bottom: 20px;
+	      margin-right: 0;
+    margin-bottom: 71px;
+    margin-top: 20px;
   }
 	.custom-piece .custom-piece__text {
 	    padding: 11px;
@@ -4249,7 +4268,9 @@ transition: .3;
 	}
 
 	.custom-piece__img {
-		display: none;
+	    position: absolute;
+    top: 0;
+    height: 70%;
 	}
 }
 
@@ -4264,7 +4285,6 @@ transition: .3;
   line-height: normal;
   letter-spacing: 0.38px;
   color: #000000;
-  text-transform: uppercase;
 }
 
 .custom-piece .custom-piece__btn i {

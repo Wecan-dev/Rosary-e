@@ -2,14 +2,19 @@
             <p class="blog-sidebar__title">
               Categorías
             </p>
-            <ul class="blog-sidebar__categorie">
-            <?php $product_categories = get_categories( array( 'taxonomy' => 'category', 'orderby' => 'menu_order', 'order' => 'asc' ));  ?>
-            <?php foreach($product_categories as $category):  global $wpdb;?>
-            <?php $result = $wpdb->get_results ("SELECT * FROM ".$wpdb->prefix."term_taxonomy where taxonomy = 'product_cat'");?>
-                <li>              
-                  <a href="<?php echo get_category_link( $category->term_id ); ?>"><?=$category->name ?></a>
-                </li>                
-                <?php $i=$i+1;?>
-                <?php endforeach; ?> 
+		
+        <ul class="blog-sidebar__categorie">
+          <?php
+          global $wpdb;
+          $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'orderby' => 'menu_order', 'order' => 'asc' ));  
+          ?>                                                        
+          <?php foreach($product_categories as $category): ?>
+            <?php $checked =NULL;  if ($category->slug == $_GET['cat']) { $checked = "checked='checked'"; } $categoria = $category->name; $category_id = $category->term_id; $category_link = get_category_link( $category_id ); ?>         
+              <li>
+                <a href="<?php echo get_category_link( $category->term_id ); ?>">
+                   <?= $categoria ?>
+                </a>
+              </li>
+              <?php endforeach; ?>  
             </ul>
           </div>

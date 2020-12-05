@@ -94,7 +94,6 @@
         </div>
       <?php endwhile; ?> 
       </div>
-      </div>
     </div>
   </section>
   <section class="general-promo">
@@ -373,7 +372,7 @@ Enviar
       <h2 class="main-general__title">
         <?php echo meta_value('title-card-nosotros', $id_page); ?>
       </h2>
-      <div class="container-grid">
+      <div class="about-card__carousel">
         <div class="about-card__item">
           <div class="about-card__img">
             <img src="<?php echo meta_value_img('image-card1-nosotros', $id_page); ?>">
@@ -518,13 +517,13 @@ Enviar
             </a>
           </li>
        
-          <li>
-            <img src="<?php echo get_template_directory_uri();?>/assets/img/place.png">
-            <a href="">
+         <!-- <li>
+            <img src="<?php //echo get_template_directory_uri();?>/assets/img/place.png">
+            <a href="<?php //echo get_theme_mod('address_map'); ?>">
               <p>Ubicación</p>
-              <?php echo get_theme_mod('address'); ?>
+              <?php// echo get_theme_mod('address'); ?>
             </a>
-          </li>
+          </li>-->
         </ul>
       </div>
     </div>

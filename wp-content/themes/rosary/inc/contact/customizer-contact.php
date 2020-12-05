@@ -47,4 +47,17 @@
     'type' => 'textarea'
   )));
 
+
+  $wp_customize->add_setting('address_map', array(
+    'default' => ''
+  ));
+
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'address_map_control', array (
+    'description' => 'Mapa Dirección',
+    'section' => 'contact',
+    'settings' => 'address_map',
+    'type' => 'textarea'
+  ))); 
+
+
 ?>
