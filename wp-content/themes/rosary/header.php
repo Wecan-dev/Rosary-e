@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta name="description" content="Creamos joyería para realzar tu brillo natural. Joyas en Oro Amarillo, Blanco y Rosa de 18k. Envíos a Bogotá, Medellín, Cali, Barranquilla y toda Colombia."/>
   <title><?php wp_title('|', true, 'right'); ?></title>
   <?php wp_head(); ?>  
+	  <meta name="keywords" content="joyería, joyerías Bogotá, joyerías Medellín, joyería Barranquilla, joyerías en Cali, joyerías Bucaramanga, joyería Colombia, Anillos compromiso">
   <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
@@ -34,11 +36,12 @@ window.cookieconsent.initialise({
 });       
 </script>
 
-  <section class="pre-navbar">
+
+  <?php if ( is_home() ) : ?>
+  <header class="header fixed-top navbar-fixed-js">
+	    <section class="pre-navbar">
     <p><?php echo get_theme_mod('pre-navbar_title');?></p>
   </section>
-  <?php if ( is_home() ) : ?>
-  <header class="header">
     <nav class="navbar navbar-expand-lg">
       <div class="container-nav">
         <div class="main-brand__top">
@@ -146,7 +149,10 @@ outlet
     </nav>
   </header>  
   <?php else: ?> 
-    <header class="header header-solid">
+    <header class="header header-solid fixed-top navbar-fixed-js">
+			    <section class="pre-navbar">
+    <p><?php echo get_theme_mod('pre-navbar_title');?></p>
+  </section>
     <nav class="navbar navbar-expand-lg">
       <div class="container-nav">
         <div class="main-brand__top">

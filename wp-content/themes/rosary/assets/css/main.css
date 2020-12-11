@@ -377,6 +377,7 @@ body {
 .main-featured__carousel .slick-prev {
   width: 60px;
   height: 60px;
+
   object-fit: contain;
   top: 39%;
   z-index: 1;
@@ -1104,7 +1105,9 @@ a.general-btn__simple:hover {
   background-color: #fcf4ea;
   position: initial;
 }
-
+.fixed {
+  background-color: #fcf4ea;
+}
 @media (min-width: 0px) and (max-width: 767px) {
   .header-solid {
     position: fixed;
@@ -1282,8 +1285,8 @@ a.general-btn__simple:hover {
 }
 
 .main-featured .main-featured__carousel {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 58px;
+  padding-right: 58px;
   margin-bottom: 80px;
 }
 
@@ -1630,7 +1633,7 @@ a.general-btn__simple:hover {
 
 .main-text {
   margin-bottom: 121px;
-  margin-top: 80px;
+  margin-top: 121px;
 }
 
 .main-text ul {
@@ -1646,6 +1649,7 @@ a.general-btn__simple:hover {
   letter-spacing: 1.13px;
   color: #000000;
   font-family: "MADE SAONARA";
+	    JUSTIFY-CONTENT: space-between;
 }
 
 .main-text ul li {
@@ -1665,6 +1669,11 @@ a.general-btn__simple:hover {
 
 .main-blog .main-blog__item {
   margin-bottom: 45px;
+
+}
+
+.main-blog__item:last-child {
+	margin-bottom: 0;
 }
 
 .main-blog .main-blog__item .container-grid {
@@ -2412,6 +2421,7 @@ a.general-btn__simple:hover {
 .general-banner {
   position: relative;
   height: 373px;
+	    margin-top: 170px;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -2419,6 +2429,13 @@ a.general-btn__simple:hover {
       height: 130px;
     margin-top: 156px;
   }
+	.contact .contact-list p {
+		text-transform: uppercase;
+    font-size: 12px;
+		font-family: Brandon Text Regular;
+		
+	}
+	    
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2558,6 +2575,7 @@ a.general-btn__simple:hover {
 
 .blog-general {
   padding: 23px 57px;
+	    margin-top: 170px;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -4214,7 +4232,7 @@ padding-bottom: 26px;
 }
 
 .custom-piece .custom-piece__title {
-  font-size: 30px;
+    font-size: 37px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -5069,6 +5087,9 @@ height: auto!important;
 		transition: .3s;
 	color:#c0a980;
 }
+.woocommerce {
+	margin-top: 170px;
+}
 .woocommerce-info, .woocommerce-message {
     border-top-color: #d7b595;
     background: white;
@@ -5907,7 +5928,9 @@ ol.flex-control-nav.flex-control-thumbs img {
 	padding-left: 55px;
 	padding-right: 55px;
 }
-
+.content-area .site-main {
+	margin-top: 170px;
+}
 @media (min-width: 0px) and (max-width: 767px) {
   .woocommerce-form-login {
     padding: 20px !important;

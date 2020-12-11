@@ -6,5 +6,12 @@
     margin-top: 0!important;
 }
 	}
+	
+	.woocommerce {
+		margin-top: 0!important;
+	}
+	.woocommerce-banner {
+		margin-top:170px;
+	}
 </style>
 <?php get_footer(); ?>

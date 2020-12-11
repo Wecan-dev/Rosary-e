@@ -36,6 +36,32 @@ $("#js_up i").on('click', function (e) {
   return false; //rompe el bucle
 });
 
+// Menú fixed
+$(window).scroll(function () {
+  if ($(document).scrollTop() > 70 && ($(window).width() >= 768)) {
+    $('.navbar-fixed-js').addClass('fixed');
+    $('.navbar-fixed-js--custom').addClass('fixed--white');
+    $('.navbar-fixed-js--custom .nav-item a').removeClass('fixed--link');
+    $('.nav-link').addClass('fixed-color');
+    $('.nav-top__header').addClass('nav-top__header--detele');
+    $('.main-brand__fixed').css('display', 'initial');
+    $('.main-brand__top').css('display', 'none');
+    $('nav > div > div.navbar-collapse.offcanvas-collapse > ul > li:nth-child(8) > a').addClass('contact')
+    // $("#iso").addClass('img-size').attr('src', 'assets/img/logo-white.jpg').removeClass('scroll-up');
+
+  } else {
+    $('nav > div > div.navbar-collapse.offcanvas-collapse > ul > li:nth-child(8) > a').removeClass('contact')
+    $('.main-brand__top').css('display', 'initial')
+    $('.main-brand__fixed').css('display', 'none')
+    $('.navbar-fixed-js--custom .nav-item a').addClass('fixed--link');
+    $('.navbar-fixed-js').removeClass('fixed');
+    $('.navbar-fixed-js--custom').addClass('fixed--white');
+    $('.nav-link').removeClass('fixed-color');
+    $('.nav-top__header').removeClass('nav-top__header--detele');
+    // $("#iso").removeClass('img-size').attr('src', 'assets/img/logo-fvr.jpg').removeClass('scroll-up');
+
+  }
+});
 
 
 
