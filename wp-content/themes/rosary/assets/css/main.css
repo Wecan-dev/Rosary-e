@@ -765,6 +765,23 @@ a.general-btn__simple:hover {
   margin-bottom: 0;
   color: #000000;
 }
+.height-100 {
+	height: 100%;
+	opacity: 1;
+	    transform: scale(1);
+    transition: .1s linear;
+}
+
+.height-0 {
+    height: 0;
+    transform: scale(0);
+    opacity: 0;
+    transition: .1s linear;
+    /* position: absolute; */
+    opacity: 0;
+    visibility: hidden;
+
+}
 
 @media (min-width: 0px) and (max-width: 767px) {
   .pre-navbar {
@@ -1085,12 +1102,15 @@ a.general-btn__simple:hover {
   position: absolute;
   width: 100%;
   z-index: 9;
+	    height: 200px;
+	transition: .3s;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
   .header {
     position: fixed;
     margin-top: 60px;
+	   height: auto;
   }
 }
 
@@ -1098,6 +1118,7 @@ a.general-btn__simple:hover {
   .header {
     position: fixed;
     margin-top: 60px;
+	      height: auto;
   }
 }
 
@@ -1107,6 +1128,8 @@ a.general-btn__simple:hover {
 }
 .fixed {
   background-color: #fcf4ea;
+	height: 107px;
+	transition: .3s;
 }
 @media (min-width: 0px) and (max-width: 767px) {
   .header-solid {

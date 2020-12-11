@@ -50,14 +50,10 @@ window.cookieconsent.initialise({
 <img id="iso" src="<?php echo get_template_directory_uri();?>/assets/img/logo.png">
 </a>
           </div>
+			
         </div>
-        <div class="main-brand__fixed">
-          <div class="main-brand">
-            <a class="navbar-brand" href="<?php echo get_home_url() ?>">
-<img id="iso" src="<?php echo get_template_directory_uri();?>/assets/img/logo.png">
-</a>
-          </div>
-        </div>
+		    
+
         <div class="main-brand brand-responsive">
           <a class="navbar-brand" href="<?php echo get_home_url() ?>">
 <img id="iso" src="<?php echo get_template_directory_uri();?>/assets/img/logo.png">

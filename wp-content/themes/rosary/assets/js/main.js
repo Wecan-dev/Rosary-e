@@ -44,15 +44,15 @@ $(window).scroll(function () {
     $('.navbar-fixed-js--custom .nav-item a').removeClass('fixed--link');
     $('.nav-link').addClass('fixed-color');
     $('.nav-top__header').addClass('nav-top__header--detele');
-    $('.main-brand__fixed').css('display', 'initial');
-    $('.main-brand__top').css('display', 'none');
+	      $('.main-brand__top').addClass('height-0')
+$('.main-brand__top').removeClass('height-100')
     $('nav > div > div.navbar-collapse.offcanvas-collapse > ul > li:nth-child(8) > a').addClass('contact')
     // $("#iso").addClass('img-size').attr('src', 'assets/img/logo-white.jpg').removeClass('scroll-up');
 
   } else {
     $('nav > div > div.navbar-collapse.offcanvas-collapse > ul > li:nth-child(8) > a').removeClass('contact')
-    $('.main-brand__top').css('display', 'initial')
-    $('.main-brand__fixed').css('display', 'none')
+    $('.main-brand__top').addClass('height-100')
+$('.main-brand__top').removeClass('height-0')	  
     $('.navbar-fixed-js--custom .nav-item a').addClass('fixed--link');
     $('.navbar-fixed-js').removeClass('fixed');
     $('.navbar-fixed-js--custom').addClass('fixed--white');
