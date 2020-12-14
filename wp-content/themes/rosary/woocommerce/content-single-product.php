@@ -83,7 +83,7 @@ if ( post_password_required() ) {
 <?php //do_action( 'woocommerce_after_single_product' ); ?>
 
 
-  <section class="custom-description main-featured">
+  <section class="custom-description custom-description--rose">
     <div class="padding-right-left">
       <h2 class="main-general__title">
         Descripción

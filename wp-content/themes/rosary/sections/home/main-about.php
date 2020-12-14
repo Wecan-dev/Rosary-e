@@ -8,7 +8,8 @@
       </p>
       <div class="container-grid">
         <div class="main-about__img">
-          <img src="<?php echo get_theme_mod('about_image');?>">
+			<img class="main-about__img--xs" src="<?php echo get_theme_mod('about_image2');?>">
+          <img class="main-about__img--xl" src="<?php echo get_theme_mod('about_image');?>">
         </div>
         <div class="main-about__text">
           <p class="main-general__description"><?php echo str_replace ( "\n", "<br><br>", get_theme_mod('about_description'));?></p>

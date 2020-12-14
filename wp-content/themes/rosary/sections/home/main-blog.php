@@ -23,7 +23,9 @@
           </p>
         </div>
         <div class="main-blog__img">
-          <img src="<?php the_post_thumbnail_url('full'); ?>">
+          <img class="main-blog__img--xl"  src="<?php the_post_thumbnail_url('full'); ?>">
+			<img class="main-blog__img--xs" src="<?php the_field('bg-blog'); ?>">
+			
         </div>
       </div>
     </div>

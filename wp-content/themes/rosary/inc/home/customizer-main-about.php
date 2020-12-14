@@ -69,5 +69,15 @@
     'settings' => 'about_image',
   )));
 
+$wp_customize->add_setting('about_image2', array(
+    'default' => ''
+  ));
+  
+  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'about_image2_control', array (
+    'description' => 'Imagen pequeña',
+    'section' => 'about',
+    'settings' => 'about_image2',
+  )));
+
 
 ?>

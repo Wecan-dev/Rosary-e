@@ -86,7 +86,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
                   <input name="upper" id="upper" max="200000" min="10" type="range" value="200000">
                 </div>
                 <div class="price-wrap">
-                  <button class="shop-btn trans" type="submit">Filter</button>
+                  <button class="shop-btn trans" type="submit">Filtrar</button>
                   <div class="d-flex">
                     <span class="price-title">Price:</span>
                     <div class="price-wrap-1">
@@ -170,9 +170,9 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
           <?php $loop = new WP_Query( $args ); ?>
           <?php while ( $loop->have_posts() ) : $loop->the_post(); global $product;?>            
             <div class="main-featured__product">
-              <div class="main-featured__img">
+              <a href="<?php the_permalink(); ?>" class="main-featured__img">
                 <img src="<?php the_post_thumbnail_url('full'); ?>">
-              </div>
+              </a>
               <div class="main-featured__text">
                 <a class="main-featured__title" href="<?php the_permalink(); ?>">
                    <?php the_title(); ?>

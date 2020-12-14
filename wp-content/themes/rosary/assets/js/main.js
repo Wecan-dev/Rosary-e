@@ -67,13 +67,6 @@ $('.main-brand__top').removeClass('height-0')
 
 
 
-$('.nav-link-p').click(function () {
-  $('.offcanvas-collapse').removeClass('open');
-})
-
-$(".hamburger").on("click", function () {
-  $(this).toggleClass("is-active");
-});
 
 var lowerSlider = document.querySelector('#lower');
 var upperSlider = document.querySelector('#upper');
@@ -108,3 +101,12 @@ lowerSlider.oninput = function () {
   }
   document.querySelector('#one').value = this.value
 };
+
+
+$('.nav-link-p').click(function () {
+  $('.offcanvas-collapse').removeClass('open');
+})
+
+$(".hamburger").on("click", function () {
+  $(this).toggleClass("is-active");
+});

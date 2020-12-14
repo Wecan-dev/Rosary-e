@@ -245,6 +245,7 @@ Enviar
       <div class="container-grid">
         <div class="custom-piece__img">
           <img src="<?php echo meta_value_img('image1-item-personalizados', get_the_ID()); ?>">
+			 <img class="custom-piece__text--img" src="<?php echo meta_value_img('image2-item-personalizados', get_the_ID()); ?>">
         </div>
         <div class="custom-piece__text">
           <img src="<?php echo meta_value_img('image2-item-personalizados', get_the_ID()); ?>">

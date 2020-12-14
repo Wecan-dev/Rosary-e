@@ -11,7 +11,7 @@
 		margin-top: 0!important;
 	}
 	.woocommerce-banner {
-		margin-top:170px;
+		margin-top:200px;
 	}
 </style>
 <?php get_footer(); ?>

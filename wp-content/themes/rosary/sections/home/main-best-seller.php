@@ -15,9 +15,9 @@
       <?php $loop = new WP_Query( $args ); ?>
       <?php while ( $loop->have_posts() ) : $loop->the_post(); global $product;?>      
         <div class="main-featured__product">
-          <div class="main-featured__img">
+          <a href="<?php the_permalink(); ?>" class="main-featured__img">
             <img src="<?php the_post_thumbnail_url('full');?>">
-          </div>
+          </a>
           <div class="main-featured__text">
             <a class="main-featured__title" href="<?php the_permalink(); ?>">
                <?php the_title();?>

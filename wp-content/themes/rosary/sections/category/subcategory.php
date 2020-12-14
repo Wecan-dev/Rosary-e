@@ -9,10 +9,10 @@
   <section class="custom-description custom-description--rosa">
     <div class="padding-right-left">
       <h2 class="main-general__title">
-        Descripción
+         <?php echo str_replace("\n", "<br>", termmeta_value( 'titulo_interna', get_queried_object()->term_id )); ?>
       </h2>
       <p class="main-general__subtitle">
-        Categoría
+            <?php echo str_replace("\n", "<br>", termmeta_value( 'subtitulo_interna', get_queried_object()->term_id )); ?>
       </p>
       <p class="custom-description__text">
          <?php echo str_replace("\n", "<br>", termmeta_value( 'descripcion_completa', get_queried_object()->term_id )); ?>
@@ -47,9 +47,9 @@
 
        ?>             
         <div class="main-featured__product">
-          <div class="main-featured__img">
+          <a href="<?php the_permalink(); ?>" class="main-featured__img">
             <img src="<?php the_post_thumbnail_url('full');?>">
-          </div>
+          </a>
           <div class="main-featured__text">
             <a class="main-featured__title" href="<?php the_permalink(); ?>">
                <?php the_title();?>

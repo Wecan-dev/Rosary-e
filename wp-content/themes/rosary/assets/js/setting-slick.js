@@ -131,6 +131,7 @@ $('.main-featured__carousel').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: false,
+		      arrows: true,
         // autoplay: true,
         autoplaySpeed: 1000,
       }

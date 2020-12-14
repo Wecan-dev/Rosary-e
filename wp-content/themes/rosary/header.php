@@ -58,10 +58,33 @@ window.cookieconsent.initialise({
           <a class="navbar-brand" href="<?php echo get_home_url() ?>">
 <img id="iso" src="<?php echo get_template_directory_uri();?>/assets/img/logo.png">
 </a>
-          <button class="navbar-toggler p-2 border-0 hamburger hamburger--elastic ml-autos" data-toggle="offcanvas" type="button">
+			<div class="icon-mobile" >
+				<ul class="nav-icon">
+              <li>
+                 
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/mi-cuenta">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/img/profile@2x.png">
+                </a>
+
+              </li>
+              <li>
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/wishlist">
+                 <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
+                 <?php $wishlist_count = YITH_WCWL()->count_products(); echo esc_html( $wishlist_count ); ?>
+                </a>
+              </li>
+              <li>
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/carrito">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/img/bag@2x.png"><?php echo wp_kses_data(WC()->cart->get_cart_contents_count()); ?>
+                </a>
+              </li>
+            </ul>
+				 <button class="navbar-toggler p-2 border-0 hamburger hamburger--elastic ml-autos" data-toggle="offcanvas" type="button">
 <span class="hamburger-box"></span>
 <span class="hamburger-inner"></span>
 </button>
+			</div>
+         
         </div>
         <div class="navbar-collapse offcanvas-collapse">
           <ul class="navbar-nav mr-autos">
