@@ -29,7 +29,9 @@
   </section>
   <section class="main-break">
     <div class="main-break__img">
-      <img src="<?php echo get_theme_mod('categories_image'); ?>">
+		<video autoplay="true" muted src="<?php echo get_theme_mod('categories_image'); ?>" >
+		
+		</video>
       <div class="main-break__mask">
 		  <p class="main-categories__title" >
 			  <?php echo get_theme_mod('categories_title'); ?>
@@ -49,7 +51,7 @@
           <p class="main-categories__text">
             <?=$category->description ?>
           </p>
-          <img class="main-categories__poster" src="<?php echo get_template_directory_uri();?>/assets/img/image_4.png">
+          <img class="main-categories__poster" src="<?php echo termmeta_value_img( 'poster_categories', $category->term_id ); ?>">
           <a class="general-btn__simple" href="<?php echo get_category_link( $category->term_id ); ?>">
             Comprar ahora
           </a>
