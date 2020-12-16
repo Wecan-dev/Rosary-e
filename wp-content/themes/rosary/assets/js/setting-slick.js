@@ -1,9 +1,9 @@
 $('.main-banner__content').slick({
   infinite: true,
-  // autoplay: true,
+ 	autoplay: true,
   slidesToShow: 1,
   slidesToScroll: 1,
-  dots: true,
+  dots: false,
   arrows: false,
   responsive: [{
       breakpoint: 1200,

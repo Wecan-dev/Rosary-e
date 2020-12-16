@@ -13,28 +13,7 @@
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 
 <body>
-<script>
-var url = "<?= get_home_url() ?>/cookies"; 
-window.cookieconsent.initialise({
 
-  "palette": {
-    "popup": {
-      "background": "#d0bd9b",
-      "text": "#000000"
-    },
-    "button": {
-      "background": "#fff",
-      "text": "#000000"
-    }
-  },
-  "theme": "classic",
-  "content": {
-    "message": "Este sitio web usa cookies para mejorar la experiencia del usuario. si continuas navegando entendemos que aceptas la Política de Cookies",
-    "dismiss": "¡Acepto!",
-    "link": "Leer màs"
-  }
-});       
-</script>
 
 
   <?php if ( is_home() ) : ?>

@@ -170,9 +170,26 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
           <?php $loop = new WP_Query( $args ); ?>
           <?php while ( $loop->have_posts() ) : $loop->the_post(); global $product;?>            
             <div class="main-featured__product">
-              <a href="<?php the_permalink(); ?>" class="main-featured__img">
-                <img src="<?php the_post_thumbnail_url('full'); ?>">
-              </a>
+                     <div href="<?php the_permalink(); ?>" class="main-featured__img">
+            <img src="<?php the_post_thumbnail_url('full');?>">
+			<div class="main-featured__mask" >
+				<a class="link-product" href="<?php the_permalink(); ?>"></a>
+				<div class="main-featured__icon" >
+					 <?php// if (is_user_logged_in()){ ?>    
+                      <a href="?add_to_wishlist=<?php echo get_the_ID(); ?>">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
+                      </a>
+                    <?php// }else { ?>  
+                    <!--<div data-toggle="tooltip" data-placement="top" title="" data-original-title="<?php if(lang() == 'es'){echo "Debes estar iniciar sesión";}else{echo "You must be logged";} ?>" class="collection-item__icon" >
+                      <img src="<?php echo get_template_directory_uri();?>/assets/img/heart.png">
+                    </div> -->             
+                    <?php// } ?>
+					 <a href="<?php the_permalink(); ?>">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/search.png">
+                      </a>
+				</div>
+			  </div>
+          </div>
               <div class="main-featured__text">
                 <a class="main-featured__title" href="<?php the_permalink(); ?>">
                    <?php the_title(); ?>
@@ -252,13 +269,44 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
       </div>
     </div>
   </section>
-  <script src="<?php echo get_template_directory_uri();?>/assets/js/jquery.min.js"></script>
-  <script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="<?php echo get_template_directory_uri();?>/assets/js/slick.min.js"></script>
-  <script src="<?php echo get_template_directory_uri();?>/assets/js/setting-slick.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-  <script src="<?php echo get_template_directory_uri();?>/assets/js/main.js"></script>
+  <script>
+
+var lowerSlider = document.querySelector('#lower');
+var upperSlider = document.querySelector('#upper');
+
+document.querySelector('#two').value = upperSlider.value;
+document.querySelector('#one').value = lowerSlider.value;
+
+var lowerVal = parseInt(lowerSlider.value);
+var upperVal = parseInt(upperSlider.value);
+
+upperSlider.oninput = function () {
+  lowerVal = parseInt(lowerSlider.value);
+  upperVal = parseInt(upperSlider.value);
+
+  if (upperVal < lowerVal + 4) {
+    lowerSlider.value = upperVal - 4;
+    if (lowerVal == lowerSlider.min) {
+      upperSlider.value = 4;
+    }
+  }
+  document.querySelector('#two').value = this.value
+};
+
+lowerSlider.oninput = function () {
+  lowerVal = parseInt(lowerSlider.value);
+  upperVal = parseInt(upperSlider.value);
+  if (lowerVal > upperVal - 4) {
+    upperSlider.value = lowerVal + 4;
+    if (upperVal == upperSlider.max) {
+      lowerSlider.value = parseInt(upperSlider.max) - 4;
+    }
+  }
+  document.querySelector('#one').value = this.value
+};
+
+</script>
+
 <?php
 
 }//else

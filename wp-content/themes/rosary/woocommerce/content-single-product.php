@@ -127,8 +127,25 @@ if ( post_password_required() ) {
 
        ?>     
         <div class="main-featured__product">
-          <div class="main-featured__img">
+                   <div href="<?php the_permalink(); ?>" class="main-featured__img">
             <img src="<?php the_post_thumbnail_url('full');?>">
+			<div class="main-featured__mask" >
+				<a class="link-product" href="<?php the_permalink(); ?>"></a>
+				<div class="main-featured__icon" >
+					 <?php// if (is_user_logged_in()){ ?>    
+                      <a href="?add_to_wishlist=<?php echo get_the_ID(); ?>">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
+                      </a>
+                    <?php// }else { ?>  
+                    <!--<div data-toggle="tooltip" data-placement="top" title="" data-original-title="<?php if(lang() == 'es'){echo "Debes estar iniciar sesión";}else{echo "You must be logged";} ?>" class="collection-item__icon" >
+                      <img src="<?php echo get_template_directory_uri();?>/assets/img/heart.png">
+                    </div> -->             
+                    <?php// } ?>
+					 <a href="<?php the_permalink(); ?>">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/search.png">
+                      </a>
+				</div>
+			  </div>
           </div>
           <div class="main-featured__text">
             <a class="main-featured__title" href="<?php the_permalink(); ?>">

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
   <section class="error-404">
-    <img src="<?php echo get_template_directory_uri();?>/assets/img/404/image.png">
+    <img src="<?php echo get_template_directory_uri();?>/assets/img/404/404.jpg">
     <div class="error-404__text">
       <h2 class="error-404__title">
         lo sentimos
