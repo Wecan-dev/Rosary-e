@@ -1,5 +1,6 @@
 <div class="woocommerce-banner" > 
-<img  src="<?php echo get_template_directory_uri();?>/assets/img/perfil.png">
+<video autoplay loop muted src="<?php echo get_template_directory_uri();?>/assets/img/perfil.mp4">
+	</video>
 	<div class="woocommerce-banner__text">
 	<h2 class="main-general__title">
         Mi cuenta
@@ -8,6 +9,7 @@
         Perfil de Usuario
       </p>
 	</div>
+	
 </div>
 
 <div class="woocommerce-grid woocommerce-padding" >

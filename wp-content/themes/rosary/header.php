@@ -19,7 +19,10 @@
   <?php if ( is_home() ) : ?>
   <header class="header fixed-top navbar-fixed-js">
 	    <section class="pre-navbar">
-    <p><?php echo get_theme_mod('pre-navbar_title');?></p>
+			  <p><?php echo get_theme_mod('pre-navbar_title');?></p>	
+			<p  id="countdown"></p>
+
+  
   </section>
     <nav class="navbar navbar-expand-lg">
       <div class="container-nav">
@@ -149,7 +152,10 @@ outlet
   <?php else: ?> 
     <header class="header header-solid fixed-top navbar-fixed-js">
 			    <section class="pre-navbar">
-    <p><?php echo get_theme_mod('pre-navbar_title');?></p>
+    <p id="countdown"></p>
+					<p><?php echo get_theme_mod('pre-navbar_title');?></p>
+						
+
   </section>
     <nav class="navbar navbar-expand-lg">
       <div class="container-nav">
@@ -259,4 +265,37 @@ outlet
       </div>
     </nav>
   </header>  
+
     <?php endif; ?>
+	<script>
+var end = new Date('12/17/2100 9:30 AM');
+
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+
+    function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        if (distance < 0) {
+
+            clearInterval(timer);
+            document.getElementById('countdown').innerHTML = 'EXPIRED!';
+
+            return;
+        }
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        document.getElementById('countdown').innerHTML = days + ' dias, ';
+        document.getElementById('countdown').innerHTML += hours + ' horas, ';
+        document.getElementById('countdown').innerHTML += minutes + ' min y ';
+        document.getElementById('countdown').innerHTML += seconds + ' seg';
+    }
+
+    timer = setInterval(showRemaining, 1000);
+</script>

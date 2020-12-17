@@ -1,18 +1,35 @@
   <section class="main-banner">    
     <div class="main-banner__content">
-    <?php for ($i=1; $i <=3 ; $i++) { ?>  
+      <?php $args = array('post_type' => 'itemsbanner', 'order'=> 'ASC','post_status' => 'publish', 'posts_per_page' => 100); ?>        
+      <?php $loop = new WP_Query( $args ); ?>
+      <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>     
+     <?php if (get_field('banner_option') == "Imagen") { ?>
       <div class="main-banner__item">
         <div class="main-banner__text wow animated fadeIn" style="visibility: visible; animation-delay: .3s  ;">
           <div class="main-banner__title">
             <h2>
-                <?php echo get_theme_mod('banner_title_'.$i.'');?>
+               <?php the_field('banner_title'); ?>
             </h2>
           </div>
         </div>
         <div class="main-banner__img">
-          <img alt="Imagen Banner" src="<?php echo get_theme_mod('banner_image_'.$i.''); ?>">
+          <img alt="Imagen Banner" src="<?php the_field('banner_image'); ?>">
+        </div>
+      </div>
+    <?php }else{ ?> 
+      <div class="main-banner__item">
+        <div class="main-banner__text wow animated fadeIn" style="visibility: visible; animation-delay: .3s  ;">
+          <div class="main-banner__title">
+            <h2>
+               <?php the_field('banner_title'); ?>
+            </h2>
+          </div>
+        </div>
+        <div class="main-banner__img">
+          <video autoplay loop muted id="myVideo" src="<?php the_field('banner_video'); ?>"> </video>
         </div>
       </div>
     <?php } ?> 
+    <?php endwhile; ?>     
     </div>
   </section>

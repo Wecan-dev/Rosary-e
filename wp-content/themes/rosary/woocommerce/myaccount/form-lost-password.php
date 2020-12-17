@@ -1,12 +1,10 @@
 <div class="woocommerce-banner" > 
-<img  src="<?php echo get_template_directory_uri();?>/assets/img/password.png">
+<img  src="<?php echo get_template_directory_uri();?>/assets/img/password.jpg">
 	<div class="woocommerce-banner__text">
 	<h2 class="main-general__title">
         Mi cuenta
       </h2>
-      <p class="general-banner__subtitle">
-        Rosary
-      </p>
+   
 	</div>
 </div>
 <div class="lost-password__custom" >

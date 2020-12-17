@@ -26,7 +26,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
 
 ?>
   <section class="general-banner">
-    <img src="<?php echo get_template_directory_uri();?>/assets/img/productos/image_1.png">
+    <img src="<?php echo get_template_directory_uri();?>/assets/img/productos/image_1.jpg">
     <div class="general-banner__text">
       <h2 class="main-general__title">
         Productos

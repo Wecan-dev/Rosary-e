@@ -6,29 +6,17 @@
     'panel' => 'panel2'
   ));
   
-for ($i=1; $i <= 3; $i++) { 
 
-  $wp_customize->add_setting('banner_title_'.$i.'', array(
+  $wp_customize->add_setting('banner_link', array(
     'default' => ''
   ));
   
-  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'banner_title_'.$i.'_control', array (
-    'description' => 'Título '.$i.'',
+  $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'banner_link_control', array (
+    'label' => 'Agregar textos e imágenes del banner',
+    'description' => '<hr>Añadir Banner <a target=”_blank href="edit.php?post_type=itemsbanner">here </a><hr>',
     'section' => 'banner',
-    'settings' => 'banner_title_'.$i.'',
-    'type' => 'textarea'
+    'settings' => 'banner_link',
+    'type' => 'hidden'
   )));
-
-  $wp_customize->add_setting('banner_image_'.$i.'', array(
-    'default' => ''
-  ));
-  
-  $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'banner_image_'.$i.'_control', array (
-    'description' => 'Imagen '.$i.'',
-    'section' => 'banner',
-    'settings' => 'banner_image_'.$i.'',
-  )));  
-}
-  
   
 ?>
