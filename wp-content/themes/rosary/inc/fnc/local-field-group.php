@@ -1,5 +1,53 @@
-<?php 
+<?php
 if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array(
+	'key' => 'group_5fdd3c0c6b721',
+	'title' => 'Imagen Hover',
+	'fields' => array(
+		array(
+			'key' => 'field_5fdd3c1b66f79',
+			'label' => '',
+			'name' => 'imagen_hover_del_producto',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
+			'preview_size' => 'medium',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'product',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
 
 acf_add_local_field_group(array(
 	'key' => 'group_5fc2ea0ba788d',
@@ -381,6 +429,54 @@ acf_add_local_field_group(array(
 ));
 
 acf_add_local_field_group(array(
+	'key' => 'group_5fdd3bd2042d5',
+	'title' => 'Personalizados',
+	'fields' => array(
+		array(
+			'key' => 'field_5fdd3bdd24cc0',
+			'label' => '',
+			'name' => 'productos_personalizados',
+			'type' => 'checkbox',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'Producto Personalizado' => 'Producto Personalizado',
+			),
+			'allow_custom' => 0,
+			'default_value' => array(
+			),
+			'layout' => 'vertical',
+			'toggle' => 0,
+			'return_format' => 'value',
+			'save_custom' => 0,
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'product',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+acf_add_local_field_group(array(
 	'key' => 'group_5fc045800876b',
 	'title' => 'Plantillas Páginas',
 	'fields' => array(
@@ -558,6 +654,38 @@ acf_add_local_field_group(array(
 			'maxlength' => '',
 		),
 		array(
+			'key' => 'field_5fdceb1159934',
+			'label' => '',
+			'name' => 'option-banner-new-in',
+			'type' => 'radio',
+			'instructions' => 'Opción Banner',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5fc0458a2cf1e',
+						'operator' => '==',
+						'value' => 'New In',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'Imagen' => 'Imagen',
+				'Vídeo' => 'Vídeo',
+			),
+			'allow_null' => 0,
+			'other_choice' => 0,
+			'default_value' => '',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+			'save_other_choice' => 0,
+		),
+		array(
 			'key' => 'field_5fc04d347d328',
 			'label' => '',
 			'name' => 'image-banner-new-in',
@@ -570,6 +698,11 @@ acf_add_local_field_group(array(
 						'field' => 'field_5fc0458a2cf1e',
 						'operator' => '==',
 						'value' => 'New In',
+					),
+					array(
+						'field' => 'field_5fdceb1159934',
+						'operator' => '==',
+						'value' => 'Imagen',
 					),
 				),
 			),
@@ -586,6 +719,38 @@ acf_add_local_field_group(array(
 			'min_size' => '',
 			'max_width' => '',
 			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+		array(
+			'key' => 'field_5fdce153f6acc',
+			'label' => '',
+			'name' => 'video-banner-new-in',
+			'type' => 'file',
+			'instructions' => 'Vídeo Banner',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5fc0458a2cf1e',
+						'operator' => '==',
+						'value' => 'New In',
+					),
+					array(
+						'field' => 'field_5fdceb1159934',
+						'operator' => '==',
+						'value' => 'Vídeo',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
+			'library' => 'all',
+			'min_size' => '',
 			'max_size' => '',
 			'mime_types' => '',
 		),
@@ -2637,13 +2802,46 @@ acf_add_local_field_group(array(
 			'mime_types' => '',
 		),
 		array(
+			'key' => 'field_5fdcfe8479c7b',
+			'label' => '',
+			'name' => 'option1_categories',
+			'type' => 'radio',
+			'instructions' => 'Opción Banner 1',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'Imagen' => 'Imagen',
+				'Vídeo' => 'Vídeo',
+				'Iframe' => 'Iframe',
+			),
+			'allow_null' => 0,
+			'other_choice' => 0,
+			'default_value' => '',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+			'save_other_choice' => 0,
+		),
+		array(
 			'key' => 'field_5fc508b445ed3',
 			'label' => '',
 			'name' => 'banner_categories',
 			'type' => 'image',
-			'instructions' => 'Imagen Banner',
+			'instructions' => 'Imagen Banner 1',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5fdcfe8479c7b',
+						'operator' => '==',
+						'value' => 'Imagen',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -2657,6 +2855,171 @@ acf_add_local_field_group(array(
 			'min_size' => '',
 			'max_width' => '',
 			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+		array(
+			'key' => 'field_5fdd017379c7c',
+			'label' => '',
+			'name' => 'iframe_banner_categories',
+			'type' => 'textarea',
+			'instructions' => 'Vídeo Banner 1 (Colocar Iframe)',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5fdcfe8479c7b',
+						'operator' => '==',
+						'value' => 'Iframe',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => '',
+		),
+		array(
+			'key' => 'field_5fdd09148a506',
+			'label' => '',
+			'name' => 'video_banner_categories',
+			'type' => 'file',
+			'instructions' => 'Vídeo Banner 1',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5fdcfe8479c7b',
+						'operator' => '==',
+						'value' => 'Vídeo',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
+			'library' => 'all',
+			'min_size' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+		array(
+			'key' => 'field_5fdd021a79c7d',
+			'label' => '',
+			'name' => 'option2_categories',
+			'type' => 'radio',
+			'instructions' => 'Opción Banner 2',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'Imagen' => 'Imagen',
+				'Vídeo' => 'Vídeo',
+				'Iframe' => 'Iframe',
+			),
+			'allow_null' => 0,
+			'other_choice' => 0,
+			'default_value' => '',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+			'save_other_choice' => 0,
+		),
+		array(
+			'key' => 'field_5fdcf0b4aa93a',
+			'label' => '',
+			'name' => 'banner2_categories',
+			'type' => 'image',
+			'instructions' => 'Imagen Banner 2',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5fdd021a79c7d',
+						'operator' => '==',
+						'value' => 'Imagen',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
+			'preview_size' => 'medium',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+		array(
+			'key' => 'field_5fdd028579c7e',
+			'label' => '',
+			'name' => 'iframe_banner2_categories',
+			'type' => 'textarea',
+			'instructions' => 'Vídeo Banner 2 (Colocar Iframe)',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5fdd021a79c7d',
+						'operator' => '==',
+						'value' => 'Iframe',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => '',
+		),
+		array(
+			'key' => 'field_5fdd09e18a507',
+			'label' => '',
+			'name' => 'video_banner2_categories',
+			'type' => 'file',
+			'instructions' => 'Vídeo Banner 2',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5fdd021a79c7d',
+						'operator' => '==',
+						'value' => 'Vídeo',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
+			'library' => 'all',
+			'min_size' => '',
 			'max_size' => '',
 			'mime_types' => '',
 		),

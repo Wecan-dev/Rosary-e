@@ -56,11 +56,11 @@ Productos
 Cats & Dogs
 </a>
             </li> -->
-            <li>
-              <a href="<?php echo get_home_url() ?>/complementos-accesorios">
+          <!--   <li>
+              <a href="<?php //echo get_home_url() ?>/complementos-accesorios">
 Accesorios
 </a>
-            </li>
+            </li> -->
             <li>
               <a href="<?php echo get_home_url() ?>/personalizados">
 Personalizados
@@ -118,8 +118,8 @@ Email: <?php echo get_theme_mod('email'); ?>
 </a>
             </li>
             <li>
-              <img src="<?php echo get_template_directory_uri();?>/assets/img/phone-call.png">
-              <a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('phone'); ?>">
+              <img src="<?php echo get_template_directory_uri();?>/assets/img/whatsapp.png">
+              <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('phone'); ?>">
 Phone: <?php echo get_theme_mod('phone'); ?>
 </a>
             </li>

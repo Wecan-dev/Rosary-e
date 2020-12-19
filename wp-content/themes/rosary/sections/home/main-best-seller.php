@@ -17,7 +17,7 @@
         <div class="main-featured__product">
           <div href="<?php the_permalink(); ?>" class="main-featured__img">
             <img src="<?php the_post_thumbnail_url('full');?>">
-			<div class="main-featured__mask" >
+			<div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
 				<a class="link-product" href="<?php the_permalink(); ?>"></a>
 				<div class="main-featured__icon" >
 					 <?php// if (is_user_logged_in()){ ?>    

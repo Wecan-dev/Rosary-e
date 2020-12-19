@@ -23,8 +23,12 @@
 
 <!-- ****************** NEW IN *********************-->
 <?php if(get_field('template_rosary') == 'New In'){ ?>  
-  <section class="general-banner">
-    <img src="<?php the_field('image-banner-new-in'); ?>">
+  <section class="general-banner general-banner__newin">
+  <?php if (get_field('option-banner-new-in') == 'Imagen'){ ?>  
+          <img src="<?php the_field('image-banner-new-in') ?>">
+  <?php }else{ ?>  
+        <video  muted loop autoplay="true" id="myVideo" src="<?php the_field('video-banner-new-in') ?>"> </video>
+  <?php } ?>    
     <div class="general-banner__text">
       <h2 class="main-general__title">
          <?php the_field('title-banner-new-in'); ?>
@@ -52,7 +56,7 @@
         <div class="main-featured__product">
                   <div href="<?php the_permalink(); ?>" class="main-featured__img">
             <img src="<?php the_post_thumbnail_url('full');?>">
-			<div class="main-featured__mask" >
+  	<div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
 				<a class="link-product" href="<?php the_permalink(); ?>"></a>
 				<div class="main-featured__icon" >
 					 <?php// if (is_user_logged_in()){ ?>    
@@ -99,7 +103,7 @@
         <div class="main-featured__product">
                     <div href="<?php the_permalink(); ?>" class="main-featured__img">
             <img src="<?php the_post_thumbnail_url('full');?>">
-			<div class="main-featured__mask" >
+ 	<div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
 				<a class="link-product" href="<?php the_permalink(); ?>"></a>
 				<div class="main-featured__icon" >
 					 <?php// if (is_user_logged_in()){ ?>    
@@ -139,12 +143,8 @@
         <p class="general-promo__subtitle">
           <?php echo meta_value('subtitle-promo-new-in', $id_page); ?>
         </p>
-        <form>
-          <input placeholder="Tu email" type="email">
-          <a class="general-btn__rose" href="">
-Unirme
-</a>
-        </form>
+		  <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 2, 'title' => false, 'description' => false ) ); ?>
+
       </div>
       <div class="general-promo__img">
         <img src="<?php echo meta_value_img('image-promo-new-in', $id_page); ?>">
@@ -179,7 +179,7 @@ Unirme
         <div class="main-featured__product">
                   <div href="<?php the_permalink(); ?>" class="main-featured__img">
             <img src="<?php the_post_thumbnail_url('full');?>">
-			<div class="main-featured__mask" >
+	<div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
 				<a class="link-product" href="<?php the_permalink(); ?>"></a>
 				<div class="main-featured__icon" >
 					 <?php// if (is_user_logged_in()){ ?>    
@@ -227,7 +227,7 @@ Unirme
         <div class="main-featured__product">
                   <div href="<?php the_permalink(); ?>" class="main-featured__img">
             <img src="<?php the_post_thumbnail_url('full');?>">
-			<div class="main-featured__mask" >
+	<div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
 				<a class="link-product" href="<?php the_permalink(); ?>"></a>
 				<div class="main-featured__icon" >
 					 <?php// if (is_user_logged_in()){ ?>    
@@ -297,23 +297,23 @@ Enviar
       <ul class="general-breadcrumbs">
         <?php echo meta_value('title-personalizados', $id_page); ?>
       </ul>
-		<div class="custom-piece__carousel" >
-			
+    <div class="custom-piece__carousel" >
+      
       <?php          
       $args = array (
              'post_type' => 'personalizado',
              'posts_status' => 'publish',
-		  'order' => 'ASC',
+      'order' => 'ASC',
       );?>
       <?php $loop = new WP_Query( $args ); ?>
       <?php while ( $loop->have_posts() ) : $loop->the_post(); global $product;?>   
-			<div class="custom-piece__item" >
-				
-			
+      <div class="custom-piece__item" >
+        
+      
       <div class="container-grid">
         <div class="custom-piece__img">
           <img src="<?php echo meta_value_img('image1-item-personalizados', get_the_ID()); ?>">
-			 <img class="custom-piece__text--img" src="<?php echo meta_value_img('image2-item-personalizados', get_the_ID()); ?>">
+       <img class="custom-piece__text--img" src="<?php echo meta_value_img('image2-item-personalizados', get_the_ID()); ?>">
         </div>
         <div class="custom-piece__text">
           <img src="<?php echo meta_value_img('image2-item-personalizados', get_the_ID()); ?>">
@@ -331,9 +331,9 @@ Enviar
           </a>
         </div>
       </div>
-				</div>
+        </div>
       <?php endwhile; ?> 
-					</div>
+          </div>
 
     </div>
   </section>
@@ -510,18 +510,18 @@ Enviar
     <div class="padding-top-bottom padding-right-left">
       <ul class="general-breadcrumbs">
         <li>
-			<a>
+      <a>
            <?php echo meta_value('title-general-categorias', $id_page); ?>
           </a>
         </li>
       </ul>
       <div class="container-grid">
-      <?php $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'posts_per_page' => 2, 'orderby' => 'menu_order', 'order' => 'asc' )); $i = 0; ?>
+      <?php $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'posts_per_page' => 2, 'orderby' => 'menu_order', 'order' => 'asc', 'parent' =>0 )); $i = 0; ?>
       <?php foreach($product_categories as $category):  global $wpdb;?>
       <?php $result = $wpdb->get_results ("SELECT * FROM ".$wpdb->prefix."term_taxonomy where taxonomy = 'product_cat'");?>    
              
         <div class="categories-all__card">
-			<span class="categories-all__border" ></span>
+      <span class="categories-all__border" ></span>
           <img src="<?php echo wp_get_attachment_url( get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true ) );?>">
           <div class="categories-all__text" href="">
             <h2 class="categories-all__title">
@@ -571,7 +571,7 @@ Enviar
          
         </p>
         <ul class="contact-list">
-		  <li>
+      <li>
             <img src="<?php echo get_template_directory_uri();?>/assets/img/envelope.png">
             <a href="mailto:<?php echo meta_value('email-sidebar-contacto', $id_page); ?>">
               <p>Correo Electrónico</p>

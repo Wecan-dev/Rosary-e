@@ -1,5 +1,5 @@
   <section class="main-categories">
-  <?php $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'posts_per_page' => 2, 'orderby' => 'menu_order', 'order' => 'asc' )); $i = 0; ?>
+  <?php $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'posts_per_page' => 2, 'parent' =>0, 'showposts' => -1 )); $i = 0; ?>
   <?php foreach($product_categories as $category):  global $wpdb;?>
   <?php $result = $wpdb->get_results ("SELECT * FROM ".$wpdb->prefix."term_taxonomy where taxonomy = 'product_cat'");?>    
   <?php if ($i <= 1) { ?>
@@ -29,7 +29,7 @@
   </section>
   <section class="main-break">
     <div class="main-break__img">
-		<video autoplay="true" muted src="<?php echo get_theme_mod('categories_image'); ?>" >
+		<video loop autoplay="true" muted src="<?php echo get_theme_mod('categories_image'); ?>" >
 		
 		</video>
       <div class="main-break__mask">
@@ -40,7 +40,7 @@
     </div>
   </section>
   <section class="main-categories">
-  <?php $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'posts_per_page' => 2, 'orderby' => 'menu_order', 'order' => 'asc' )); $i = 0; ?>
+  <?php $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'posts_per_page' => 2, 'parent' =>0 )); $i = 0; ?>
   <?php foreach($product_categories as $category):  global $wpdb;?>
   <?php $result = $wpdb->get_results ("SELECT * FROM ".$wpdb->prefix."term_taxonomy where taxonomy = 'product_cat'");?>    
   <?php if ($i > 1) { ?>    

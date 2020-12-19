@@ -67,7 +67,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
             <?php $checked =NULL;  if ($category->slug == $_GET['cat']) { $checked = "checked='checked'"; } $categoria = $category->name; $category_id = $category->term_id; $category_link = get_category_link( $category_id ); ?>         
               <li>
                 <a href="<?php echo get_home_url().'/tienda?cat='.$category->slug.'&tax=product_cat'?>">
-                   <?= $categoria ?>
+                   <?php if ($_GET["cat"] != NULL && $_GET["cat"] == $category->slug){ ?> <span class="hover_cat"> <?php echo  $categoria ?></span> <?php }else{ ?> <?php echo  $categoria ?> <?php }  ?>
                 </a>
               </li>
               <?php endforeach; ?>  
@@ -82,8 +82,8 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
               <fieldset class="filter-price">
                <form method="get">
                 <div class="price-field">
-                  <input name="lower" id="lower" max="200000" min="10" type="range" value="10">
-                  <input name="upper" id="upper" max="200000" min="10" type="range" value="200000">
+                  <input name="lower" id="lower" max="<?php echo price_mayor(); ?>" min="10" type="range" value="<?php if ($_GET["lower"] != NULL){ echo $_GET["lower"];}else{ echo '10'; } ?>">
+                  <input name="upper" id="upper" max="<?php echo price_mayor(); ?>" min="10" type="range" value="<?php if ($_GET["upper"] != NULL){ echo $_GET["upper"];}else{ echo price_mayor(); } ?>">
                 </div>
                 <div class="price-wrap">
                   <button class="shop-btn trans" type="submit">Filtrar</button>
@@ -106,19 +106,19 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
           </div>
           <div class="shop-sidebar__content">
             <h2 class="shop-sidebar__title">
-              Colores
+              Colores 
               <span></span>
             </h2>
             <ul class="shop-sidebar__colors">
               <?php
                  global $wpdb;
-                 $product_categories = get_categories( array( 'taxonomy' => 'pa_color', 'orderby' => 'menu_order', 'order' => 'asc' ));  
+                 $product_categories = get_categories( array( 'taxonomy' => 'pa_material', 'orderby' => 'menu_order', 'order' => 'asc' ));  
               ?>                                                        
               <?php foreach($product_categories as $category): ?>
               <?php $categoria = $category->name; $category_id = $category->term_id; $category_link = get_category_link( $category_id ); ?>               
               <li>
-                <a href="<?php echo get_home_url() ?>/tienda/?cat=<?php echo $category->slug;?>&tax=pa_color">
-                  <?= $categoria ?>
+                <a href="<?php echo get_home_url() ?>/tienda/?cat=<?php echo $category->slug;?>&tax=pa_material">
+                  <?php if ($_GET["cat"] != NULL && $_GET["cat"] == $category->slug){ ?> <span class="hover_cat"> <?php echo  $categoria ?></span> <?php }else{ ?> <?php echo  $categoria ?> <?php }  ?>
                 </a>
               </li>
               <?php endforeach; ?>
@@ -172,7 +172,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
             <div class="main-featured__product">
                      <div href="<?php the_permalink(); ?>" class="main-featured__img">
             <img src="<?php the_post_thumbnail_url('full');?>">
-			<div class="main-featured__mask" >
+    	<div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
 				<a class="link-product" href="<?php the_permalink(); ?>"></a>
 				<div class="main-featured__icon" >
 					 <?php// if (is_user_logged_in()){ ?>    
@@ -207,9 +207,9 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
         <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
           <div class="categorie-product__list">
 
-					<?php $loop = new WP_Query( $args ); ?>
-					<?php while ( $loop->have_posts() ) : $loop->the_post(); global $product;?>             
-						<div class="main-featured__product">
+          <?php $loop = new WP_Query( $args ); ?>
+          <?php while ( $loop->have_posts() ) : $loop->the_post(); global $product;?>             
+            <div class="main-featured__product">
               <div class="main-featured__img">
                 <img src="<?php the_post_thumbnail_url('full'); ?>">
               </div>
@@ -217,15 +217,15 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
                 <a class="main-featured__title" href="<?php the_permalink(); ?>">
                    <?php the_title(); ?>
                 </a>
-				  <p class="main-featured__description">
-										<?php if(lang() == 'es'){echo "Categoría: ";}if(lang() == 'en'){echo "category: ";}  
-										$product_categories = wp_get_post_terms( get_the_ID(), 'product_cat' ); $i = 0;
-										foreach($product_categories as $category):
-											if ($i > 0 ) {echo " / "; } echo $category->name; $i=$i+1;
-										endforeach;?>
+          <p class="main-featured__description">
+                    <?php if(lang() == 'es'){echo "Categoría: ";}if(lang() == 'en'){echo "category: ";}  
+                    $product_categories = wp_get_post_terms( get_the_ID(), 'product_cat' ); $i = 0;
+                    foreach($product_categories as $category):
+                      if ($i > 0 ) {echo " / "; } echo $category->name; $i=$i+1;
+                    endforeach;?>
 
-									</p>
-				   <div class="main-featured__description">
+                  </p>
+           <div class="main-featured__description">
                    <?php the_content(); ?>
                 </div>
                 <p class="main-featured__price">
@@ -233,8 +233,8 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
                 </p>
               </div>
             </div>
-					<?php endwhile; ?>        	
-					</div>
+          <?php endwhile; ?>          
+          </div>
         </div>
 
 

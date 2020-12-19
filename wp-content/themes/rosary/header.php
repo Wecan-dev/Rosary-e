@@ -76,19 +76,32 @@
             <!-- <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/recomendados">Recomendados</a>
             </li> -->
-            <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/tienda">Productos</a>
-            </li>
+           <div class="nav-item dropdown show">
+  <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Productos
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+ <?php $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'posts_per_page' => 2, 'parent' =>0, 'showposts' => -1 )); $i = 0; ?>
+  <?php foreach($product_categories as $category):  global $wpdb;?>
+  <?php $result = $wpdb->get_results ("SELECT * FROM ".$wpdb->prefix."term_taxonomy where taxonomy = 'product_cat'");?>            
+                <a class="dropdown-item"  href="<?php echo get_category_link( $category->term_id ); ?>">
+                    <?=$category->name ?>
+                </a>
+             
+	     <?php endforeach; ?>  
+  </div>
+</div>
             <!-- <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/Cats&Dogs">
 Cats & Dogs
 </a>
             </li> -->
-            <li class="nav-item">
+         <!--  <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/complementos-accesorios">
 Accesorios
 </a>
-            </li>
+            </li>-->
             <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/personalizados">
 Personalizados
@@ -152,8 +165,9 @@ outlet
   <?php else: ?> 
     <header class="header header-solid fixed-top navbar-fixed-js">
 			    <section class="pre-navbar">
-    <p id="countdown"></p>
-					<p><?php echo get_theme_mod('pre-navbar_title');?></p>
+    		<p><?php echo get_theme_mod('pre-navbar_title');?></p>
+					<p id="countdown"></p>
+			
 						
 
   </section>
@@ -190,24 +204,39 @@ outlet
             <!-- <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/recomendados">Recomendados</a>
             </li> -->
-            <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/tienda">Productos</a>
-            </li>
+			  <div class="nav-item dropdown show">
+  <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Productos
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+ <?php $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'posts_per_page' => 2, 'parent' =>0, 'showposts' => -1 )); $i = 0; ?>
+  <?php foreach($product_categories as $category):  global $wpdb;?>
+  <?php $result = $wpdb->get_results ("SELECT * FROM ".$wpdb->prefix."term_taxonomy where taxonomy = 'product_cat'");?>            
+                <a class="dropdown-item"  href="<?php echo get_category_link( $category->term_id ); ?>">
+                    <?=$category->name ?>
+                </a>
+             
+	     <?php endforeach; ?>  
+  </div>
+</div>
+			 
             <!-- <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/cats&dogs">
 Cats & Dogs
 </a>
             </li> -->
-            <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/complementos-accesorios">
+			  
+           <!--  <li class="nav-item">
+              <a class="nav-link" data="offcanvas" href="<?php// echo get_home_url() ?>/complementos-accesorios">
 Accesorios
 </a>
-            </li>
-            <li class="nav-item">
+            </li>-->
+             <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/personalizados">
 Personalizados
 </a>
-            </li>
+            </li> 
             <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/nosotros">
 Nosotros
@@ -268,7 +297,7 @@ outlet
 
     <?php endif; ?>
 	<script>
-var end = new Date('12/17/2100 9:30 AM');
+var end = new Date('12/26/2020 9:30 AM');
 
     var _second = 1000;
     var _minute = _second * 60;

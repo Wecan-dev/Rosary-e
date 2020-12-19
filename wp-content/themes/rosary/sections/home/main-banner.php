@@ -17,8 +17,8 @@
         </div>
       </div>
     <?php }else{ ?> 
-      <div class="main-banner__item">
-        <div class="main-banner__text wow animated fadeIn" style="visibility: visible; animation-delay: .3s  ;">
+      <div class="main-banner__item main-banner__video">
+        <div class="main-banner__text">
           <div class="main-banner__title">
             <h2>
                <?php the_field('banner_title'); ?>
@@ -33,3 +33,12 @@
     <?php endwhile; ?>     
     </div>
   </section>
+<script type="text/javascript">
+$(document).ready(function() {
+    setTimeout(function() {
+        $(".main-banner__video .main-banner__text").fadeOut(5000);
+    },3000);
+ 
+ 
+});
+</script>

@@ -3,6 +3,7 @@ $('.main-banner__content').slick({
  	autoplay: true,
   slidesToShow: 1,
   slidesToScroll: 1,
+	        autoplaySpeed: 8000,
   dots: false,
   arrows: false,
   responsive: [{

@@ -1,0 +1,4 @@
+2020-12-19T15:01:05+00:00 CRITICAL syntax error, unexpected 'cldws_set_min_total' (T_STRING) en /var/www/html/Rosary-e/wp-content/themes/rosary/functions.php en la línea 213
+
+2020-12-19T15:04:40+00:00 CRITICAL syntax error, unexpected 'cldws_set_min_total' (T_STRING) en /var/www/html/Rosary-e/wp-content/themes/rosary/functions.php en la línea 213
+

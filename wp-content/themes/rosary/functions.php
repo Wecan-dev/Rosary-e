@@ -205,3 +205,27 @@ function custom_post_type_Items_banner() {
 
 }
 add_action( 'init', 'custom_post_type_Items_banner', 0 );
+
+// Establecer un importe minimo en la compra
+function woocommerce_importe_minimo() {
+  $minimum = 5000000;  // Debes cambiar el 20 por el importe mínimo que quieras establecer en tu pedido
+  if ( WC()->cart->total > $minimum ) {
+    if( is_cart() ) {
+      wc_print_notice(
+      sprintf( ' Debes realizar un pedido menor a  %s para finalizar su compra.' , // Pon aquí el texto que quieras que se muestre en el carrito de compra.
+        wc_price( $minimum ),
+        wc_price( WC()->cart->total )
+      ), 'error'
+      );
+    } else {
+      wc_add_notice(
+      sprintf( 'No puedes finalizar tu compra. Debes realizar un pedido mínimo de %s para finalizar su compra.' , // Pon aquí el texto que quieras que se muestre en la página de finalizar compra.
+        wc_price( $minimum ), 
+        wc_price( WC()->cart->total )
+      ), 'error'
+      );
+    }
+  }
+}
+add_action( 'woocommerce_checkout_process', 'woocommerce_importe_minimo' );
+add_action( 'woocommerce_before_cart' , 'woocommerce_importe_minimo' );

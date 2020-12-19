@@ -19,7 +19,7 @@
             <?php the_title(); ?>
           </a>
           <p class="main-general__description">
-           <?php echo excerpt(30); ?>
+           <?php the_content(); ?>
           </p>
         </div>
         <div class="main-blog__img">

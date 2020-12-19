@@ -700,3 +700,26 @@ $span = '<span class=""></span>';
 
   echo $description;
 }
+
+// ******************** Prices ***/
+
+function price_mayor(){
+  
+    $args = 
+    array(
+      'post_type' => 'product',
+      'paged' => $paged,
+      'posts_per_page' => 1,        
+      'post_status' => 'publish',
+      'orderby' => 'meta_value', // orderby the meta_value of the following meta_key
+      'meta_key' => '_price', // the custom meta_key name
+      'order'=> 'DESC' // sort descending
+    );
+     
+
+         $loop = new WP_Query( $args ); 
+         while ( $loop->have_posts() ) : $loop->the_post(); global $product;
+              $count = $product->get_price();
+         endwhile; 
+          return $count;     
+}
