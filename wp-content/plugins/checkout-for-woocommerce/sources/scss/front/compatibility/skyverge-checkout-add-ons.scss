@@ -1,0 +1,41 @@
+#wc_checkout_add_ons {
+    margin: 0.5em 0;
+
+    .form-row {
+        margin-bottom: 1.8em;
+    }
+
+    .form-row > label:not(.checkbox):first-child {
+        color: #333;
+        font-weight: 300;
+        margin-bottom: 0.6em;
+        font-size: 1.2em;
+    }
+
+    .cfw-select-input {
+        margin-bottom: 0.6em;
+    }
+
+    .cfw-select-input label {
+        opacity: 1 !important;
+        position: relative;
+        display: block;
+        color: #666;
+        padding: 0;
+        margin: 0 !important;
+        font-size: 1em !important;
+    }
+}
+
+.wc-checkout-add-ons-input-file-plupload {
+    margin-top: -1.8em;
+    margin-bottom: 1.8em;
+}
+
+span.select2 {
+    z-index: 1;
+}
+
+.select2-container {
+    width: 100% !important;
+}

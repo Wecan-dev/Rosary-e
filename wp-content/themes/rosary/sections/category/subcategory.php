@@ -41,15 +41,15 @@
 
     </div>
   </section>
-  <section class="main-featured main-featured--white">
+  <section class="main-featured main-featured--white product categories-single">
     <div class="padding-top-bottom">
       <h2 class="main-general__title">
-        OTROS TESOROS
+        <?php echo str_replace("\n", "<br>", termmeta_value( 'title_otros_interna', get_queried_object()->term_id )); ?>
       </h2>
       <p class="main-general__subtitle">
-        DE LA COLECCIÓN
+        <?php echo str_replace("\n", "<br>", termmeta_value( 'subtitle_otros_interna', get_queried_object()->term_id )); ?>
       </p>
-      <div class="main-featured__carousel">
+      <div class="container-grid">
      <?php foreach((get_the_terms(get_the_ID(), 'product_cat' )) as $category) { $cate =$category->slug;}
           $loop   = new WP_QUERY(array(
               'post_type'         => 'product',
@@ -70,10 +70,10 @@
         <div class="main-featured__product">
           <div href="<?php the_permalink(); ?>" class="main-featured__img">
             <img src="<?php the_post_thumbnail_url('full');?>">
-			<div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
-				<a class="link-product" href="<?php the_permalink(); ?>"></a>
-				<div class="main-featured__icon" >
-					 <?php// if (is_user_logged_in()){ ?>    
+      <div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
+        <a class="link-product" href="<?php the_permalink(); ?>"></a>
+        <div class="main-featured__icon" >
+           <?php// if (is_user_logged_in()){ ?>    
                       <a href="?add_to_wishlist=<?php echo get_the_ID(); ?>">
                         <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
                       </a>
@@ -82,11 +82,11 @@
                       <img src="<?php echo get_template_directory_uri();?>/assets/img/heart.png">
                     </div> -->             
                     <?php// } ?>
-					 <a href="<?php the_permalink(); ?>">
+           <a href="<?php the_permalink(); ?>">
                         <img src="<?php echo get_template_directory_uri();?>/assets/img/search.png">
                       </a>
-				</div>
-			  </div>
+        </div>
+        </div>
           </div>
           <div class="main-featured__text">
             <a class="main-featured__title" href="<?php the_permalink(); ?>">

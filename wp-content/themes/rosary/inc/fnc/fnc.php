@@ -652,6 +652,9 @@ function generate_description () {
 $valueb = meta_value( 'detalle_del_producto', $id );
 $valuet = meta_value( 'technical_decription_product', $id );
 $valuec =  meta_value( 'caracteristicas_producto', $id );
+
+
+
 $span = '<span class=""></span>';
 
   if ($valueb != NULL) {
@@ -664,6 +667,8 @@ $span = '<span class=""></span>';
     $spanc = $span;
   }                                      
  
+
+if (meta_value( 'productos_personalizados', $id ) != NULL) {
   $description = '
   <p class="title-collapse">
     <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
@@ -696,7 +701,61 @@ $span = '<span class=""></span>';
     <div class="card_body">
        '.$valuec.'
     </div>
-  </div>';    
+  </div>
+
+
+    <div class="product-details__custom" >
+      <div>
+        <img src="'.get_template_directory_uri().'/assets/img/pencil.png">
+          <a href=""> Personalizar </a>
+      </div>
+      <div>
+        <img src="'.get_template_directory_uri().'/assets/img/envelope.png">
+        <a href="'.get_home_url().'/contacto"> Contáctanos </a>
+      </div>
+    </div>  
+  ';  
+}else { 
+  $description = '
+  <p class="title-collapse">
+    <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
+      Descripción <span class="caret"></span>
+    </a>
+  </p>
+  <div class="collapse show" id="collapseExample">
+    <div class="card_body">
+     '.$valued.'
+    </div>
+  </div>
+  <p class="title-collapse">
+    <a data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="true" aria-controls="collapseExample1">
+      Detalle del Producto 
+    </a>
+  </p class="title-collapse" >
+  <div class="collapse show" id="collapseExample1">
+    <div class="card_body card_body-list">
+      '.$spanb.''.str_replace("<br>", '<br><span class=""></span>', $valueb).'
+    </div>
+  </div>
+  
+  
+  <p class="title-collapse">
+    <a data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+      Característica del Producto <span class="caret"></span>
+    </a>
+  </p>  
+  <div class="collapse" id="collapseExample3">
+    <div class="card_body">
+       '.$valuec.'
+    </div>
+  </div>  
+  ';  
+}
+
+
+
+
+
 
   echo $description;
 }

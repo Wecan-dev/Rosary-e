@@ -61,7 +61,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
             <ul class="shop-sidebar__categories">
           <?php
           global $wpdb;
-          $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'orderby' => 'menu_order', 'order' => 'asc' ));  
+          $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'orderby' => 'menu_order', 'order' => 'asc', 'parent' =>0  ));  
           ?>                                                        
           <?php foreach($product_categories as $category): ?>
             <?php $checked =NULL;  if ($category->slug == $_GET['cat']) { $checked = "checked='checked'"; } $categoria = $category->name; $category_id = $category->term_id; $category_link = get_category_link( $category_id ); ?>         
@@ -86,27 +86,49 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
                   <input name="upper" id="upper" max="<?php echo price_mayor(); ?>" min="10" type="range" value="<?php if ($_GET["upper"] != NULL){ echo $_GET["upper"];}else{ echo price_mayor(); } ?>">
                 </div>
                 <div class="price-wrap">
-                  <button class="shop-btn trans" type="submit">Filtrar</button>
+                  
                   <div class="d-flex">
-                    <span class="price-title">Price:</span>
+                    <span class="price-title">Precio:</span>
                     <div class="price-wrap-1">
-                      <label for="one">$</label>
+                      <label for="one">COP</label>
                       <input id="one">
                     </div>
                     <div class="price-wrap_line">-</div>
                     <div class="price-wrap-2">
-                      <label for="two">$</label>
+                      <label for="two">COP</label>
                       <input id="two">
                     </div>
                   </div>
+					<button class="shop-btn trans mt-3" type="submit">Filtrar</button>
                 </div>
                 </form> 
               </fieldset>
             </div>
           </div>
-          <div class="shop-sidebar__content">
+         <!-- <div class="shop-sidebar__content">
             <h2 class="shop-sidebar__title">
               Colores 
+              <span></span>
+            </h2>
+            <ul class="shop-sidebar__colors">
+              <?php //
+                 global $wpdb;
+                 $product_categories = get_categories( array( 'taxonomy' => 'pa_color-pedreria', 'orderby' => 'menu_order', 'order' => 'asc' ));  
+              ?>                                                        
+              <?php //foreach($product_categories as $category): ?>
+              <?php// $categoria = $category->name; $category_id = $category->term_id; $category_link = get_category_link( $category_id ); ?>               
+              <li>
+                <a href="<?php //echo get_home_url() ?>/tienda/?cat=<?php// echo $category->slug;?>&tax=pa_color-pedreria">
+                  <?php// if ($_GET["cat"] != NULL && $_GET["cat"] == $category->slug){ ?> <span class="hover_cat"> <?php //echo  $categoria ?></span> <?php// }else{ ?> <?php// echo  $categoria ?> <?//php }  ?>
+                </a>
+              </li>
+              <?php// endforeach; ?>
+            </ul>
+          </div>-->
+
+          <div class="shop-sidebar__content">
+            <h2 class="shop-sidebar__title">
+              Mix de Materiales 
               <span></span>
             </h2>
             <ul class="shop-sidebar__colors">
@@ -124,6 +146,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
               <?php endforeach; ?>
             </ul>
           </div>
+
           <div class="shop-sidebar__newsletter">
             <input placeholder="Email for Newsletter" type="Email">
             <a href="">
@@ -172,10 +195,10 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
             <div class="main-featured__product">
                      <div href="<?php the_permalink(); ?>" class="main-featured__img">
             <img src="<?php the_post_thumbnail_url('full');?>">
-    	<div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
-				<a class="link-product" href="<?php the_permalink(); ?>"></a>
-				<div class="main-featured__icon" >
-					 <?php// if (is_user_logged_in()){ ?>    
+      <div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
+        <a class="link-product" href="<?php the_permalink(); ?>"></a>
+        <div class="main-featured__icon" >
+           <?php// if (is_user_logged_in()){ ?>    
                       <a href="?add_to_wishlist=<?php echo get_the_ID(); ?>">
                         <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
                       </a>
@@ -184,11 +207,11 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
                       <img src="<?php echo get_template_directory_uri();?>/assets/img/heart.png">
                     </div> -->             
                     <?php// } ?>
-					 <a href="<?php the_permalink(); ?>">
+           <a href="<?php the_permalink(); ?>">
                         <img src="<?php echo get_template_directory_uri();?>/assets/img/search.png">
                       </a>
-				</div>
-			  </div>
+        </div>
+        </div>
           </div>
               <div class="main-featured__text">
                 <a class="main-featured__title" href="<?php the_permalink(); ?>">

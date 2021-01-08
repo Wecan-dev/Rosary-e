@@ -66,6 +66,55 @@ if ( post_password_required() ) {
 		 */
 		do_action( 'woocommerce_single_product_summary' );
 		?>
+		<!--<div class="product-details__custom" >
+			<div>
+				<img src="<?php echo get_template_directory_uri();?>/assets/img/pencil.png">
+					<a href="">
+				Personalizar
+			</a>
+			</div>
+		<div>
+			<img src="<?php echo get_template_directory_uri();?>/assets/img/envelope.png">
+			<a href="">
+				
+				Contáctanos
+			</a>
+			</div>
+				
+		</div>
+		<style>
+			.product-details__custom a{
+				  font-size: 13px;
+				  font-weight: normal;
+				  font-stretch: normal;
+				  font-style: normal;
+				  line-height: normal;
+				  letter-spacing: normal;
+				  color: #020202;
+			}
+			.product-details__custom  {
+				display: flex;
+				    margin-top: 10px;
+			}
+			.product-details__custom div {
+				margin-right: 40px;
+			}
+			.product-details__custom div:nth-child(2) a{
+				  font-weight: normal;
+				  font-stretch: normal;
+				  font-style: normal;
+				  line-height: normal;
+				  letter-spacing: normal;
+				  color: #c0a980;
+				border-bottom: 1px solid;
+			}
+			.product-details__custom img {
+				width: 16px;
+				height: 16px;
+				object-fit: contain;
+				margin-right: 5px;
+			}
+		</style>-->
 	</div>
 	</section>
 	<?php
@@ -86,14 +135,14 @@ if ( post_password_required() ) {
   <section class="custom-description custom-description--rose">
     <div class="padding-right-left">
       <h2 class="main-general__title">
-        Descripción
+        <?php foreach((get_the_terms(get_the_ID(), 'product_cat' )) as $category) { echo str_replace("\n", '<br>', termmeta_value( 'titulo_interna', $category->term_id )); $cate =$category->slug;} ?>
+		   
       </h2>
       <p class="main-general__subtitle">
-        del producto
+            <?php foreach((get_the_terms(get_the_ID(), 'product_cat' )) as $category) { echo str_replace("\n", '<br>', termmeta_value( 'subtitulo_interna', $category->term_id )); $cate =$category->slug;} ?>
       </p>
       <p class="custom-description__text">
-        <?php foreach((get_the_terms(get_the_ID(), 'product_cat' )) as $category) { $cate =$category->slug;} 
-        echo str_replace("\n", '<br>', termmeta_value( 'descripcion_completa', $category->term_id )); ?>
+        <?php foreach((get_the_terms(get_the_ID(), 'product_cat' )) as $category) { echo str_replace("\n", '<br>', termmeta_value( 'descripcion_completa', $category->term_id )); $cate =$category->slug;} ?>
       </p>
     </div>
   </section>
@@ -167,3 +216,6 @@ if ( post_password_required() ) {
     display: none;
 }
 </style>
+<script>
+$('#variation_pa_material div.label > label').text("Seleccionar Color");
+</script>

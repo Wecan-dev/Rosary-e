@@ -1,0 +1,57 @@
+#cfw-shipping-method-address-review, #cfw-payment-method-address-review {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    margin-bottom: 2em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+
+    li {
+        display: flex;
+        padding: 0 0.85em;
+
+        .inner {
+            display: flex;
+            flex: 1;
+        }
+
+        .shipping-details-link {
+            text-align: right;
+        }
+
+        .shipping-details-label {
+            color: lighten(#333, 25%);
+            font-weight: normal;
+            flex: 0 0 6em;
+        }
+
+        .shipping-details-label.shipping-details-label-long {
+            flex: 0 0 9em;
+        }
+
+        .shipping-details-label, .shipping-details-content {
+            padding-right: 1em;
+        }
+
+        .shipping-details-link a {
+            color: lighten(#737373, 25%);
+
+            &:hover {
+                color: #737373;
+            }
+        }
+
+        .inner, .shipping-details-link {
+            padding: 0.85em 0;
+        }
+
+        &:not(:last-child) > div {
+            border-bottom: 1px solid #ddd;
+        }
+    }
+}
+
+#cfw-shipping-method-address-review-contact, #cfw-payment-method-address-review-contact {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

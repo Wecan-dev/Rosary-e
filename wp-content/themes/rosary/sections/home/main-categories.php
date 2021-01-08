@@ -18,6 +18,7 @@
         <div class="main-categories__img">
           <img src="<?php echo wp_get_attachment_url( get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true ) );?>">
           <div class="main-categories__mask">
+			  <a href="<?php echo get_category_link( $category->term_id ); ?>" class="main-categories__link" ></a>
             <h2 class="main-categories__title">
               <?=$category->name ?>
             </h2>
@@ -59,6 +60,7 @@
         <div class="main-categories__img">
           <img src="<?php echo wp_get_attachment_url( get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true ) );?>">
           <div class="main-categories__mask">
+			  	  <a href="<?php echo get_category_link( $category->term_id ); ?>" class="main-categories__link" ></a>
             <h2 class="main-categories__title">
               <?=$category->name ?>
             </h2>

@@ -77,7 +77,7 @@ if ( ! defined( 'YITH_WCWL' ) ) {
 
 		<th class="product-name">
 			<span class="nobr">
-				<?php echo esc_html( apply_filters( 'yith_wcwl_wishlist_view_name_heading', __( 'Product', 'yith-woocommerce-wishlist' ), $wishlist ) ); ?>
+				<?php echo esc_html( apply_filters( 'yith_wcwl_wishlist_view_name_heading', __( 'Producto', 'yith-woocommerce-wishlist' ), $wishlist ) ); ?>
 			</span>
 		</th>
 
@@ -85,7 +85,7 @@ if ( ! defined( 'YITH_WCWL' ) ) {
 			<?php $column_count ++; ?>
 			<th class="product-price">
 				<span class="nobr">
-					<?php echo esc_html( apply_filters( 'yith_wcwl_wishlist_view_price_heading', __( 'price', 'yith-woocommerce-wishlist' ), $wishlist ) ); ?>
+					<?php echo esc_html( apply_filters( 'yith_wcwl_wishlist_view_price_heading', __( 'Precio', 'yith-woocommerce-wishlist' ), $wishlist ) ); ?>
 				</span>
 			</th>
 		<?php endif; ?>
@@ -356,3 +356,7 @@ if ( ! defined( 'YITH_WCWL' ) ) {
     margin-top: 155px!important;
 	}}
 </style>
+
+<script>
+$('.add_to_cart_button').text('Agregar al carrito');
+</script>

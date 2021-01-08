@@ -45,10 +45,10 @@ if ( ! defined( 'YITH_WCWL' ) ) {
 ?>
 <section class="padding-left-right wishlist-section" >
 <h2 class="wishlist_title" >
-	my wishtlist 
+	Mi lista de Deseos 
 	<span>
 
-		from mar de rosas
+		Rosary
 	</span>
 </h2>
 <div class="border-cart" >

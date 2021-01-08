@@ -35,7 +35,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 				<img  src="<?php echo get_template_directory_uri();?>/assets/img/user.png">
 			</div>
 			<p class="login-text">
-				¿Aún no tienes una cuenta en Rosary? Accede a ofertas exclusivas, lanzamientos, eventos e ideas utiliza esta opción y accede al formulario de registro. <br> Brindándonos tus detalles, la compra en <a href="rosary.com.co">rosary.com.co</a> se efectuará de forma mucho más rápida y agradable.
+				¿Aún no tienes una cuenta en Rosary? Accede a ofertas exclusivas, lanzamientos, eventos e ideas utiliza esta opción y accede al formulario de registro. <br> Brindándonos tus detalles, la compra en <a href="<?php echo get_home_url() ?>">rosary.com.co</a> se efectuará de forma mucho más rápida y agradable.
 			</p>
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 

@@ -30,7 +30,6 @@ $('.main-banner__content').slick({
         dots: false,
         // autoplay: true,
         arrows: false,
-        autoplaySpeed: 1000
       }
     }
   ]
@@ -96,8 +95,7 @@ $('.about-card__carousel').slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: false,
-        autoplaySpeed: 1000,
+        dots: true,
       }
     }
   ]

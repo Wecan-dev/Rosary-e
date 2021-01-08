@@ -38,13 +38,27 @@
       </p>
     </div>
   </section>
+  <section class="custom-description custom-description--rosa">
+    <div class="padding-right-left">
+      <h2 class="main-general__title">
+        Golden Hour Treasures
+      </h2>
+      <p class="main-general__subtitle">
+        Natural shine to illuminate space
+      </p>
+      <p class="custom-description__text">
+       Una colección para espíritus con resplandor propio que como un cálido rayo de sol que atardece, llegan para pintar de oro, con su halo de luz dorada, los espacios; y nos cobija con ese poderoso brillo de naturaleza celestial que efímeramente recibimos y agradecemos antes de que el día pase y otra vez amanezca de nuevo.
+<br>
+Esencias que hemos mirado hacia atrás en el tiempo para encontrarnos con una iridiscencia natural que no se agota. 
+      </p>
+    </div>
+  </section>
+
+
+
+
   <section class="general-product">
     <div class="padding-right-left padding-top-bottom">
-      <ul class="general-breadcrumbs">
-        <li>
-          <?php the_field('title-new-in'); ?>
-        </li>
-      </ul>
       <div class="container-grid">
       <?php          
       $args = array (
@@ -294,9 +308,7 @@ Enviar
   </section>
   <section class="custom-piece">
     <div class="padding-top-bottom">
-      <ul class="general-breadcrumbs">
-        <?php echo meta_value('title-personalizados', $id_page); ?>
-      </ul>
+    
     <div class="custom-piece__carousel" >
       
       <?php          
@@ -496,7 +508,8 @@ Enviar
 <!-- ****************** Categorías *********************-->
 <?php if(get_field('template_rosary') == 'Categorías'){ ?>
   <section class="general-banner">
-    <img src=" <?php echo meta_value_img('image-banner-categorias', $id_page); ?>">
+    <!--<img src=" <?php // echo meta_value_img('image-banner-categorias', $id_page); ?>"> -->
+	  <img src="<?php echo get_template_directory_uri();?>/assets/img/productos/image_1.jpg ">
     <div class="general-banner__text">
       <h2 class="main-general__title">
          <?php echo meta_value('title-banner-categorias', $id_page); ?>
@@ -528,7 +541,7 @@ Enviar
              <?=$category->name ?>
             </h2>
             <p class="categories-all__subtitle">
-              <?php echo termmeta_value('descripcion_interna', $category->term_id);?>
+              <?php echo termmeta_value('title_entrada_categories', $category->term_id);?>
             </p>
             <a class="general-btn__light" href="<?php echo get_category_link( $category->term_id ); ?>">Comprar</a>
           </div>

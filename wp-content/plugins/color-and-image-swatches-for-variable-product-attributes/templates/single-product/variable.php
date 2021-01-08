@@ -59,7 +59,7 @@ do_action( 'woocommerce_before_add_to_cart_form' );
 			
 				<div id="variation_<?php echo sanitize_title( $name ); ?>" class="variation">
 				
-						<div class="label"><label for="<?php echo sanitize_title( $name ); ?>"><?php echo wc_attribute_label( $name ); ?></label></div>
+						<div class="label"><label for="<?php echo sanitize_title( $name ); ?>">Seleccionar <?php echo wc_attribute_label( $name ); ?></label></div>
 					
 						<div class="value">
 						
@@ -309,7 +309,7 @@ do_action( 'woocommerce_before_add_to_cart_form' );
 						
 						if ( sizeof( $attributes ) === $loop ) {
 							
-							echo '<a class="reset_variations" href="#reset">Clear Selection</a>';
+							echo '<a class="reset_variations" href="#reset">Eliminar selección</a>';
 							
 						}
 							

@@ -108,5 +108,7 @@ defined( 'ABSPATH' ) || exit;
 	</div>
 
 	<?php do_action( 'woocommerce_after_cart_totals' ); ?>
-
+<p class="mt-2">
+	*El costo de envío se aplicará en el siguiente paso.
+	</p>
 </div>

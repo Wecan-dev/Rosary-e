@@ -3,13 +3,15 @@
               Categorías
             </p>
 		
+			  
+			  
         <ul class="blog-sidebar__categorie">
-          <?php
+         <?php
           global $wpdb;
-          $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'orderby' => 'menu_order', 'order' => 'asc' ));  
+          $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'orderby' => 'menu_order', 'order' => 'asc', 'parent' =>0  ));  
           ?>                                                        
           <?php foreach($product_categories as $category): ?>
-            <?php $checked =NULL;  if ($category->slug == $_GET['cat']) { $checked = "checked='checked'"; } $categoria = $category->name; $category_id = $category->term_id; $category_link = get_category_link( $category_id ); ?>         
+            <?php $checked =NULL;  if ($category->slug == $_GET['cat']) { $checked = "checked='checked'"; } $categoria = $category->name; $category_id = $category->term_id; $category_link = get_category_link( $category_id ); ?>    
               <li>
                 <a href="<?php echo get_category_link( $category->term_id ); ?>">
                    <?= $categoria ?>

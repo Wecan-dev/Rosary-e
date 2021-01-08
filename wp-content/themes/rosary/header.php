@@ -76,10 +76,9 @@
             <!-- <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/recomendados">Recomendados</a>
             </li> -->
-           <div class="nav-item dropdown show">
-  <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Productos
-  </a>
+           <div class="nav-item dropdown ">
+
+			    <a aria-expanded="false" aria-haspopup="true" class="nav-link"  href="<?php echo get_home_url() ?>/tienda" role="button">Productos</a>
 
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
  <?php $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'posts_per_page' => 2, 'parent' =>0, 'showposts' => -1 )); $i = 0; ?>
@@ -191,23 +190,46 @@ outlet
           <a class="navbar-brand" href="<?php echo get_home_url() ?>">
 <img id="iso" src="<?php echo get_template_directory_uri();?>/assets/img/logo.png">
 </a>
-          <button class="navbar-toggler p-2 border-0 hamburger hamburger--elastic ml-autos" data-toggle="offcanvas" type="button">
+     			<div class="icon-mobile" >
+				<ul class="nav-icon">
+              <li>
+                 
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/mi-cuenta">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/img/profile@2x.png">
+                </a>
+
+              </li>
+              <li>
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/wishlist">
+                 <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
+                 <?php $wishlist_count = YITH_WCWL()->count_products(); echo esc_html( $wishlist_count ); ?>
+                </a>
+              </li>
+              <li>
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/carrito">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/img/bag@2x.png"><?php echo wp_kses_data(WC()->cart->get_cart_contents_count()); ?>
+                </a>
+              </li>
+            </ul>
+				 <button class="navbar-toggler p-2 border-0 hamburger hamburger--elastic ml-autos" data-toggle="offcanvas" type="button">
 <span class="hamburger-box"></span>
 <span class="hamburger-inner"></span>
 </button>
+			</div>
         </div>
         <div class="navbar-collapse offcanvas-collapse">
           <ul class="navbar-nav mr-autos">
-            <li class="nav-item">
+              <li class="nav-item">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>">Inicio</a>
+            </li>
+			  <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/new-in">New in</a>
             </li>
             <!-- <li class="nav-item">
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/recomendados">Recomendados</a>
             </li> -->
 			  <div class="nav-item dropdown show">
-  <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Productos
-  </a>
+		    <a aria-expanded="false" aria-haspopup="true" class="nav-link"  href="<?php echo get_home_url() ?>/tienda" role="button">Productos</a>
 
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
  <?php $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'posts_per_page' => 2, 'parent' =>0, 'showposts' => -1 )); $i = 0; ?>

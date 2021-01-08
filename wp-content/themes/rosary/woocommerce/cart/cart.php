@@ -18,9 +18,9 @@
 defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_cart' ); ?>
-<div class="woocommerce-banner" > 
-<img  src="<?php echo get_template_directory_uri();?>/assets/img/perfil.png">
-	<div class="woocommerce-banner__text">
+<div class="general-banner" > 
+<img  src="<?php echo get_template_directory_uri();?>/assets/img/Banner-contact.jpg">
+	<div class="general-banner__text">
 	<h2 class="main-general__title">
         Carro de Compras
       </h2>

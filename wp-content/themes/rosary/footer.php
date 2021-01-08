@@ -3,7 +3,9 @@
       <div class="container-grid">
         <div class="main-footer__item">
           <div class="main-footer__logo">
-            <img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png">
+			  <a href="<?php echo get_home_url() ?>">
+			    <img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png">
+			  </a>
           </div>
           <p class="main-footer__description">
             <?php echo get_theme_mod('description_contact'); ?>
@@ -84,12 +86,17 @@ Guía de tallas
 </a>
             </li>
             <li>
-              <a href="<?php echo get_home_url() ?>/entregas-y-devoluciones">
+              <a href="<?php echo get_home_url() ?>/envios-y-entregas">
 Envíos y entregas
 </a>
             </li>
+			              <li>
+              <a href="<?php echo get_home_url() ?>/garantias-y-devoluciones">
+Garantías y Devoluciones
+</a>
+            </li>
             <li>
-              <a href="<?php echo get_home_url() ?>/politicas-y-privacidad">
+              <a href="<?php echo get_home_url() ?>/politicas-privacidad">
 Políticas y privacidad
 </a>
             </li>

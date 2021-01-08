@@ -1,6 +1,6 @@
-<div class="woocommerce-banner" > 
-<img  src="<?php echo get_template_directory_uri();?>/assets/img/perfil.png">
-	<div class="woocommerce-banner__text">
+<div class="general-banner" > 
+<img  src="http://159.89.229.55/Rosary-e/wp-content/uploads/2020/12/Banner-contact.jpg">
+	<div class="general-banner__text">
 	<h2 class="main-general__title">
         Lista de deseos
       </h2>

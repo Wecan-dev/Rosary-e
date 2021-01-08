@@ -1,0 +1,25 @@
+#cfw-payment-request-buttons .wc-stripe-banner-checkout {
+  margin: 0 !important;
+  padding: 0;
+
+  .banner-title {
+    display: none;
+  }
+
+  ul.wc_stripe_checkout_banner_gateways {
+      display: flex;
+  }
+
+  ul.wc_stripe_checkout_banner_gateways li.wc-stripe-checkout-banner-gateway {
+    margin-bottom: 0;
+  }
+
+  li.wc-stripe-checkout-banner-gateway {
+    margin-right: 7px !important;
+  }
+
+  button {
+    max-height: 35px !important;
+    min-height: 35px !important;
+  }
+}
