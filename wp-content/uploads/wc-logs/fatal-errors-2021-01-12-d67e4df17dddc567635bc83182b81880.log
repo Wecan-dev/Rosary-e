@@ -1,0 +1,22 @@
+2021-01-12T18:24:40+00:00 CRITICAL Uncaught Error: Call to undefined function products() in /var/www/html/Rosary-e/wp-content/themes/rosary/inc/fnc/fnc.php:639
+Stack trace:
+#0 /var/www/html/Rosary-e/wp-includes/class-wp-hook.php(287): generate_description('')
+#1 /var/www/html/Rosary-e/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/Rosary-e/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/Rosary-e/wp-content/plugins/color-and-image-swatches-for-variable-product-attributes/templates/single-product/variable.php(325): do_action('woocommerce_bef...')
+#4 /var/www/html/Rosary-e/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include('/var/www/html/R...')
+#5 /var/www/html/Rosary-e/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1670): wc_get_template('single-product/...', Array)
+#6 /var/www/html/Rosary-e/wp-includes/class-wp-hook.php(287): woocommerce_variable_add_to_cart('')
+#7 /var/www/html/Rosary-e/wp-includes/class-wp-hook.php(311): WP_Hook->apply_ en /var/www/html/Rosary-e/wp-content/themes/rosary/inc/fnc/fnc.php en la línea 639
+
+2021-01-12T18:25:05+00:00 CRITICAL Uncaught Error: Call to undefined function products() in /var/www/html/Rosary-e/wp-content/themes/rosary/inc/fnc/fnc.php:639
+Stack trace:
+#0 /var/www/html/Rosary-e/wp-includes/class-wp-hook.php(287): generate_description('')
+#1 /var/www/html/Rosary-e/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/Rosary-e/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/Rosary-e/wp-content/plugins/color-and-image-swatches-for-variable-product-attributes/templates/single-product/variable.php(325): do_action('woocommerce_bef...')
+#4 /var/www/html/Rosary-e/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include('/var/www/html/R...')
+#5 /var/www/html/Rosary-e/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1670): wc_get_template('single-product/...', Array)
+#6 /var/www/html/Rosary-e/wp-includes/class-wp-hook.php(287): woocommerce_variable_add_to_cart('')
+#7 /var/www/html/Rosary-e/wp-includes/class-wp-hook.php(311): WP_Hook->apply_ en /var/www/html/Rosary-e/wp-content/themes/rosary/inc/fnc/fnc.php en la línea 639
+

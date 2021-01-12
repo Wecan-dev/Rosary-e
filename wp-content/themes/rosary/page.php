@@ -424,7 +424,7 @@ Enviar
     <div class="container-grid">
       <div class="about-reason__item">
         <div class="about-reason__icon">
-          <img src=" <?php echo meta_value_img('icon-reason-nosotros', $id_page); ?>">
+          		<img src=" <?php echo meta_value_img('icon-reason-nosotros', $id_page); ?>">
         </div>
         <p class="about-reason__text">
            <?php echo meta_value('texto-reason-nosotros', $id_page); ?>
@@ -440,7 +440,9 @@ Enviar
       </div>
       <div class="about-reason__item">
         <div class="about-reason__icon">
+				<a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('phone'); ?>" >
           <img src="<?php echo meta_value_img('icon-reason3-nosotros', $id_page); ?>">
+			</a>
         </div>
         <p class="about-reason__text">
           <?php echo meta_value('texto-reason3-nosotros', $id_page); ?>
