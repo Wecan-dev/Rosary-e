@@ -44,3 +44,38 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php do_action( 'woocommerce_receipt_' . $order->get_payment_method(), $order->get_id() ); ?>
 
 <div class="clear"></div>
+<style>
+	.order_details {
+		background: #fff;
+		display: flex!important;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	.checkout-custom {
+	background-image: none!important;	
+		    padding-top: 40px;
+    padding-bottom: 60px;
+	}
+	#epayco_form > button {
+	font-size: 13px!important;
+    color: #000000!important;
+    border-radius: 2px!important;
+    background-color: #d0bd9b!important;
+    border: none;
+    width: 215px!important;
+    height: 50px!important;
+    display: flex;
+    text-transform: uppercase;
+    border-color: transparent;
+    border-width: 0!important;
+    font-family: Brandon Text Bold!important;
+}
+	#epayco_form > button img {
+		display: none!important;
+	}
+
+</style>
+
+<script>
+$('#epayco_form > button').text('Pagar con ePayco')
+</script>
