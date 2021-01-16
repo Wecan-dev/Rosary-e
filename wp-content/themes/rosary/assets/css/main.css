@@ -3644,6 +3644,7 @@ transition: .3;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
+	border: solid 1px #d0bd9b;
   margin-bottom: 0;
   letter-spacing: normal;
   color: #ffffff;
@@ -5525,13 +5526,12 @@ color: #fff;
 }
 
 .shop-sidebar .shop-btn {
-  width: 72px;
-  height: 22px;
-  padding: 5px 18px 4px;
+  padding: 5px 18px ;
   border: solid 0.5px #000000;
   font-size: 9px;
   font-weight: 500;
   font-stretch: normal;
+	    background: #f0e3d4;
   font-style: normal;
   line-height: normal;
   letter-spacing: 1px;
