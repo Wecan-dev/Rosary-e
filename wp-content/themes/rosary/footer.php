@@ -96,7 +96,7 @@ Garantías y Devoluciones
 </a>
             </li>
             <li>
-              <a href="<?php echo get_home_url() ?>/politicas-privacidad">
+              <a href="<?php echo get_home_url() ?>/politica-privacidad">
 Políticas y privacidad
 </a>
             </li>

@@ -212,14 +212,16 @@ function woocommerce_importe_minimo() {
   if ( WC()->cart->total > $minimum ) {
     if( is_cart() ) {
       wc_print_notice(
-      sprintf( ' Debes realizar un pedido menor a  %s para finalizar su compra.' , // Pon aquí el texto que quieras que se muestre en el carrito de compra.
+		  
+      sprintf( '  Esta plataforma permite un monto máximo por transacción de %s, si tu compra supera éste valor ¡No te preocupes! Puedes llevar todos los productos realizando transacciones independientes' , // Pon aquí el texto que quieras que se muestre en el carrito de compra.
         wc_price( $minimum ),
         wc_price( WC()->cart->total )
       ), 'error'
       );
     } else {
       wc_add_notice(
-      sprintf( 'No puedes finalizar tu compra. Debes realizar un pedido mínimo de %s para finalizar su compra.' , // Pon aquí el texto que quieras que se muestre en la página de finalizar compra.
+		 
+      sprintf( '  No puedes finalizar tu compra. El monto máximo por transacción es de %s, si tu compra supera éste valor ¡No te preocupes! Puedes realizar diferentes transacciones.' , // Pon aquí el texto que quieras que se muestre en la página de finalizar compra.
         wc_price( $minimum ), 
         wc_price( WC()->cart->total )
       ), 'error'

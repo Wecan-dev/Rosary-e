@@ -75,6 +75,28 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
           </div>
           <div class="shop-sidebar__content">
             <h2 class="shop-sidebar__title">
+              Colección 
+              <span></span>
+            </h2>
+            <ul class="shop-sidebar__categories">
+          <?php
+          global $wpdb;
+          $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'orderby' => 'menu_order', 'order' => 'asc'  ));  
+          ?>                                                        
+          <?php foreach($product_categories as $category): ?>
+            <?php $checked =NULL;  if ($category->slug == $_GET['cat']) { $checked = "checked='checked'"; } $categoria = $category->name; $category_id = $category->term_id; $category_link = get_category_link( $category_id ); ?> 
+            <?php if($category->parent >1){ ?>         
+              <li>
+                <a href="<?php echo get_home_url().'/tienda?cat='.$category->slug.'&tax=product_cat'?>">
+                   <?php if ($_GET["cat"] != NULL && $_GET["cat"] == $category->slug){ ?> <span class="hover_cat"> <?php echo  $categoria ?></span> <?php }else{ ?> <?php echo  $categoria ?> <?php }  ?>
+                </a>
+              </li>
+            <?php } ?>  
+              <?php endforeach; ?>  
+            </ul>
+          </div>          
+          <div class="shop-sidebar__content">
+            <h2 class="shop-sidebar__title">
               precio
               <span></span>
             </h2>
@@ -99,7 +121,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
                       <input id="two">
                     </div>
                   </div>
-					<button class="shop-btn trans mt-3" type="submit">Filtrar</button>
+          <button class="shop-btn trans mt-3" type="submit">Filtrar</button>
                 </div>
                 </form> 
               </fieldset>

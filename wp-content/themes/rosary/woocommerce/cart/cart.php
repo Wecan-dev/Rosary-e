@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Cart Page
  *
@@ -18,17 +19,7 @@
 defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_cart' ); ?>
-<div class="general-banner" > 
-<img  src="<?php echo get_template_directory_uri();?>/assets/img/Banner-contact.jpg">
-	<div class="general-banner__text">
-	<h2 class="main-general__title">
-        Carro de Compras
-      </h2>
-      <p class="general-banner__subtitle">
-        Rosary
-      </p>
-	</div>
-</div>
+
 <div class="cart-custom" >
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>

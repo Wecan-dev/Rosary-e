@@ -694,11 +694,11 @@ if (meta_value( 'productos_personalizados', $id ) != NULL) {
   
   <p class="title-collapse">
     <a data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
-      Característica del Producto <span class="caret"></span>
+      Características del Producto <span class="caret"></span>
     </a>
   </p>  
-  <div class="collapse" id="collapseExample3">
-    <div class="card_body">
+  <div class="collapse show" id="collapseExample3">
+    <div class="card_body card_caracteristicas">
        '.$valuec.'
     </div>
   </div>
@@ -744,8 +744,8 @@ if (meta_value( 'productos_personalizados', $id ) != NULL) {
       Característica del Producto <span class="caret"></span>
     </a>
   </p>  
-  <div class="collapse" id="collapseExample3">
-    <div class="card_body">
+  <div class="collapse show" id="collapseExample3">
+    <div class="card_body card_caracteristicas">
        '.$valuec.'
     </div>
   </div>  
