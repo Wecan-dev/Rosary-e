@@ -44,12 +44,12 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
 
                 <form class="woocommerce-ordering" method="get">
                   <select name="orderby" class="orderby" aria-label="Shop order">
-                      <option value="menu_order" <?php echo $selectm ?>>Default sorting</option>
-                      <option value="popularity" <?php echo $selectp ?>>Sort by popularity</option>
-                      <option value="rating" <?php echo $selectr ?>>Sort by average rating</option>
-                      <option value="date" <?php echo $selectd ?>>Sort by latest</option>
-                      <option value="price" <?php echo $selectpr ?>>Sort by price: low to high</option>
-                      <option value="price-desc" <?php echo $selectpr_desc ?>>Sort by price: high to low</option>
+                      <option value="menu_order" <?php echo $selectm ?>>Ordernar por</option>
+                      <option value="popularity" <?php echo $selectp ?>>Por popularidad</option>
+                      <option value="rating" <?php echo $selectr ?>>Por calificación promedio</option>
+                      <option value="date" <?php echo $selectd ?>>Por último</option>
+                      <option value="price" <?php echo $selectpr ?>>Por precio: de menor a mayor</option>
+                      <option value="price-desc" <?php echo $selectpr_desc ?>>Por precio: de mayor a menor</option>
                   </select>
                 </form>
           </div>

@@ -439,8 +439,9 @@ Enviar
         </p>
       </div>
       <div class="about-reason__item">
+		  
         <div class="about-reason__icon">
-				<a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('phone'); ?>" >
+				<a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('phone'); ?>&text=%C2%A1Hola!%20%C2%BFC%C3%B3mo%20est%C3%A1s?%20%E2%9C%A8%20Vi%20la%20p%C3%A1gina%20web%20y%20tengo%20algunas%20preguntas%20%C2%BFpodr%C3%ADas%20asesorarme%20por%20favor?%20%E2%98%BA%EF%B8%8F" >
           <img src="<?php echo meta_value_img('icon-reason3-nosotros', $id_page); ?>">
 			</a>
         </div>
@@ -594,9 +595,9 @@ Enviar
             </a>
           </li>
           <li>
-            <img src="<?php echo get_template_directory_uri();?>/assets/img/phone-call.png">
-            <a href="tel:<?php echo meta_value('phone-sidebar-contacto', $id_page); ?>">
-              <p>Teléfono</p>
+            <img src="<?php echo get_template_directory_uri();?>/assets/img/whatsapp.png">
+            <a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('phone'); ?>&text=%C2%A1Hola!%20%C2%BFC%C3%B3mo%20est%C3%A1s?%20%E2%9C%A8%20Vi%20la%20p%C3%A1gina%20web%20y%20tengo%20algunas%20preguntas%20%C2%BFpodr%C3%ADas%20asesorarme%20por%20favor?%20%E2%98%BA%EF%B8%8F">
+              <p>WhatsApp</p>
               <?php echo get_theme_mod('phone'); ?>
             </a>
           </li>

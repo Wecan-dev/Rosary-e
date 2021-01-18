@@ -707,7 +707,7 @@ if (meta_value( 'productos_personalizados', $id ) != NULL) {
     <div class="product-details__custom" >
       <div>
         <img src="'.get_template_directory_uri().'/assets/img/pencil.png">
-          <a href=""> Personalizar </a>
+          <a href="'.get_home_url().'/contacto"> Personalizar </a>
       </div>
       <div>
         <img src="'.get_template_directory_uri().'/assets/img/envelope.png">

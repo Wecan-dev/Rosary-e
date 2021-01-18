@@ -7,10 +7,13 @@
         <?php echo get_theme_mod('best_seller_subtitle');?>
       </p>
       <div class="main-featured__carousel">
+      <?php for ($i=1; $i <= 12; $i++) { ?>
+         <?php if(get_theme_mod('productos_best'.$i.'')!=NULL) { ?>        
       <?php          
       $args = array (
              'post_type' => 'product',
-             'posts_per_page' => get_theme_mod('best_seller_num_post'),
+             'ID' => get_theme_mod('productos_best'.$i.''),
+                     
       );?>
       <?php $loop = new WP_Query( $args ); ?>
       <?php while ( $loop->have_posts() ) : $loop->the_post(); global $product;?>      
@@ -48,7 +51,8 @@
           </div>
         </div>
       <?php endwhile; ?>    
-        
+      <?php } ?> 
+      <?php } ?>   
       </div>
     </div>
   </section>
