@@ -4919,7 +4919,7 @@ display: block!important;
     align-items: center;
     border: 1px solid #d0bd9b;
     border-radius: 2px;
-    width: fit-content;
+width: max-content;
 }
 .items-count {
 border: none;
