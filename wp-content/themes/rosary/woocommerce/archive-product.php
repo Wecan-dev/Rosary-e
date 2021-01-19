@@ -38,20 +38,21 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
   </section>
   <section class="shop">
     <div class="padding-right-left padding-top-bottom">
-      <div class="container-grid">
+      <div class="container-gridd">
+
+        <div class="shop-products">
+          <div class="shop-products__header">
+			    <div class="shop-products__flex">
+           				  <a class="shop-products__collpase" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Filtros
+  </a>
+             			<div class="collapse collapse-filter" id="collapseExample">
         <div class="shop-sidebar">
+
+
           <div class="shop-sidebar__content">
 
-                <form class="woocommerce-ordering" method="get">
-                  <select name="orderby" class="orderby" aria-label="Shop order">
-                      <option value="menu_order" <?php echo $selectm ?>>Ordernar por</option>
-                      <option value="popularity" <?php echo $selectp ?>>Por popularidad</option>
-                      <option value="rating" <?php echo $selectr ?>>Por calificación promedio</option>
-                      <option value="date" <?php echo $selectd ?>>Por último</option>
-                      <option value="price" <?php echo $selectpr ?>>Por precio: de menor a mayor</option>
-                      <option value="price-desc" <?php echo $selectpr_desc ?>>Por precio: de mayor a menor</option>
-                  </select>
-                </form>
+             
           </div>
           <div class="shop-sidebar__content">
             <h2 class="shop-sidebar__title">
@@ -176,9 +177,8 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
 </a>
           </div>
         </div>
-        <div class="shop-products">
-          <div class="shop-products__header">
-           <?php 
+</div>
+					<?php 
             //$published_posts = wp_count_posts()->publish;
              $published_posts = count_post_product($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"]);
            // $posts_per_page = get_option('posts_per_page');
@@ -191,9 +191,26 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
             else {
               $current_page = $paged;
             } ?>          
-            <h2>Showing <?php echo ''.$current_page.'-'.$max_page.' of '.$published_posts.''; ?> results</h2>            <div class="shop-products__menu">
+            <h2>Showing <?php echo ''.$current_page.'-'.$max_page.' of '.$published_posts.''; ?> results</h2> 
+			    
+			
+				  
+			  </div>
+			  <div class="shop-products__menu">
+			 
+
               <!-- Nav tabs -->
           <!-- Nav tabs -->
+				      <form class="woocommerce-ordering" method="get">
+                  <select name="orderby" class="orderby" aria-label="Shop order">
+                      <option value="menu_order" <?php echo $selectm ?>>Ordernar por</option>
+                      <option value="popularity" <?php echo $selectp ?>>Por popularidad</option>
+                      <option value="rating" <?php echo $selectr ?>>Por calificación promedio</option>
+                      <option value="date" <?php echo $selectd ?>>Por último</option>
+                      <option value="price" <?php echo $selectpr ?>>Por precio: de menor a mayor</option>
+                      <option value="price-desc" <?php echo $selectpr_desc ?>>Por precio: de mayor a menor</option>
+                  </select>
+                </form>
           <ul class="nav " id="myTab" role="tablist">
             <li class="nav-item">
               <a class=" active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><img src="<?php echo get_template_directory_uri();?>/assets/img/productos/menu.png"></a>
@@ -202,8 +219,8 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
               <a class="" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><img src="<?php echo get_template_directory_uri();?>/assets/img/productos/list.png"></a>
             </li>
           </ul>
+				
 
-             
               
             </div>
           </div>

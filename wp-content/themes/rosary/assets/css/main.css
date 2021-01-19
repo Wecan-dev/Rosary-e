@@ -4844,8 +4844,8 @@ display: block!important;
 
 @media (min-width: 0px) and (max-width: 767px) {
   .shop .padding-right-left {
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -5192,6 +5192,7 @@ color: #fff;
 .shop-products .shop-products__header .shop-products__menu img {
   width: 22px;
   height: 22px;
+	    object-fit: contain;
   margin-left: 13px;
 }
 
@@ -5207,10 +5208,30 @@ color: #fff;
 }
 
 .shop-products .container-grid {
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
   gap: 22px;
 }
 
+.shop-products__menu, .shop-products__flex {
+	    display: flex;
+    align-items: center;
+	position: relative;
+}
+.shop-products__collpase {
+	    color: #000;
+    margin-right: 15px;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+
+.collapse-filter {
+	    position: absolute;
+    z-index: 1;
+    top: 36px;
+    background: rgb(250, 245, 238);
+    padding: 0px 30px 30px 30px;
+}
 @media (min-width: 992px) and (max-width: 1250px) {
 		.about-card .about-card__text {
     min-height: 265px;
@@ -5226,6 +5247,15 @@ color: #fff;
     JUSTIFY-CONTENT: space-between;
     ALIGN-ITEMS: CENTER;
 }
+	.shop-products__header {
+		flex-direction: column;	
+		align-items: initial!important;
+	}
+	
+	
+	.shop-products__menu {
+	
+	}
 	.wishlist_view  .product-add-to-cart, 	.wishlist_view  .product-add-to-cart a {
 		margin-bottom: 0!important;
 	}
@@ -5265,7 +5295,7 @@ color: #fff;
 
 @media (min-width: 768px) and (max-width: 991px) {
   .shop-products .container-grid {
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -5307,14 +5337,12 @@ color: #fff;
   /* Style for active state input */
 }
 
-.shop-sidebar .shop-sidebar__content select {
-  font-size: 13px;
-  font-weight: 500;
+.shop-products__header select {
+  font-size: 12px;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   text-transform: uppercase;
-  font-family: Brandon Text Medium;
   letter-spacing: normal;
   color: #000000;
   background: none;
