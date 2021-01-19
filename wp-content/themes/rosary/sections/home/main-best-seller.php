@@ -12,7 +12,7 @@
       <?php          
       $args = array (
              'post_type' => 'product',
-             'ID' => get_theme_mod('productos_best'.$i.''),
+             'post__in'  =>  array(get_theme_mod('productos_best'.$i.'')),
                      
       );?>
       <?php $loop = new WP_Query( $args ); ?>

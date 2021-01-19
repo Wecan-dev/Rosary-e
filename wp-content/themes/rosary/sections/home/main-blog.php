@@ -19,7 +19,7 @@
             <?php the_title(); ?>
           </a>
           <p class="main-general__description">
-           <?php the_content(); ?>
+			  <?php the_field('texto_inicio_blog'); ?>
           </p>
         </div>
         <div class="main-blog__img">

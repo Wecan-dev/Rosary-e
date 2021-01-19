@@ -334,18 +334,10 @@ if ( ! defined( 'YITH_WCWL' ) ) {
 
 <style>
 .woocommerce-message {
-  border-top-color: #c39c75 !important;
-  border-bottom-left-radius: 5px;
-  font-size: 17px;
-  font-weight: bold;
-  padding: 1rem 2rem !important;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 2.55px;
-  color: #585e59;
-  border-bottom-right-radius: 5px;
-  background-color: #d7d3cd;
+  border-top-color: #d7b595;
+    background: white;
+	    padding: 20px!important;
+	color: #000!important;
 }
 
 .woocommerce-message::before {

@@ -7,7 +7,7 @@
   <title><?php wp_title('|', true, 'right'); ?></title>
   <?php wp_head(); ?>  
 	  <meta name="keywords" content="joyería, joyerías Bogotá, joyerías Medellín, joyería Barranquilla, joyerías en Cali, joyerías Bucaramanga, joyería Colombia, Anillos compromiso">
-  <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>

@@ -18,6 +18,8 @@
           <div class="blog-general__title" href="">
             <?php the_title(); ?>
           </div>
+						  <?php the_field('texto_inicio_blog'); ?>
+<br><br>
           <?php the_content(); ?>
           <div class="blog-post__metas">
             <div class="blog-general__tag">

@@ -11,8 +11,7 @@
   background: #9E9E9E;
 }
 a {
-	color: #d0bd9b;
-}
+    color: #c1ab82;}
 a:hover {
   text-decoration: none !important;
   color: #000;
@@ -2956,6 +2955,11 @@ position: relative;
 	    margin-top: 200px;
 }
 
+.blog-genera__post--single img {
+height: auto;
+	width: 100%!important;
+}
+
 @media (min-width: 0px) and (max-width: 767px) {
   .blog-general {
     padding: 25px 25px;
@@ -5666,9 +5670,7 @@ color: #fff;
  .woocommerce-message a {
 	color: #d7b595;
 		transition: .3s;
-	 
-	 font-family: Brandon Text Bold;
-}
+	 }
 .woocommerce-message a:hover { 
 		transition: .3s;
 color: #000;
