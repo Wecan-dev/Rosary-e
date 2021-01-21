@@ -11,7 +11,7 @@
             <?=$category->description ?>
           </p>
           <img class="main-categories__poster" src="<?php echo termmeta_value_img( 'poster_categories', $category->term_id ); ?>">
-          <a class="general-btn__simple" href="<?php echo get_category_link( $category->term_id ); ?>">
+          <a class="general-btn__simple" href="<?php echo get_category_link( $category->term_id ); ?>cat=yes">
             Comprar ahora
           </a>
         </div>
