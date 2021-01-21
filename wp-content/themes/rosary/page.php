@@ -546,7 +546,7 @@ Enviar
             <p class="categories-all__subtitle">
               <?php echo termmeta_value('title_entrada_categories', $category->term_id);?>
             </p>
-            <a class="general-btn__light" href="<?php echo get_category_link( $category->term_id ); ?>">Comprar</a>
+            <a class="general-btn__light" href="<?php echo get_category_link( $category->term_id ); ?>?cat=yes">Comprar</a>
           </div>
         </div>
       <?php endforeach; ?>

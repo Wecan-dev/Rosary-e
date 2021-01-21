@@ -3,7 +3,7 @@ $pag = get_post(get_the_ID())->post_title;
 get_header( 'shop' );
 
 global $wp_query;
-if (get_queried_object_id()!=NULL) {
+if ($_GET['cat']=='yes') {
    get_template_part('sections/category/subcategory');
 }
 else{ 
@@ -16,11 +16,7 @@ if ($_GET['orderby'] == 'price' ){ $selectpr = 'selected="selected"';}
 if ($_GET['orderby'] == 'price-desc' ){ $selectpr_desc = 'selected="selected"';}    
 
 $urlsinparametros= explode('?', $_SERVER['REQUEST_URI'], 2);
-if ($category_name == NULL){ 
-    $urlsinparametros = get_home_url().'/'.get_post(get_the_ID())->post_name;
-}else{
-  $urlsinparametros = get_home_url().'/product-category/'.$category_name;
-}    
+   
 
 $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['orderby'],$paged);         
 
@@ -42,11 +38,11 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
 
         <div class="shop-products">
           <div class="shop-products__header">
-			    <div class="shop-products__flex">
-           				  <a class="shop-products__collpase" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          <div class="shop-products__flex">
+                    <a class="shop-products__collpase" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Filtros
   </a>
-             			<div class="collapse collapse-filter" id="collapseExample">
+                  <div class="collapse collapse-filter" id="collapseExample">
         <div class="shop-sidebar">
 
 
@@ -67,8 +63,8 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
           <?php foreach($product_categories as $category): ?>
             <?php $checked =NULL;  if ($category->slug == $_GET['cat']) { $checked = "checked='checked'"; } $categoria = $category->name; $category_id = $category->term_id; $category_link = get_category_link( $category_id ); ?>         
               <li>
-                <a href="<?php echo get_home_url().'/tienda?cat='.$category->slug.'&tax=product_cat'?>">
-                   <?php if ($_GET["cat"] != NULL && $_GET["cat"] == $category->slug){ ?> <span class="hover_cat"> <?php echo  $categoria ?></span> <?php }else{ ?> <?php echo  $categoria ?> <?php }  ?>
+                <a href="<?php echo get_home_url().'/product-category/'.$category->slug.'/?'.$urlsinparametros[1]?>">
+                   <?php if (get_queried_object()->slug == $category->slug){ ?> <span class="hover_cat"> <?php echo  $categoria ?></span> <?php }else{ ?> <?php echo  $categoria ?> <?php }  ?>
                 </a>
               </li>
               <?php endforeach; ?>  
@@ -88,8 +84,8 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
             <?php $checked =NULL;  if ($category->slug == $_GET['cat']) { $checked = "checked='checked'"; } $categoria = $category->name; $category_id = $category->term_id; $category_link = get_category_link( $category_id ); ?> 
             <?php if($category->parent >1){ ?>         
               <li>
-                <a href="<?php echo get_home_url().'/tienda?cat='.$category->slug.'&tax=product_cat'?>">
-                   <?php if ($_GET["cat"] != NULL && $_GET["cat"] == $category->slug){ ?> <span class="hover_cat"> <?php echo  $categoria ?></span> <?php }else{ ?> <?php echo  $categoria ?> <?php }  ?>
+                <a href="<?php echo get_home_url().'/product-category/'.$category->slug.'/?'.$urlsinparametros[1]?>">
+                   <?php if (get_queried_object()->slug == $category->slug){ ?> <span class="hover_cat"> <?php echo  $categoria ?></span> <?php }else{ ?> <?php echo  $categoria ?> <?php }  ?>
                 </a>
               </li>
             <?php } ?>  
@@ -101,32 +97,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
               precio
               <span></span>
             </h2>
-            <div class="wrapper">
-              <fieldset class="filter-price">
-               <form method="get">
-                <div class="price-field">
-                  <input name="lower" id="lower" max="<?php echo price_mayor(); ?>" min="10" type="range" value="<?php if ($_GET["lower"] != NULL){ echo $_GET["lower"];}else{ echo '10'; } ?>">
-                  <input name="upper" id="upper" max="<?php echo price_mayor(); ?>" min="10" type="range" value="<?php if ($_GET["upper"] != NULL){ echo $_GET["upper"];}else{ echo price_mayor(); } ?>">
-                </div>
-                <div class="price-wrap">
-                  
-                  <div class="d-flex">
-                    <span class="price-title">Precio:</span>
-                    <div class="price-wrap-1">
-                      <label for="one">COP</label>
-                      <input id="one">
-                    </div>
-                    <div class="price-wrap_line">-</div>
-                    <div class="price-wrap-2">
-                      <label for="two">COP</label>
-                      <input id="two">
-                    </div>
-                  </div>
-          <button class="shop-btn trans mt-3" type="submit">Filtrar</button>
-                </div>
-                </form> 
-              </fieldset>
-            </div>
+            <?php dynamic_sidebar( 'sidebar-1' ); ?>
           </div>
          <!-- <div class="shop-sidebar__content">
             <h2 class="shop-sidebar__title">
@@ -154,20 +125,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
               Mix de Materiales 
               <span></span>
             </h2>
-            <ul class="shop-sidebar__colors">
-              <?php
-                 global $wpdb;
-                 $product_categories = get_categories( array( 'taxonomy' => 'pa_material', 'orderby' => 'menu_order', 'order' => 'asc' ));  
-              ?>                                                        
-              <?php foreach($product_categories as $category): ?>
-              <?php $categoria = $category->name; $category_id = $category->term_id; $category_link = get_category_link( $category_id ); ?>               
-              <li>
-                <a href="<?php echo get_home_url() ?>/tienda/?cat=<?php echo $category->slug;?>&tax=pa_material">
-                  <?php if ($_GET["cat"] != NULL && $_GET["cat"] == $category->slug){ ?> <span class="hover_cat"> <?php echo  $categoria ?></span> <?php }else{ ?> <?php echo  $categoria ?> <?php }  ?>
-                </a>
-              </li>
-              <?php endforeach; ?>
-            </ul>
+            <?php dynamic_sidebar( 'sidebar-2' ); ?>
           </div>
 
           <div class="shop-sidebar__newsletter">
@@ -178,7 +136,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
           </div>
         </div>
 </div>
-					<?php 
+          <?php 
             //$published_posts = wp_count_posts()->publish;
              $published_posts = count_post_product($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"]);
            // $posts_per_page = get_option('posts_per_page');
@@ -191,26 +149,17 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
             else {
               $current_page = $paged;
             } ?>          
-            <h2>Showing <?php echo ''.$current_page.'-'.$max_page.' of '.$published_posts.''; ?> results</h2> 
-			    
-			
-				  
-			  </div>
-			  <div class="shop-products__menu">
-			 
+            <h2><?php echo woocommerce_result_count();  ?></h2> 
+          
+      
+          
+        </div>
+        <div class="shop-products__menu">
+       
 
               <!-- Nav tabs -->
           <!-- Nav tabs -->
-				      <form class="woocommerce-ordering" method="get">
-                  <select name="orderby" class="orderby" aria-label="Shop order">
-                      <option value="menu_order" <?php echo $selectm ?>>Ordernar por</option>
-                      <option value="popularity" <?php echo $selectp ?>>Por popularidad</option>
-                      <option value="rating" <?php echo $selectr ?>>Por calificación promedio</option>
-                      <option value="date" <?php echo $selectd ?>>Por último</option>
-                      <option value="price" <?php echo $selectpr ?>>Por precio: de menor a mayor</option>
-                      <option value="price-desc" <?php echo $selectpr_desc ?>>Por precio: de mayor a menor</option>
-                  </select>
-                </form>
+          <?php echo woocommerce_catalog_ordering();  ?> 
           <ul class="nav " id="myTab" role="tablist">
             <li class="nav-item">
               <a class=" active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><img src="<?php echo get_template_directory_uri();?>/assets/img/productos/menu.png"></a>
@@ -219,7 +168,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
               <a class="" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><img src="<?php echo get_template_directory_uri();?>/assets/img/productos/list.png"></a>
             </li>
           </ul>
-				
+        
 
               
             </div>
@@ -229,29 +178,29 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
       <div class="tab-content">
         <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">        
           <div class="container-grid">
-          <?php $loop = new WP_Query( $args ); ?>
-          <?php while ( $loop->have_posts() ) : $loop->the_post(); global $product;?>            
+          <?php
+          if ( woocommerce_product_loop() ) {
+            if ( wc_get_loop_prop( 'total' ) ) {
+              while ( have_posts() ) {
+                the_post();
+
+                /** * Hook: woocommerce_shop_loop.  */
+          ?>              
             <div class="main-featured__product">
-                     <div href="<?php the_permalink(); ?>" class="main-featured__img">
-            <img src="<?php the_post_thumbnail_url('full');?>">
-      <div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
-        <a class="link-product" href="<?php the_permalink(); ?>"></a>
-        <div class="main-featured__icon" >
-           <?php// if (is_user_logged_in()){ ?>    
-                      <a href="?add_to_wishlist=<?php echo get_the_ID(); ?>">
-                        <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
-                      </a>
-                    <?php// }else { ?>  
-                    <!--<div data-toggle="tooltip" data-placement="top" title="" data-original-title="<?php if(lang() == 'es'){echo "Debes estar iniciar sesión";}else{echo "You must be logged";} ?>" class="collection-item__icon" >
-                      <img src="<?php echo get_template_directory_uri();?>/assets/img/heart.png">
-                    </div> -->             
-                    <?php// } ?>
-           <a href="<?php the_permalink(); ?>">
-                        <img src="<?php echo get_template_directory_uri();?>/assets/img/search.png">
-                      </a>
-        </div>
-        </div>
-          </div>
+              <div href="<?php the_permalink(); ?>" class="main-featured__img">
+                <img src="<?php the_post_thumbnail_url('full');?>">
+                <div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
+                  <a class="link-product" href="<?php the_permalink(); ?>"></a>
+                  <div class="main-featured__icon" >                   
+                    <a href="?add_to_wishlist=<?php echo get_the_ID(); ?>">
+                      <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
+                    </a>                   
+                    <a href="<?php the_permalink(); ?>">
+                      <img src="<?php echo get_template_directory_uri();?>/assets/img/search.png">
+                    </a>
+                  </div>
+                </div>
+              </div>
               <div class="main-featured__text">
                 <a class="main-featured__title" href="<?php the_permalink(); ?>">
                    <?php the_title(); ?>
@@ -261,16 +210,45 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
                 </p>
               </div>
             </div>
-          <?php endwhile; ?>    
+            <?php
+               }
+               }
+            ?>
+            <?php
+              woocommerce_product_loop_end();
+
+              /**
+               * Hook: woocommerce_after_shop_loop.
+               *
+               * @hooked woocommerce_pagination - 10
+               */
+            ?> 
+            <div class="blog-general__paginator">
+              <?php do_action( 'woocommerce_after_shop_loop' ); ?>
+            </div>
+            <?php              
+            } else {
+              /**
+               * Hook: woocommerce_no_products_found.
+               *
+               * @hooked wc_no_products_found - 10
+               */
+              do_action( 'woocommerce_no_products_found' );
+            } ?>    
           </div>          
         </div>
 
 
         <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
           <div class="categorie-product__list">
+          <?php
+          if ( woocommerce_product_loop() ) {
+            if ( wc_get_loop_prop( 'total' ) ) {
+              while ( have_posts() ) {
+                the_post();
 
-          <?php $loop = new WP_Query( $args ); ?>
-          <?php while ( $loop->have_posts() ) : $loop->the_post(); global $product;?>             
+                /** * Hook: woocommerce_shop_loop.  */
+          ?>            
             <div class="main-featured__product">
               <div class="main-featured__img">
                 <img src="<?php the_post_thumbnail_url('full'); ?>">
@@ -295,7 +273,31 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
                 </p>
               </div>
             </div>
-          <?php endwhile; ?>          
+            <?php
+               }
+               }
+            ?>
+            <?php
+              woocommerce_product_loop_end();
+
+              /**
+               * Hook: woocommerce_after_shop_loop.
+               *
+               * @hooked woocommerce_pagination - 10
+               */
+            ?> 
+            <div class="blog-general__paginator">
+              <?php do_action( 'woocommerce_after_shop_loop' ); ?>
+            </div>
+            <?php              
+            } else {
+              /**
+               * Hook: woocommerce_no_products_found.
+               *
+               * @hooked wc_no_products_found - 10
+               */
+              do_action( 'woocommerce_no_products_found' );
+            } ?>           
           </div>
         </div>
 
@@ -305,21 +307,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
 
           </div>
 
-             <div class="blog-general__paginator">
-                <?php echo paginate_links(array(
-                  "base" => add_query_arg("paged", "%#%"),
-                  "format" => '',
-                  "type" => "plain",
-                  "total" => $max_page,
-                  "current" => $current_page,
-                  "show_all" => false,
-                  "end_size" => 2,
-                  "mid_size" => 2,
-                  "prev_next" => true,
-                  "next_text" => __('<img src="'.get_template_directory_uri().'/assets/img/blog/next.png">'),
-                  "prev_text" => __('<img src="'.get_template_directory_uri().'/assets/img/blog/prev.png">'),
-                  )); ?>
-              </div>
+
 
         
            
@@ -331,6 +319,11 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
       </div>
     </div>
   </section>
+<style type="text/css">
+span.count {
+    display: none;
+}
+</style>
   <script>
 
 var lowerSlider = document.querySelector('#lower');
