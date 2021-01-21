@@ -5590,6 +5590,22 @@ color: #fff;
   transition-duration: 0.3s;
 }
 
+.price_slider_amount button{
+    border: 1px solid #d0bd9b!important;
+    border-radius: 0!important;
+    background: #ffffff!important;
+    color: #270f00!important;
+	transition: .3s;
+    font-weight: 500;
+    padding: 6px 12px!important;
+font-weight: 500!important;
+}
+
+.price_slider_amount button:hover{
+background: #e6d8be!important;
+	transition: .3s;
+}
+
 .shop-sidebar .shop-sidebar__categories,
 .shop-sidebar .shop-sidebar__colors {
   list-style: none;
