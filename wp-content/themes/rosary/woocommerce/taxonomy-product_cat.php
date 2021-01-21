@@ -307,21 +307,6 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
 
           </div>
 
-             <div class="blog-general__paginator">
-                <?php echo paginate_links(array(
-                  "base" => add_query_arg("paged", "%#%"),
-                  "format" => '',
-                  "type" => "plain",
-                  "total" => $max_page,
-                  "current" => $current_page,
-                  "show_all" => false,
-                  "end_size" => 2,
-                  "mid_size" => 2,
-                  "prev_next" => true,
-                  "next_text" => __('<img src="'.get_template_directory_uri().'/assets/img/blog/next.png">'),
-                  "prev_text" => __('<img src="'.get_template_directory_uri().'/assets/img/blog/prev.png">'),
-                  )); ?>
-              </div>
 
         
            

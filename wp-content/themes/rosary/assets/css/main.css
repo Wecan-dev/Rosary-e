@@ -20,7 +20,12 @@ a:hover {
 	    background: #fcf4ea;
 }
 .pswp__ui--fit .pswp__caption, .pswp__ui--fit .pswp__top-bar {
-    background-color: rgb(0, 0, 0);
+        background-color: #e6d8be;
+    color: #000;
+    opacity: 1;
+}
+.pswp__caption__center,.pswp__counter {
+	color: #000;
 }
 .btn_custom {
   display: inline-block;
@@ -3004,13 +3009,14 @@ height: auto;
 .page-numbers {
 	    list-style: none;
     padding-left: 0;
+	    justify-content: center;
     display: flex;
     width: 100%;
 }
 .woocommerce-result-count {
 	margin-bottom: 0;	
-	    color: #000;
     margin-right: 15px;
+	    color: #c0a980;
     margin-bottom: 0;
     font-size: 15px;
 }
@@ -3035,6 +3041,9 @@ transition: .3;
 .blog-general__paginator a:hover {
 	transition: .3;
 	color: #c7b197;
+}
+span.page-numbers.current {
+    color: #c0a980;
 }
 
 .blog-general__paginator span {
@@ -4653,7 +4662,7 @@ transition: .3s;
 
 .custom-piece {
   position: relative;
-  
+  background: #fcf4ea;
 	    margin-top: 50px;
 }
 .custom-piece__carousel .slick-dots li button:before {
@@ -5235,12 +5244,16 @@ color: #fff;
 	position: relative;
 }
 .shop-products__collpase {
-	    color: #000;
+	    color: #c0a980;
     margin-right: 15px;
     margin-bottom: 0;
-    font-size: 15px;
+    font-size: 14px;
 }
-
+.shop-products__collpase img{
+    width: 9px;
+    margin-left: 8px;
+    object-fit: contain;
+}
 
 .collapse-filter {
 	    position: absolute;
@@ -5361,8 +5374,8 @@ color: #fff;
   font-style: normal;
   line-height: normal;
   text-transform: uppercase;
+	    color: #c0a980;
   letter-spacing: normal;
-  color: #000000;
   background: none;
   border: none;
   -webkit-appearance: none;
@@ -6003,7 +6016,9 @@ color: #c0a980;
   letter-spacing: 1.73px;
   text-align: center;
   color: #ffffff;
-  font-family: Brandon Text Medium;
+  font-family: Brandon Text Medium;paspan.page-numbers.current {
+    color: #c0a980;
+}
   text-transform: uppercase;
 }
 

@@ -9,7 +9,7 @@
         <h2 class="main-sale__title">
           <?php echo get_theme_mod('sale_title'); ?>
         </h2>
-        <a class="general-btn__simple" href="<?php echo get_theme_mod('sale_url_buttom'); ?>">
+        <a target="_blank" class="general-btn__simple" href="<?php echo get_theme_mod('sale_url_buttom'); ?>">
           <?php echo get_theme_mod('sale_buttom'); ?>
         </a>
       </div>

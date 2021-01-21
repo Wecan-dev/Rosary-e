@@ -40,7 +40,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
           <div class="shop-products__header">
           <div class="shop-products__flex">
                     <a class="shop-products__collpase" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Filtros
+    FILTROS <img src="<?php echo get_template_directory_uri();?>/assets/img/productos/arrow.png" >
   </a>
                   <div class="collapse collapse-filter" id="collapseExample">
         <div class="shop-sidebar">
@@ -223,7 +223,9 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
                * @hooked woocommerce_pagination - 10
                */
             ?> 
-            <div class="blog-general__paginator">
+       
+          </div> 
+			      <div class="blog-general__paginator">
               <?php do_action( 'woocommerce_after_shop_loop' ); ?>
             </div>
             <?php              
@@ -234,8 +236,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
                * @hooked wc_no_products_found - 10
                */
               do_action( 'woocommerce_no_products_found' );
-            } ?>    
-          </div>          
+            } ?>   
         </div>
 
 
