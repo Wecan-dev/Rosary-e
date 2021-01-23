@@ -1188,7 +1188,7 @@ a.general-btn__simple:hover {
 .navbar-nav {
   width: 100%;
   justify-content: flex-end;
-  margin-bottom: 9px;
+  margin-bottom: 0;
   align-items: flex-end;
 }
 
@@ -1216,7 +1216,6 @@ a.general-btn__simple:hover {
 
 .header {
   background-color: rgba(255, 255, 255, 0.71);
-  position: absolute;
   width: 100%;
   z-index: 9;
 	    height: 200px;
@@ -1271,7 +1270,6 @@ a.general-btn__simple:hover {
 
 .header-solid {
   background-color: #fcf4ea;
-  position: initial;
 }
 .fixed {
   background-color: #fcf4ea;
@@ -4098,7 +4096,14 @@ margin: 0 14px;
 @media (min-width: 0px) and (max-width: 767px) {
   .about-card .about-card__text {
     padding: 20px;
+	      border-top: 28px solid #FFF;
+	      min-height: 345px;
   }
+	.about-card .about-card__img {
+  height: 376px;
+  margin-bottom: 0!important;
+}
+	
 }
 
 .about-card .about-card__img {
@@ -4125,7 +4130,9 @@ margin: 0 14px;
 	.about-card .about-card__img {
 		height: 100%;}
 	.about-card .about-card__item {
-	margin: 0;}
+	margin: 0;
+	    background: #e6d8be;
+	}
 }
 
 
@@ -5263,6 +5270,29 @@ color: #fff;
     background: rgb(250, 245, 238);
     padding: 0px 30px 30px 30px;
 }
+
+.ui-slider-horizontal .ui-slider-range {
+    top: 0;
+    height: 2px;
+    background: black !important;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    background: #d0bd9b;
+    border-radius: 50%;
+	top: -7px!important;
+    outline: none;
+}
+
+.widget_price_filter .widget-title {
+	display: none;
+}
+
+
+.price_slider {
+	    border-radius: 2px;
+    background: #e6d8be;
+    height: 2px;
+}
 @media (min-width: 992px) and (max-width: 1250px) {
 		.about-card .about-card__text {
     min-height: 265px;
@@ -5270,6 +5300,19 @@ color: #fff;
     padding-right: 100px;
     padding-left: 100px;
 }
+}
+
+
+.about-card__carousel .slick-dots li button:before {
+	content: ""!important;
+	    background: #c0a980;
+    border-radius: 50%;
+	width: 13px;
+	height: 13px;
+}
+
+.about-card__carousel  .slick-dots {
+	bottom: -31px;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -5588,6 +5631,7 @@ color: #fff;
 .shop-sidebar .shop-sidebar__content .price-field input[type=range]:active::-webkit-slider-thumb {
   box-shadow: 0 0 0 0.5px #fff;
   transition-duration: 0.3s;
+	
 }
 
 .price_slider_amount button{
@@ -5597,8 +5641,20 @@ color: #fff;
     color: #270f00!important;
 	transition: .3s;
     font-weight: 500;
+	    margin: 15px 0!important;
     padding: 6px 12px!important;
 font-weight: 500!important;
+}
+
+.price_label {
+	    order: -1;
+    margin-top: 15px;
+}
+
+.price_slider_amount {
+	    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .price_slider_amount button:hover{

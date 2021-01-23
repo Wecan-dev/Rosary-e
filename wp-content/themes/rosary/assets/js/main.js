@@ -46,11 +46,9 @@ $(window).scroll(function () {
     $('.nav-top__header').addClass('nav-top__header--detele');
 	      $('.main-brand__top').addClass('height-0')
 $('.main-brand__top').removeClass('height-100')
-    $('nav > div > div.navbar-collapse.offcanvas-collapse > ul > li:nth-child(8) > a').addClass('contact')
     // $("#iso").addClass('img-size').attr('src', 'assets/img/logo-white.jpg').removeClass('scroll-up');
 
   } else {
-    $('nav > div > div.navbar-collapse.offcanvas-collapse > ul > li:nth-child(8) > a').removeClass('contact')
     $('.main-brand__top').addClass('height-100')
 $('.main-brand__top').removeClass('height-0')	  
     $('.navbar-fixed-js--custom .nav-item a').addClass('fixed--link');

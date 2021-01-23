@@ -96,6 +96,7 @@ $('.about-card__carousel').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: true,
+		  arrows: false,
       }
     }
   ]

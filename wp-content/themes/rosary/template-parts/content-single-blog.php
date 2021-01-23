@@ -33,39 +33,43 @@
           <ul class="blog-sidebar__follow blog-sidebar__box">
                 <?php if (get_theme_mod('pinterest')!=NULL) {?> 
                 <li>
-                  <a href="<?php echo get_theme_mod('pinterest'); ?>"><img src="<?php echo get_theme_mod('pinterest_image'); ?>"></a>
+                  <a target="_blank" href="<?php echo get_theme_mod('pinterest'); ?>"><img src="<?php echo get_theme_mod('pinterest_image'); ?>"></a>
                 </li>
                 <?php } ?>
                 <?php if (get_theme_mod('vimeo')!=NULL) {?> 
                 <li>
-                  <a href="<?php echo get_theme_mod('vimeo'); ?>"><img src="<?php echo get_theme_mod('vimeo_image'); ?>"></a>
+                  <a target="_blank" href="<?php echo get_theme_mod('vimeo'); ?>"><img src="<?php echo get_theme_mod('vimeo_image'); ?>"></a>
                 </li>
                 <?php } ?>                
                 <?php if (get_theme_mod('youtube')!=NULL) {?>
                 <li>
-                  <a href="<?php echo get_theme_mod('youtube'); ?>"><img src="<?php echo get_theme_mod('youtube_image'); ?>"></a>
+                  <a target="_blank" href="<?php echo get_theme_mod('youtube'); ?>"><img src="<?php echo get_theme_mod('youtube_image'); ?>"></a>
                 </li>
                 <?php } ?>
                 <?php if (get_theme_mod('facebook')!=NULL) {?>
                 <li>
-                  <a href="<?php echo get_theme_mod('facebook'); ?>"><img src="<?php echo get_theme_mod('facebook_image'); ?>"></a>
+                  <a target="_blank" href="<?php echo get_theme_mod('facebook'); ?>"><img src="<?php echo get_theme_mod('facebook_image'); ?>"></a>
                 </li>
                 <?php } ?>
                 <?php if (get_theme_mod('instagram')!=NULL) {?>
                 <li>
-                  <a href="<?php echo get_theme_mod('instagram'); ?>"><img src="<?php echo get_theme_mod('instagram_image'); ?>"></a>
+                  <a target="_blank" href="<?php echo get_theme_mod('instagram'); ?>"><img src="<?php echo get_theme_mod('instagram_image'); ?>"></a>
                 </li>
                 <?php } ?>
                 <?php if (get_theme_mod('twitter')!=NULL) {?>
                 <li>
-                  <a href="<?php echo get_theme_mod('twitter'); ?>"><img src="<?php echo get_theme_mod('twitter_image'); ?>"></a>
+                  <a target="_blank" href="<?php echo get_theme_mod('twitter'); ?>"><img src="<?php echo get_theme_mod('twitter_image'); ?>"></a>
                 </li>
                 <?php } ?>   
                 <?php if (get_theme_mod('linkedin')!=NULL) {?>
                 <li>
-                  <a href="<?php echo get_theme_mod('linkedin'); ?>"><img src="<?php echo get_theme_mod('linkedin_image'); ?>"></a>
+                  <a target="_blank" href="<?php echo get_theme_mod('linkedin'); ?>"><img src="<?php echo get_theme_mod('linkedin_image'); ?>"></a>
                 </li>
-                <?php } ?>          	
+			    <?php } ?>  
+			          <li>
+                  <a target="_blank" href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('phone'); ?>&text=%C2%A1Hola!%20%C2%BFC%C3%B3mo%20est%C3%A1s?%20%E2%9C%A8%20Vi%20la%20p%C3%A1gina%20web%20y%20tengo%20algunas%20preguntas%20%C2%BFpodr%C3%ADas%20asesorarme%20por%20favor?%20%E2%98%BA%EF%B8%8F"><img src="<?php echo get_template_directory_uri();?>/assets/img/whatsapp-2.png"></a>
+                </li>
+                      	
  
           </ul>
 
