@@ -1,0 +1,12 @@
+2021-01-26T18:02:00+00:00 CRITICAL Uncaught Error: Call to a member function get_status() on null in /var/www/html/Rosary-e/wp-content/plugins/Plugin_ePayco_WooCommerce-master/woocommerce-gateway-payco.php:604
+Stack trace:
+#0 /var/www/html/Rosary-e/wp-includes/class-wp-hook.php(287): WC_ePayco->ePayco_successful_request(NULL)
+#1 /var/www/html/Rosary-e/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/Rosary-e/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#3 /var/www/html/Rosary-e/wp-content/plugins/Plugin_ePayco_WooCommerce-master/woocommerce-gateway-payco.php(552): do_action('ePayco_init', Array)
+#4 /var/www/html/Rosary-e/wp-includes/class-wp-hook.php(287): WC_ePayco->check_ePayco_response('')
+#5 /var/www/html/Rosary-e/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/Rosary-e/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#7 /var/www/html/Rosary-e/wp-content/plugins/woocommerce/includes/class-wc-api.php(161): do_action('woocommerce_api...')
+#8 /var/www en /var/www/html/Rosary-e/wp-content/plugins/Plugin_ePayco_WooCommerce-master/woocommerce-gateway-payco.php en la línea 604
+

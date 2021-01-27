@@ -63,7 +63,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
           <?php foreach($product_categories as $category): ?>
             <?php $checked =NULL;  if ($category->slug == $_GET['cat']) { $checked = "checked='checked'"; } $categoria = $category->name; $category_id = $category->term_id; $category_link = get_category_link( $category_id ); ?>         
               <li>
-                <a href="<?php echo get_home_url().'/product-category/'.$category->slug.'/?'.$urlsinparametros[1]?>">
+                <a href="<?php echo get_home_url().'/product-category/'.$category->slug.'/?'.$urlsinparametros[1].'&ct=1'?>">
                    <?php if (get_queried_object()->slug == $category->slug){ ?> <span class="hover_cat"> <?php echo  $categoria ?></span> <?php }else{ ?> <?php echo  $categoria ?> <?php }  ?>
                 </a>
               </li>
@@ -84,7 +84,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
             <?php $checked =NULL;  if ($category->slug == $_GET['cat']) { $checked = "checked='checked'"; } $categoria = $category->name; $category_id = $category->term_id; $category_link = get_category_link( $category_id ); ?> 
             <?php if($category->parent >1){ ?>         
               <li>
-                <a href="<?php echo get_home_url().'/product-category/'.$category->slug.'/?'.$urlsinparametros[1]?>">
+                <a href="<?php echo get_home_url().'/product-category/'.$category->slug.'/?'.$urlsinparametros[1].'&col=1'?>">
                    <?php if (get_queried_object()->slug == $category->slug){ ?> <span class="hover_cat"> <?php echo  $categoria ?></span> <?php }else{ ?> <?php echo  $categoria ?> <?php }  ?>
                 </a>
               </li>

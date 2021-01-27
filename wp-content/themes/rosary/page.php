@@ -2,15 +2,15 @@
  while ( have_posts() ) : the_post(); $id_page = get_the_ID();
  ?>
 
-<?php if(get_field('template_rosary') == 'General Page'){ ?>  
+<?php if(get_field('template_rosary') == 'Página General'){ ?>  
   <section class="general-banner">
-    <img src="<?php the_field('image_banner_page'); ?>">
+    <img src="<?php the_field('image-banner-general-page'); ?>">
     <div class="general-banner__text">
       <h2 class="main-general__title">
-        <?php the_field('title_banner_page'); ?>
+        <?php the_field('title-banner-general-page'); ?>
       </h2>
       <p class="general-banner__subtitle">
-        <?php the_field('subtitle_banner_page'); ?>
+        <?php the_field('subtitle-banner-general-page'); ?>
       </p>
     </div>
   </section>
@@ -21,6 +21,19 @@
   </section>    
 <?php } ?> 
 
+<!-- ****************** Ninguno *********************-->
+
+<?php if(get_field('template_rosary') == 'Ninguno'){ ?>
+  <section class="general-legal">
+    <div class="padding-top-bottom ">
+	</div>		
+  </section>
+  <section class="general-legal">
+    <div class="padding-top-bottom padding-right-left">
+      <?php the_content(); ?>
+    </div>
+  </section>    
+<?php } ?>
 <!-- ****************** NEW IN *********************-->
 <?php if(get_field('template_rosary') == 'New In'){ ?>  
   <section class="general-banner general-banner__newin">
@@ -546,7 +559,7 @@ Enviar
             <p class="categories-all__subtitle">
               <?php echo termmeta_value('title_entrada_categories', $category->term_id);?>
             </p>
-            <a class="general-btn__light" href="<?php echo get_category_link( $category->term_id ); ?>?cat=yes">Comprar</a>
+            <a class="general-btn__light" href="<?php echo get_category_link( $category->term_id ); ?>">Comprar</a>
           </div>
         </div>
       <?php endforeach; ?>

@@ -16,10 +16,11 @@ if ($_GET['orderby'] == 'price' ){ $selectpr = 'selected="selected"';}
 if ($_GET['orderby'] == 'price-desc' ){ $selectpr_desc = 'selected="selected"';}    
 
 $urlsinparametros= explode('?', $_SERVER['REQUEST_URI'], 2);
+$urlsinparametros2= explode('tienda', $_SERVER['REQUEST_URI'], 2); 
    
 
 $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['orderby'],$paged);         
-
+if($urlsinparametros[1] != NULL OR $urlsinparametros2[1] != NULL){ 
 ?>
   <section class="general-banner">
     <img src="<?php echo get_template_directory_uri();?>/assets/img/productos/image_1.jpg">
@@ -40,7 +41,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
           <div class="shop-products__header">
           <div class="shop-products__flex">
                     <a class="shop-products__collpase" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Filtros
+    FILTROS <img src="<?php echo get_template_directory_uri();?>/assets/img/productos/arrow.png" >
   </a>
                   <div class="collapse collapse-filter" id="collapseExample">
         <div class="shop-sidebar">
@@ -223,7 +224,9 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
                * @hooked woocommerce_pagination - 10
                */
             ?> 
-            <div class="blog-general__paginator">
+       
+          </div> 
+			      <div class="blog-general__paginator">
               <?php do_action( 'woocommerce_after_shop_loop' ); ?>
             </div>
             <?php              
@@ -234,8 +237,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
                * @hooked wc_no_products_found - 10
                */
               do_action( 'woocommerce_no_products_found' );
-            } ?>    
-          </div>          
+            } ?>   
         </div>
 
 
@@ -308,6 +310,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
           </div>
 
 
+
         
            
 
@@ -318,6 +321,133 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
       </div>
     </div>
   </section>
+<?php }else{ ?>
+  <section class="general-banner general-banner__subcategorie">
+    <div class="banner1">  
+      <?php if (termmeta_value('option1_categories', get_queried_object()->term_id) == 'Imagen'){ ?> 
+        <img src="<?php echo termmeta_value_img( 'banner_categories', get_queried_object()->term_id ); ?>">
+      <?php } ?>  
+     <?php if (termmeta_value('option1_categories', get_queried_object()->term_id) == 'Iframe'){ ?>   
+         <?php echo termmeta_value('iframe_banner_categories', get_queried_object()->term_id ); ?>
+      <?php } ?> 
+     <?php if (termmeta_value('option1_categories', get_queried_object()->term_id) == 'Vídeo'){ ?>   
+         <video muted loop autoplay id="myVideo" src="<?php echo termmeta_value_img('video_banner_categories', get_queried_object()->term_id );  ?>"> </video>
+      <?php } ?>      
+    </div> 
+    <div class="banner2">  
+      <?php if (termmeta_value('option2_categories', get_queried_object()->term_id) == 'Imagen'){ ?> 
+        <img src="<?php echo termmeta_value_img( 'banner2_categories', get_queried_object()->term_id ); ?>">
+      <?php } ?>  
+     <?php if (termmeta_value('option2_categories', get_queried_object()->term_id) == 'Iframe'){ ?>   
+         <?php echo termmeta_value('iframe_banner2_categories', get_queried_object()->term_id ); ?>
+      <?php } ?> 
+     <?php if (termmeta_value('option2_categories', get_queried_object()->term_id) == 'Vídeo'){ ?>   
+         <video muted loop autoplay id="myVideo" src="<?php echo termmeta_value_img('video_banner2_categories', get_queried_object()->term_id );  ?>"> </video>
+      <?php } ?> 
+    </div>                
+    <div class="general-banner__text">
+      <h2 class="main-general__title">
+        <?php echo termmeta_value('title_banner_categories', get_queried_object()->term_id); ?>
+      </h2>
+      <?php if(termmeta_value('subtitle_banner_categories', get_queried_object()->term_id) != NULL) { ?>		
+      <p class="general-banner__subtitle">
+        <?php echo termmeta_value('subtitle_banner_categories', get_queried_object()->term_id); ?>
+      </p>	
+	 <?php } ?>	
+    </div>
+  </section>
+  <section class="custom-description custom-description--rosa">
+    <div class="padding-right-left">
+      <h2 class="main-general__title">
+         <?php echo str_replace("\n", "<br>", termmeta_value( 'titulo_interna', get_queried_object()->term_id )); ?>
+      </h2>
+      <p class="main-general__subtitle">
+            <?php echo str_replace("\n", "<br>", termmeta_value( 'subtitulo_interna', get_queried_object()->term_id )); ?>
+      </p>
+      <p class="custom-description__text">
+         <?php echo str_replace("\n", "<br>", termmeta_value( 'descripcion_completa', get_queried_object()->term_id )); ?>
+      </p>
+
+    </div>
+  </section>
+  <section class="main-featured main-featured--white product categories-single">
+    <div class="padding-top-bottom">
+      <h2 class="main-general__title">
+        <?php echo str_replace("\n", "<br>", termmeta_value( 'title_otros_interna', get_queried_object()->term_id )); ?>
+      </h2>
+      <p class="main-general__subtitle">
+        <?php echo str_replace("\n", "<br>", termmeta_value( 'subtitle_otros_interna', get_queried_object()->term_id )); ?>
+      </p>
+      <div class="container-grid">
+          <?php
+          if ( woocommerce_product_loop() ) {
+            if ( wc_get_loop_prop( 'total' ) ) {
+              while ( have_posts() ) {
+                the_post();
+
+
+       ?>            
+        <div class="main-featured__product">
+          <div href="<?php the_permalink(); ?>" class="main-featured__img">
+            <img src="<?php the_post_thumbnail_url('full');?>">
+      <div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
+        <a class="link-product" href="<?php the_permalink(); ?>"></a>
+        <div class="main-featured__icon" >
+           <?php// if (is_user_logged_in()){ ?>    
+                      <a href="?add_to_wishlist=<?php echo get_the_ID(); ?>">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
+                      </a>
+                    <?php// }else { ?>  
+                    <!--<div data-toggle="tooltip" data-placement="top" title="" data-original-title="<?php if(lang() == 'es'){echo "Debes estar iniciar sesión";}else{echo "You must be logged";} ?>" class="collection-item__icon" >
+                      <img src="<?php echo get_template_directory_uri();?>/assets/img/heart.png">
+                    </div> -->             
+                    <?php// } ?>
+           <a href="<?php the_permalink(); ?>">
+                        <img src="<?php echo get_template_directory_uri();?>/assets/img/search.png">
+                      </a>
+        </div>
+        </div>
+          </div>
+          <div class="main-featured__text">
+            <a class="main-featured__title" href="<?php the_permalink(); ?>">
+               <?php the_title();?>
+            </a>
+            <p class="main-featured__price">
+              <?php echo $product->get_price_html(); ?>
+            </p>
+          </div>
+        </div>
+        
+            <?php
+               }
+               }
+            ?>
+            <?php
+              woocommerce_product_loop_end();
+
+              /**
+               * Hook: woocommerce_after_shop_loop.
+               *
+               * @hooked woocommerce_pagination - 10
+               */
+            ?> 
+            <div class="blog-general__paginator">
+              <?php do_action( 'woocommerce_after_shop_loop' ); ?>
+            </div>
+            <?php              
+            } else {
+              /**
+               * Hook: woocommerce_no_products_found.
+               *
+               * @hooked wc_no_products_found - 10
+               */
+              do_action( 'woocommerce_no_products_found' );
+            } ?>            
+      </div>
+    </div>
+  </section>
+<?php } ?>
+
 <style type="text/css">
 span.count {
     display: none;

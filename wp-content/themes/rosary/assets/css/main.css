@@ -1275,6 +1275,7 @@ a.general-btn__simple:hover {
   background-color: #fcf4ea;
 	height: 107px;
 	transition: .3s;
+	    z-index: 9999;
 }
 @media (min-width: 0px) and (max-width: 767px) {
   .header-solid {
@@ -2721,10 +2722,12 @@ position: relative;
 
 .contact input,
 .contact textarea {
-  padding: 20px!important;
+  padding: 11px 20px!important;
+	height: auto !important;
   border-radius: 2px!important;
   border: solid 1px #d0bd9b!important;
   width: 100%;
+	    box-shadow: none!important;
 }
 .contact label,
 .contact input::placeholder,
