@@ -18,7 +18,10 @@ if ($_GET['orderby'] == 'price-desc' ){ $selectpr_desc = 'selected="selected"';}
 $urlsinparametros= explode('?', $_SERVER['REQUEST_URI'], 2);
 $urlsinparametros2= explode('tienda', $_SERVER['REQUEST_URI'], 2); 
    
-
+if($_GET["ct"] != NULL OR $_GET["filter_material"] != NULL OR $_GET["max_price"] != NULL) {
+ $show = "show";
+} 
+	
 $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['orderby'],$paged);         
 if($urlsinparametros[1] != NULL OR $urlsinparametros2[1] != NULL){ 
 ?>
@@ -43,7 +46,7 @@ if($urlsinparametros[1] != NULL OR $urlsinparametros2[1] != NULL){
                     <a class="shop-products__collpase" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     FILTROS <img src="<?php echo get_template_directory_uri();?>/assets/img/productos/arrow.png" >
   </a>
-                  <div class="collapse collapse-filter" id="collapseExample">
+                  <div class="collapse collapse-filter <?php echo $show ?>" id="collapseExample">
         <div class="shop-sidebar">
 
 

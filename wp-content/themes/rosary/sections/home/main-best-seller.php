@@ -23,7 +23,7 @@
 			<div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
 				<a class="link-product" href="<?php the_permalink(); ?>"></a>
 				<div class="main-featured__icon" >
-					   <a>
+					   <a class="" data-toggle="tooltip" data-placement="top" title="Producto bajo pre order">
                       <img src="<?php echo get_template_directory_uri();?>/assets/img/star.png">
                     </a>  
 					 <?php// if (is_user_logged_in()){ ?>    
@@ -59,3 +59,11 @@
       </div>
     </div>
   </section>
+<style>
+.main-featured .padding-top-bottom {
+    padding-bottom: 0;
+}
+	.main-featured .main-featured__carousel{
+		margin-bottom: 0;
+	}
+</style>

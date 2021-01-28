@@ -4347,7 +4347,6 @@ padding-bottom: 26px;
 }
 
 .general-promo .frm_fields_container{
-	display: flex;    justify-content: space-between;
 }
 .general-promo .frm_form_fields   {
 	width: 100%;
@@ -4394,14 +4393,24 @@ padding-bottom: 26px;
   display: flex;
   width: 100%;
   border-radius: 2px;
-  border: solid 1px #d0bd9b;
+ 
   background: transparent;
   justify-content: space-between;
 }
 
+.general-promo form input{ 
+ border: solid 1px #d0bd9b;
+
+}
+.general-promo form input[type="checkbox"] {
+	width: 20px!important;
+	margin-top: 20px;
+} 
 .general-promo .general-btn__rose {
-  width: 113px;
   height: 100%;
+	    width: 100%;
+    padding: 16PX;
+    margin-top: 10px;
 	border-radius: 0!important;
 }
 

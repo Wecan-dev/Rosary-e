@@ -131,6 +131,7 @@ defined( 'ABSPATH' ) || exit;
                    <div class="billing_last_name_checkout"></div>
                </td>               
            </tr>	
+	
            <tr>
                <td>
                    <div class="second_last_name_checkout"></div>
@@ -138,7 +139,17 @@ defined( 'ABSPATH' ) || exit;
                <td>
                    <div class="tipo_person_checkout"></div>
                </td>               
-           </tr>			
+           </tr>
+
+           <tr>
+               <td>
+                   <div class="document_client_checkout"></div>
+               </td>
+               <td>
+                   <div class="documen_client_date_checkout"></div>
+               </td>               
+           </tr>
+			
            <tr>
                <td colspan="2">
                    <div class="billing_address_1_field_checkout"></div>
@@ -247,8 +258,7 @@ defined( 'ABSPATH' ) || exit;
   $('#billing_postcode_field').appendTo('.billing_postcode_field_checkout');
   $('#guardar_info_checkout_field').appendTo('.guardar_info_checkout_field_checkout');
 	
-  $('#second_last_name').appendTo('.second_last_name_checkout');
-  $('#tipo_person').appendTo('.tipo_person_checkout');
+
 
   $('#billing_city').attr('placeholder','Ciudad');
 
