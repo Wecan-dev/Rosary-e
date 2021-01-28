@@ -5973,6 +5973,7 @@ transition: .3s;
 
 .field-privacy_policy, .field-privacy_policy .form-row  {
 	margin-bottom: 0!important;
+	    font-weight: 600;
 }
 
 .woocommerce-form-login__rememberme span {
@@ -6364,6 +6365,11 @@ thead {
 	    padding: 40px;
 }
 
+.field-privacy_policy  .form-row{
+	    flex-direction: row!important;
+    align-items: center;
+}
+
 .checkout-grid #customer_details{
 	  padding: 30px;
 } 
@@ -6541,7 +6547,8 @@ thead {
 .product-details .flex-viewport {
   width: 87%;
   margin-left: 10px;
-  /* height: 585px !important; */
+	height: 100% !important;
+	min-height: 325px !important;
 }
 
 ol.flex-control-nav.flex-control-thumbs {
