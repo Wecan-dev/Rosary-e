@@ -23,6 +23,9 @@
 			<div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
 				<a class="link-product" href="<?php the_permalink(); ?>"></a>
 				<div class="main-featured__icon" >
+					   <a>
+                      <img src="<?php echo get_template_directory_uri();?>/assets/img/star.png">
+                    </a>  
 					 <?php// if (is_user_logged_in()){ ?>    
                       <a href="?add_to_wishlist=<?php echo get_the_ID(); ?>">
                         <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">

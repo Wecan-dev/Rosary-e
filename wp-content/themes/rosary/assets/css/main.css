@@ -1574,13 +1574,14 @@ overflow: hidden;
     padding-left: 10px;
     padding-right: 10px;
     justify-content: space-around;
-    height: 68px;
+    height: 96px;
 }
 .main-featured__icon img{
 width: 20px!important;
     height: 20px!important;
     object-fit: contain!important;
     border: none;
+	margin: 4px 0;
 }
 .main-featured__product .main-featured__img img {
   height: 100%; 
@@ -3007,6 +3008,7 @@ height: auto;
 .widget {
 	margin-top:0;
 }
+
 .page-numbers {
 	    list-style: none;
     padding-left: 0;

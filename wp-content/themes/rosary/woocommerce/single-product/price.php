@@ -24,7 +24,8 @@ global $product;
 ?>
 <p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
 <?php if (get_field('stock_product') == 'No hay Stock'){ ?>
-<p class="advise product-notif"> 
-	<img src="<?php echo get_template_directory_uri();?>/assets/img/fire.png">
-	¡Ultimas unidades de este producto!</p>
+<p class="advise product-notif" data-toggle="tooltip" data-placement="top" title="Actualmente no hay unidades disponibles de este producto, puedes llevarlo bajo Pre orden con un tiempo de entrega aproximado de 15 días hábiles"> 
+	<img src="<?php echo get_template_directory_uri();?>/assets/img/star.png">
+  ¡Producto disponible bajo pedido!
+	</p>
 <?php } ?>

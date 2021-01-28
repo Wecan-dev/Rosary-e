@@ -4,7 +4,9 @@ wow = new WOW({
   offset: 100,
 });
 wow.init();
-
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 
 $(function () {
   'use strict'
