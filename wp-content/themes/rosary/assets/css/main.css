@@ -1147,11 +1147,11 @@ a.general-btn__simple:hover {
 }
 
 .navbar-brand img {
-  margin-top: 19px;
-  object-fit: contain;
-  margin-bottom: 10px;
-  width: 90px;
-  height: 56px;
+     margin-top: 10px;
+    object-fit: contain;
+    margin-bottom: 2px;
+    width: 104px;
+    height: 78px;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
@@ -4911,6 +4911,36 @@ display: block!important;
 .shop-products .main-featured__product {
   margin: 0;
 }
+
+.shop-products .bapf_no_products {
+	    grid-column: 1/5;
+}
+
+.categorie-product__list .bapf_no_products {
+	display: none;
+}
+
+.shipping-calculator-form button{
+	font-size: 13px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.73px;
+    color: #000000;
+	    color: #000!important;
+    border-radius: 2px;
+    background-color: #d0bd9b!important;
+    border: none;
+    width: 215px;
+    height: 50px;
+    display: flex;
+    text-transform: uppercase;
+    font-family: Brandon Text Bold;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
 .title-collapse {
 	    border-top: solid 2px #d0bd9b;
     padding-top: 17px;
@@ -5268,6 +5298,7 @@ color: #fff;
 .collapse-filter {
 	    position: absolute;
     z-index: 1;
+	    width: max-content;
     top: 36px;
 	    left: 0;
     background: rgb(250, 245, 238);
@@ -7058,4 +7089,8 @@ li.woocommerce-widget-layered-nav-list__item.wc-layered-nav-term a {
 }
 form.form-wppp-select.products-per-page {
     display: none;
+}
+
+table.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents.info td {
+    border: none;
 }

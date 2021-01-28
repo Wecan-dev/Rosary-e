@@ -21,11 +21,167 @@ defined( 'ABSPATH' ) || exit;
 <div class="woocommerce-billing-fields">
 	<?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
 
-		<h3><?php esc_html_e( 'Billing &amp; Shipping', 'woocommerce' ); ?></h3>
+		<!--<h3><?php esc_html_e( 'Billing &amp; Shipping', 'woocommerce' ); ?></h3>-->
+    <h3>Información </h3>
+    <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents info">
+           <tr>
+               <td>
+                   <h4 class="cuenta_checkout"></h4>
+               </td>
+              
+           </tr>
+           <tr>
+               <td colspan="2">
+                   <div class="email_checkout"></div>
+               </td>              
+           </tr> 
+           <tr>
+               <td colspan="2">
+                   <div class="correo_noticias_field"></div>
+               </td>              
+           </tr>   
+           <tr>
+               <td colspan="2">
+                   <h4>Dirección de envíos </h4>
+               </td>               
+           </tr>                     
+           <tr>
+               <td>
+                   <div class="billing_first_name_checkout"></div>
+               </td>
+               <td>
+                   <div class="billing_last_name_checkout"></div>
+               </td>               
+           </tr>  
+           <tr>
+               <td colspan="2">
+                   <div class="billing_address_1_field_checkout"></div>
+               </td>              
+           </tr>   
+           <tr>
+               <td colspan="2">
+                   <div class="billing_address_2_field_checkout"></div>
+               </td>              
+           </tr>                    
+           <tr>
+               <td>
+                   <div class="billing_city_field_checkout"></div>
+               </td>
+               <td>
+                   <div class="billing_phone_checkout"></div>
+               </td>               
+           </tr>                                        
+    </table>
+
+    <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents info">
+           <tr>
+               <td>
+                   <label class="label_billing_country_field_checkout">País/Región</label>
+                   <div class="billing_country_field_checkout"></div>
+               </td>
+               <td>
+                   <label class="label_billing_state_checkout">Provincia</label>
+                   <div class="billing_state_field_checkout"></div>
+               </td>   
+               <td>
+                   <label class="label_billing_postcode_field">Código postal</label>
+                   <div class="billing_postcode_field_checkout"></div>
+               </td>                            
+           </tr>
+           <tr>
+               <td colspan="3">
+                   <div class="guardar_info_checkout_field_checkout"></div>
+               </td>                            
+           </tr>           
+        </table>      
+
+
 
 	<?php else : ?>
 
-		<h3><?php esc_html_e( 'Billing details', 'woocommerce' ); ?></h3>
+		<!--<h3><?php esc_html_e( 'Billing details', 'woocommerce' ); ?></h3>-->
+		<h3>Información </h3>
+		<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents info">
+           <tr>
+               <td>
+                   <h4 class="cuenta_checkout"></h4>
+               </td>
+              
+           </tr>
+           <tr>
+               <td colspan="2">
+                   <div class="email_checkout"></div>
+               </td>              
+           </tr> 
+           <tr>
+               <td colspan="2">
+                   <div class="correo_noticias_field"></div>
+               </td>              
+           </tr>   
+           <tr>
+               <td colspan="2">
+                   <h4>Dirección de envíos </h4>
+               </td>               
+           </tr> 
+		   <tr>
+               <td>
+                   <div class="billing_first_name_checkout"></div>
+               </td>
+               <td>
+                   <div class="billing_last_name_checkout"></div>
+               </td>               
+           </tr>	
+           <tr>
+               <td>
+                   <div class="second_last_name_checkout"></div>
+               </td>
+               <td>
+                   <div class="tipo_person_checkout"></div>
+               </td>               
+           </tr>			
+           <tr>
+               <td colspan="2">
+                   <div class="billing_address_1_field_checkout"></div>
+               </td>              
+           </tr>   
+           <tr>
+               <td colspan="2">
+                   <div class="billing_address_2_field_checkout"></div>
+               </td>              
+           </tr>                    
+           <tr>
+               <td>
+                   <div class="billing_city_field_checkout"></div>
+               </td>
+               <td>
+                   <div class="billing_phone_checkout"></div>
+               </td>               
+           </tr>                                        
+		</table>
+
+		<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents info">
+           <tr>
+               <td>
+               	   <label class="label_billing_country_field_checkout">País/Región</label>
+                   <div class="billing_country_field_checkout"></div>
+               </td>
+               <td>
+               	   <label class="label_billing_state_checkout">Provincia</label>
+                   <div class="billing_state_field_checkout"></div>
+               </td>   
+               <td>
+               	   <label class="label_billing_postcode_field">Código postal</label>
+                   <div class="billing_postcode_field_checkout"></div>
+               </td>                            
+           </tr>
+           <tr>
+               <td colspan="3">
+                   <div class="guardar_info_checkout_field_checkout"></div>
+               </td>                            
+           </tr>           
+        </table>   		
+
+
 
 	<?php endif; ?>
 
@@ -72,3 +228,35 @@ defined( 'ABSPATH' ) || exit;
 		<?php do_action( 'woocommerce_after_checkout_registration_form', $checkout ); ?>
 	</div>
 <?php endif; ?>
+
+<script type="text/javascript">
+  $('.woocommerce-form-login-toggle').appendTo('.cuenta_checkout');
+  $('.form_login').appendTo('.cuenta_checkout');
+  $('#billing_email_field').appendTo('.email_checkout');
+  $('#correo_noticias_field').appendTo('.correo_noticias_field');
+  $('#billing_first_name_field').appendTo('.billing_first_name_checkout');
+  $('#billing_last_name_field').appendTo('.billing_last_name_checkout');
+  $('#billing_address_1 input').prop('placeholder', 'dsff');
+  $('#billing_address_1_field').appendTo('.billing_address_1_field_checkout');
+  $('#billing_city_field').appendTo('.billing_city_field_checkout');
+  $('#billing_address_2_field').appendTo('.billing_address_2_field_checkout');
+  $('#billing_address_2_field').appendTo('.billing_address_2_field_checkout');
+  $('#billing_phone').appendTo('.billing_phone_checkout');
+  $('#billing_country_field').appendTo('.billing_country_field_checkout');
+  $('#billing_state_field').appendTo('.billing_state_field_checkout');
+  $('#billing_postcode_field').appendTo('.billing_postcode_field_checkout');
+  $('#guardar_info_checkout_field').appendTo('.guardar_info_checkout_field_checkout');
+	
+  $('#second_last_name').appendTo('.second_last_name_checkout');
+  $('#tipo_person').appendTo('.tipo_person_checkout');
+
+  $('#billing_city').attr('placeholder','Ciudad');
+
+  var ur = "CO"; 
+  $(document).ready(function(){
+    $("#billing_country").val(ur);
+    $('#billing_country').prop('disabled', true);
+    $('#billing_city').prop('disabled', false);
+  }); 
+
+</script>

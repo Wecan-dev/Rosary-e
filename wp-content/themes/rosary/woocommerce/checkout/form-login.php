@@ -23,8 +23,18 @@ if ( is_user_logged_in() || 'no' === get_option( 'woocommerce_enable_checkout_lo
 
 ?>
 <div class="woocommerce-form-login-toggle">
-	<?php wc_print_notice( apply_filters( 'woocommerce_checkout_login_message', esc_html__( 'Returning customer?', 'woocommerce' ) ) . ' <a href="#" class="showlogin">' . esc_html__( 'Click here to login', 'woocommerce' ) . '</a>', 'notice' ); ?>
+<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents info">
+  <tr>
+  	<td><h4>Información  de contacto</h4></td>
+     <td>
+         
+	         <?php wc_print_notice( apply_filters( 'woocommerce_checkout_login_message', esc_html__( 'tienes una cuenta? ', 'woocommerce' ) ) . ' <a href="#" class="showlogin">' . esc_html__( 'iniciar sesión', 'woocommerce' ) . '</a>', 'notice' ); ?>
+         
+     </td>
+  </tr>
+</table>
 </div>
+<div class="form_login">
 <?php
 
 woocommerce_login_form(
@@ -34,3 +44,6 @@ woocommerce_login_form(
 		'hidden'   => true,
 	)
 );
+?>
+</div>
+<?php
