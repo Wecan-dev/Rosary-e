@@ -1533,6 +1533,29 @@ overflow: hidden;
     position: absolute;
     left: 0;
     top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	  background: #00000024;
+}
+
+.link-product__stock {
+    font-size: 13px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.73px;
+    color: #ffffff;
+    font-family: Brandon Text Bold;
+    padding: 14px 9px;
+    border: solid 1px #ffffff;
+    text-transform: uppercase;
+    transition: .3s;
+    display: block;
+    text-align: center;
+  
+    margin-bottom: 0;
 }
 .main-featured__mask {
 	position: absolute;
@@ -1568,13 +1591,13 @@ overflow: hidden;
     justify-content: space-between;
     position: absolute;
     right: 11px;
+	    height: 73px;
     bottom: 14px;
     flex-direction: column;
     align-items: center;
     padding-left: 10px;
     padding-right: 10px;
     justify-content: space-around;
-    height: 96px;
 }
 .main-featured__icon img{
 width: 20px!important;
@@ -2393,6 +2416,7 @@ position: relative;
 .main-footer .main-footer__logo img {
   width: 128px;
   height: 80px;
+	    object-fit: contain;
 }
 
 .main-footer .main-footer__title {

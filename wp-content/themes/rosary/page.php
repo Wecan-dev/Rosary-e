@@ -84,11 +84,16 @@ Esencias que hemos mirado hacia atrás en el tiempo para encontrarnos con una ir
                   <div href="<?php the_permalink(); ?>" class="main-featured__img">
             <img src="<?php the_post_thumbnail_url('full');?>">
   	<div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
-				<a class="link-product" href="<?php the_permalink(); ?>"></a>
+								<a class="link-product" href="<?php the_permalink(); ?>">
+				 <?php if (meta_value('stock_product', get_the_ID()) == 'No hay Stock'){ ?>	
+					<p class="link-product__stock">
+						¡Disponible bajo pedido!
+					</p>
+				  <?php }else { ?>
+					  <?php } ?>
+				</a>
 				<div class="main-featured__icon" >
-					   <a>
-                      <img src="<?php echo get_template_directory_uri();?>/assets/img/star.png">
-                    </a>  
+
 					 <?php// if (is_user_logged_in()){ ?>    
                       <a href="?add_to_wishlist=<?php echo get_the_ID(); ?>">
                         <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
@@ -134,11 +139,16 @@ Esencias que hemos mirado hacia atrás en el tiempo para encontrarnos con una ir
                     <div href="<?php the_permalink(); ?>" class="main-featured__img">
             <img src="<?php the_post_thumbnail_url('full');?>">
  	<div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
-				<a class="link-product" href="<?php the_permalink(); ?>"></a>
+								<a class="link-product" href="<?php the_permalink(); ?>">
+				 <?php if (meta_value('stock_product', get_the_ID()) == 'No hay Stock'){ ?>	
+					<p class="link-product__stock">
+						¡Disponible bajo pedido!
+					</p>
+				  <?php }else { ?>
+					  <?php } ?>
+				</a>
 				<div class="main-featured__icon" >
-					   <a>
-                      <img src="<?php echo get_template_directory_uri();?>/assets/img/star.png">
-                    </a>  
+					   
 					 <?php// if (is_user_logged_in()){ ?>    
                       <a href="?add_to_wishlist=<?php echo get_the_ID(); ?>">
                         <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
@@ -213,11 +223,16 @@ Esencias que hemos mirado hacia atrás en el tiempo para encontrarnos con una ir
                   <div href="<?php the_permalink(); ?>" class="main-featured__img">
             <img src="<?php the_post_thumbnail_url('full');?>">
 	<div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
-				<a class="link-product" href="<?php the_permalink(); ?>"></a>
+								<a class="link-product" href="<?php the_permalink(); ?>">
+				 <?php if (meta_value('stock_product', get_the_ID()) == 'No hay Stock'){ ?>	
+					<p class="link-product__stock">
+						¡Disponible bajo pedido!
+					</p>
+				  <?php }else { ?>
+					  <?php } ?>
+				</a>
 				<div class="main-featured__icon" >
-					   <a>
-                      <img src="<?php echo get_template_directory_uri();?>/assets/img/star.png">
-                    </a>  
+					 
 					 <?php// if (is_user_logged_in()){ ?>    
                       <a href="?add_to_wishlist=<?php echo get_the_ID(); ?>">
                         <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
@@ -264,11 +279,16 @@ Esencias que hemos mirado hacia atrás en el tiempo para encontrarnos con una ir
                   <div href="<?php the_permalink(); ?>" class="main-featured__img">
             <img src="<?php the_post_thumbnail_url('full');?>">
 	<div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
-				<a class="link-product" href="<?php the_permalink(); ?>"></a>
+								<a class="link-product" href="<?php the_permalink(); ?>">
+				 <?php if (meta_value('stock_product', get_the_ID()) == 'No hay Stock'){ ?>	
+					<p class="link-product__stock">
+						¡Disponible bajo pedido!
+					</p>
+				  <?php }else { ?>
+					  <?php } ?>
+				</a>
 				<div class="main-featured__icon" >
-					   <a>
-                      <img src="<?php echo get_template_directory_uri();?>/assets/img/star.png">
-                    </a>  
+					
 					 <?php// if (is_user_logged_in()){ ?>    
                       <a href="?add_to_wishlist=<?php echo get_the_ID(); ?>">
                         <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">

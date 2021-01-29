@@ -143,7 +143,7 @@ defined( 'ABSPATH' ) || exit;
 
            <tr>
                <td>
-                   <div class="document_client_checkout"></div>
+                   <div class="document_client_field_checkout"></div>
                </td>
                <td>
                    <div class="documen_client_date_checkout"></div>
@@ -257,16 +257,25 @@ defined( 'ABSPATH' ) || exit;
   $('#billing_state_field').appendTo('.billing_state_field_checkout');
   $('#billing_postcode_field').appendTo('.billing_postcode_field_checkout');
   $('#guardar_info_checkout_field').appendTo('.guardar_info_checkout_field_checkout');
-	
+ 
+  $('#second_last_name_field').appendTo('.second_last_name_checkout');
+  $('#tipo_person_field').appendTo('.tipo_person_checkout');
+  $('#document_client_field').appendTo('.document_client_field_checkout');
+  $('#documen_client_date_field').appendTo('.documen_client_date_checkout');
 
 
   $('#billing_city').attr('placeholder','Ciudad');
+  $('#billing_address_1').attr('placeholder','Dirección');
+	
+  //$('.select2-selection__placeholder > span').text("Seleccionar Color");
+  document.querySelector('#select2-tipo_person-container span').innerHTML = '1 elemento';	
 
   var ur = "CO"; 
   $(document).ready(function(){
+	$('#billing_country').prop('disabled', true);  
     $("#billing_country").val(ur);
-    $('#billing_country').prop('disabled', true);
-    $('#billing_city').prop('disabled', false);
+   // $('#billing_country').prop('disabled', false);
+   // $('#billing_city').prop('disabled', false);
   }); 
 
 </script>
