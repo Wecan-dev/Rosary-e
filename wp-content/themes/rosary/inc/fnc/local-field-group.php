@@ -91,30 +91,6 @@ acf_add_local_field_group(array(
 			'media_upload' => 1,
 			'delay' => 0,
 		),
-		array(
-			'key' => 'field_601178f4cf7c5',
-			'label' => 'Stock',
-			'name' => 'stock_product',
-			'type' => 'radio',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'choices' => array(
-				'Hay Stock' => 'Hay Stock',
-				'No hay Stock' => 'No hay Stock',
-			),
-			'allow_null' => 0,
-			'other_choice' => 0,
-			'default_value' => '',
-			'layout' => 'horizontal',
-			'return_format' => 'value',
-			'save_other_choice' => 0,
-		),
 	),
 	'location' => array(
 		array(

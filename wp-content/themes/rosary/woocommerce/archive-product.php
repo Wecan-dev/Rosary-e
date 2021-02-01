@@ -193,12 +193,16 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
                 <img src="<?php the_post_thumbnail_url('full');?>">
                 <div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
 									<a class="link-product" href="<?php the_permalink(); ?>">
-				 <?php if (meta_value('stock_product', get_the_ID()) == 'No hay Stock'){ ?>	
+								 <?php if (meta_value('_stock_status', get_the_ID()) == 'onbackorder'){ ?>
 					<p class="link-product__stock">
 						¡Disponible bajo pedido!
 					</p>
-				  <?php }else { ?>
-					  <?php } ?>
+<?php } ?>
+<?php if (meta_value('_stock_status', get_the_ID()) == 'outofstock'){ ?>
+		<p class="link-product__stock">
+						Sold Out
+					</p>			
+					<?php } ?>
 				</a>
                   <div class="main-featured__icon" >                   
 					  <a href="?add_to_wishlist=<?php echo get_the_ID(); ?>">

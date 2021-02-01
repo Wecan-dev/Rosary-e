@@ -23,9 +23,33 @@ global $product;
 
 ?>
 <p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
-<?php if (get_field('stock_product') == 'No hay Stock'){ ?>
+<?php if (meta_value('_stock_status', get_the_ID()) == 'onbackorder'){ ?>
 <p class="advise product-notif" data-toggle="tooltip" data-placement="top" title="Actualmente no hay unidades disponibles de este producto, puedes llevarlo bajo Pre orden con un tiempo de entrega aproximado de 15 días hábiles"> 
 	<img src="<?php echo get_template_directory_uri();?>/assets/img/star.png">
   ¡Producto disponible bajo pedido!
 	</p>
 <?php } ?>
+<?php if (meta_value('_stock_status', get_the_ID()) == 'outofstock'){ ?>
+<p class="advise product-notif"> 
+	
+  ¡Agotado!
+	</p>
+<?php } ?>
+<style>
+.tooltip-inner {
+background-color: #d0bd9b;
+	color: #000!important;
+}
+.tooltip.bs-tooltip-right .arrow:before {
+    border-right-color: #d0bd9b !important;
+}
+.tooltip.bs-tooltip-left .arrow:before {
+    border-left-color: #d0bd9b !important;
+}
+.tooltip.bs-tooltip-bottom .arrow:before {
+    border-bottom-color: #d0bd9b !important;
+}
+.tooltip.bs-tooltip-top .arrow:before {
+    border-top-color: #d0bd9b !important;
+}
+</style>

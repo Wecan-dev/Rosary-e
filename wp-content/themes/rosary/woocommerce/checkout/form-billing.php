@@ -117,7 +117,9 @@ defined( 'ABSPATH' ) || exit;
                <td colspan="2">
                    <div class="correo_noticias_field"></div>
                </td>              
-           </tr>   
+           </tr> 
+	    </table>
+	    <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents info">
            <tr>
                <td colspan="2">
                    <h4>Dirección de envíos </h4>
@@ -272,8 +274,9 @@ defined( 'ABSPATH' ) || exit;
 
   var ur = "CO"; 
   $(document).ready(function(){
-	$('#billing_country').prop('disabled', true);  
-    $("#billing_country").val(ur);
+	//$('#billing_country').prop('disabled', false);  
+	  document.getElementById("billing_country").disabled=true;
+    $("#billing_country").val('CO');
    // $('#billing_country').prop('disabled', false);
    // $('#billing_city').prop('disabled', false);
   }); 

@@ -3094,6 +3094,7 @@ text-align: center;
   font-family: Brandon Text Medium;
   letter-spacing: normal;
   color: #000000;
+
 }
 
 .blog-general__paginator img {
@@ -5438,13 +5439,13 @@ color: #fff;
 
 @media (min-width: 768px) and (max-width: 991px) {
   .shop-products .container-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .shop-products .container-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -7135,4 +7136,8 @@ form.form-wppp-select.products-per-page {
 
 table.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents.info td {
     border: none;
+}
+
+.woocommerce-variation-availability {
+    display: none;
 }
