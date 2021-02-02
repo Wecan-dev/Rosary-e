@@ -319,7 +319,7 @@ outlet
 
     <?php endif; ?>
 	<script>
-var end = new Date('12/26/2020 9:30 AM');
+var end = new Date('02/28/2021 11:59 PM');
 
     var _second = 1000;
     var _minute = _second * 60;

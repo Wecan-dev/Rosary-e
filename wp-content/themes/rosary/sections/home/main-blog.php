@@ -2,7 +2,7 @@
   <?php
   $args = 
   array(
-    'post_type' => 'post',
+    'post_type' => 'postinicio',
     'posts_per_page' => 2,
     'order' => 'DESC',             
 
@@ -19,12 +19,12 @@
             <?php the_title(); ?>
           </a>
           <p class="main-general__description">
-			  <?php the_field('texto_inicio_blog'); ?>
+            <?php the_content(); ?>
           </p>
         </div>
         <div class="main-blog__img">
           <img class="main-blog__img--xl"  src="<?php the_post_thumbnail_url('full'); ?>">
-			<img class="main-blog__img--xs" src="<?php the_field('bg-blog'); ?>">
+			<img class="main-blog__img--xs" src="<?php the_field('bg-post'); ?>">
 			
         </div>
       </div>
