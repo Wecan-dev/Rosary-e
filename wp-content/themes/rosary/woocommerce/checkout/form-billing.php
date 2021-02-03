@@ -101,98 +101,35 @@ defined( 'ABSPATH' ) || exit;
 
 		<!--<h3><?php esc_html_e( 'Billing details', 'woocommerce' ); ?></h3>-->
 		<h3>Información </h3>
-		<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents info">
-           <tr>
-               <td>
-                   <h4 class="cuenta_checkout"></h4>
-               </td>
-              
-           </tr>
-           <tr>
-               <td colspan="2">
-                   <div class="email_checkout"></div>
-               </td>              
-           </tr> 
-           <tr>
-               <td colspan="2">
-                   <div class="correo_noticias_field"></div>
-               </td>              
-           </tr> 
-	    </table>
-	    <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents info">
-           <tr>
-               <td colspan="2">
-                   <h4>Dirección de envíos </h4>
-               </td>               
-           </tr> 
-		   <tr>
-               <td>
-                   <div class="billing_first_name_checkout"></div>
-               </td>
-               <td>
-                   <div class="billing_last_name_checkout"></div>
-               </td>               
-           </tr>	
-	
-           <tr>
-               <td>
-                   <div class="second_last_name_checkout"></div>
-               </td>
-               <td>
-                   <div class="tipo_person_checkout"></div>
-               </td>               
-           </tr>
-
-           <tr>
-               <td>
-                   <div class="document_client_field_checkout"></div>
-               </td>
-               <td>
-                   <div class="documen_client_date_checkout"></div>
-               </td>               
-           </tr>
-			
-           <tr>
-               <td colspan="2">
-                   <div class="billing_address_1_field_checkout"></div>
-               </td>              
-           </tr>   
-           <tr>
-               <td colspan="2">
-                   <div class="billing_address_2_field_checkout"></div>
-               </td>              
-           </tr>                    
-           <tr>
-               <td>
-                   <div class="billing_city_field_checkout"></div>
-               </td>
-               <td>
-                   <div class="billing_phone_checkout"></div>
-               </td>               
-           </tr>                                        
-		</table>
-
-		<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents info">
-           <tr>
-               <td>
-               	   <label class="label_billing_country_field_checkout">País/Región</label>
-                   <div class="billing_country_field_checkout"></div>
-               </td>
-               <td>
-               	   <label class="label_billing_state_checkout">Provincia</label>
-                   <div class="billing_state_field_checkout"></div>
-               </td>   
-               <td>
-               	   <label class="label_billing_postcode_field">Código postal</label>
-                   <div class="billing_postcode_field_checkout"></div>
-               </td>                            
-           </tr>
-           <tr>
-               <td colspan="3">
-                   <div class="guardar_info_checkout_field_checkout"></div>
-               </td>                            
-           </tr>           
-        </table>   		
+		<div class="cuenta_checkout_v">
+			<h4 class="cuenta_checkout"></h4>
+	    </div>
+	    <div class="email_checkout"></div>
+	    <div class="correo_noticias_field"></div>
+        <h4>Dirección de envíos </h4>
+        <div class="billing_first_name_checkout"></div>
+        <div class="billing_last_name_checkout"></div>       
+        <div class="second_last_name_checkout"></div>
+	    <div class="tipo_person_checkout"></div>
+	    <div class="document_client_field_checkout"></div>
+	    <div class="documen_client_date_checkout"></div>
+        <div class="billing_address_1_field_checkout"></div>
+        <div class="billing_address_2_field_checkout"></div>
+		<div class="billing_postcode_field_checkout"></div>	          
+        <div class="billing_phone_checkout"></div>
+	    <div class="billing_country_field_checkout_v">
+             <label class="label_billing_country_field_checkout">País/Región</label>
+             <div class="billing_country_field_checkout"></div>			
+	    </div>
+	    <div class="billing_country_field_checkout_v">
+             <label class="label_billing_state_checkout">Provincia</label>
+             <div class="billing_state_field_checkout"></div>			
+	    </div>	
+	    <div class="billing_country_field_checkout_v">
+            <label class="label_billing_postcode_field">Ciudad</label>                 
+			<div class="billing_city_field_checkout"></div>			
+	    </div>              
+		<div class="guardar_info_checkout_field_checkout"></div>   		
 
 
 
@@ -270,12 +207,12 @@ defined( 'ABSPATH' ) || exit;
   $('#billing_address_1').attr('placeholder','Dirección');
 	
   //$('.select2-selection__placeholder > span').text("Seleccionar Color");
-  document.querySelector('#select2-tipo_person-container span').innerHTML = '1 elemento';	
+  //document.querySelector('#select2-tipo_person-container span').innerHTML = '1 elemento';	
 
   var ur = "CO"; 
   $(document).ready(function(){
 	//$('#billing_country').prop('disabled', false);  
-	  document.getElementById("billing_country").disabled=true;
+	
     $("#billing_country").val('CO');
    // $('#billing_country').prop('disabled', false);
    // $('#billing_city').prop('disabled', false);

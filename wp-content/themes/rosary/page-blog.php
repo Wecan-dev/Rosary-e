@@ -6,8 +6,8 @@
         $args = 
         array(
           'type' => 'post',
-      'paged' => $paged,
-      'posts_per_page' => 3, 
+          'paged' => $paged,
+          'posts_per_page' => 3, 
           ); ?>
         <?php $loop = new WP_Query( $args ); ?>
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>        

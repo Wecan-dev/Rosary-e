@@ -60,6 +60,7 @@
                   <img src="<?php echo get_template_directory_uri();?>/assets/img/bag@2x.png"><?php echo wp_kses_data(WC()->cart->get_cart_contents_count()); ?>
                 </a>
               </li>
+					
             </ul>
 				 <button class="navbar-toggler p-2 border-0 hamburger hamburger--elastic ml-autos" data-toggle="offcanvas" type="button">
 <span class="hamburger-box"></span>
@@ -155,6 +156,22 @@ outlet
                   <img src="<?php echo get_template_directory_uri();?>/assets/img/bag@2x.png"><?php echo wp_kses_data(WC()->cart->get_cart_contents_count()); ?>
                 </a>
               </li>
+				<li>
+					 <a class="nav-link" data="offcanvas">
+                 <form action="<?php echo esc_url( $action_link ); ?>" id="frm_search_form" method="get" class="searchform">      
+           <div id="custom-search">
+            <form method="get" >
+              <input type="text" name="s" class="search-query" placeholder="Buscar" />
+              <input type="hidden" name="post_type" value="product">
+              <button type="button">
+			          <img src="<?php echo get_template_directory_uri();?>/assets/img/loupe.png">
+			        </button>
+            </form>  
+            </div>
+         </form> 
+                </a>
+					 
+					</li>
             </ul>
           </ul>
         </div>
@@ -308,7 +325,19 @@ outlet
                   <img src="<?php echo get_template_directory_uri();?>/assets/img/bag@2x.png"><?php echo wp_kses_data(WC()->cart->get_cart_contents_count()); ?>
                 </a>
               </li>
-
+	 <a class="nav-link" data="offcanvas">
+                 <form action="<?php echo esc_url( $action_link ); ?>" id="frm_search_form" method="get" class="searchform">      
+           <div id="custom-search">
+            <form method="get" >
+              <input type="text" name="s" class="search-query" placeholder="Buscar" />
+              <input type="hidden" name="post_type" value="product">
+              <button type="button">
+                <img src="<?php echo get_template_directory_uri();?>/assets/img/loupe.png">
+              </button>
+            </form>
+            </div>
+         </form> 
+                </a>
 
             </ul>
           </ul>
@@ -318,6 +347,106 @@ outlet
   </header>  
 
     <?php endif; ?>
+<style>
+	
+	
+/* search model */
+
+
+
+#custom-search .search-query {
+  padding: 0 4px;
+  width: 50px;
+  height: auto;
+  border: 2px solid transparent;
+  background-color: transparent;
+  color: transparent;
+  font-size: 15px;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  margin-bottom: 0;
+}
+
+/* Hide Text when unfocused plus fallbacks */
+#custom-search .search-query::placeholder {
+  color: transparent;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+#custom-search .search-query::-webkit-input-placeholder {
+  color: transparent;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+#custom-search .search-query::-moz-placeholder {
+  color: transparent;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+#custom-search .search-query:-moz-placeholder {
+  color: transparent;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+#custom-search .search-query:-ms-input-placeholder {
+  color: transparent;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+/* Style when Search is selected */
+#custom-search .search-query:focus {
+  border-radius: 5px;
+  border: 2px solid white;
+  background-color: #ffffff;
+  width: 250px;
+  color: #000;
+}
+
+/* Style for placeholder value plus fallbacks */
+#custom-search .search-query:focus::placeholder {
+  color: #cccccc;
+}
+
+#custom-search .search-query:focus::-webkit-input-placeholder {
+  color: #cccccc;
+}
+
+#custom-search .search-query:focus::-moz-placeholder {
+  color: transparent;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+#custom-search .search-query:focus::-moz-placeholder {
+  color: transparent;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+#custom-search .search-query:focus:-ms-input-placeholder {
+  color: #cccccc;
+}
+
+/* Style for Button */
+#custom-search button {
+  border: 0;
+  background: none;
+  padding: 0;
+  width: 0;
+  margin-top: -5px;
+  position: relative;
+  top: -1px;
+  left: -29px;
+  margin-bottom: 0;
+  border-radius: 3px;
+}
+	</style>
+	
 	<script>
 var end = new Date('02/28/2021 11:59 PM');
 
@@ -349,4 +478,24 @@ var end = new Date('02/28/2021 11:59 PM');
     }
 
     timer = setInterval(showRemaining, 1000);
+		
+		
+  // Search model
+  $('.search-switch').on('click', function() {
+    $('.search-model').fadeIn(400);
+  });
+
+  $('.search-close-switch').on('click', function() {
+    $('.search-model').fadeOut(400,function(){
+      $('#search-input').val('');
+    });
+  });
+
+  // buscador
+  // Focus Covers Full Area
+$(function() {
+  $("#custom-search").click(function() {
+    $(".search-query").focus();
+    });
+});
 </script>

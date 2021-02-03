@@ -135,6 +135,7 @@ Phone: <?php echo get_theme_mod('phone'); ?>
       </div>
     </div>
   </footer>
+<?php styles_checkout() ?>
   <div class="main-powered">
     <div class="container">
       <div class="d-flex justify-content-center main-powered__flex">

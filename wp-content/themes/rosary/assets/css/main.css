@@ -6399,6 +6399,44 @@ thead {
 	    padding: 40px;
 }
 
+.billing_phone_checkout input{
+	width: 100%;
+}
+.woocommerce form .form-row .input-checkbox {
+	height: auto!important;
+}
+#tipo_person_field, #document_client_field {
+	    margin-bottom: 18px!important;
+}
+
+label.label_billing_country_field_checkout, label.label_billing_state_checkout, label.label_billing_postcode_field {
+	display: none;
+} 
+.woocommerce-billing-fields h4 {
+	    font-family: Brandon Text Medium;
+    font-size: 15px;
+    font-stretch: normal;
+    font-style: normal;
+    /* text-transform: uppercase; */
+    margin-bottom: 14px;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #d0bd9b;
+    margin-top: 14px;
+}
+
+#ship-to-different-address {
+	   font-family: Brandon Text Medium;
+    font-size: 15px;
+    font-stretch: normal;
+    font-style: normal;
+    /* text-transform: uppercase; */
+    margin-bottom: 14px;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000;
+    margin-top: 14px;
+}
 .field-privacy_policy  .form-row{
 	    flex-direction: row!important;
     align-items: center;
@@ -7140,4 +7178,11 @@ table.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents.info
 
 .woocommerce-variation-availability {
     display: none;
+}
+
+/* style checkout */
+section.general-legal {
+    background-color: #f0e3d4;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

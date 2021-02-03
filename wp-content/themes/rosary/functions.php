@@ -399,6 +399,37 @@ function wpdocs_filter_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'wpdocs_filter_wp_title', 10, 2 );
+
+/*********** Styles checkout ***********/
+/*********** Styles checkout ***********/
+function styles_checkout(){ 
+
+    foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+         $item = $item +1;
+        }
+
+    do_action( 'woocommerce_review_order_before_cart_contents' );
+
+    foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
+      $_product = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+      if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_checkout_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
+        if ($item > 1) {}
+        else{ ?>
+      
+        <style type="text/css">
+          .wc-block-components-order-summary-item__description, .wc-block-components-order-summary-item__image {
+              display: table-row-group;
+              vertical-align: top;
+          }
+          .wc-block-components-order-summary-item__image>img {
+              max-width: 300px;
+              width: 300px;
+          }
+        </style>
+     
+        <?php
+      }
+    }
+  }
+}
 ?>
-
-

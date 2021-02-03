@@ -131,10 +131,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
           </div>
 
           <div class="shop-sidebar__newsletter">
-            <input placeholder="Email for Newsletter" type="Email">
-            <a href="">
-<img src="<?php echo get_template_directory_uri();?>/assets/img/productos/envelope.png">
-</a>
+            <?php echo do_shortcode('[formidable id=3]');  ?>
           </div>
         </div>
 </div>
@@ -192,20 +189,20 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
               <div href="<?php the_permalink(); ?>" class="main-featured__img">
                 <img src="<?php the_post_thumbnail_url('full');?>">
                 <div class="main-featured__mask" style="background-image: url('<?php the_field('imagen_hover_del_producto'); ?>')" >
-									<a class="link-product" href="<?php the_permalink(); ?>">
-								 <?php if (meta_value('_stock_status', get_the_ID()) == 'onbackorder'){ ?>
-					<p class="link-product__stock">
-						¡Disponible bajo pedido!
-					</p>
+                  <a class="link-product" href="<?php the_permalink(); ?>">
+                 <?php if (meta_value('_stock_status', get_the_ID()) == 'onbackorder'){ ?>
+          <p class="link-product__stock">
+            ¡Disponible bajo pedido!
+          </p>
 <?php } ?>
 <?php if (meta_value('_stock_status', get_the_ID()) == 'outofstock'){ ?>
-		<p class="link-product__stock">
-						Sold Out
-					</p>			
-					<?php } ?>
-				</a>
+    <p class="link-product__stock">
+            Sold Out
+          </p>      
+          <?php } ?>
+        </a>
                   <div class="main-featured__icon" >                   
-					  <a href="?add_to_wishlist=<?php echo get_the_ID(); ?>">
+            <a href="?add_to_wishlist=<?php echo get_the_ID(); ?>">
                       <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
                     </a>                   
                     <a href="<?php the_permalink(); ?>">
@@ -238,7 +235,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
             ?> 
        
           </div> 
-			      <div class="blog-general__paginator">
+            <div class="blog-general__paginator">
               <?php do_action( 'woocommerce_after_shop_loop' ); ?>
             </div>
             <?php              

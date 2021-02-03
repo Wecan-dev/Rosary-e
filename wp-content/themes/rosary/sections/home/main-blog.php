@@ -15,9 +15,9 @@
           <div class="main-blog__counter">
             0<?php echo $i; ?>
           </div>
-          <a class="main-blog__title" href="<?php the_permalink(); ?>">
+          <h2 class="main-blog__title">
             <?php the_title(); ?>
-          </a>
+          </h2>
           <p class="main-general__description">
             <?php the_content(); ?>
           </p>
