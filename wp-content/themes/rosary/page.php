@@ -676,5 +676,74 @@ Enviar
   </section>
 <?php } ?>  
 
+<style>
+	.header .dropdown:hover>.dropdown-menu {
+		padding: 23px;
+		  box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.09);
+  background-color: #f0e3d4;
+		    border: none;
+    border-radius: 0;
+		    width: 545px;
+		display: flex!important;
+    min-height: 319px;
+	}
+	
+	.nav-genero {
+		display: flex;
+		    margin-right: 14px;
+		flex-direction: column;
+	}
+	.nav-genero a{
+		text-transform: initial!important;
+	}
+	
+	.nav-genero .active{
+		    border-bottom: 1px solid #000;
+	}
+
+.header .dropdown:hover>.dropdown-menu .dropdown-item {
+    text-transform: initial !important;
+    padding-left: 0;
+		width: fit-content;
+		    background-color: transparent;
+}
+	
+	.header .dropdown:hover>.dropdown-menu .dropdown-item {
+				width: fit-content;
+
+	}
+	.dropdown-item:nth-child(1) .drop-img img {
+		opacity: 1;
+	}
+	.drop-img {
+		  width: 285px;
+  height: 264px;				position:absolute;
+		    right: 23px;
+		top: 23px;
+
+	}
+	
+	.drop-img img {
+		width: 100%;
+		height: 100%;
+		top: 0;
+		opacity: 0;
+		object-fit: cover;
+	}
+	
+	.dropdown-item{
+		display: flex;
+	}
+	
+	.dropdown-item:hover .drop-img img { 
+	opacity: 1;
+		top: 0;
+    right: 0;
+	}
+	
+	
+
+</style>
+
 <?php  endwhile; ?> 
 <?php get_footer(); ?>

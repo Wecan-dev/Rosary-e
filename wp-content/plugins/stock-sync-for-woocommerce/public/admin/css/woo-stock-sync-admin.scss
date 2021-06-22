@@ -1,0 +1,271 @@
+/* compile */
+
+/**
+ * Check credentials in the settings page
+ */
+
+.woo-stock-sync-check-credentials-indicator {
+	display: inline-block;
+	width: auto;
+	height: 16px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	margin-left: 10px;
+	padding-left: 21px;
+}
+
+.woo-stock-sync-check-credentials-processing { background-image: url("../img/wpspin_light.gif"); }
+.woo-stock-sync-check-credentials-success { background-image: url("../img/yes.png"); }
+.woo-stock-sync-check-credentials-fail { background-image: url("../img/no.png"); }
+
+/**
+ * API credentials table
+ */
+td.forminp-wss_credentials_table  {
+  padding-right: 0;
+  padding-left: 0;
+
+  & > table {
+    th,
+    td {
+      width: auto;
+      margin-bottom: 9px;
+      padding: 15px 10px;
+    }
+
+    td.min,
+    th.min {
+      width: 2%;
+      white-space: nowrap;
+      margin-right: 5px;
+    }
+  }
+
+}
+
+/**
+ * Sync update app
+ */
+$border-color: #dee2e6;
+
+.wss-app {
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+
+    p {
+      font-size: 16px;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+
+    .processing {
+      h2 {
+        color: #1864ab;
+      }
+    }
+
+    .completed {
+      h2 {
+        color: #2b8a3e;
+      }
+    }
+  }
+
+  .sites {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .site {
+      background: #ffffff;
+      border: 1px solid $border-color;
+      flex: auto;
+      max-width: 360px;
+      margin: 0 20px 20px 0;
+      background: #ffffff;
+
+      .site-header {
+        display: flex;
+        border-bottom: 1px solid $border-color;
+
+        .title {
+          flex: auto;
+          padding: 10px 20px;
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        .status {
+          flex: none;
+          padding: 10px 20px;
+
+          .icon {
+            display: block;
+            width: 16px;
+            height: 16px;
+            background-repeat: no-repeat;
+            background-position: left top;
+          }
+
+          &.process .icon { background-image: url("../img/wpspin_light.gif"); }
+          &.completed .icon { background-image: url("../img/yes.png"); }
+        }
+      }
+
+      .content {
+        padding: 10px 20px;
+
+        table {
+          th, td {
+            text-align: left;
+            padding: 5px 10px;
+          }
+
+          th {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Stock Sync report page
+ */
+#woo-stock-sync-report {
+  .last-updated {
+    line-height: 30px;
+    margin: 10px 0;
+  }
+
+  .tablenav {
+    .wss-product-search {
+      float: left;
+    }
+  }
+
+  table {
+    background: #ffffff;
+
+    th, td {
+      vertical-align: middle;
+    }
+
+    .button {
+      line-height: 24px;
+      min-height: 24px;
+      padding: 0 5px;
+    }
+  }
+}
+
+/**
+ * Log table
+ */
+.wss-log-table {
+  margin-bottom: 20px;
+
+  tr.type-error {
+    background: #ffe3e3;
+  }
+}
+
+.wss-descs {
+  margin: 0 0 10px;
+
+  .desc {
+    margin-right: 10px;
+
+    .wss-sync-result {
+      margin-right: 3px;
+    }
+  }
+}
+
+.wss-sync-result {
+  border-radius: 8px;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  text-align: center;
+  line-height: 16px;
+  font-size: 12px;
+  vertical-align: text-top;
+
+  &.sync-result-success {background: #2f9e44;}
+  &.sync-result-warning {background: #f08c00;}
+  &.sync-result-error {background: #e03131;}
+  &.sync-result-na {background: #ced4da;}
+}
+
+/**
+ * Tools page
+ */
+#woo-stock-sync-tools {
+  .tools {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    .tool {
+      flex: auto;
+      max-width: 300px;
+      margin: 0 20px 20px 0;
+      background: #ffffff;
+      border: 1px solid $border-color;
+      padding: 20px;
+
+      .title {
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      .desc {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+/**
+ * Icons
+ */
+.wss-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: left top;
+  vertical-align: text-top;
+
+  &.process {
+    background-image: url("../img/wpspin_light.gif");
+  }
+
+  &.warning {
+    background-image: url("../img/warning.png");
+  }
+
+  &.completed {
+    background-image: url("../img/yes.png");
+  }
+}
+
+/**
+ * Alert
+ */
+.wss-alert {
+  background: #fff9db;
+  border: 1px solid #ffe066;
+  padding: 10px 20px;
+  margin: 20px 0;
+}

@@ -54,7 +54,7 @@ $args = arg($_GET["cat"],$_GET["tax"],$_GET["lower"],$_GET["upper"],$_GET['order
           </div>
           <div class="shop-sidebar__content">
             <h2 class="shop-sidebar__title">
-              Categorías
+              Categoríasss
               <span></span>
             </h2>
             <ul class="shop-sidebar__categories">

@@ -56,7 +56,7 @@ if($urlsinparametros[1] != NULL OR $urlsinparametros2[1] != NULL){
           </div>
           <div class="shop-sidebar__content">
             <h2 class="shop-sidebar__title">
-              Categorías
+              Categoría
               <span></span>
             </h2>
             <ul class="shop-sidebar__categories">

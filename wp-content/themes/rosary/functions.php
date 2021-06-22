@@ -150,14 +150,6 @@ function Personalizado() {
 add_action( 'init', 'Personalizado', 0 );
 
 
-
-
-
-
-
-
-
-
 /*********** ITEMS Banner***********/
 function custom_post_type_Items_banner() {
 
@@ -432,4 +424,15 @@ function styles_checkout(){
     }
   }
 }
+
+
+
+
+function wpb_custom_new_menu()
+{
+	register_nav_menu('my-custom-menu', __('Main Menu'));
+}
+add_action('init', 'wpb_custom_new_menu');
+
+
 ?>

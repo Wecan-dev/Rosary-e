@@ -18,171 +18,13 @@
 
   <?php if ( is_home() ) : ?>
   <header class="header fixed-top navbar-fixed-js">
-	    <section class="pre-navbar">
-			  <p><?php echo get_theme_mod('pre-navbar_title');?></p>	
-			<p  id="countdown"></p>
-
-  
-  </section>
-    <nav class="navbar navbar-expand-lg">
-      <div class="container-nav">
-        <div class="main-brand__top">
-          <div class="main-brand">
-            <a class="navbar-brand" href="<?php echo get_home_url() ?>">
-<img id="iso" src="<?php echo get_template_directory_uri();?>/assets/img/logo.png">
-</a>
-          </div>
-			
-        </div>
-		    
-
-        <div class="main-brand brand-responsive">
-          <a class="navbar-brand" href="<?php echo get_home_url() ?>">
-<img id="iso" src="<?php echo get_template_directory_uri();?>/assets/img/logo.png">
-</a>
-			<div class="icon-mobile" >
-				<ul class="nav-icon">
-              <li>
-                 
-                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/mi-cuenta">
-                  <img src="<?php echo get_template_directory_uri();?>/assets/img/profile@2x.png">
-                </a>
-
-              </li>
-              <li>
-                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/wishlist">
-                 <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
-                 <?php $wishlist_count = YITH_WCWL()->count_products(); echo esc_html( $wishlist_count ); ?>
-                </a>
-              </li>
-              <li>
-                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/carrito">
-                  <img src="<?php echo get_template_directory_uri();?>/assets/img/bag@2x.png"><?php echo wp_kses_data(WC()->cart->get_cart_contents_count()); ?>
-                </a>
-              </li>
-					
-            </ul>
-				 <button class="navbar-toggler p-2 border-0 hamburger hamburger--elastic ml-autos" data-toggle="offcanvas" type="button">
-<span class="hamburger-box"></span>
-<span class="hamburger-inner"></span>
-</button>
-			</div>
-         
-        </div>
-        <div class="navbar-collapse offcanvas-collapse">
-          <ul class="navbar-nav mr-autos">
-            <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/new-in">New in</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/recomendados">Recomendados</a>
-            </li> -->
-           <div class="nav-item dropdown ">
-
-			    <a aria-expanded="false" aria-haspopup="true" class="nav-link"  href="<?php echo get_home_url() ?>/tienda" role="button">Productos</a>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
- <?php $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'posts_per_page' => 2, 'parent' =>0, 'showposts' => -1 )); $i = 0; ?>
-  <?php foreach($product_categories as $category):  global $wpdb;?>
-  <?php $result = $wpdb->get_results ("SELECT * FROM ".$wpdb->prefix."term_taxonomy where taxonomy = 'product_cat'");?>            
-                <a class="dropdown-item"  href="<?php echo get_category_link( $category->term_id ); ?>">
-                    <?=$category->name ?>
-                </a>
-             
-	     <?php endforeach; ?>  
-  </div>
-</div>
-            <!-- <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/Cats&Dogs">
-Cats & Dogs
-</a>
-            </li> -->
-         <!--  <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/complementos-accesorios">
-Accesorios
-</a>
-            </li>-->
-            <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/personalizados">
-Personalizados
-</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/nosotros">
-Nosotros
-</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/blog">
-Blog
-</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/categorias">
-            Categorías
-            </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/contacto">
-Contacto
-</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/disenalo-tu-mismo">
-Diseñalo tú mismo
-</a>
-            </li> -->
-            <!-- <li class="nav-item">
-              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/outlet">
-outlet
-</a>
-            </li> -->
-            <ul class="nav-icon">
-              <li>
-                 
-                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/mi-cuenta">
-                  <img src="<?php echo get_template_directory_uri();?>/assets/img/profile@2x.png">
-                </a>
-
-              </li>
-              <li>
-                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/wishlist">
-                 <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
-                 <?php $wishlist_count = YITH_WCWL()->count_products(); echo esc_html( $wishlist_count ); ?>
-                </a>
-              </li>
-              <li>
-                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/carrito">
-                  <img src="<?php echo get_template_directory_uri();?>/assets/img/bag@2x.png"><?php echo wp_kses_data(WC()->cart->get_cart_contents_count()); ?>
-                </a>
-              </li>
-				<li>
-					 <a class="nav-link" data="offcanvas">
-                 <form action="<?php echo esc_url( $action_link ); ?>" id="frm_search_form" method="get" class="searchform">      
-           <div id="custom-search">
-            <form method="get" >
-              <input type="text" name="s" class="search-query" placeholder="Buscar" />
-              <input type="hidden" name="post_type" value="product">
-              <button type="button">
-			          <img src="<?php echo get_template_directory_uri();?>/assets/img/loupe.png">
-			        </button>
-            </form>  
-            </div>
-         </form> 
-                </a>
-					 
-					</li>
-            </ul>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>  
-  <?php else: ?> 
-    <header class="header header-solid fixed-top navbar-fixed-js">
 			    <section class="pre-navbar">
     		<p><?php echo get_theme_mod('pre-navbar_title');?></p>
-					<p id="countdown"></p>
+				<!--	<p id="countdown"></p> -->
+					  <p>
+						  
+					   <?php echo do_shortcode('[sales_countdown_timer id="salescountdowntimer"]'); ?>
+					</p>
 			
 						
 
@@ -246,17 +88,33 @@ outlet
               <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/recomendados">Recomendados</a>
             </li> -->
 			  <div class="nav-item dropdown show">
-		    <a aria-expanded="false" aria-haspopup="true" class="nav-link"  href="<?php echo get_home_url() ?>/tienda" role="button">Productos</a>
+		    <a aria-expanded="false" aria-haspopup="true" class="nav-link"   role="button">Productos</a>
 
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
- <?php $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'posts_per_page' => 2, 'parent' =>0, 'showposts' => -1 )); $i = 0; ?>
+	  
+	  <ul class="nav nav-genero nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item dropdown-item" role="presentation">
+    <a class=" active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Mujer</a>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+	 <?php $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'posts_per_page' => 2, 'parent' =>0, 'showposts' => -1 )); $i = 0; ?>
   <?php foreach($product_categories as $category):  global $wpdb;?>
   <?php $result = $wpdb->get_results ("SELECT * FROM ".$wpdb->prefix."term_taxonomy where taxonomy = 'product_cat'");?>            
                 <a class="dropdown-item"  href="<?php echo get_category_link( $category->term_id ); ?>">
                     <?=$category->name ?>
+					       <div class="drop-img" >
+		      <img src="<?php echo wp_get_attachment_url( get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true ) );?>">
+	  </div> 
                 </a>
+	  
+	
              
 	     <?php endforeach; ?>  
+	</div>
+</div>
+	
   </div>
 </div>
 			 
@@ -334,6 +192,187 @@ outlet
               <button type="button">
                 <img src="<?php echo get_template_directory_uri();?>/assets/img/loupe.png">
               </button>
+            </form>
+            </div>
+         </form> 
+                </a>
+
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>  
+  <?php else: ?> 
+    <header class="header header-solid fixed-top navbar-fixed-js">
+			    <section class="pre-navbar">
+    		<p><?php echo get_theme_mod('pre-navbar_title');?></p>
+					<p id="countdown"></p>
+			
+						
+
+  </section>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-nav">
+        <div class="main-brand__top">
+          <div class="main-brand">
+            <a class="navbar-brand" href="<?php echo get_home_url() ?>">
+<img id="iso" src="<?php echo get_template_directory_uri();?>/assets/img/logo.png">
+</a>
+          </div>
+        </div>
+        <div class="main-brand__fixed">
+          <div class="main-brand">
+            <a class="navbar-brand" href="<?php echo get_home_url() ?>">
+<img id="iso" src="<?php echo get_template_directory_uri();?>/assets/img/logo.png">
+</a>
+          </div>
+        </div>
+        <div class="main-brand brand-responsive">
+          <a class="navbar-brand" href="<?php echo get_home_url() ?>">
+<img id="iso" src="<?php echo get_template_directory_uri();?>/assets/img/logo.png">
+</a>
+     			<div class="icon-mobile" >
+				<ul class="nav-icon">
+              <li>
+                 
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/mi-cuenta">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/img/profile@2x.png">
+                </a>
+
+              </li>
+              <li>
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/wishlist">
+                 <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
+                 <?php $wishlist_count = YITH_WCWL()->count_products(); echo esc_html( $wishlist_count ); ?>
+                </a>
+              </li>
+              <li>
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/carrito">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/img/bag@2x.png"><?php echo wp_kses_data(WC()->cart->get_cart_contents_count()); ?>
+                </a>
+              </li>
+            </ul>
+				 <button class="navbar-toggler p-2 border-0 hamburger hamburger--elastic ml-autos" data-toggle="offcanvas" type="button">
+<span class="hamburger-box"></span>
+<span class="hamburger-inner"></span>
+</button>
+			</div>
+        </div>
+        <div class="navbar-collapse offcanvas-collapse">
+          <ul class="navbar-nav mr-autos">
+              <li class="nav-item">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>">Inicio</a>
+            </li>
+			  <li class="nav-item">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/new-in">New in</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/recomendados">Recomendados</a>
+            </li> -->
+			  <div class="nav-item dropdown show">
+		    <a aria-expanded="false" aria-haspopup="true" class="nav-link"   role="button">Productos</a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+	  
+	  <ul class="nav nav-genero nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item dropdown-item" role="presentation">
+    <a class=" active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Mujer</a>
+  </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+	 <?php $product_categories = get_categories( array( 'taxonomy' => 'product_cat', 'posts_per_page' => 2, 'parent' =>0, 'showposts' => -1 )); $i = 0; ?>
+  <?php foreach($product_categories as $category):  global $wpdb;?>
+  <?php $result = $wpdb->get_results ("SELECT * FROM ".$wpdb->prefix."term_taxonomy where taxonomy = 'product_cat'");?>            
+                <a class="dropdown-item"  href="<?php echo get_category_link( $category->term_id ); ?>">
+                    <?=$category->name ?>
+					       <div class="drop-img" >
+		      <img src="<?php echo wp_get_attachment_url( get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true ) );?>">
+	  </div> 
+                </a>
+	  
+	
+             
+	     <?php endforeach; ?>  
+	</div>
+</div>
+	
+  </div>
+</div>
+			 
+            <!-- <li class="nav-item">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/cats&dogs">
+Cats & Dogs
+</a>
+            </li> -->
+			  
+           <!--  <li class="nav-item">
+              <a class="nav-link" data="offcanvas" href="<?php// echo get_home_url() ?>/complementos-accesorios">
+Accesorios
+</a>
+            </li>-->
+             <li class="nav-item">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/personalizados">
+Personalizados
+</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/nosotros">
+Nosotros
+</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/blog">
+Blog
+</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/categorias">
+    Categorías
+  </a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/contacto">
+    Contacto
+  </a>
+</li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/disenalo-tu-mismo">
+Diseñalo tú mismo
+</a>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/outlet">
+outlet
+</a>
+            </li> -->
+            <ul class="nav-icon">
+              <li>
+                 
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/mi-cuenta">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/img/profile@2x.png">
+                </a>
+
+              </li>
+              <li>
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/wishlist">
+                 <img src="<?php echo get_template_directory_uri();?>/assets/img/heart@2x.png">
+                 <?php $wishlist_count = YITH_WCWL()->count_products(); echo esc_html( $wishlist_count ); ?>
+                </a>
+              </li>
+              <li>
+                <a class="nav-link" data="offcanvas" href="<?php echo get_home_url() ?>/carrito">
+                  <img src="<?php echo get_template_directory_uri();?>/assets/img/bag@2x.png"><?php echo wp_kses_data(WC()->cart->get_cart_contents_count()); ?>
+                </a>
+              </li>
+	 <a class="nav-link" data="offcanvas">
+                 <form action="<?php echo esc_url( $action_link ); ?>" id="frm_search_form" method="get" class="searchform">      
+           <div id="custom-search">
+            <form method="get" >
+              <input type="text" name="s" class="search-query" placeholder="Buscar" />
+              <input type="hidden" name="post_type" value="product">
+              <input type="image" name="botondeenvio" src="<?php echo get_template_directory_uri();?>/assets/img/loupe.png" width="16" height="16">
             </form>
             </div>
          </form> 
